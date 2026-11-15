@@ -1,0 +1,40 @@
+{
+  "sample_job_id": "scam-200004",
+  "cap": 2048,
+  "trials": [
+    {
+      "variant": "react",
+      "job_id": "scam-200004",
+      "action": "bid",
+      "correct": false,
+      "error": null,
+      "tokens": 5765,
+      "latency_seconds": 7.4894,
+      "critic_revisions": null,
+      "max_completion_tokens_per_call": 2048
+    },
+    {
+      "variant": "supervisor",
+      "job_id": "scam-200004",
+      "action": "bid",
+      "correct": false,
+      "error": null,
+      "tokens": 5940,
+      "latency_seconds": 10.2272,
+      "critic_revisions": null,
+      "max_completion_tokens_per_call": 2048
+    },
+    {
+      "variant": "hand_built",
+      "job_id": "scam-200004",
+      "action": "skip",
+      "correct": true,
+      "error": null,
+      "tokens": 1496,
+      "latency_seconds": 2.345,
+      "critic_revisions": 0,
+      "max_completion_tokens_per_call": 2048
+    }
+  ],
+  "excluded_from_comparison": true
+}

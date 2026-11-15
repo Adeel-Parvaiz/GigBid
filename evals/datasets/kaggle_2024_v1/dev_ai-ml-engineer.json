@@ -1,0 +1,4026 @@
+{
+ "_note": "Synthetic job text; gold labels derived by rule from generation-time tags; not human-labelled.",
+ "provenance_counts": {
+  "synthetic": 200
+ },
+ "label_provenance": "synthetic_rule",
+ "jobs": [
+  {
+   "job_id": "scam-200019",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    19,
+    47
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200028",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    5082
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200132",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00"
+   ],
+   "price_band": [
+    34,
+    44
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200049",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    638
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200057",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4527
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200026",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200004",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-08"
+   ],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 0.75,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200017",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1076
+   ],
+   "coverage": 0.2,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200131",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    27,
+    53
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200073",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    18,
+    45
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200103",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    985
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200146",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    42,
+    68
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200100",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1384
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200150",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-10"
+   ],
+   "price_band": [
+    100,
+    129
+   ],
+   "coverage": 0.83,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200064",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1246
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200062",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    474
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200050",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    20.0,
+    250.0
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200113",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    304
+   ],
+   "coverage": 0.2,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200023",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    316
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200106",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    165
+   ],
+   "coverage": 0.25,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200051",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-18",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05"
+   ],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200079",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-12"
+   ],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200086",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-18"
+   ],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200065",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    19,
+    48
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200044",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00"
+   ],
+   "price_band": [
+    800,
+    978
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200136",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-12"
+   ],
+   "price_band": [
+    23,
+    36
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200112",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-19"
+   ],
+   "price_band": [
+    400,
+    566
+   ],
+   "coverage": 0.83,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200110",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    147
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200075",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02"
+   ],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200147",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    36,
+    59
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200020",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-rd-13",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01"
+   ],
+   "price_band": [
+    3000,
+    4106
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200010",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200087",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    326
+   ],
+   "coverage": 0.2,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200070",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    322
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200140",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    26,
+    44
+   ],
+   "coverage": 0.17,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200149",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    36,
+    62
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200036",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200139",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-rd-01"
+   ],
+   "price_band": [
+    41,
+    71
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200094",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    39,
+    66
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200006",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-rd-13",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-rv-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04"
+   ],
+   "price_band": [
+    400,
+    593
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100002",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-06"
+   ],
+   "price_band": [
+    800,
+    909
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100401",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01"
+   ],
+   "price_band": [
+    32,
+    48
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101386",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-11"
+   ],
+   "price_band": [
+    26,
+    37
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100819",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-17"
+   ],
+   "price_band": [
+    200,
+    280
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100086",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08"
+   ],
+   "price_band": [
+    200,
+    230
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101170",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-rv-01"
+   ],
+   "price_band": [
+    3000,
+    5154
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100149",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-13"
+   ],
+   "price_band": [
+    18,
+    43
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100540",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-15"
+   ],
+   "price_band": [
+    100,
+    162
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100345",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-08"
+   ],
+   "price_band": [
+    1500,
+    1933
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100511",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-rd-12",
+    "ai-ml-engineer-cs-15"
+   ],
+   "price_band": [
+    1500,
+    2401
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100084",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-rd-07"
+   ],
+   "price_band": [
+    800,
+    1206
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100370",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-rv-07"
+   ],
+   "price_band": [
+    23,
+    49
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100800",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-09"
+   ],
+   "price_band": [
+    3000,
+    3537
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100514",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-cs-16"
+   ],
+   "price_band": [
+    31,
+    53
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100793",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-18",
+    "ai-ml-engineer-rd-01"
+   ],
+   "price_band": [
+    400,
+    457
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101492",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-18",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-rd-01"
+   ],
+   "price_band": [
+    18,
+    28
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100104",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-14"
+   ],
+   "price_band": [
+    33,
+    59
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100971",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-14"
+   ],
+   "price_band": [
+    400,
+    602
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100376",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-06"
+   ],
+   "price_band": [
+    24,
+    42
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100222",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-06"
+   ],
+   "price_band": [
+    17,
+    47
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101354",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-01"
+   ],
+   "price_band": [
+    400,
+    658
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100960",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-08"
+   ],
+   "price_band": [
+    36,
+    53
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100882",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-rd-12"
+   ],
+   "price_band": [
+    26,
+    38
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100043",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-14"
+   ],
+   "price_band": [
+    800,
+    954
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100907",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01"
+   ],
+   "price_band": [
+    45,
+    74
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100846",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-rd-01"
+   ],
+   "price_band": [
+    34,
+    63
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101416",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-rd-07"
+   ],
+   "price_band": [
+    200,
+    357
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101013",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-13"
+   ],
+   "price_band": [
+    42,
+    53
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101390",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-rv-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-06"
+   ],
+   "price_band": [
+    100,
+    113
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100032",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-rd-12"
+   ],
+   "price_band": [
+    33,
+    43
+   ],
+   "coverage": 0.83,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101018",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05"
+   ],
+   "price_band": [
+    22,
+    37
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101268",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-17"
+   ],
+   "price_band": [
+    400,
+    619
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101281",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-02"
+   ],
+   "price_band": [
+    400,
+    614
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101069",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-15"
+   ],
+   "price_band": [
+    1500,
+    2330
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100180",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05"
+   ],
+   "price_band": [
+    400,
+    715
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101171",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-rd-12"
+   ],
+   "price_band": [
+    800,
+    1223
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100396",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-18"
+   ],
+   "price_band": [
+    24,
+    41
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100439",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-18",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-rd-12"
+   ],
+   "price_band": [
+    21,
+    48
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100146",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-rd-12",
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-cs-15"
+   ],
+   "price_band": [
+    19,
+    42
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101304",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-01"
+   ],
+   "price_band": [
+    25,
+    42
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101182",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-12"
+   ],
+   "price_band": [
+    3000,
+    3852
+   ],
+   "coverage": 0.75,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101020",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-17"
+   ],
+   "price_band": [
+    100,
+    165
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100847",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-rd-13",
+    "ai-ml-engineer-cs-15"
+   ],
+   "price_band": [
+    800,
+    1142
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100784",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03"
+   ],
+   "price_band": [
+    200,
+    287
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100859",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-07"
+   ],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100748",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-rv-07"
+   ],
+   "price_band": [
+    31,
+    51
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100639",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-rd-13",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-rv-01"
+   ],
+   "price_band": [
+    3000,
+    4677
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100313",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-06"
+   ],
+   "price_band": [
+    100,
+    127
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100243",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-18",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01"
+   ],
+   "price_band": [
+    3000,
+    5334
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100951",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-rd-07"
+   ],
+   "price_band": [
+    100,
+    136
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100402",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00"
+   ],
+   "price_band": [
+    1500,
+    1952
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100856",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-13",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-18",
+    "ai-ml-engineer-cs-19"
+   ],
+   "price_band": [
+    3000,
+    4365
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101125",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-16"
+   ],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101295",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-rd-13",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01"
+   ],
+   "price_band": [
+    20,
+    28
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101288",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03"
+   ],
+   "price_band": [
+    27,
+    47
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100066",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-cs-17"
+   ],
+   "price_band": [
+    19,
+    42
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101118",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00"
+   ],
+   "price_band": [
+    800,
+    1163
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100477",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-18"
+   ],
+   "price_band": [
+    400,
+    637
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100506",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-18",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04"
+   ],
+   "price_band": [
+    1500,
+    1874
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100563",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-rv-01"
+   ],
+   "price_band": [
+    16,
+    43
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100423",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-16"
+   ],
+   "price_band": [
+    3000,
+    4069
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100253",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-rv-07"
+   ],
+   "price_band": [
+    17,
+    33
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100665",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-16"
+   ],
+   "price_band": [
+    37,
+    66
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100816",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-03"
+   ],
+   "price_band": [
+    800,
+    1046
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100163",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08"
+   ],
+   "price_band": [
+    400,
+    634
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100710",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-18",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-rv-01",
+    "ai-ml-engineer-cs-03"
+   ],
+   "price_band": [
+    800,
+    1258
+   ],
+   "coverage": 0.75,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101391",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04"
+   ],
+   "price_band": [
+    100,
+    133
+   ],
+   "coverage": 0.75,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100885",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-09"
+   ],
+   "price_band": [
+    400,
+    678
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101254",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01"
+   ],
+   "price_band": [
+    34,
+    61
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101485",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01"
+   ],
+   "price_band": [
+    19,
+    27
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100998",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-03"
+   ],
+   "price_band": [
+    100,
+    116
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100508",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-rd-12",
+    "ai-ml-engineer-cs-15"
+   ],
+   "price_band": [
+    100,
+    113
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101271",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-cs-00"
+   ],
+   "price_band": [
+    45,
+    75
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100058",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-18",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-05"
+   ],
+   "price_band": [
+    3000,
+    5115
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101039",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-11"
+   ],
+   "price_band": [
+    39,
+    53
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100036",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-14"
+   ],
+   "price_band": [
+    100,
+    162
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101465",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-13"
+   ],
+   "price_band": [
+    100,
+    124
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100986",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-rv-07"
+   ],
+   "price_band": [
+    16,
+    29
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101371",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-18",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-rv-01"
+   ],
+   "price_band": [
+    100,
+    131
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100030",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-10"
+   ],
+   "price_band": [
+    39,
+    66
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100317",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-04"
+   ],
+   "price_band": [
+    36,
+    60
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100606",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-cs-00"
+   ],
+   "price_band": [
+    29,
+    38
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100130",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-06"
+   ],
+   "price_band": [
+    38,
+    47
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100027",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-04"
+   ],
+   "price_band": [
+    23,
+    31
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100957",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-12"
+   ],
+   "price_band": [
+    20,
+    28
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101001",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04"
+   ],
+   "price_band": [
+    40,
+    53
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100883",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-15",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-cs-18",
+    "ai-ml-engineer-cs-19"
+   ],
+   "price_band": [
+    22,
+    43
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100557",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-17"
+   ],
+   "price_band": [
+    35,
+    61
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101161",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-cs-08"
+   ],
+   "price_band": [
+    1500,
+    2076
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101320",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-rd-07"
+   ],
+   "price_band": [
+    36,
+    58
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100476",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-16",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-01"
+   ],
+   "price_band": [
+    42,
+    70
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100683",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-cs-08"
+   ],
+   "price_band": [
+    38,
+    65
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100959",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-rd-12",
+    "ai-ml-engineer-cs-13"
+   ],
+   "price_band": [
+    44,
+    60
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101257",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-rd-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-09"
+   ],
+   "price_band": [
+    37,
+    49
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100934",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-rd-01",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-08",
+    "ai-ml-engineer-cs-14",
+    "ai-ml-engineer-cs-15"
+   ],
+   "price_band": [
+    100,
+    154
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100336",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-17",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-11",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-01"
+   ],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101449",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-rd-12",
+    "ai-ml-engineer-cs-13",
+    "ai-ml-engineer-cs-15"
+   ],
+   "price_band": [
+    19,
+    46
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100854",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-05",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-04",
+    "ai-ml-engineer-cs-06",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-cs-09"
+   ],
+   "price_band": [
+    45,
+    55
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100678",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-09",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-12",
+    "ai-ml-engineer-rd-12",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-05"
+   ],
+   "price_band": [
+    200,
+    280
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100909",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "ai-ml-engineer-cs-10",
+    "ai-ml-engineer-cs-19",
+    "ai-ml-engineer-cs-00",
+    "ai-ml-engineer-cs-01",
+    "ai-ml-engineer-cs-02",
+    "ai-ml-engineer-cs-03",
+    "ai-ml-engineer-cs-07",
+    "ai-ml-engineer-rd-07"
+   ],
+   "price_band": [
+    100,
+    173
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100169",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    112
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100711",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    15,
+    27
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101496",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    19,
+    45
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100827",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2615
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100804",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    36,
+    61
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100459",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    15,
+    44
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100381",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    29,
+    40
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100428",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    17,
+    32
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100590",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    33,
+    52
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101425",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    20.0,
+    250.0
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101471",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    527
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101131",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1278
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100348",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2668
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100265",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    17,
+    46
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101106",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22,
+    43
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100114",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1342
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100419",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22,
+    31
+   ],
+   "coverage": 0.25,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100324",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    32,
+    59
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100745",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    507
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101366",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    256
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100704",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    226
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100103",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    128
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100635",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    20,
+    35
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101433",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    27,
+    39
+   ],
+   "coverage": 0.17,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100314",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1081
+   ],
+   "coverage": 0.2,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100100",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    555
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101061",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    30,
+    48
+   ],
+   "coverage": 0.25,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100386",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    17,
+    26
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100534",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    25,
+    40
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100595",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    719
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101052",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    310
+   ],
+   "coverage": 0.2,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101175",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22,
+    40
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100619",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    30,
+    38
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101265",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    569
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100333",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    30,
+    43
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101346",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    113
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101002",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4793
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100616",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    944
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100073",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    45,
+    66
+   ],
+   "coverage": 0.2,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101446",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    33,
+    59
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100013",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    889
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100372",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100792",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    1806
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100176",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    348
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100740",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2575
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100585",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101135",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4314
+   ],
+   "coverage": 0.2,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101122",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    148
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100550",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    18,
+    38
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100458",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1033
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101109",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    21,
+    32
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101340",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    133
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101047",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    179
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101219",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    1925
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100774",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    15,
+    27
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100761",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    998
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100561",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    21,
+    47
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100318",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    5133
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100290",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    661
+   ],
+   "coverage": 0.17,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100095",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    683
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  }
+ ]
+}

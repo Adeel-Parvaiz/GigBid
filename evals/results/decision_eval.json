@@ -1,0 +1,98 @@
+{
+ "meta": {
+  "generated_at": "2026-11-09T11:44:26",
+  "commit": "no-git",
+  "corpus": "toy-sample-5-jobs",
+  "llm": "heuristic-double",
+  "valid_for_report": false,
+  "why_not": "toy corpus + test-double LLM; rerun on the instructor dev set with a real model"
+ },
+ "base": {
+  "n_jobs": 5,
+  "bid_or_skip": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  },
+  "scam_or_injection_detection": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  },
+  "price_in_band_rate": 1.0,
+  "unsupported_claims_per_proposal_before": 0.0,
+  "unsupported_claims_per_proposal_after": 0.0,
+  "latency_ms_p50": 3.494166999985282,
+  "latency_ms_p95": 10.627004000070883,
+  "per_job": [
+   {
+    "job_id": "job-001",
+    "action": "bid",
+    "gold": "bid",
+    "scam_pred": false,
+    "scam_gold": false,
+    "ms": 10.627004000070883,
+    "price_in_band": true,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "claims_total": 6
+   },
+   {
+    "job_id": "job-002",
+    "action": "skip",
+    "gold": "skip",
+    "scam_pred": true,
+    "scam_gold": true,
+    "ms": 3.494166999985282,
+    "price_in_band": null,
+    "unsupported_before": null,
+    "unsupported_after": null,
+    "claims_total": null
+   },
+   {
+    "job_id": "job-003",
+    "action": "skip",
+    "gold": "skip",
+    "scam_pred": false,
+    "scam_gold": false,
+    "ms": 3.229883000017253,
+    "price_in_band": null,
+    "unsupported_before": null,
+    "unsupported_after": null,
+    "claims_total": null
+   },
+   {
+    "job_id": "job-004",
+    "action": "skip",
+    "gold": "skip",
+    "scam_pred": true,
+    "scam_gold": true,
+    "ms": 3.302265999991505,
+    "price_in_band": null,
+    "unsupported_before": null,
+    "unsupported_after": null,
+    "claims_total": null
+   },
+   {
+    "job_id": "job-005",
+    "action": "bid",
+    "gold": "bid",
+    "scam_pred": false,
+    "scam_gold": false,
+    "ms": 6.358345999956327,
+    "price_in_band": true,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "claims_total": 6
+   }
+  ]
+ },
+ "fabricating_writer_verifier_on": {
+  "unsupported_claims_per_proposal_before": 1.0,
+  "unsupported_claims_per_proposal_after": 0.0
+ },
+ "fabricating_writer_verifier_off": {
+  "unsupported_claims_per_proposal_before": 1.0,
+  "unsupported_claims_per_proposal_after": 1.0
+ }
+}

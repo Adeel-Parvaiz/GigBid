@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2285" height="181" viewBox="0 0 2285 181">
+<defs><marker id='arrow' markerWidth='10' markerHeight='7' refX='9' refY='3.5' orient='auto'><polygon points='0 0, 10 3.5, 0 7' fill='#46566b'/></marker></defs>
+<rect width='100%' height='100%' fill='#ffffff'/>
+<text x='32' y='32' font-family='Arial' font-size='20' font-weight='700'>GigBid conversation graph (compiled StateGraph)</text>
+<path d='M 215 89 L 270 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 1565 89 L 2070 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 1565 89 C 1635 24, 1110 24, 1170 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 1565 89 L 1620 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 665 89 L 2070 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 665 89 L 720 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 1340 89 L 2070 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 1340 89 L 1395 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 1115 89 L 2070 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 1115 89 L 1170 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 2015 89 L 2070 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 440 89 L 2070 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 440 89 L 495 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 890 89 L 945 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<path d='M 1790 89 L 1845 89' fill='none' stroke='#46566b' stroke-width='1.5' marker-end='url(#arrow)'/>
+<rect x='45' y='65' width='170' height='48' rx='8' fill='#eff6ff' stroke='#52657a' stroke-width='1.5'/>
+<text x='130.0' y='94' text-anchor='middle' font-family='Arial' font-size='13' fill='#16243a'>__start__</text>
+<rect x='270' y='65' width='170' height='48' rx='8' fill='#eff6ff' stroke='#52657a' stroke-width='1.5'/>
+<text x='355.0' y='94' text-anchor='middle' font-family='Arial' font-size='13' fill='#16243a'>load_thread</text>
+<rect x='495' y='65' width='170' height='48' rx='8' fill='#eff6ff' stroke='#52657a' stroke-width='1.5'/>
+<text x='580.0' y='94' text-anchor='middle' font-family='Arial' font-size='13' fill='#16243a'>classify</text>
+<rect x='720' y='65' width='170' height='48' rx='8' fill='#eff6ff' stroke='#52657a' stroke-width='1.5'/>
+<text x='805.0' y='94' text-anchor='middle' font-family='Arial' font-size='13' fill='#16243a'>propose_slots</text>
+<rect x='945' y='65' width='170' height='48' rx='8' fill='#eff6ff' stroke='#52657a' stroke-width='1.5'/>
+<text x='1030.0' y='94' text-anchor='middle' font-family='Arial' font-size='13' fill='#16243a'>draft_reply</text>
+<rect x='1170' y='65' width='170' height='48' rx='8' fill='#eff6ff' stroke='#52657a' stroke-width='1.5'/>
+<text x='1255.0' y='94' text-anchor='middle' font-family='Arial' font-size='13' fill='#16243a'>compliance</text>
+<rect x='1395' y='65' width='170' height='48' rx='8' fill='#eff6ff' stroke='#52657a' stroke-width='1.5'/>
+<text x='1480.0' y='94' text-anchor='middle' font-family='Arial' font-size='13' fill='#16243a'>approval</text>
+<rect x='1620' y='65' width='170' height='48' rx='8' fill='#eff6ff' stroke='#52657a' stroke-width='1.5'/>
+<text x='1705.0' y='94' text-anchor='middle' font-family='Arial' font-size='13' fill='#16243a'>send_reply</text>
+<rect x='1845' y='65' width='170' height='48' rx='8' fill='#eff6ff' stroke='#52657a' stroke-width='1.5'/>
+<text x='1930.0' y='94' text-anchor='middle' font-family='Arial' font-size='13' fill='#16243a'>learn</text>
+<rect x='2070' y='65' width='170' height='48' rx='8' fill='#eff6ff' stroke='#52657a' stroke-width='1.5'/>
+<text x='2155.0' y='94' text-anchor='middle' font-family='Arial' font-size='13' fill='#16243a'>__end__</text>
+</svg>

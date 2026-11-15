@@ -1,0 +1,172 @@
+{
+  "scope": "Real Qwen + registered application account + HTTP API + authenticated MCP + owned GigSim + Chromium UI approval; SQLite persistence.",
+  "limitations": [
+    "Synthetic marketplace and outcomes; approval is scripted inside disposable sandbox.",
+    "SQLite restarts verified; Postgres durability is a separate assignment requirement.",
+    "This is not live Upwork integration."
+  ],
+  "checks": [
+    {
+      "name": "application_account_registration",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "job_discovery",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "initial_connects",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "agent_reaches_approval_gate",
+      "passed": true,
+      "observed": "awaiting_approval"
+    },
+    {
+      "name": "analysis_and_preview_spend_zero_connects",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "no_submission_before_approval",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "unauthenticated_approval_rejected",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "other_user_cannot_approve",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "session_and_account_survive_abrupt_restart",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "pending_proposal_survives_restart",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "balance_survives_restart",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "browser_approval_submits",
+      "passed": true,
+      "observed": "submitted"
+    },
+    {
+      "name": "exact_connects_deduction",
+      "passed": true,
+      "observed": 12
+    },
+    {
+      "name": "repeated_approval_rejected",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "repeated_approval_no_second_charge",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "simulated_outcome_recorded",
+      "passed": true,
+      "observed": {
+        "outcomes": [
+          {
+            "draft_id": "draft-0001",
+            "replied": true,
+            "interview": true,
+            "hired": false,
+            "source": "synthetic-rule-based-client"
+          }
+        ]
+      }
+    },
+    {
+      "name": "submitted_proposal_survives_restart",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "spent_balance_survives_restart",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "messages_survive_restart",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "outcomes_survive_restart",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "workspace_mcp_interview_reaches_approval",
+      "passed": true,
+      "observed": "awaiting_approval"
+    },
+    {
+      "name": "workspace_mcp_offers_calendar_slots",
+      "passed": true,
+      "observed": [
+        "2026-11-16T11:00",
+        "2026-11-16T12:00",
+        "2026-11-16T13:00"
+      ]
+    },
+    {
+      "name": "workspace_no_hold_before_approval",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "workspace_interview_approval_survives_restart",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "workspace_mcp_approved_interview_creates_tentative_hold",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "workspace_exactly_one_hold",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "workspace_hold_persists_after_restart",
+      "passed": true,
+      "observed": null
+    }
+  ],
+  "screenshots": [
+    "evals/results/gigsim_workflow/01-inbox.png",
+    "evals/results/gigsim_workflow/02-restored-approval.png",
+    "evals/results/gigsim_workflow/03-submitted-pipeline.png",
+    "evals/results/gigsim_workflow/04-persisted-messages.png"
+  ],
+  "status": "passed",
+  "ports_closed": {
+    "rest": true,
+    "mcp": true,
+    "api": true,
+    "web": true
+  }
+}

@@ -1,0 +1,558 @@
+{
+  "started_at_pkt": "2026-11-14T11:55:14.056720+05:00",
+  "finished_at_pkt": "2026-11-14T11:55:25.825895+05:00",
+  "returncode": 1,
+  "scope": "Real Chromium browser against isolated FastAPI/React servers; deterministic HeuristicLLM and sample data; degraded-mode responses deliberately mocked in that test.",
+  "node_version": "v22.23.5",
+  "stdout": "[WebServer] INFO:     Started server process [7787]\n[WebServer] INFO:     Waiting for application startup.\n[WebServer] INFO:     Application startup complete.\n[WebServer] INFO:     Uvicorn running on http://127.0.0.1:18000 (Press CTRL+C to quit)\n\nRunning 8 tests using 2 workers\n\n  \u2718  1 [desktop] \u203a tests/e2e/degraded.spec.ts:4:1 \u203a marketplace down: banner, clear error state, and it recovers (1.3s)\n  \u2713  2 [desktop] \u203a tests/e2e/approve.spec.ts:4:1 \u203a inbox -> streamed run -> evidence on hover -> approve -> pipeline (1.4s)\n  \u2713  3 [desktop] \u203a tests/e2e/approve.spec.ts:22:1 \u203a a pending approval survives a page refresh (1.1s)\n[WebServer] ERROR:    Exception in ASGI application\n[WebServer] Traceback (most recent call last):\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py\", line 422, in run_asgi\n[WebServer]     result = await app(  # type: ignore[func-returns-value]\n[WebServer]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n[WebServer]         self.scope, self.receive, self.send\n[WebServer]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n[WebServer]     )\n[WebServer]     ^\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py\", line 63, in __call__\n[WebServer]     return await self.app(scope, receive, send)\n[WebServer]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/applications.py\", line 1194, in __call__\n[WebServer]     await super().__call__(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/applications.py\", line 96, in __call__\n[WebServer]     await self.middleware_stack(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/middleware/errors.py\", line 186, in __call__\n[WebServer]     raise exc\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/middleware/errors.py\", line 164, in __call__\n[WebServer]     await self.app(scope, receive, _send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/telemetry/_asgi.py\", line 151, in __call__\n[WebServer]     await self.app(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/middleware/cors.py\", line 91, in __call__\n[WebServer]     await self.simple_response(scope, receive, send, request_headers=headers)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/middleware/cors.py\", line 149, in simple_response\n[WebServer]     await self.app(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/middleware/exceptions.py\", line 63, in __call__\n[WebServer]     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n[WebServer]     raise exc\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n[WebServer]     await app(scope, receive, sender)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py\", line 18, in __call__\n[WebServer]     await self.app(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/routing.py\", line 683, in __call__\n[WebServer]     await self.middleware_stack(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/routing.py\", line 2811, in app\n[WebServer]     await route.handle(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/routing.py\", line 1839, in handle\n[WebServer]     await self.original_router.handle(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/routing.py\", line 2894, in handle\n[WebServer]     await included_router._handle_selected(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/routing.py\", line 1865, in _handle_selected\n[WebServer]     await original_route.handle(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/routing.py\", line 1328, in handle\n[WebServer]     await effective_context.app(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/routing.py\", line 166, in app\n[WebServer]     await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n[WebServer]     raise exc\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n[WebServer]     await app(scope, receive, sender)\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/routing.py\", line 152, in app\n[WebServer]     response = await f(request)\n[WebServer]                ^^^^^^^^^^^^^^^^\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/routing.py\", line 511, in app\n[WebServer]     solved_result = await solve_dependencies(\n[WebServer]                     ^^^^^^^^^^^^^^^^^^^^^^^^^\n[WebServer]     ...<6 lines>...\n[WebServer]     )\n[WebServer]     ^\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/fastapi/dependencies/utils.py\", line 752, in solve_dependencies\n[WebServer]     solved = await run_in_threadpool(call, **solved_result.values)\n[WebServer]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/starlette/concurrency.py\", line 34, in run_in_threadpool\n[WebServer]     return await anyio.to_thread.run_sync(func)\n[WebServer]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/anyio/to_thread.py\", line 65, in run_sync\n[WebServer]     return await get_async_backend().run_sync_in_worker_thread(\n[WebServer]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n[WebServer]         func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter\n[WebServer]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n[WebServer]     )\n[WebServer]     ^\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/anyio/_backends/_asyncio.py\", line 2779, in run_sync_in_worker_thread\n[WebServer]     return await future\n[WebServer]            ^^^^^^^^^^^^\n[WebServer]   File \"/home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/anyio/_backends/_asyncio.py\", line 1124, in run\n[WebServer]     result = context.run(func, *args)\n[WebServer]   File \"/home/adeel/gigbid/apps/api/deps.py\", line 15, in get_run\n[WebServer]     run = request.app.state.manager.store.get(run_id)\n[WebServer]   File \"/home/adeel/gigbid/apps/api/runs.py\", line 55, in get\n[WebServer]     return self._row(r) if r else None\n[WebServer]            ~~~~~~~~~^^^\n[WebServer]   File \"/home/adeel/gigbid/apps/api/runs.py\", line 37, in _row\n[WebServer]     \"degraded\": r[6] == \"1\", \"created_at\": float(r[7]), \"outcome\": r[8] or None, \"origin\": r[9]}\n[WebServer]                                            ~~~~~^^^^^^\n[WebServer] TypeError: float() argument must be a string or a real number, not 'NoneType'\n  \u2713  5 [desktop] \u203a tests/e2e/onboarding.spec.ts:4:1 \u203a onboarding: register, set rates, land on a ranked inbox (572ms)\n  \u2713  6 [desktop] \u203a tests/e2e/onboarding.spec.ts:12:1 \u203a unauthenticated visitors are sent to sign-in @mobile (302ms)\n  \u2713  7 [desktop] \u203a tests/e2e/reject.spec.ts:4:1 \u203a reject requires a reason and records it in analytics (823ms)\n  \u2713  8 [phone] \u203a tests/e2e/onboarding.spec.ts:12:1 \u203a unauthenticated visitors are sent to sign-in @mobile (315ms)\n  \u2718  4 [desktop] \u203a tests/e2e/edit.spec.ts:4:1 \u203a editing a draft saves it; a policy-violating edit blocks approval (5.8s)\n\n\n  1) [desktop] \u203a tests/e2e/degraded.spec.ts:4:1 \u203a marketplace down: banner, clear error state, and it recovers \n\n    Error: expect(locator).toBeVisible() failed\n\n    Locator: getByRole('alert').filter({ hasText: 'queued' })\n    Expected: visible\n    Error: strict mode violation: getByRole('alert').filter({ hasText: 'queued' }) resolved to 2 elements:\n        1) <div role=\"alert\" class=\"banner bad\" data-testid=\"degraded-banner\">Marketplace unavailable. New work is queued (2 wa\u2026</div> aka getByTestId('degraded-banner')\n        2) <div role=\"alert\" class=\"card err\">\u2026</div> aka getByText('Marketplace unavailablemarketplace unavailable: marketplace_unavailableYour')\n\n    Call log:\n      - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'queued' }) with timeout 5000ms\n      - waiting for getByRole('alert').filter({ hasText: 'queued' })\n\n\n       9 |   await expect(page.getByTestId(\"degraded-banner\")).toContainText(\"Marketplace unavailable\");\n      10 |   await expect(page.getByTestId(\"degraded-banner\")).toContainText(\"2 waiting\");\n    > 11 |   await expect(page.getByRole(\"alert\").filter({ hasText: \"queued\" })).toBeVisible();\n         |                                                                       ^\n      12 |\n      13 |   await page.unroute(\"**/api/health\");\n      14 |   await page.unroute(\"**/api/jobs\");\n        at /home/adeel/gigbid/apps/web/tests/e2e/degraded.spec.ts:11:71\n\n    attachment #1: screenshot (image/png) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n    test-results/degraded-marketplace-down--964cd-error-state-and-it-recovers-desktop/test-failed-1.png\n    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n    Error Context: test-results/degraded-marketplace-down--964cd-error-state-and-it-recovers-desktop/error-context.md\n\n    attachment #3: trace (application/zip) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n    test-results/degraded-marketplace-down--964cd-error-state-and-it-recovers-desktop/trace.zip\n    Usage:\n\n        npx playwright show-trace test-results/degraded-marketplace-down--964cd-error-state-and-it-recovers-desktop/trace.zip\n\n    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n  2) [desktop] \u203a tests/e2e/edit.spec.ts:4:1 \u203a editing a draft saves it; a policy-violating edit blocks approval \n\n    Error: expect(locator).toContainText(expected) failed\n\n    Locator: getByTestId('timeline')\n    Expected substring: \"fit_matcher\"\n    Received string:    \"\"\n    Timeout: 5000ms\n\n    Call log:\n      - Expect \"toContainText\" getByTestId('timeline') with timeout 5000ms\n      - waiting for getByTestId('timeline')\n        13 \u00d7 locator resolved to <ol data-testid=\"timeline\"></ol>\n           - unexpected value \"\"\n\n\n       at helpers.ts:19\n\n      17 |   const card = page.getByTestId(\"job-card\").filter({ hasText: jobTitle });\n      18 |   await card.getByRole(\"button\", { name: \"Analyse\" }).click();\n    > 19 |   await expect(page.getByTestId(\"timeline\")).toContainText(\"fit_matcher\");\n         |                                              ^\n      20 |   await page.getByRole(\"link\", { name: /open studio/ }).click();\n      21 |   await expect(page.getByRole(\"heading\", { name: /Proposal studio/ })).toBeVisible();\n      22 | }\n        at analyseUntilStudio (/home/adeel/gigbid/apps/web/tests/e2e/helpers.ts:19:46)\n        at /home/adeel/gigbid/apps/web/tests/e2e/edit.spec.ts:6:3\n\n    attachment #1: screenshot (image/png) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n    test-results/edit-editing-a-draft-saves-87633-lating-edit-blocks-approval-desktop/test-failed-1.png\n    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n    Error Context: test-results/edit-editing-a-draft-saves-87633-lating-edit-blocks-approval-desktop/error-context.md\n\n    attachment #3: trace (application/zip) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n    test-results/edit-editing-a-draft-saves-87633-lating-edit-blocks-approval-desktop/trace.zip\n    Usage:\n\n        npx playwright show-trace test-results/edit-editing-a-draft-saves-87633-lating-edit-blocks-approval-desktop/trace.zip\n\n    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n  2 failed\n    [desktop] \u203a tests/e2e/degraded.spec.ts:4:1 \u203a marketplace down: banner, clear error state, and it recovers \n    [desktop] \u203a tests/e2e/edit.spec.ts:4:1 \u203a editing a draft saves it; a policy-violating edit blocks approval \n  6 passed (11.0s)\n",
+  "html_report": "apps/web/playwright-report/index.html",
+  "stats": {
+    "startTime": "2026-11-14T06:55:14.751Z",
+    "duration": 11014.537,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "browser_report": {
+    "config": {
+      "argv": [
+        "/home/adeel/gigbid/.local-models/node-runtime/node-v22.23.5-linux-x64/bin/node",
+        "/home/adeel/gigbid/apps/web/node_modules/@playwright/test/cli.js",
+        "test",
+        "--workers=2"
+      ],
+      "configFile": "/home/adeel/gigbid/apps/web/playwright.config.ts",
+      "rootDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+      "failOnFlakyTests": false,
+      "forbidOnly": false,
+      "fullyParallel": false,
+      "globalSetup": null,
+      "globalTeardown": null,
+      "globalTimeout": 0,
+      "grep": {},
+      "grepInvert": null,
+      "maxFailures": 0,
+      "metadata": {
+        "actualWorkers": 2
+      },
+      "preserveOutput": "always",
+      "projects": [
+        {
+          "outputDir": "/home/adeel/gigbid/apps/web/test-results",
+          "repeatEach": 1,
+          "retries": 0,
+          "metadata": {
+            "actualWorkers": 2
+          },
+          "id": "desktop",
+          "name": "desktop",
+          "testDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "testIgnore": [],
+          "testMatch": [
+            "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+          ],
+          "timeout": 60000
+        },
+        {
+          "outputDir": "/home/adeel/gigbid/apps/web/test-results",
+          "repeatEach": 1,
+          "retries": 0,
+          "metadata": {
+            "actualWorkers": 2
+          },
+          "id": "phone",
+          "name": "phone",
+          "testDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "testIgnore": [],
+          "testMatch": [
+            "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+          ],
+          "timeout": 60000
+        }
+      ],
+      "filteredProjects": [
+        {
+          "grep": {},
+          "grepInvert": null,
+          "outputDir": "/home/adeel/gigbid/apps/web/test-results",
+          "repeatEach": 1,
+          "retries": 0,
+          "metadata": {
+            "actualWorkers": 2
+          },
+          "name": "desktop",
+          "testDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "snapshotDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "testIgnore": [],
+          "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+          "timeout": 60000,
+          "use": {
+            "baseURL": "http://127.0.0.1:13000",
+            "trace": "retain-on-failure",
+            "screenshot": "only-on-failure",
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            }
+          },
+          "dependencies": [],
+          "ignoreSnapshots": false,
+          "__projectId": "desktop"
+        },
+        {
+          "grep": {},
+          "grepInvert": null,
+          "outputDir": "/home/adeel/gigbid/apps/web/test-results",
+          "repeatEach": 1,
+          "retries": 0,
+          "metadata": {
+            "actualWorkers": 2
+          },
+          "name": "phone",
+          "testDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "snapshotDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "testIgnore": [],
+          "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+          "timeout": 60000,
+          "use": {
+            "baseURL": "http://127.0.0.1:13000",
+            "trace": "retain-on-failure",
+            "screenshot": "only-on-failure",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          },
+          "dependencies": [],
+          "ignoreSnapshots": false,
+          "__projectId": "phone"
+        }
+      ],
+      "quiet": false,
+      "reporter": [
+        [
+          "html",
+          {
+            "open": "never"
+          }
+        ],
+        [
+          "list",
+          null
+        ],
+        [
+          "json",
+          {
+            "outputFile": "test-results/results.json"
+          }
+        ]
+      ],
+      "reportSlowTests": {
+        "max": 5,
+        "threshold": 300000
+      },
+      "shard": null,
+      "tags": [],
+      "updateSnapshots": "default",
+      "updateSourceMethod": "patch",
+      "version": "1.65.0",
+      "workers": 2,
+      "webServer": null
+    },
+    "suites": [
+      {
+        "title": "approve.spec.ts",
+        "file": "approve.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "inbox -> streamed run -> evidence on hover -> approve -> pipeline",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 1430,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T06:55:17.507Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "16b493c0a9730b10f50e-9755591f6db516b27ff5",
+            "file": "approve.spec.ts",
+            "line": 4,
+            "column": 1
+          },
+          {
+            "title": "a pending approval survives a page refresh",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 1093,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T06:55:19.297Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "16b493c0a9730b10f50e-8c1b9aa4e552aa69afa3",
+            "file": "approve.spec.ts",
+            "line": 22,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "degraded.spec.ts",
+        "file": "degraded.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "marketplace down: banner, clear error state, and it recovers",
+            "ok": false,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 1,
+                    "parallelIndex": 1,
+                    "status": "failed",
+                    "duration": 1332,
+                    "error": {
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'queued' })\nExpected: visible\nError: strict mode violation: getByRole('alert').filter({ hasText: 'queued' }) resolved to 2 elements:\n    1) <div role=\"alert\" class=\"banner bad\" data-testid=\"degraded-banner\">Marketplace unavailable. New work is queued (2 wa\u2026</div> aka getByTestId('degraded-banner')\n    2) <div role=\"alert\" class=\"card err\">\u2026</div> aka getByText('Marketplace unavailablemarketplace unavailable: marketplace_unavailableYour')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'queued' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'queued' })\u001b[22m\n",
+                      "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'queued' })\nExpected: visible\nError: strict mode violation: getByRole('alert').filter({ hasText: 'queued' }) resolved to 2 elements:\n    1) <div role=\"alert\" class=\"banner bad\" data-testid=\"degraded-banner\">Marketplace unavailable. New work is queued (2 wa\u2026</div> aka getByTestId('degraded-banner')\n    2) <div role=\"alert\" class=\"card err\">\u2026</div> aka getByText('Marketplace unavailablemarketplace unavailable: marketplace_unavailableYour')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'queued' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'queued' })\u001b[22m\n\n    at /home/adeel/gigbid/apps/web/tests/e2e/degraded.spec.ts:11:71",
+                      "location": {
+                        "file": "/home/adeel/gigbid/apps/web/tests/e2e/degraded.spec.ts",
+                        "column": 71,
+                        "line": 11
+                      },
+                      "snippet": " \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"degraded-banner\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"Marketplace unavailable\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"degraded-banner\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"2 waiting\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"alert\"\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m\"queued\"\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39munroute(\u001b[32m\"**/api/health\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39munroute(\u001b[32m\"**/api/jobs\"\u001b[39m)\u001b[33m;\u001b[39m"
+                    },
+                    "errors": [
+                      {
+                        "location": {
+                          "file": "/home/adeel/gigbid/apps/web/tests/e2e/degraded.spec.ts",
+                          "column": 71,
+                          "line": 11
+                        },
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: 'queued' })\nExpected: visible\nError: strict mode violation: getByRole('alert').filter({ hasText: 'queued' }) resolved to 2 elements:\n    1) <div role=\"alert\" class=\"banner bad\" data-testid=\"degraded-banner\">Marketplace unavailable. New work is queued (2 wa\u2026</div> aka getByTestId('degraded-banner')\n    2) <div role=\"alert\" class=\"card err\">\u2026</div> aka getByText('Marketplace unavailablemarketplace unavailable: marketplace_unavailableYour')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: 'queued' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'queued' })\u001b[22m\n\n\n   9 |   await expect(page.getByTestId(\"degraded-banner\")).toContainText(\"Marketplace unavailable\");\n  10 |   await expect(page.getByTestId(\"degraded-banner\")).toContainText(\"2 waiting\");\n> 11 |   await expect(page.getByRole(\"alert\").filter({ hasText: \"queued\" })).toBeVisible();\n     |                                                                       ^\n  12 |\n  13 |   await page.unroute(\"**/api/health\");\n  14 |   await page.unroute(\"**/api/jobs\");\n    at /home/adeel/gigbid/apps/web/tests/e2e/degraded.spec.ts:11:71"
+                      }
+                    ],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T06:55:17.498Z",
+                    "annotations": [],
+                    "attachments": [
+                      {
+                        "name": "screenshot",
+                        "contentType": "image/png",
+                        "path": "/home/adeel/gigbid/apps/web/test-results/degraded-marketplace-down--964cd-error-state-and-it-recovers-desktop/test-failed-1.png"
+                      },
+                      {
+                        "name": "error-context",
+                        "contentType": "text/markdown",
+                        "path": "/home/adeel/gigbid/apps/web/test-results/degraded-marketplace-down--964cd-error-state-and-it-recovers-desktop/error-context.md"
+                      },
+                      {
+                        "name": "trace",
+                        "contentType": "application/zip",
+                        "path": "/home/adeel/gigbid/apps/web/test-results/degraded-marketplace-down--964cd-error-state-and-it-recovers-desktop/trace.zip"
+                      }
+                    ],
+                    "errorLocation": {
+                      "file": "/home/adeel/gigbid/apps/web/tests/e2e/degraded.spec.ts",
+                      "column": 71,
+                      "line": 11
+                    }
+                  }
+                ],
+                "status": "unexpected"
+              }
+            ],
+            "id": "8e74e3a558d632fead33-a39c9ecd58c20bf72647",
+            "file": "degraded.spec.ts",
+            "line": 4,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "edit.spec.ts",
+        "file": "edit.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "editing a draft saves it; a policy-violating edit blocks approval",
+            "ok": false,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 2,
+                    "parallelIndex": 1,
+                    "status": "failed",
+                    "duration": 5783,
+                    "error": {
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('timeline')\nExpected substring: \u001b[32m\"fit_matcher\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('timeline') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('timeline')\u001b[22m\n\u001b[2m    13 \u00d7 locator resolved to <ol data-testid=\"timeline\"></ol>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n",
+                      "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('timeline')\nExpected substring: \u001b[32m\"fit_matcher\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('timeline') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('timeline')\u001b[22m\n\u001b[2m    13 \u00d7 locator resolved to <ol data-testid=\"timeline\"></ol>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n    at analyseUntilStudio (/home/adeel/gigbid/apps/web/tests/e2e/helpers.ts:19:46)\n    at /home/adeel/gigbid/apps/web/tests/e2e/edit.spec.ts:6:3",
+                      "location": {
+                        "file": "/home/adeel/gigbid/apps/web/tests/e2e/helpers.ts",
+                        "column": 46,
+                        "line": 19
+                      },
+                      "snippet": "\u001b[90m   at \u001b[39mhelpers.ts:19\n\n \u001b[90m 17 |\u001b[39m   \u001b[36mconst\u001b[39m card \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"job-card\"\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m jobTitle })\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m card\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Analyse\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"timeline\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"fit_matcher\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"link\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/open studio/\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"heading\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/Proposal studio/\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m }"
+                    },
+                    "errors": [
+                      {
+                        "location": {
+                          "file": "/home/adeel/gigbid/apps/web/tests/e2e/helpers.ts",
+                          "column": 46,
+                          "line": 19
+                        },
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('timeline')\nExpected substring: \u001b[32m\"fit_matcher\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('timeline') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('timeline')\u001b[22m\n\u001b[2m    13 \u00d7 locator resolved to <ol data-testid=\"timeline\"></ol>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n\n   at helpers.ts:19\n\n  17 |   const card = page.getByTestId(\"job-card\").filter({ hasText: jobTitle });\n  18 |   await card.getByRole(\"button\", { name: \"Analyse\" }).click();\n> 19 |   await expect(page.getByTestId(\"timeline\")).toContainText(\"fit_matcher\");\n     |                                              ^\n  20 |   await page.getByRole(\"link\", { name: /open studio/ }).click();\n  21 |   await expect(page.getByRole(\"heading\", { name: /Proposal studio/ })).toBeVisible();\n  22 | }\n    at analyseUntilStudio (/home/adeel/gigbid/apps/web/tests/e2e/helpers.ts:19:46)\n    at /home/adeel/gigbid/apps/web/tests/e2e/edit.spec.ts:6:3"
+                      }
+                    ],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T06:55:19.748Z",
+                    "annotations": [],
+                    "attachments": [
+                      {
+                        "name": "screenshot",
+                        "contentType": "image/png",
+                        "path": "/home/adeel/gigbid/apps/web/test-results/edit-editing-a-draft-saves-87633-lating-edit-blocks-approval-desktop/test-failed-1.png"
+                      },
+                      {
+                        "name": "error-context",
+                        "contentType": "text/markdown",
+                        "path": "/home/adeel/gigbid/apps/web/test-results/edit-editing-a-draft-saves-87633-lating-edit-blocks-approval-desktop/error-context.md"
+                      },
+                      {
+                        "name": "trace",
+                        "contentType": "application/zip",
+                        "path": "/home/adeel/gigbid/apps/web/test-results/edit-editing-a-draft-saves-87633-lating-edit-blocks-approval-desktop/trace.zip"
+                      }
+                    ],
+                    "errorLocation": {
+                      "file": "/home/adeel/gigbid/apps/web/tests/e2e/helpers.ts",
+                      "column": 46,
+                      "line": 19
+                    }
+                  }
+                ],
+                "status": "unexpected"
+              }
+            ],
+            "id": "9ed70afab1bbfad1daab-008766a59f6e2ddc538f",
+            "file": "edit.spec.ts",
+            "line": 4,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "onboarding.spec.ts",
+        "file": "onboarding.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "onboarding: register, set rates, land on a ranked inbox",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 572,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T06:55:20.406Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "fe534f0825407f213faa-eb6aa4ab7c657ab4fcbb",
+            "file": "onboarding.spec.ts",
+            "line": 4,
+            "column": 1
+          },
+          {
+            "title": "unauthenticated visitors are sent to sign-in @mobile",
+            "ok": true,
+            "tags": [
+              "mobile"
+            ],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 302,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T06:55:20.989Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              },
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "phone",
+                "projectName": "phone",
+                "results": [
+                  {
+                    "workerIndex": 3,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 315,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T06:55:22.450Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "fe534f0825407f213faa-4d0e253b95e77fdf2e01",
+            "file": "onboarding.spec.ts",
+            "line": 12,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "reject.spec.ts",
+        "file": "reject.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "reject requires a reason and records it in analytics",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 823,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T06:55:21.304Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "c85cc255562de8c5f25f-b9e7bcf198d9b75689f7",
+            "file": "reject.spec.ts",
+            "line": 4,
+            "column": 1
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "stats": {
+      "startTime": "2026-11-14T06:55:14.751Z",
+      "duration": 11014.537,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0
+    }
+  }
+}

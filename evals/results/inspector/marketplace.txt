@@ -1,0 +1,147 @@
+MCP Inspector: Tools
+
+gigbid-marketplace
+
+Servers
+Tools
+Prompts
+Resources
+
+Connected (169ms)
+
+Tools (9)
+Paginated
+
+create_proposal_draft
+
+get_client_history
+
+get_connects_balance
+
+get_job
+
+list_messages
+
+list_threads
+
+search_jobs
+
+send_message
+
+submit_proposal
+
+get_connects_balance
+
+READ-ONLY
+IDEMPOTENT
+OPEN-WORLD
+
+Get the freelancer's remaining Connects balance.
+
+Edit as JSON
+Execute Tool
+Load test
+History
+
+Tick two runs to compare them
+
+Compare
+
+Run #1
+
+OK
+
+4:55:08 PM · 47 ms
+
+Re-run
+Results
+
+47 ms
+
+Arguments
+1
+2
+3
+{
+  "balance": 100
+}
+⎘
+Structured Output
+1
+2
+3
+{
+  "balance": 100
+}
+⎘
+Protocol
+Network
+Messages
+LEGACY
+Clear
+Export
+
+11:55:08
+
+CLIENT → SERVER
+
+32ms
+
+OK
+TOOLS/CALL
+
+get_connects_balance
+
+11:55:07
+
+CLIENT → SERVER
+
+109ms
+
+OK
+RESOURCES/TEMPLATES/LIST
+
+11:55:07
+
+CLIENT → SERVER
+
+108ms
+
+OK
+PROMPTS/LIST
+
+11:55:07
+
+CLIENT → SERVER
+
+103ms
+
+OK
+TOOLS/LIST
+
+11:55:07
+
+CLIENT → SERVER
+
+102ms
+
+OK
+RESOURCES/LIST
+
+11:55:07
+
+CLIENT → SERVER
+NOTIFICATIONS/INITIALIZED
+
+11:55:07
+
+CLIENT → SERVER
+
+46ms
+
+OK
+INITIALIZE
+
+v2.15.0
+
+Copyright © Model Context Protocol a Series of LF Projects, LLC.

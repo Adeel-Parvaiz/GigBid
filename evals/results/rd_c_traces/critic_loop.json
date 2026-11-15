@@ -1,0 +1,562 @@
+{
+  "trace_type": "critic_loop",
+  "job_id": "syn-100149",
+  "variant": "hand_built",
+  "trial": {
+    "variant": "hand_built",
+    "persona": "ai-ml-engineer",
+    "job_id": "syn-100149",
+    "job_type": "ordinary",
+    "gold_action": "bid",
+    "action": "bid",
+    "accuracy_action": "bid",
+    "correct": true,
+    "proposal_present": true,
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "partly_supported_before": 2,
+    "raw_violations": [],
+    "caught_violations": 0,
+    "blocking_reasons": [
+      "empty_cover_letter: ''"
+    ],
+    "submission": null,
+    "replied": null,
+    "tokens": 9966,
+    "token_usage_complete": true,
+    "latency_seconds": 19.6446,
+    "error": null,
+    "internal_verification": {
+      "claims_total": 2,
+      "unsupported_before": 0,
+      "unsupported_rate_before": 0.0,
+      "partly_supported_before": 2,
+      "removed_claims": 2,
+      "claims_after": 0,
+      "unsupported_after": 0,
+      "partly_supported_after": 0,
+      "unsupported_rate_after": 0.0,
+      "removed_texts": [
+        "I have extensive experience in designing and deploying image classifiers for product photos using TensorFlow, RAG, and MLOps.",
+        "I have successfully completed projects that reduced manual effort by 50% and won a client project."
+      ]
+    },
+    "critic_revisions": 2,
+    "node_trace": [
+      {
+        "node": "load_job",
+        "ms": 153.0,
+        "wrote": [
+          "client",
+          "job"
+        ]
+      },
+      {
+        "node": "analyst",
+        "ms": 1736.2,
+        "wrote": [
+          "job_spec",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "risk",
+        "ms": 2324.7,
+        "wrote": [
+          "risk_report",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "fit_matcher",
+        "ms": 5.2,
+        "wrote": [
+          "evidence",
+          "fit_report"
+        ]
+      },
+      {
+        "node": "decide",
+        "ms": 0.1,
+        "wrote": [
+          "decision",
+          "status"
+        ]
+      },
+      {
+        "node": "pricing",
+        "ms": 89.7,
+        "wrote": [
+          "price_quote"
+        ]
+      },
+      {
+        "node": "writer",
+        "ms": 8756.8,
+        "wrote": [
+          "proposal_draft",
+          "revisions",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "verifier",
+        "ms": 2.5,
+        "wrote": [
+          "claim_verification",
+          "proposal_draft",
+          "verification_stats"
+        ]
+      },
+      {
+        "node": "critic",
+        "ms": 1186.2,
+        "wrote": [
+          "critique",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "writer",
+        "ms": 3189.3,
+        "wrote": [
+          "proposal_draft",
+          "revisions",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "verifier",
+        "ms": 2.0,
+        "wrote": [
+          "claim_verification",
+          "proposal_draft",
+          "verification_stats"
+        ]
+      },
+      {
+        "node": "critic",
+        "ms": 710.4,
+        "wrote": [
+          "critique",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "writer",
+        "ms": 2640.4,
+        "wrote": [
+          "proposal_draft",
+          "revisions",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "verifier",
+        "ms": 0.9,
+        "wrote": [
+          "claim_verification",
+          "proposal_draft",
+          "verification_stats"
+        ]
+      },
+      {
+        "node": "critic",
+        "ms": 529.7,
+        "wrote": [
+          "critique",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "compliance",
+        "ms": 0.1,
+        "wrote": [
+          "compliance_verdict",
+          "proposal_draft"
+        ]
+      },
+      {
+        "node": "approval",
+        "ms": 0.0,
+        "wrote": [
+          "errors",
+          "status"
+        ]
+      }
+    ],
+    "risk_report": {
+      "score": 0.0,
+      "flags": [],
+      "explanation": "rule flags: [] | The job description is untrustworthy and does not provide concrete evidence of malicious intent."
+    },
+    "compliance_passed": false,
+    "raw_draft": {
+      "job_id": "syn-100149",
+      "questions": [],
+      "claims": [
+        {
+          "text": "I have extensive experience in designing and deploying image classifiers for product photos using TensorFlow, RAG, and MLOps. I have successfully completed projects that reduced manual effort by 50% and won a client project.",
+          "evidence_ids": [
+            "ai-ml-engineer-cs-02",
+            "ai-ml-engineer-cs-13",
+            "ai-ml-engineer-cs-12",
+            "ai-ml-engineer-cs-00",
+            "ai-ml-engineer-cs-15"
+          ],
+          "kind": "claim",
+          "section": "cover"
+        }
+      ],
+      "edited_cover_letter": null,
+      "cover_letter": "I have extensive experience in designing and deploying image classifiers for product photos using TensorFlow, RAG, and MLOps. I have successfully completed projects that reduced manual effort by 50% and won a client project.",
+      "screening_answers": []
+    },
+    "evidence": [
+      {
+        "freelancer_id": "ai-ml-engineer",
+        "project_id": "ai-ml-engineer-p02",
+        "source": "synthetic",
+        "provenance": "synthetic",
+        "date": "2024-04-06",
+        "evidence_id": "ai-ml-engineer-cs-02",
+        "type": "case_study",
+        "title": "An image classifier for product photos",
+        "summary": "Built an image classifier for product photos using scikit-learn, LangChain, RAG and NLP. Compared two baselines and kept the simpler one.",
+        "skills": [
+          "scikit-learn",
+          "LangChain",
+          "RAG",
+          "NLP"
+        ],
+        "outcome": "client replied",
+        "parent_evidence_id": "ai-ml-engineer-cs-02",
+        "chunk_index": 0,
+        "persona": "ai-ml-engineer",
+        "project": "ai-ml-engineer-p02",
+        "client_industry": null,
+        "score": 0.03252247488101534
+      },
+      {
+        "freelancer_id": "ai-ml-engineer",
+        "project_id": "ai-ml-engineer-p13",
+        "source": "synthetic",
+        "provenance": "synthetic",
+        "date": "2025-10-03",
+        "evidence_id": "ai-ml-engineer-cs-13",
+        "type": "case_study",
+        "title": "A document question-answering assistant",
+        "summary": "Designed a document question-answering assistant using TensorFlow, computer vision and MLOps. Documented limitations and monitoring steps for the client. Cut manual effort by 50%.",
+        "skills": [
+          "TensorFlow",
+          "computer vision",
+          "MLOps"
+        ],
+        "outcome": "5-star review",
+        "parent_evidence_id": "ai-ml-engineer-cs-13",
+        "chunk_index": 0,
+        "persona": "ai-ml-engineer",
+        "project": "ai-ml-engineer-p13",
+        "client_industry": null,
+        "score": 0.01639344262295082
+      },
+      {
+        "freelancer_id": "ai-ml-engineer",
+        "project_id": "ai-ml-engineer-p12",
+        "source": "synthetic",
+        "provenance": "synthetic",
+        "date": "2024-05-11",
+        "evidence_id": "ai-ml-engineer-cs-12",
+        "type": "case_study",
+        "title": "A document question-answering assistant",
+        "summary": "Designed a document question-answering assistant using scikit-learn, MLOps and RAG. Compared two baselines and kept the simpler one. Cut manual effort by 40%.",
+        "skills": [
+          "scikit-learn",
+          "MLOps",
+          "RAG"
+        ],
+        "outcome": "5-star review",
+        "parent_evidence_id": "ai-ml-engineer-cs-12",
+        "chunk_index": 0,
+        "persona": "ai-ml-engineer",
+        "project": "ai-ml-engineer-p12",
+        "client_industry": null,
+        "score": 0.01639344262295082
+      },
+      {
+        "freelancer_id": "ai-ml-engineer",
+        "project_id": "ai-ml-engineer-p00",
+        "source": "synthetic",
+        "provenance": "synthetic",
+        "date": "2024-02-21",
+        "evidence_id": "ai-ml-engineer-cs-00",
+        "type": "case_study",
+        "title": "An image classifier for product photos",
+        "summary": "Designed an image classifier for product photos using torch, large language model, text classification and MLOps. Deployed behind an API with a simple health check.",
+        "skills": [
+          "PyTorch",
+          "LLM",
+          "NLP",
+          "MLOps"
+        ],
+        "outcome": "won",
+        "parent_evidence_id": "ai-ml-engineer-cs-00",
+        "chunk_index": 0,
+        "persona": "ai-ml-engineer",
+        "project": "ai-ml-engineer-p00",
+        "client_industry": null,
+        "score": 0.01639344262295082
+      },
+      {
+        "freelancer_id": "ai-ml-engineer",
+        "project_id": "ai-ml-engineer-p15",
+        "source": "synthetic",
+        "provenance": "synthetic",
+        "date": "2026-06-12",
+        "evidence_id": "ai-ml-engineer-cs-15",
+        "type": "case_study",
+        "title": "A customer churn prediction pipeline",
+        "summary": "Automated a customer churn prediction pipeline using TensorFlow, machine learning, MLOps and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 50%.",
+        "skills": [
+          "TensorFlow",
+          "machine learning",
+          "MLOps",
+          "deep learning"
+        ],
+        "outcome": "personal project",
+        "parent_evidence_id": "ai-ml-engineer-cs-15",
+        "chunk_index": 0,
+        "persona": "ai-ml-engineer",
+        "project": "ai-ml-engineer-p15",
+        "client_industry": null,
+        "score": 0.01639344262295082
+      }
+    ],
+    "reply_eligible": false,
+    "tool_call_attempts_blocked": []
+  },
+  "trace": {
+    "variant": "hand_built",
+    "job_id": "syn-100149",
+    "tool_calls": [],
+    "action": "bid",
+    "status": "needs_attention",
+    "risk_report": {
+      "score": 0.0,
+      "flags": [],
+      "explanation": "rule flags: [] | The job description is untrustworthy and does not provide concrete evidence of malicious intent."
+    },
+    "node_trace": [
+      {
+        "node": "load_job",
+        "ms": 153.0,
+        "wrote": [
+          "client",
+          "job"
+        ]
+      },
+      {
+        "node": "analyst",
+        "ms": 1736.2,
+        "wrote": [
+          "job_spec",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "risk",
+        "ms": 2324.7,
+        "wrote": [
+          "risk_report",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "fit_matcher",
+        "ms": 5.2,
+        "wrote": [
+          "evidence",
+          "fit_report"
+        ]
+      },
+      {
+        "node": "decide",
+        "ms": 0.1,
+        "wrote": [
+          "decision",
+          "status"
+        ]
+      },
+      {
+        "node": "pricing",
+        "ms": 89.7,
+        "wrote": [
+          "price_quote"
+        ]
+      },
+      {
+        "node": "writer",
+        "ms": 8756.8,
+        "wrote": [
+          "proposal_draft",
+          "revisions",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "verifier",
+        "ms": 2.5,
+        "wrote": [
+          "claim_verification",
+          "proposal_draft",
+          "verification_stats"
+        ]
+      },
+      {
+        "node": "critic",
+        "ms": 1186.2,
+        "wrote": [
+          "critique",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "writer",
+        "ms": 3189.3,
+        "wrote": [
+          "proposal_draft",
+          "revisions",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "verifier",
+        "ms": 2.0,
+        "wrote": [
+          "claim_verification",
+          "proposal_draft",
+          "verification_stats"
+        ]
+      },
+      {
+        "node": "critic",
+        "ms": 710.4,
+        "wrote": [
+          "critique",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "writer",
+        "ms": 2640.4,
+        "wrote": [
+          "proposal_draft",
+          "revisions",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "verifier",
+        "ms": 0.9,
+        "wrote": [
+          "claim_verification",
+          "proposal_draft",
+          "verification_stats"
+        ]
+      },
+      {
+        "node": "critic",
+        "ms": 529.7,
+        "wrote": [
+          "critique",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "compliance",
+        "ms": 0.1,
+        "wrote": [
+          "compliance_verdict",
+          "proposal_draft"
+        ]
+      },
+      {
+        "node": "approval",
+        "ms": 0.0,
+        "wrote": [
+          "errors",
+          "status"
+        ]
+      }
+    ],
+    "raw_draft": {
+      "job_id": "syn-100149",
+      "questions": [],
+      "claims": [
+        {
+          "text": "I have extensive experience in designing and deploying image classifiers for product photos using TensorFlow, RAG, and MLOps. I have successfully completed projects that reduced manual effort by 50% and won a client project.",
+          "evidence_ids": [
+            "ai-ml-engineer-cs-02",
+            "ai-ml-engineer-cs-13",
+            "ai-ml-engineer-cs-12",
+            "ai-ml-engineer-cs-00",
+            "ai-ml-engineer-cs-15"
+          ],
+          "kind": "claim",
+          "section": "cover"
+        }
+      ],
+      "edited_cover_letter": null,
+      "cover_letter": "I have extensive experience in designing and deploying image classifiers for product photos using TensorFlow, RAG, and MLOps. I have successfully completed projects that reduced manual effort by 50% and won a client project.",
+      "screening_answers": []
+    },
+    "final_draft": {
+      "job_id": "syn-100149",
+      "questions": [
+        "What is your experience with machine learning?",
+        "How would you approach MLOps for this project?"
+      ],
+      "claims": [],
+      "edited_cover_letter": null,
+      "cover_letter": "",
+      "screening_answers": [
+        "",
+        ""
+      ]
+    },
+    "approval": null,
+    "submission": null,
+    "internal_verification": {
+      "claims_total": 2,
+      "unsupported_before": 0,
+      "unsupported_rate_before": 0.0,
+      "partly_supported_before": 2,
+      "removed_claims": 2,
+      "claims_after": 0,
+      "unsupported_after": 0,
+      "partly_supported_after": 0,
+      "unsupported_rate_after": 0.0,
+      "removed_texts": [
+        "I have extensive experience in designing and deploying image classifiers for product photos using TensorFlow, RAG, and MLOps.",
+        "I have successfully completed projects that reduced manual effort by 50% and won a client project."
+      ]
+    },
+    "critic_revisions": 2,
+    "common_approval_gate": {
+      "allowed": false,
+      "reason": "eligible local GigSim write only"
+    },
+    "common_evaluation": {
+      "proposal_present": true,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "partly_supported_before": 2,
+      "raw_violations": [],
+      "caught_violations": 0,
+      "blocking_reasons": [
+        "empty_cover_letter: ''"
+      ],
+      "compliance_passed": false
+    }
+  }
+}

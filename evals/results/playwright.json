@@ -1,0 +1,629 @@
+{
+  "started_at_pkt": "2026-11-14T18:03:59.489084+05:00",
+  "finished_at_pkt": "2026-11-14T18:04:23.380054+05:00",
+  "returncode": 0,
+  "scope": "Real Chromium browser against isolated FastAPI/React servers; deterministic HeuristicLLM and sample data; degraded-mode responses deliberately mocked in that test.",
+  "node_version": "v22.23.5",
+  "stdout": "[WebServer] INFO:     Started server process [5408]\n[WebServer] INFO:     Waiting for application startup.\n[WebServer] INFO:     Application startup complete.\n[WebServer] INFO:     Uvicorn running on http://127.0.0.1:18000 (Press CTRL+C to quit)\n\nRunning 12 tests using 2 workers\n\n  \u2713   2 [desktop] \u203a tests/e2e/approve.spec.ts:4:1 \u203a inbox -> streamed run -> evidence on hover -> approve -> pipeline (2.2s)\n  \u2713   3 [desktop] \u203a tests/e2e/approve.spec.ts:25:1 \u203a a pending approval survives a page refresh (1.4s)\n  \u2713   4 [desktop] \u203a tests/e2e/edit.spec.ts:4:1 \u203a editing a draft saves it; a policy-violating edit blocks approval (1.8s)\n  \u2713   5 [desktop] \u203a tests/e2e/github-import.spec.ts:4:1 \u203a GitHub README import requires repository and authorship confirmation (1.8s)\n  \u2713   6 [desktop] \u203a tests/e2e/onboarding.spec.ts:4:1 \u203a onboarding: register, set rates, land on a ranked inbox (1.6s)\n  \u2713   7 [desktop] \u203a tests/e2e/onboarding.spec.ts:20:1 \u203a unauthenticated visitors are sent to sign-in @mobile (714ms)\n  \u2713   1 [desktop] \u203a tests/e2e/degraded.spec.ts:4:1 \u203a marketplace down: banner, clear error state, and it recovers (10.0s)\n  \u2713   8 [desktop] \u203a tests/e2e/platform-confirmation.spec.ts:4:1 \u203a Upwork confirmation requires separate review and an attachment choice (2.3s)\n[WebServer] Processing request of type CallToolRequest\n[WebServer] Processing request of type ListToolsRequest\n[WebServer] Processing request of type CallToolRequest\n[WebServer] Processing request of type ListToolsRequest\n  \u2713  10 [desktop] \u203a tests/e2e/reject.spec.ts:4:1 \u203a reject requires a reason and records it in analytics (2.0s)\n  \u2713   9 [desktop] \u203a tests/e2e/portfolio-ingestion.spec.ts:5:1 \u203a portfolio upload is indexed, updated and searchable without restarting @mobile (4.1s)\n  \u2713  11 [phone] \u203a tests/e2e/onboarding.spec.ts:20:1 \u203a unauthenticated visitors are sent to sign-in @mobile (786ms)\n[WebServer] Processing request of type CallToolRequest\n[WebServer] Processing request of type ListToolsRequest\n[WebServer] Processing request of type CallToolRequest\n[WebServer] Processing request of type ListToolsRequest\n  \u2713  12 [phone] \u203a tests/e2e/portfolio-ingestion.spec.ts:5:1 \u203a portfolio upload is indexed, updated and searchable without restarting @mobile (3.1s)\n\n  12 passed (22.4s)\n",
+  "html_report": "apps/web/playwright-report/index.html",
+  "stats": {
+    "startTime": "2026-11-14T13:04:00.843Z",
+    "duration": 22427.505999999998,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "browser_report": {
+    "config": {
+      "argv": [
+        "/home/adeel/gigbid/.local-models/node-runtime/node-v22.23.5-linux-x64/bin/node",
+        "/home/adeel/gigbid/apps/web/node_modules/@playwright/test/cli.js",
+        "test",
+        "--workers=2"
+      ],
+      "configFile": "/home/adeel/gigbid/apps/web/playwright.config.ts",
+      "rootDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+      "failOnFlakyTests": false,
+      "forbidOnly": false,
+      "fullyParallel": false,
+      "globalSetup": null,
+      "globalTeardown": null,
+      "globalTimeout": 0,
+      "grep": {},
+      "grepInvert": null,
+      "maxFailures": 0,
+      "metadata": {
+        "actualWorkers": 2
+      },
+      "preserveOutput": "always",
+      "projects": [
+        {
+          "outputDir": "/home/adeel/gigbid/apps/web/test-results",
+          "repeatEach": 1,
+          "retries": 0,
+          "metadata": {
+            "actualWorkers": 2
+          },
+          "id": "desktop",
+          "name": "desktop",
+          "testDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "testIgnore": [],
+          "testMatch": [
+            "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+          ],
+          "timeout": 60000
+        },
+        {
+          "outputDir": "/home/adeel/gigbid/apps/web/test-results",
+          "repeatEach": 1,
+          "retries": 0,
+          "metadata": {
+            "actualWorkers": 2
+          },
+          "id": "phone",
+          "name": "phone",
+          "testDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "testIgnore": [],
+          "testMatch": [
+            "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+          ],
+          "timeout": 60000
+        }
+      ],
+      "filteredProjects": [
+        {
+          "grep": {},
+          "grepInvert": null,
+          "outputDir": "/home/adeel/gigbid/apps/web/test-results",
+          "repeatEach": 1,
+          "retries": 0,
+          "metadata": {
+            "actualWorkers": 2
+          },
+          "name": "desktop",
+          "testDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "snapshotDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "testIgnore": [],
+          "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+          "timeout": 60000,
+          "use": {
+            "baseURL": "http://127.0.0.1:13000",
+            "trace": "retain-on-failure",
+            "screenshot": "only-on-failure",
+            "viewport": {
+              "width": 1280,
+              "height": 800
+            }
+          },
+          "dependencies": [],
+          "ignoreSnapshots": false,
+          "__projectId": "desktop"
+        },
+        {
+          "grep": {},
+          "grepInvert": null,
+          "outputDir": "/home/adeel/gigbid/apps/web/test-results",
+          "repeatEach": 1,
+          "retries": 0,
+          "metadata": {
+            "actualWorkers": 2
+          },
+          "name": "phone",
+          "testDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "snapshotDir": "/home/adeel/gigbid/apps/web/tests/e2e",
+          "testIgnore": [],
+          "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+          "timeout": 60000,
+          "use": {
+            "baseURL": "http://127.0.0.1:13000",
+            "trace": "retain-on-failure",
+            "screenshot": "only-on-failure",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            }
+          },
+          "dependencies": [],
+          "ignoreSnapshots": false,
+          "__projectId": "phone"
+        }
+      ],
+      "quiet": false,
+      "reporter": [
+        [
+          "html",
+          {
+            "open": "never"
+          }
+        ],
+        [
+          "list",
+          null
+        ],
+        [
+          "json",
+          {
+            "outputFile": "test-results/results.json"
+          }
+        ]
+      ],
+      "reportSlowTests": {
+        "max": 5,
+        "threshold": 300000
+      },
+      "shard": null,
+      "tags": [],
+      "updateSnapshots": "default",
+      "updateSourceMethod": "patch",
+      "version": "1.65.0",
+      "workers": 2,
+      "webServer": null
+    },
+    "suites": [
+      {
+        "title": "approve.spec.ts",
+        "file": "approve.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "inbox -> streamed run -> evidence on hover -> approve -> pipeline",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 2160,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:04.498Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "16b493c0a9730b10f50e-9755591f6db516b27ff5",
+            "file": "approve.spec.ts",
+            "line": 4,
+            "column": 1
+          },
+          {
+            "title": "a pending approval survives a page refresh",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 1367,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:07.184Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "16b493c0a9730b10f50e-8c1b9aa4e552aa69afa3",
+            "file": "approve.spec.ts",
+            "line": 25,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "degraded.spec.ts",
+        "file": "degraded.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "marketplace down: banner, clear error state, and it recovers",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 1,
+                    "parallelIndex": 1,
+                    "status": "passed",
+                    "duration": 9970,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:04.467Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "8e74e3a558d632fead33-a39c9ecd58c20bf72647",
+            "file": "degraded.spec.ts",
+            "line": 4,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "edit.spec.ts",
+        "file": "edit.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "editing a draft saves it; a policy-violating edit blocks approval",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 1776,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:08.582Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "9ed70afab1bbfad1daab-008766a59f6e2ddc538f",
+            "file": "edit.spec.ts",
+            "line": 4,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "github-import.spec.ts",
+        "file": "github-import.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "GitHub README import requires repository and authorship confirmation",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 1753,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:10.385Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "7518e25bda3fd754fed5-531c98ef3baefa5fffa4",
+            "file": "github-import.spec.ts",
+            "line": 4,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "onboarding.spec.ts",
+        "file": "onboarding.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "onboarding: register, set rates, land on a ranked inbox",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 1602,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:12.164Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "fe534f0825407f213faa-eb6aa4ab7c657ab4fcbb",
+            "file": "onboarding.spec.ts",
+            "line": 4,
+            "column": 1
+          },
+          {
+            "title": "unauthenticated visitors are sent to sign-in @mobile",
+            "ok": true,
+            "tags": [
+              "mobile"
+            ],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 714,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:13.787Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              },
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "phone",
+                "projectName": "phone",
+                "results": [
+                  {
+                    "workerIndex": 2,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 786,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:19.630Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "fe534f0825407f213faa-4d0e253b95e77fdf2e01",
+            "file": "onboarding.spec.ts",
+            "line": 20,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "platform-confirmation.spec.ts",
+        "file": "platform-confirmation.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "Upwork confirmation requires separate review and an attachment choice",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 2329,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:14.530Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "6b9865d73fe7aca7fb5b-2b2bf3873b3b5f091882",
+            "file": "platform-confirmation.spec.ts",
+            "line": 4,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "portfolio-ingestion.spec.ts",
+        "file": "portfolio-ingestion.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "portfolio upload is indexed, updated and searchable without restarting @mobile",
+            "ok": true,
+            "tags": [
+              "mobile"
+            ],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 1,
+                    "parallelIndex": 1,
+                    "status": "passed",
+                    "duration": 4081,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:15.000Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              },
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "phone",
+                "projectName": "phone",
+                "results": [
+                  {
+                    "workerIndex": 3,
+                    "parallelIndex": 1,
+                    "status": "passed",
+                    "duration": 3149,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:19.806Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "65e557f5dd40ed877ffa-f110119b379eb34a84ed",
+            "file": "portfolio-ingestion.spec.ts",
+            "line": 5,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "reject.spec.ts",
+        "file": "reject.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "reject requires a reason and records it in analytics",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 60000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "desktop",
+                "projectName": "desktop",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 2030,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-11-14T13:04:16.889Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "c85cc255562de8c5f25f-b9e7bcf198d9b75689f7",
+            "file": "reject.spec.ts",
+            "line": 4,
+            "column": 1
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "stats": {
+      "startTime": "2026-11-14T13:04:00.843Z",
+      "duration": 22427.505999999998,
+      "expected": 12,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  }
+}

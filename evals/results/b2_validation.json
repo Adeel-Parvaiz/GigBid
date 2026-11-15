@@ -1,0 +1,42 @@
+{
+  "recorded_at": "2026-11-14T12:48:06.310543+00:00",
+  "python": {
+    "passed": 163,
+    "skipped": 2,
+    "failures": 0,
+    "seconds": "51.293"
+  },
+  "final_focused_after_coverage_config": {
+    "passed": 10
+  },
+  "real_mcp_neural_verification": "evals/results/b2/mcp_verification.json",
+  "repository_rules": "ok   secrets\nok   gigsim\nok   prompts\nok   readme-numbers\n",
+  "hashes": {
+    "rag/variants/v0_naive.py": "684f5ee8c52a966a8cea1cc17a966f6d2bbc7daba3d022a821a12b1150b7ac71",
+    "rag/variants/v1_decomposed.py": "8f67beb815dc7697ad5d693934eda598b3137b0bd4e2644acd0bbaebb3e39f63",
+    "rag/variants/v2_hybrid.py": "ffbc86a51e19c823053eca9fe045d1fa1ecffe62911b8d73849da751bdcd6ef0",
+    "rag/variants/v3_rerank.py": "192eed7228519a4e4da7c9d40c626efa14c0293c9fac3485f8125fe3e6084313",
+    "rag/variants/v8_corrective.py": "eac23a7367b266228de9fd031c14df35afa26d9cea8410a466066188680d4679",
+    "rag/retriever.py": "d6c2ae9ba6c33e1f053176db707b06b7ea4b3cbeb808e2b522cec73663499830",
+    "agent/mcp_client.py": "83763ff72d7624926bb51f2decc60b87f52eae7119323b739e9a88b7909cd77f",
+    "mcp_servers/portfolio/tools.py": "ace0155a98fd8dd088aea0ff43dae487b753707495d2abfcc2cc55d08347ca39",
+    "tests/contract/snapshots/portfolio.json": "2520ec766efb95e8639815edec3536a91f20189b5c65f43ca6aaaf8ea19ca3c9"
+  },
+  "comparison": {
+    "trials": 3000,
+    "variants": 5,
+    "personas": 3,
+    "source_items": 88,
+    "chunks": 88,
+    "summary_sha256": "8d4a0eddb2b92601a87e2f1e3d2ce29959ce18e6fcea5363cccadfb8ead203ae",
+    "trials_sha256": "17bed3741a5c64d158ab5470f077a07a26cc22f52f60cbad1144d5d88e269c37"
+  },
+  "live_services_and_closed_test_ports": {
+    "3000": "open",
+    "8000": "open",
+    "8001": "open",
+    "8003": "open",
+    "18000": "closed",
+    "13000": "closed"
+  }
+}

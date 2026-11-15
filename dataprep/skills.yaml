@@ -1,0 +1,41 @@
+# Skill lexicon: canonical name, aliases, category. Used to extract skills from REAL job text (noisy by nature)
+# and as the vocabulary for synthetic data. Extend it; every match is a heuristic label, not ground truth.
+skills:
+  - {name: Python, aliases: [python, python3], category: common}
+  - {name: SQL, aliases: [sql, mysql, postgresql, postgres, sqlite], category: common}
+  - {name: Git, aliases: [git, github, gitlab], category: common}
+  - {name: Docker, aliases: [docker, containerization], category: common}
+  - {name: scikit-learn, aliases: [scikit-learn, sklearn, scikit learn], category: ml_ai}
+  - {name: PyTorch, aliases: [pytorch, torch], category: ml_ai}
+  - {name: TensorFlow, aliases: [tensorflow, keras], category: ml_ai}
+  - {name: NLP, aliases: [nlp, natural language processing, text classification, sentiment analysis], category: ml_ai}
+  - {name: computer vision, aliases: [computer vision, image classification, object detection, opencv, yolo], category: ml_ai}
+  - {name: LLM, aliases: [llm, large language model, gpt, openai api, prompt engineering], category: ml_ai}
+  - {name: RAG, aliases: [rag, retrieval augmented generation, retrieval-augmented generation, vector database, pinecone, chroma, faiss], category: ml_ai}
+  - {name: LangChain, aliases: [langchain, langgraph, llamaindex], category: ml_ai}
+  - {name: machine learning, aliases: [machine learning, ml model, predictive model, classification, regression, xgboost, random forest], category: ml_ai}
+  - {name: deep learning, aliases: [deep learning, neural network, cnn, transformers, hugging face, huggingface], category: ml_ai}
+  - {name: time series, aliases: [time series, forecasting, arima, prophet], category: ml_ai}
+  - {name: MLOps, aliases: [mlops, mlflow, model deployment, kubeflow], category: ml_ai}
+  - {name: FastAPI, aliases: [fastapi, flask, django rest], category: web_dev}
+  - {name: Django, aliases: [django], category: web_dev}
+  - {name: React, aliases: [react, reactjs, react.js], category: web_dev}
+  - {name: Next.js, aliases: [next.js, nextjs], category: web_dev}
+  - {name: TypeScript, aliases: [typescript], category: web_dev}
+  - {name: JavaScript, aliases: [javascript, node.js, nodejs, express.js], category: web_dev}
+  - {name: Vue, aliases: [vue, vue.js, vuejs, nuxt], category: web_dev}
+  - {name: HTML/CSS, aliases: [html, css, tailwind, bootstrap], category: web_dev}
+  - {name: REST API, aliases: [rest api, restful, api integration, graphql], category: web_dev}
+  - {name: MongoDB, aliases: [mongodb, mongoose], category: web_dev}
+  - {name: AWS, aliases: [aws, ec2, s3, lambda], category: web_dev}
+  - {name: WordPress, aliases: [wordpress, woocommerce, shopify], category: web_dev}
+  - {name: pandas, aliases: [pandas, dataframe], category: data_analytics}
+  - {name: Excel, aliases: [excel, spreadsheet, google sheets, vba], category: data_analytics}
+  - {name: Tableau, aliases: [tableau], category: data_analytics}
+  - {name: Power BI, aliases: [power bi, powerbi], category: data_analytics}
+  - {name: dashboarding, aliases: [dashboard, data visualization, plotly, looker, metabase, streamlit], category: data_analytics}
+  - {name: dbt, aliases: [dbt], category: data_analytics}
+  - {name: Airflow, aliases: [airflow, etl, data pipeline, data engineering], category: data_analytics}
+  - {name: statistics, aliases: [statistics, statistical analysis, a/b test, hypothesis testing, r programming], category: data_analytics}
+  - {name: web scraping, aliases: [web scraping, scraper, beautifulsoup, scrapy, selenium], category: data_analytics}
+  - {name: data cleaning, aliases: [data cleaning, data entry, data wrangling, data cleansing], category: data_analytics}

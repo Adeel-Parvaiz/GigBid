@@ -1,0 +1,24 @@
+{
+  "job_id": "syn-100243",
+  "model": "qwen2.5:1.5b",
+  "before": {
+    "score": 0.95,
+    "flags": [
+      "prompt_injection"
+    ],
+    "explanation": ""
+  },
+  "after": {
+    "score": 0.7,
+    "flags": [
+      "prompt_injection"
+    ],
+    "explanation": ""
+  },
+  "note": "Real model diagnostic on one pilot job; not part of held-out comparison.",
+  "after_explicit_examples": {
+    "score": 0.0,
+    "flags": [],
+    "explanation": "The job description is untrustworthy and does not provide concrete evidence of malicious intent."
+  }
+}

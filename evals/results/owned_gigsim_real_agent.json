@@ -1,0 +1,426 @@
+{
+  "scope": "Real local LLM + actual bid graph + authenticated MCP + project-owned GigSim REST + disposable SQLite",
+  "llm": {
+    "analyst": "qwen25-15b",
+    "risk": "qwen25-15b",
+    "writer": "qwen25-15b",
+    "critic": "qwen25-15b",
+    "liaison_intent": "qwen25-15b",
+    "liaison_reply": "qwen25-15b"
+  },
+  "approval": "Scripted approvals only inside disposable synthetic simulator; not human evaluation or real marketplace writes.",
+  "cases": [
+    {
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-101281",
+      "gold_action": "bid",
+      "decision": {
+        "action": "bid",
+        "reasons": [
+          "fit 1.00 >= 0.6"
+        ]
+      },
+      "status_before": "",
+      "approval_gate_reached": true,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 94.2,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 1234.6,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 2211.4,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.1,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.1,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        },
+        {
+          "node": "pricing",
+          "ms": 70.2,
+          "wrote": [
+            "price_quote"
+          ]
+        },
+        {
+          "node": "writer",
+          "ms": 6033.7,
+          "wrote": [
+            "proposal_draft",
+            "revisions"
+          ]
+        },
+        {
+          "node": "verifier",
+          "ms": 0.6,
+          "wrote": [
+            "claim_verification",
+            "proposal_draft",
+            "verification_stats"
+          ]
+        },
+        {
+          "node": "critic",
+          "ms": 423.1,
+          "wrote": [
+            "critique"
+          ]
+        },
+        {
+          "node": "compliance",
+          "ms": 0.9,
+          "wrote": [
+            "compliance_verdict",
+            "proposal_draft"
+          ]
+        }
+      ],
+      "preview_spent_zero_connects": true,
+      "blocking_reasons": [],
+      "status_after_sandbox_approval": "submitted",
+      "connects_spent": 12,
+      "seconds": 9.254
+    },
+    {
+      "persona": "fullstack-dev",
+      "job_id": "syn-100354",
+      "gold_action": "bid",
+      "decision": {
+        "action": "bid",
+        "reasons": [
+          "fit 1.00 >= 0.6"
+        ]
+      },
+      "status_before": "needs_attention",
+      "approval_gate_reached": false,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 88.1,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 890.8,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 1226.6,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.5,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        },
+        {
+          "node": "pricing",
+          "ms": 43.6,
+          "wrote": [
+            "price_quote"
+          ]
+        },
+        {
+          "node": "writer",
+          "ms": 3025.5,
+          "wrote": [
+            "proposal_draft",
+            "revisions"
+          ]
+        },
+        {
+          "node": "verifier",
+          "ms": 0.3,
+          "wrote": [
+            "claim_verification",
+            "proposal_draft",
+            "verification_stats"
+          ]
+        },
+        {
+          "node": "critic",
+          "ms": 269.9,
+          "wrote": [
+            "critique"
+          ]
+        },
+        {
+          "node": "writer",
+          "ms": 2926.5,
+          "wrote": [
+            "proposal_draft",
+            "revisions"
+          ]
+        },
+        {
+          "node": "verifier",
+          "ms": 0.3,
+          "wrote": [
+            "claim_verification",
+            "proposal_draft",
+            "verification_stats"
+          ]
+        },
+        {
+          "node": "critic",
+          "ms": 229.0,
+          "wrote": [
+            "critique"
+          ]
+        },
+        {
+          "node": "writer",
+          "ms": 3128.3,
+          "wrote": [
+            "proposal_draft",
+            "revisions"
+          ]
+        },
+        {
+          "node": "verifier",
+          "ms": 0.4,
+          "wrote": [
+            "claim_verification",
+            "proposal_draft",
+            "verification_stats"
+          ]
+        },
+        {
+          "node": "critic",
+          "ms": 233.8,
+          "wrote": [
+            "critique"
+          ]
+        },
+        {
+          "node": "compliance",
+          "ms": 0.1,
+          "wrote": [
+            "compliance_verdict",
+            "proposal_draft"
+          ]
+        },
+        {
+          "node": "approval",
+          "ms": 0.0,
+          "wrote": [
+            "errors",
+            "status"
+          ]
+        }
+      ],
+      "preview_spent_zero_connects": true,
+      "blocking_reasons": [],
+      "sandbox_submission": "not attempted: skipped or blocked by normal gate",
+      "seconds": 11.278
+    },
+    {
+      "persona": "data-analyst",
+      "job_id": "syn-100349",
+      "gold_action": "bid",
+      "decision": {
+        "action": "bid",
+        "reasons": [
+          "fit 1.00 >= 0.6"
+        ]
+      },
+      "status_before": "needs_attention",
+      "approval_gate_reached": false,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 75.9,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 1559.4,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 729.9,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.4,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        },
+        {
+          "node": "pricing",
+          "ms": 39.8,
+          "wrote": [
+            "price_quote"
+          ]
+        },
+        {
+          "node": "writer",
+          "ms": 3514.5,
+          "wrote": [
+            "proposal_draft",
+            "revisions"
+          ]
+        },
+        {
+          "node": "verifier",
+          "ms": 0.4,
+          "wrote": [
+            "claim_verification",
+            "proposal_draft",
+            "verification_stats"
+          ]
+        },
+        {
+          "node": "critic",
+          "ms": 255.4,
+          "wrote": [
+            "critique"
+          ]
+        },
+        {
+          "node": "writer",
+          "ms": 3542.5,
+          "wrote": [
+            "proposal_draft",
+            "revisions"
+          ]
+        },
+        {
+          "node": "verifier",
+          "ms": 0.4,
+          "wrote": [
+            "claim_verification",
+            "proposal_draft",
+            "verification_stats"
+          ]
+        },
+        {
+          "node": "critic",
+          "ms": 255.8,
+          "wrote": [
+            "critique"
+          ]
+        },
+        {
+          "node": "writer",
+          "ms": 2891.6,
+          "wrote": [
+            "proposal_draft",
+            "revisions"
+          ]
+        },
+        {
+          "node": "verifier",
+          "ms": 0.3,
+          "wrote": [
+            "claim_verification",
+            "proposal_draft",
+            "verification_stats"
+          ]
+        },
+        {
+          "node": "critic",
+          "ms": 233.9,
+          "wrote": [
+            "critique"
+          ]
+        },
+        {
+          "node": "compliance",
+          "ms": 0.1,
+          "wrote": [
+            "compliance_verdict",
+            "proposal_draft"
+          ]
+        },
+        {
+          "node": "approval",
+          "ms": 0.0,
+          "wrote": [
+            "errors",
+            "status"
+          ]
+        }
+      ],
+      "preview_spent_zero_connects": true,
+      "blocking_reasons": [],
+      "sandbox_submission": "not attempted: skipped or blocked by normal gate",
+      "seconds": 12.502
+    }
+  ],
+  "outcomes": {
+    "outcomes": [
+      {
+        "draft_id": "draft-0001",
+        "replied": true,
+        "interview": true,
+        "hired": false,
+        "source": "synthetic-rule-based-client"
+      }
+    ]
+  }
+}

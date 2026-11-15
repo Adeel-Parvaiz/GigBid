@@ -1,0 +1,49 @@
+{
+  "model": "qwen2.5:1.5b",
+  "synthetic_diagnostic": true,
+  "draft": {
+    "job_id": "diagnostic-writer",
+    "questions": [
+      "What is the primary requirement for the FastAPI backend?",
+      "Can you provide evidence of experience with Python and FastAPI?",
+      "How do you ensure the security of the inventory API?",
+      "Can you describe a time when you successfully deployed a FastAPI application?"
+    ],
+    "claims": [
+      {
+        "text": "I have built a Python FastAPI inventory backend with PostgreSQL and unit tests.",
+        "evidence_ids": [
+          "example-case"
+        ],
+        "kind": "claim",
+        "section": "cover"
+      },
+      {
+        "text": "I have experience securing FastAPI applications.",
+        "evidence_ids": [
+          "example-case"
+        ],
+        "kind": "claim",
+        "section": "cover"
+      },
+      {
+        "text": "I have successfully deployed a FastAPI application.",
+        "evidence_ids": [
+          "example-case"
+        ],
+        "kind": "claim",
+        "section": "cover"
+      }
+    ],
+    "edited_cover_letter": null,
+    "cover_letter": "I have built a Python FastAPI inventory backend with PostgreSQL and unit tests.\n\nI have experience securing FastAPI applications.\n\nI have successfully deployed a FastAPI application.",
+    "screening_answers": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "seconds": 57.41403402900005,
+  "note": "Isolated writer smoke test using a fabricated diagnostic evidence item; not held-out evaluation."
+}

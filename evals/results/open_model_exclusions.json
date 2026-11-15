@@ -1,0 +1,1454 @@
+{
+  "rows": [
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100243",
+      "gold": "bid",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 15174.8,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 5952.9,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.8,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 15.201,
+      "calls": [
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 401,
+          "completion_tokens": 26,
+          "seconds": 5.951680145999944
+        },
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 299,
+          "completion_tokens": 113,
+          "seconds": 15.173440441000139
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100253",
+      "gold": "bid",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.1,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 8196.2,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 19308.6,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 3.6,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 19.316,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 296,
+          "completion_tokens": 111,
+          "seconds": 8.194993892999946
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 394,
+          "completion_tokens": 155,
+          "seconds": 19.307840824000095
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "scam-200010",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": true,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 7250.7,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 13828.0,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 4.2,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 13.834,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 259,
+          "completion_tokens": 92,
+          "seconds": 7.249618082999859
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 369,
+          "completion_tokens": 28,
+          "seconds": 11.566635164000218
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 476,
+          "completion_tokens": 28,
+          "seconds": 2.2599147759997322
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-101131",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 8324.8,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 12704.5,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 4.4,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 12.71,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 271,
+          "completion_tokens": 99,
+          "seconds": 8.324038793
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 373,
+          "completion_tokens": 26,
+          "seconds": 12.70389976999968
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100036",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.1,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 12603.0,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 3734.0,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 3.1,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 12.607,
+      "calls": [
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 396,
+          "completion_tokens": 25,
+          "seconds": 3.733326815000055
+        },
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 296,
+          "completion_tokens": 109,
+          "seconds": 12.601993272999607
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100222",
+      "gold": "bid",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.1,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 11796.5,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 4219.9,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.6,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 11.8,
+      "calls": [
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 380,
+          "completion_tokens": 37,
+          "seconds": 4.219272632999946
+        },
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 275,
+          "completion_tokens": 94,
+          "seconds": 11.79565303499976
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-101122",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 7657.5,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 11056.7,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.7,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 11.061,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 295,
+          "completion_tokens": 113,
+          "seconds": 7.656722639999771
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 389,
+          "completion_tokens": 25,
+          "seconds": 11.056146303999867
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "scam-200064",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": true,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 7877.7,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 17523.4,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.0,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.1,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 17.529,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 255,
+          "completion_tokens": 106,
+          "seconds": 7.876641442000164
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 359,
+          "completion_tokens": 132,
+          "seconds": 17.522675724000237
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-101416",
+      "gold": "bid",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 8121.7,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 11552.2,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.5,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 11.558,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 292,
+          "completion_tokens": 112,
+          "seconds": 8.120605985999646
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 386,
+          "completion_tokens": 26,
+          "seconds": 11.55152671199994
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100761",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 11434.3,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 3083.7,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.7,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 11.438,
+      "calls": [
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 370,
+          "completion_tokens": 22,
+          "seconds": 3.0831246020002254
+        },
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 276,
+          "completion_tokens": 114,
+          "seconds": 11.43331688499984
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "scam-200049",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": true,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 11759.2,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 15106.6,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.8,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.1,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 15.113,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 275,
+          "completion_tokens": 102,
+          "seconds": 11.757924076000108
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 369,
+          "completion_tokens": 26,
+          "seconds": 15.105874320000112
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100793",
+      "gold": "bid",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 8958.7,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 13245.2,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 3.5,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 13.25,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 301,
+          "completion_tokens": 115,
+          "seconds": 8.957426701999793
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 406,
+          "completion_tokens": 35,
+          "seconds": 13.244556638000176
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100606",
+      "gold": "bid",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 13968.7,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 6280.7,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.0,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 13.973,
+      "calls": [
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 384,
+          "completion_tokens": 79,
+          "seconds": 6.280146479999985
+        },
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 286,
+          "completion_tokens": 104,
+          "seconds": 13.967800938999972
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100784",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 11348.9,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 3639.3,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.2,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 11.353,
+      "calls": [
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 380,
+          "completion_tokens": 30,
+          "seconds": 3.638590271999874
+        },
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 269,
+          "completion_tokens": 107,
+          "seconds": 11.347935012000107
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100590",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 6761.3,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 10063.0,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 3.9,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 10.068,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 273,
+          "completion_tokens": 98,
+          "seconds": 6.760400244000266
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 375,
+          "completion_tokens": 26,
+          "seconds": 10.062348492999718
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-101219",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": false,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.1,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 6805.6,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 10182.0,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.5,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 10.187,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 268,
+          "completion_tokens": 87,
+          "seconds": 6.804577567000251
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 366,
+          "completion_tokens": 27,
+          "seconds": 10.181453761999819
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100066",
+      "gold": "bid",
+      "completed": false,
+      "error_type": "ValueError",
+      "seconds": 141.145,
+      "calls": [
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 677,
+          "completion_tokens": 40,
+          "seconds": 4.5518877869999415
+        },
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 294,
+          "completion_tokens": 109,
+          "seconds": 12.697577740999805
+        },
+        {
+          "node": "writer",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 1534,
+          "completion_tokens": 718,
+          "seconds": 62.20889770900021
+        },
+        {
+          "node": "writer",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 2387,
+          "completion_tokens": 766,
+          "seconds": 66.22545635100005
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100800",
+      "gold": "bid",
+      "completed": false,
+      "error_type": "ValueError",
+      "seconds": 78.277,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 316,
+          "completion_tokens": 128,
+          "seconds": 10.315241287999925
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 699,
+          "completion_tokens": 38,
+          "seconds": 15.757270548999713
+        },
+        {
+          "node": "writer",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 1616,
+          "completion_tokens": 282,
+          "seconds": 37.39132207600005
+        },
+        {
+          "node": "writer",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 2025,
+          "completion_tokens": 276,
+          "seconds": 25.113792205999744
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "scam-200004",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": true,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "risk_report": {
+        "score": 1.0,
+        "flags": [
+          "no_budget",
+          "off_platform_contact",
+          "payment_unverified",
+          "unpaid_work"
+        ],
+        "explanation": "rule flags: ['no_budget', 'off_platform_contact', 'payment_unverified', 'unpaid_work'] | The client is not verified, the job is unpaid, the client contacts outside the platform, and the job is for an OCR and extraction workflow, which is not a typical project for an LLM."
+      },
+      "job_spec": {
+        "job_id": "scam-200004",
+        "title": "A resume screening ranker (LLM)",
+        "deliverables": [],
+        "required_skills": [
+          "LLM",
+          "NLP",
+          "machine learning",
+          "Docker"
+        ],
+        "budget_min": null,
+        "budget_max": null,
+        "duration_days": 7,
+        "screening_questions": [
+          "Have you used LLM on a client project before? Please link an example."
+        ],
+        "hidden_needs": []
+      },
+      "fit_report": {
+        "score": 0.75,
+        "matched_skills": [
+          "LLM",
+          "NLP",
+          "machine learning"
+        ],
+        "missing_skills": [
+          "Docker"
+        ],
+        "evidence_ids": [
+          "ai-ml-engineer-cs-17",
+          "ai-ml-engineer-cs-05",
+          "ai-ml-engineer-cs-02",
+          "ai-ml-engineer-cs-15",
+          "ai-ml-engineer-rv-13"
+        ],
+        "variant": "v1_decomposed"
+      },
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 8052.5,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 15802.4,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 4.2,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.1,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 15.811,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 277,
+          "completion_tokens": 85,
+          "seconds": 8.050944818000062
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 674,
+          "completion_tokens": 77,
+          "seconds": 15.801377511999817
+        }
+      ]
+    }
+  ]
+}

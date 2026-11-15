@@ -1,0 +1,5 @@
+{
+  "command": "python -m pytest -q",
+  "exit_code": 0,
+  "output": "..............................................ss........................ [ 61%]\n.............................................                            [100%]\n=============================== warnings summary ===============================\n.venv-linux/lib/python3.14/site-packages/langsmith/_internal/_beta_decorator.py:92: 13 warnings\n  /home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/langsmith/_internal/_beta_decorator.py:92: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead\n    if asyncio.iscoroutinefunction(func):\n\ntests/integration/test_marketplace_mcp.py::test_tool_annotations_and_constraints\n  /usr/lib/python3.14/contextlib.py:109: DeprecationWarning: Use `streamable_http_client` instead.\n    self.gen = func(*args, **kwds)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n115 passed, 2 skipped, 14 warnings in 14.01s\n"
+}

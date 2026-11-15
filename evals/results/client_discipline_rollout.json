@@ -1,0 +1,21 @@
+{
+  "api_health": {
+    "api": "ok",
+    "marketplace": "ok",
+    "queued_degraded_runs": 0
+  },
+  "test_controls_absent_from_production": true,
+  "isolated_test_ports_closed": {
+    "13040": true,
+    "18040": true,
+    "13000": true,
+    "18000": true
+  },
+  "source_sha256": {
+    "agent/mcp_client.py": "0bdf77f6c6cca10523b823c815f2c8aad87b6564cb83f5d79686faaf8703dc3f",
+    "apps/api/recovery.py": "cf009c23ca4d128146a611efd7c9af3db0a162e4fd903f3770aa242ee6d5ad06",
+    "apps/api/runs.py": "036ca64195f2ebe067bcc6cce8adc6a6c1c72ccf86a55d2b40250bbbeb3a7965",
+    "apps/api/main.py": "483a0499d8b1366e8d5e7cdd14b20972cac782d6dd87f8d1922a27ccb8039491",
+    "apps/web/tests/a6/marketplace-recovery.spec.ts": "8460288398f50b611652ad2f422b879a9e7ee39c1394a4ddf8215c9ead8dbd7b"
+  }
+}

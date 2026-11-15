@@ -1,0 +1,69 @@
+{
+  "recorded_at": "2026-11-14T11:56:10.966133+00:00",
+  "command": "CI=true python -m pytest -q --junitxml=test-results/python.xml",
+  "exit_code": 0,
+  "passed": 149,
+  "skipped": [
+    {
+      "test": "tests.integration.test_postgres_durability.test_crash_and_resume_on_postgres_submits_once",
+      "reason": "no postgres"
+    },
+    {
+      "test": "tests.integration.test_worker.test_analyse_scout_and_restart_never_double_analyse",
+      "reason": "redis-server not installed"
+    }
+  ],
+  "failures": 0,
+  "errors": 0,
+  "seconds": "51.368",
+  "focused_a7_checks": 8,
+  "tool_count": 15,
+  "schema_servers": [
+    "portfolio",
+    "marketplace",
+    "workspace"
+  ],
+  "inspector": {
+    "package": "@modelcontextprotocol/inspector",
+    "version": "2.15.0",
+    "dist": {
+      "shasum": "d4121ecab6140b59991fffec66ef37bc71d575c4",
+      "tarball": "https://registry.npmjs.org/@modelcontextprotocol/inspector/-/inspector-2.15.0.tgz",
+      "fileCount": 44,
+      "integrity": "sha512-TWdX2oJNVTan3B0/0YLpVJWbeuuii3cgDnc7uIwAiCQ9q7QMvZuQrapkQXOC2MKsmyNWj0tplWjza3IolBU+wA==",
+      "signatures": [
+        {
+          "sig": "MEQCIEqqG8/16rCr+me8ooIkvuCAuAkROQb1wAggDPr7c68FAiAt9cDP4y17KCKdhBt2pFP0u+Q5wWFBTtxTSRcSbp+tWA==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEQCIAcZuRzTar4vZFkDEDdBwqc75zaQ3G/I81w927E5yCLBAiAXWhUxKuLu6EnDOCFfHun2NA7mSELDAmI53uqQucvR6Q==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@modelcontextprotocol%2finspector@2.15.0",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 6625288
+    }
+  },
+  "fixture_cleanup_and_user_services": {
+    "16274": "closed",
+    "16275": "closed",
+    "16278": "closed",
+    "16281": "closed",
+    "3000": "open",
+    "8000": "open"
+  },
+  "remote_ci_run": false,
+  "hashes": {
+    "tests/unit/test_mcp_inmemory.py": "6879f365c3a83e74b3d590cf74563a2629d242d423dec07bdb2ad6b17ff71e6c",
+    "tests/contract/test_tool_schemas.py": "b537363b13bc8d8b2610ef114475171f670d16fcaa6974394b8fb79e888012e0",
+    "tests/contract/snapshots/marketplace.json": "b6baedd4a87e3bd13aae6b3b9383abc4e770a481fbd4f89f4f0c3bf7c7796d45",
+    "scripts/capture_mcp_inspector.py": "615aacc8986bfa75ea5941f06ecd871e5514de980cb19309c1ca9d8e7915c07c",
+    "evals/inspectors/capture.cjs": "d72ef45df767dcbb3e6d01760b4eef659650b652d78732cae098c6e13c11d549"
+  }
+}

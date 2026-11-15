@@ -1,0 +1,561 @@
+[
+  {
+    "task_id": "A01",
+    "request": "Find portfolio proof that I have built a customer churn model.\nExact search phrase: \"customer churn model\". Maximum evidence items: 5.",
+    "expected_tool": "search_evidence",
+    "arguments": {
+      "requirement": "customer churn model",
+      "k": 5
+    },
+    "expect": {
+      "path": "items",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A02",
+    "request": "Look up evidence in my portfolio for Python classification work.\nExact search phrase: \"Python classification\". Maximum evidence items: 5.",
+    "expected_tool": "search_evidence",
+    "arguments": {
+      "requirement": "Python classification",
+      "k": 5
+    },
+    "expect": {
+      "path": "items",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A03",
+    "request": "Search my work samples for dashboarding experience.\nExact search phrase: \"dashboarding experience\". Maximum evidence items: 5.",
+    "expected_tool": "search_evidence",
+    "arguments": {
+      "requirement": "dashboarding experience",
+      "k": 5
+    },
+    "expect": {
+      "path": "items",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A04",
+    "request": "Open portfolio evidence evidence-001 and show the case-study details.\n",
+    "expected_tool": "get_case_study",
+    "arguments": {
+      "id": "evidence-001"
+    },
+    "expect": {
+      "path": "evidence_id",
+      "operator": "equals",
+      "value": "evidence-001"
+    }
+  },
+  {
+    "task_id": "A05",
+    "request": "Fetch the portfolio item with ID evidence-003.\n",
+    "expected_tool": "get_case_study",
+    "arguments": {
+      "id": "evidence-003"
+    },
+    "expect": {
+      "path": "evidence_id",
+      "operator": "equals",
+      "value": "evidence-003"
+    }
+  },
+  {
+    "task_id": "A06",
+    "request": "List all skills from my freelancer portfolio and their item counts.\n",
+    "expected_tool": "list_skills",
+    "arguments": {},
+    "expect": {
+      "path": "skills",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A07",
+    "request": "Which skills are represented in my portfolio? Return the complete skill inventory.\n",
+    "expected_tool": "list_skills",
+    "arguments": {},
+    "expect": {
+      "path": "skills",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A08",
+    "request": "Find open marketplace jobs mentioning customer churn.\nExact search phrase: \"customer churn\". Maximum results: 10.",
+    "expected_tool": "search_jobs",
+    "arguments": {
+      "query": "customer churn",
+      "limit": 10
+    },
+    "expect": {
+      "path": "jobs",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A09",
+    "request": "Search current listings for dashboard work.\nExact search phrase: \"dashboard\". Maximum results: 10.",
+    "expected_tool": "search_jobs",
+    "arguments": {
+      "query": "dashboard",
+      "limit": 10
+    },
+    "expect": {
+      "path": "jobs",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A10",
+    "request": "Show me matching job posts for support ticket sentiment analysis.\nExact search phrase: \"sentiment\". Maximum results: 10.",
+    "expected_tool": "search_jobs",
+    "arguments": {
+      "query": "sentiment",
+      "limit": 10
+    },
+    "expect": {
+      "path": "jobs",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A11",
+    "request": "Retrieve the full job posting for job-001.\n",
+    "expected_tool": "get_job",
+    "arguments": {
+      "job_id": "job-001"
+    },
+    "expect": {
+      "path": "job_id",
+      "operator": "equals",
+      "value": "job-001"
+    }
+  },
+  {
+    "task_id": "A12",
+    "request": "Get job details by marketplace ID job-003.\n",
+    "expected_tool": "get_job",
+    "arguments": {
+      "job_id": "job-003"
+    },
+    "expect": {
+      "path": "job_id",
+      "operator": "equals",
+      "value": "job-003"
+    }
+  },
+  {
+    "task_id": "A13",
+    "request": "Read listing job-005, including its description and requirements.\n",
+    "expected_tool": "get_job",
+    "arguments": {
+      "job_id": "job-005"
+    },
+    "expect": {
+      "path": "job_id",
+      "operator": "equals",
+      "value": "job-005"
+    }
+  },
+  {
+    "task_id": "A14",
+    "request": "Check client-good's past projects, rating, and payment verification.\n",
+    "expected_tool": "get_client_history",
+    "arguments": {
+      "client_id": "client-good"
+    },
+    "expect": {
+      "path": "client_id",
+      "operator": "equals",
+      "value": "client-good"
+    }
+  },
+  {
+    "task_id": "A15",
+    "request": "Look up the marketplace history and payment status for client-shady.\n",
+    "expected_tool": "get_client_history",
+    "arguments": {
+      "client_id": "client-shady"
+    },
+    "expect": {
+      "path": "client_id",
+      "operator": "equals",
+      "value": "client-shady"
+    }
+  },
+  {
+    "task_id": "A16",
+    "request": "How many Connects do I currently have available?\n",
+    "expected_tool": "get_connects_balance",
+    "arguments": {},
+    "expect": {
+      "path": "balance",
+      "operator": "greater_than",
+      "value": 0
+    }
+  },
+  {
+    "task_id": "A17",
+    "request": "Check my remaining marketplace Connects balance before applying.\n",
+    "expected_tool": "get_connects_balance",
+    "arguments": {},
+    "expect": {
+      "path": "balance",
+      "operator": "greater_than",
+      "value": 0
+    }
+  },
+  {
+    "task_id": "A18",
+    "request": "List my client conversation threads with their job and client IDs.\n",
+    "expected_tool": "list_threads",
+    "arguments": {},
+    "expect": {
+      "path": "threads",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A19",
+    "request": "Show the conversations currently in my inbox.\n",
+    "expected_tool": "list_threads",
+    "arguments": {},
+    "expect": {
+      "path": "threads",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A20",
+    "request": "Read all messages in conversation conv-001.\n",
+    "expected_tool": "list_messages",
+    "arguments": {
+      "thread_id": "conv-001"
+    },
+    "expect": {
+      "path": "thread_id",
+      "operator": "equals",
+      "value": "conv-001"
+    }
+  },
+  {
+    "task_id": "A21",
+    "request": "Fetch the message history for thread conv-002.\n",
+    "expected_tool": "list_messages",
+    "arguments": {
+      "thread_id": "conv-002"
+    },
+    "expect": {
+      "path": "thread_id",
+      "operator": "equals",
+      "value": "conv-002"
+    }
+  },
+  {
+    "task_id": "A22",
+    "request": "Prepare a proposal draft for job-001, but only preview it and do not create or submit anything.\nCover letter: \"I can build and evaluate the requested churn baseline using Python and scikit-learn.\". Bid: 300 USD. Request key: rdA-draft-001. No screening answers. Preview only.",
+    "expected_tool": "create_proposal_draft",
+    "arguments": {
+      "proposal": {
+        "job_id": "job-001",
+        "cover_letter": "I can build and evaluate the requested churn baseline using Python and scikit-learn.",
+        "screening_answers": [],
+        "bid_amount": 300,
+        "currency": "USD",
+        "idempotency_key": "rdA-draft-001",
+        "dry_run": true
+      }
+    },
+    "expect": {
+      "path": "dry_run",
+      "operator": "equals",
+      "value": true
+    }
+  },
+  {
+    "task_id": "A23",
+    "request": "Run a dry-run proposal preview for job-004 and report its Connects cost without submitting.\nCover letter: \"I can develop a support-ticket sentiment classifier and document its evaluation.\". Bid: 250 USD. Request key: rdA-draft-002. No screening answers. Preview only.",
+    "expected_tool": "create_proposal_draft",
+    "arguments": {
+      "proposal": {
+        "job_id": "job-004",
+        "cover_letter": "I can develop a support-ticket sentiment classifier and document its evaluation.",
+        "screening_answers": [],
+        "bid_amount": 250,
+        "currency": "USD",
+        "idempotency_key": "rdA-draft-002",
+        "dry_run": true
+      }
+    },
+    "expect": {
+      "path": "dry_run",
+      "operator": "equals",
+      "value": true
+    }
+  },
+  {
+    "task_id": "A24",
+    "request": "Create a non-submitted draft preview for the fraud detection listing job-005.\nCover letter: \"I can assess the fraud data and build a measured classification baseline.\". Bid: 350 USD. Request key: rdA-draft-003. No screening answers. Preview only.",
+    "expected_tool": "create_proposal_draft",
+    "arguments": {
+      "proposal": {
+        "job_id": "job-005",
+        "cover_letter": "I can assess the fraud data and build a measured classification baseline.",
+        "screening_answers": [],
+        "bid_amount": 350,
+        "currency": "USD",
+        "idempotency_key": "rdA-draft-003",
+        "dry_run": true
+      }
+    },
+    "expect": {
+      "path": "dry_run",
+      "operator": "equals",
+      "value": true
+    }
+  },
+  {
+    "task_id": "A25",
+    "request": "Submit the already-approved proposal draft draft-0001 using its idempotency key.\nRequest key: \"rdA-submit-001\".",
+    "expected_tool": "submit_proposal",
+    "setup": "seed_draft",
+    "arguments": {
+      "draft_id": "draft-0001",
+      "idempotency_key": "rdA-submit-001"
+    },
+    "expect": {
+      "path": "status",
+      "operator": "equals",
+      "value": "submitted"
+    }
+  },
+  {
+    "task_id": "A26",
+    "request": "Finalize the approved draft draft-0001 and spend its Connects once.\nRequest key: \"rdA-submit-002\".",
+    "expected_tool": "submit_proposal",
+    "setup": "seed_draft",
+    "arguments": {
+      "draft_id": "draft-0001",
+      "idempotency_key": "rdA-submit-002"
+    },
+    "expect": {
+      "path": "status",
+      "operator": "equals",
+      "value": "submitted"
+    }
+  },
+  {
+    "task_id": "A27",
+    "request": "Send this approved reply in client thread conv-001: Thanks, I can discuss the scope here.\nRequest key: \"rdA-message-001\".",
+    "expected_tool": "send_message",
+    "arguments": {
+      "thread_id": "conv-001",
+      "text": "Thanks, I can discuss the scope here.",
+      "idempotency_key": "rdA-message-001"
+    },
+    "expect": {
+      "path": "thread_id",
+      "operator": "equals",
+      "value": "conv-001"
+    }
+  },
+  {
+    "task_id": "A28",
+    "request": "Deliver the approved message 'I will share a brief project plan shortly.' to conversation conv-002.\nRequest key: \"rdA-message-002\".",
+    "expected_tool": "send_message",
+    "arguments": {
+      "thread_id": "conv-002",
+      "text": "I will share a brief project plan shortly.",
+      "idempotency_key": "rdA-message-002"
+    },
+    "expect": {
+      "path": "thread_id",
+      "operator": "equals",
+      "value": "conv-002"
+    }
+  },
+  {
+    "task_id": "A29",
+    "request": "Find available interview appointment times on working days starting November 12, 2026.\nMaximum results: 5. Number of calendar days: 3. Meeting minutes: 30. Start date: \"2026-11-12\".",
+    "expected_tool": "get_free_slots",
+    "arguments": {
+      "start_date": "2026-11-12",
+      "days": 3,
+      "duration_minutes": 30,
+      "limit": 5
+    },
+    "expect": {
+      "path": "slots",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A30",
+    "request": "Check my calendar for free 60-minute interview slots from November 16, 2026.\nMaximum results: 5. Number of calendar days: 4. Meeting minutes: 60. Start date: \"2026-11-16\".",
+    "expected_tool": "get_free_slots",
+    "arguments": {
+      "start_date": "2026-11-16",
+      "days": 4,
+      "duration_minutes": 60,
+      "limit": 5
+    },
+    "expect": {
+      "path": "slots",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A31",
+    "request": "Show up to three free times for a 30-minute meeting starting November 18, 2026.\nMaximum results: 3. Number of calendar days: 2. Meeting minutes: 30. Start date: \"2026-11-18\".",
+    "expected_tool": "get_free_slots",
+    "arguments": {
+      "start_date": "2026-11-18",
+      "days": 2,
+      "duration_minutes": 30,
+      "limit": 3
+    },
+    "expect": {
+      "path": "slots",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A32",
+    "request": "Place a tentative calendar hold at 11:00 on November 12, 2026 for a client interview.\nCalendar title: \"Client interview\". Request key: \"rdA-hold-001\". Interview start: \"2026-11-12T11:00\".",
+    "expected_tool": "create_tentative_hold",
+    "arguments": {
+      "start": "2026-11-12T11:00",
+      "title": "Client interview",
+      "idempotency_key": "rdA-hold-001"
+    },
+    "expect": {
+      "path": "status",
+      "operator": "equals",
+      "value": "tentative"
+    }
+  },
+  {
+    "task_id": "A33",
+    "request": "Reserve a provisional interview slot at 13:00 on November 16, 2026; do not make a confirmed booking.\nCalendar title: \"Provisional client interview\". Request key: \"rdA-hold-002\". Interview start: \"2026-11-16T13:00\".",
+    "expected_tool": "create_tentative_hold",
+    "arguments": {
+      "start": "2026-11-16T13:00",
+      "title": "Provisional client interview",
+      "idempotency_key": "rdA-hold-002"
+    },
+    "expect": {
+      "path": "status",
+      "operator": "equals",
+      "value": "tentative"
+    }
+  },
+  {
+    "task_id": "A34",
+    "request": "Create a temporary calendar hold for a technical interview at 14:00 on November 17, 2026.\nCalendar title: \"Technical interview\". Request key: \"rdA-hold-003\". Interview start: \"2026-11-17T14:00\".",
+    "expected_tool": "create_tentative_hold",
+    "arguments": {
+      "start": "2026-11-17T14:00",
+      "title": "Technical interview",
+      "idempotency_key": "rdA-hold-003"
+    },
+    "expect": {
+      "path": "status",
+      "operator": "equals",
+      "value": "tentative"
+    }
+  },
+  {
+    "task_id": "A35",
+    "request": "Draft, but do not send, an email to client@example.test with subject 'Project update' and a short status note.\nEmail body: \"I have reviewed the requirements and will share a concise project update shortly.\". Email subject: \"Project update\". Request key: \"rdA-email-001\".",
+    "expected_tool": "create_email_draft",
+    "arguments": {
+      "to": "client@example.test",
+      "subject": "Project update",
+      "body": "I have reviewed the requirements and will share a concise project update shortly.",
+      "idempotency_key": "rdA-email-001"
+    },
+    "expect": {
+      "path": "status",
+      "operator": "equals",
+      "value": "draft"
+    }
+  },
+  {
+    "task_id": "A36",
+    "request": "Prepare an unsent email draft to hiring@example.test titled 'Interview availability'.\nEmail body: \"Thank you for the invitation. I am available to discuss the project and next steps.\". Email subject: \"Interview availability\". Request key: \"rdA-email-002\".",
+    "expected_tool": "create_email_draft",
+    "arguments": {
+      "to": "hiring@example.test",
+      "subject": "Interview availability",
+      "body": "Thank you for the invitation. I am available to discuss the project and next steps.",
+      "idempotency_key": "rdA-email-002"
+    },
+    "expect": {
+      "path": "status",
+      "operator": "equals",
+      "value": "draft"
+    }
+  },
+  {
+    "task_id": "A37",
+    "request": "Save this note as an email draft to team@example.test; leave it for a human to send.\nEmail body: \"Thanks for the conversation. I will follow up with the requested details here.\". Email subject: \"Follow-up\". Request key: \"rdA-email-003\".",
+    "expected_tool": "create_email_draft",
+    "arguments": {
+      "to": "team@example.test",
+      "subject": "Follow-up",
+      "body": "Thanks for the conversation. I will follow up with the requested details here.",
+      "idempotency_key": "rdA-email-003"
+    },
+    "expect": {
+      "path": "status",
+      "operator": "equals",
+      "value": "draft"
+    }
+  },
+  {
+    "task_id": "A38",
+    "request": "Find portfolio examples demonstrating scikit-learn model evaluation.\nExact search phrase: \"scikit-learn model evaluation\". Maximum evidence items: 5.",
+    "expected_tool": "search_evidence",
+    "arguments": {
+      "requirement": "scikit-learn model evaluation",
+      "k": 5
+    },
+    "expect": {
+      "path": "items",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A39",
+    "request": "Search marketplace postings for jobs about a recommender system.\nExact search phrase: \"recommender\". Maximum results: 10.",
+    "expected_tool": "search_jobs",
+    "arguments": {
+      "query": "recommender",
+      "limit": 10
+    },
+    "expect": {
+      "path": "jobs",
+      "operator": "nonempty"
+    }
+  },
+  {
+    "task_id": "A40",
+    "request": "Look up calendar availability for a client interview beginning November 20, 2026.\nMaximum results: 5. Number of calendar days: 3. Meeting minutes: 30. Start date: \"2026-11-20\".",
+    "expected_tool": "get_free_slots",
+    "arguments": {
+      "start_date": "2026-11-20",
+      "days": 3,
+      "duration_minutes": 30,
+      "limit": 5
+    },
+    "expect": {
+      "path": "slots",
+      "operator": "nonempty"
+    }
+  }
+]

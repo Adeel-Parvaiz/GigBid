@@ -1,0 +1,11 @@
+# Kaggle: asaniczka / Upwork Job Postings Dataset 2024 (50K Records), v1.
+title: [title]
+description: [description]
+published: [published_date]
+is_hourly: [is_hourly]
+hourly_low: [hourly_low]
+hourly_high: [hourly_high]
+budget: [budget]
+country: [country]
+url: [link]
+skills: []

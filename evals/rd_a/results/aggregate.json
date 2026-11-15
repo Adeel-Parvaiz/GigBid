@@ -1,0 +1,254 @@
+{
+  "experiment": "R&D A: MCP tool description granularity",
+  "selector": "BM25 lexical tool discovery; no LLM called",
+  "tasks": 40,
+  "trials": 120,
+  "seed": 4016,
+  "task_set_sha256": "46e57b1c778686c991ff63c38c975ec0b54e8c39ee4a0f622ab6314367309248",
+  "mcp_schema_sha256": "56410a358eeced01313ffef777e8540e0b24b0b0b560de2e4c43c8eec06e3da9",
+  "conditions": {
+    "fine_grained": {
+      "n_tasks": 40,
+      "correct_tool_selection": 0.875,
+      "task_completion": 0.875,
+      "argument_schema_validity": 0.95,
+      "tool_calls": 40,
+      "mean_tool_calls_per_task": 1.0,
+      "failed_tool_calls": 2,
+      "median_latency_ms": 89.846,
+      "p95_latency_ms": 165.266,
+      "median_selection_latency_ms": 0.5275000000000001,
+      "median_tool_latency_ms": 8.841999999999999,
+      "token_usage_available_tasks": 0,
+      "token_usage_total": null,
+      "cost_measurable_tasks": 0,
+      "cost_usd_total": null,
+      "selection_by_expected_tool": {
+        "create_email_draft": {
+          "n_tasks": 3,
+          "selected_correct": 3
+        },
+        "create_proposal_draft": {
+          "n_tasks": 3,
+          "selected_correct": 3
+        },
+        "create_tentative_hold": {
+          "n_tasks": 3,
+          "selected_correct": 3
+        },
+        "get_case_study": {
+          "n_tasks": 2,
+          "selected_correct": 1
+        },
+        "get_client_history": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        },
+        "get_connects_balance": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        },
+        "get_free_slots": {
+          "n_tasks": 4,
+          "selected_correct": 3
+        },
+        "get_job": {
+          "n_tasks": 3,
+          "selected_correct": 3
+        },
+        "list_messages": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        },
+        "list_skills": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        },
+        "list_threads": {
+          "n_tasks": 2,
+          "selected_correct": 1
+        },
+        "search_evidence": {
+          "n_tasks": 4,
+          "selected_correct": 3
+        },
+        "search_jobs": {
+          "n_tasks": 4,
+          "selected_correct": 4
+        },
+        "send_message": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        },
+        "submit_proposal": {
+          "n_tasks": 2,
+          "selected_correct": 1
+        }
+      }
+    },
+    "coarse_grained": {
+      "n_tasks": 40,
+      "correct_tool_selection": 0.6,
+      "task_completion": 0.6,
+      "argument_schema_validity": 0.65,
+      "tool_calls": 40,
+      "mean_tool_calls_per_task": 1.0,
+      "failed_tool_calls": 14,
+      "median_latency_ms": 89.3135,
+      "p95_latency_ms": 117.77,
+      "median_selection_latency_ms": 0.34299999999999997,
+      "median_tool_latency_ms": 6.404999999999999,
+      "token_usage_available_tasks": 0,
+      "token_usage_total": null,
+      "cost_measurable_tasks": 0,
+      "cost_usd_total": null,
+      "selection_by_expected_tool": {
+        "create_email_draft": {
+          "n_tasks": 3,
+          "selected_correct": 3
+        },
+        "create_proposal_draft": {
+          "n_tasks": 3,
+          "selected_correct": 2
+        },
+        "create_tentative_hold": {
+          "n_tasks": 3,
+          "selected_correct": 2
+        },
+        "get_case_study": {
+          "n_tasks": 2,
+          "selected_correct": 0
+        },
+        "get_client_history": {
+          "n_tasks": 2,
+          "selected_correct": 1
+        },
+        "get_connects_balance": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        },
+        "get_free_slots": {
+          "n_tasks": 4,
+          "selected_correct": 2
+        },
+        "get_job": {
+          "n_tasks": 3,
+          "selected_correct": 2
+        },
+        "list_messages": {
+          "n_tasks": 2,
+          "selected_correct": 1
+        },
+        "list_skills": {
+          "n_tasks": 2,
+          "selected_correct": 1
+        },
+        "list_threads": {
+          "n_tasks": 2,
+          "selected_correct": 0
+        },
+        "search_evidence": {
+          "n_tasks": 4,
+          "selected_correct": 2
+        },
+        "search_jobs": {
+          "n_tasks": 4,
+          "selected_correct": 2
+        },
+        "send_message": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        },
+        "submit_proposal": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        }
+      }
+    },
+    "optimized": {
+      "n_tasks": 40,
+      "correct_tool_selection": 0.675,
+      "task_completion": 0.675,
+      "argument_schema_validity": 0.85,
+      "tool_calls": 40,
+      "mean_tool_calls_per_task": 1.0,
+      "failed_tool_calls": 6,
+      "median_latency_ms": 96.06,
+      "p95_latency_ms": 131.165,
+      "median_selection_latency_ms": 0.6185,
+      "median_tool_latency_ms": 8.331,
+      "token_usage_available_tasks": 0,
+      "token_usage_total": null,
+      "cost_measurable_tasks": 0,
+      "cost_usd_total": null,
+      "selection_by_expected_tool": {
+        "create_email_draft": {
+          "n_tasks": 3,
+          "selected_correct": 3
+        },
+        "create_proposal_draft": {
+          "n_tasks": 3,
+          "selected_correct": 3
+        },
+        "create_tentative_hold": {
+          "n_tasks": 3,
+          "selected_correct": 2
+        },
+        "get_case_study": {
+          "n_tasks": 2,
+          "selected_correct": 1
+        },
+        "get_client_history": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        },
+        "get_connects_balance": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        },
+        "get_free_slots": {
+          "n_tasks": 4,
+          "selected_correct": 2
+        },
+        "get_job": {
+          "n_tasks": 3,
+          "selected_correct": 2
+        },
+        "list_messages": {
+          "n_tasks": 2,
+          "selected_correct": 1
+        },
+        "list_skills": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        },
+        "list_threads": {
+          "n_tasks": 2,
+          "selected_correct": 1
+        },
+        "search_evidence": {
+          "n_tasks": 4,
+          "selected_correct": 2
+        },
+        "search_jobs": {
+          "n_tasks": 4,
+          "selected_correct": 2
+        },
+        "send_message": {
+          "n_tasks": 2,
+          "selected_correct": 0
+        },
+        "submit_proposal": {
+          "n_tasks": 2,
+          "selected_correct": 2
+        }
+      }
+    }
+  },
+  "description_sha256": {
+    "fine_grained": "e4f6fd720fcfbaf72504faf223a5e9ed22f69a4dd5cc679611c777a4220eea46",
+    "coarse_grained": "bb18e465d7105c4b5f3e480f1e4d553732db8e696a01c6bcd3fb6171ec05d53b",
+    "optimized": "e6a9b27be6d20277df68b96e72a42b99064addd311e611d0a74e11e7a05309a4"
+  },
+  "statistical_significance_claimed": false
+}

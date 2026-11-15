@@ -1,0 +1,21 @@
+{
+  "gigsim": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "service": "gigbid-gigsim",
+      "synthetic": true
+    }
+  },
+  "api": {
+    "status": 200,
+    "body": {
+      "api": "ok",
+      "marketplace": "ok",
+      "queued_degraded_runs": 0
+    }
+  },
+  "port_18003_closed": true,
+  "port_18001_closed": true,
+  "port_8000_closed": true
+}

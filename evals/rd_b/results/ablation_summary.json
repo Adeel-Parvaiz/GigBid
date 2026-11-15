@@ -1,0 +1,1185 @@
+{
+  "experiment": "R&D B preregistered one-component-at-a-time ablation",
+  "created_at": "2026-11-14T20:12:21.562228+00:00",
+  "preregistration": "docs/RD_B_PREREGISTRATION.md",
+  "dataset": {
+    "data_dir": "data\\processed\\kaggle_2024_v1",
+    "dev_dir": "evals\\datasets\\kaggle_2024_v1",
+    "manifest_seed": 7,
+    "manifest_sha256": "21a81829334590fcdb0e917f36fc832d1bdbf87f75a33eb9852dbd816a5f6894",
+    "personas": {
+      "ai-ml-engineer": 200,
+      "fullstack-dev": 200,
+      "data-analyst": 200
+    },
+    "total_job_persona_rows_per_condition": 600,
+    "positive_gold_rows_per_condition": 338,
+    "files_sha256": {
+      "data\\processed\\kaggle_2024_v1\\portfolio_items.json": "7529d3c81891b8f5b5c7d90955df4831cec0a84eb9a935ac4fe333a137fffd37",
+      "data\\processed\\kaggle_2024_v1\\jobs.json": "fe35cc0cbad6237633fb9e56bc203fe506f5693ffa59760675ab702f0369cdd5",
+      "evals\\datasets\\kaggle_2024_v1\\dev_ai-ml-engineer.json": "2dc74ab2260bc6f58bb87ecb43af3df800dd03775052e3323eb96cd97447966c",
+      "evals\\datasets\\kaggle_2024_v1\\dev_fullstack-dev.json": "a30b47480065b396762b7a68dce7dcda48404317a161bf4d9546f0567919af1d",
+      "evals\\datasets\\kaggle_2024_v1\\dev_data-analyst.json": "4344cbf84dd5c28cbbb6ac85bfb02764478150670404ea50eb87d188d2d6b95e"
+    }
+  },
+  "configuration": {
+    "conditions": [
+      {
+        "name": "v0_naive",
+        "decomposition": false,
+        "hybrid_bm25_dense": false,
+        "cross_encoder_reranking": false
+      },
+      {
+        "name": "v1_v2_v3",
+        "decomposition": true,
+        "hybrid_bm25_dense": true,
+        "cross_encoder_reranking": true
+      },
+      {
+        "name": "no_decomposition",
+        "decomposition": false,
+        "hybrid_bm25_dense": true,
+        "cross_encoder_reranking": true
+      },
+      {
+        "name": "no_hybrid",
+        "decomposition": true,
+        "hybrid_bm25_dense": false,
+        "cross_encoder_reranking": true
+      },
+      {
+        "name": "no_reranking",
+        "decomposition": true,
+        "hybrid_bm25_dense": true,
+        "cross_encoder_reranking": false
+      }
+    ],
+    "embedding": {
+      "provider": "fastembed",
+      "package_version": "0.9.1",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "source": "Qdrant/all-MiniLM-L6-v2-onnx",
+      "revision": "d13954661f83248295ba75c1ed411eef3b7b936e",
+      "model_file": "model.onnx",
+      "model_file_sha256": "bbd7b466f6d58e646fdc2bd5fd67b2f5e93c0b687011bd4548c420f7bd46f0c5",
+      "dimensions": 384,
+      "license": "apache-2.0",
+      "batch_size": 32
+    },
+    "reranker": {
+      "provider": "fastembed-cross-encoder",
+      "package_version": "0.9.1",
+      "model": "Xenova/ms-marco-MiniLM-L-6-v2",
+      "source": "Xenova/ms-marco-MiniLM-L-6-v2",
+      "revision": "a09144355adeed5f58c8ed011d209bf8ee5a1fec",
+      "model_file": "onnx/model.onnx",
+      "sha256": "c623d0bcb99f4622beb413eaef00cfbe5db20df9f1dd982da4b4f26022881870",
+      "license": "apache-2.0",
+      "threads": 2,
+      "pair_cache_limit": 8192
+    },
+    "index": "DenseIndex cosine + in-memory BM25; fixed chunks shared by all conditions",
+    "k": 10,
+    "source_level_metrics": true,
+    "retrieval_only": true
+  },
+  "conditions": {
+    "v0_naive": {
+      "jobs": 600,
+      "eligible_jobs": 338,
+      "recall@5": 0.2599852071005917,
+      "ndcg@10": 0.4699556940954915,
+      "empty_result_rate": 0.0,
+      "mean_returned_sources": 10.0,
+      "p95_latency_ms": 55.0907
+    },
+    "v1_v2_v3": {
+      "jobs": 600,
+      "eligible_jobs": 338,
+      "recall@5": 0.3206360946745562,
+      "ndcg@10": 0.5497629621527501,
+      "empty_result_rate": 0.0,
+      "mean_returned_sources": 9.036666666666667,
+      "p95_latency_ms": 921.9037
+    },
+    "no_decomposition": {
+      "jobs": 600,
+      "eligible_jobs": 338,
+      "recall@5": 0.28032544378698226,
+      "ndcg@10": 0.5055019983393296,
+      "empty_result_rate": 0.0,
+      "mean_returned_sources": 10.0,
+      "p95_latency_ms": 1679.0774
+    },
+    "no_hybrid": {
+      "jobs": 600,
+      "eligible_jobs": 338,
+      "recall@5": 0.3206360946745562,
+      "ndcg@10": 0.5497629621527501,
+      "empty_result_rate": 0.0,
+      "mean_returned_sources": 9.036666666666667,
+      "p95_latency_ms": 568.7244
+    },
+    "no_reranking": {
+      "jobs": 600,
+      "eligible_jobs": 338,
+      "recall@5": 0.34874260355029585,
+      "ndcg@10": 0.5784342087616189,
+      "empty_result_rate": 0.0,
+      "mean_returned_sources": 9.266666666666667,
+      "p95_latency_ms": 47.0749
+    }
+  },
+  "by_persona": {
+    "v0_naive": {
+      "ai-ml-engineer": {
+        "jobs": 200,
+        "eligible_jobs": 113,
+        "recall@5": 0.30420353982300885,
+        "ndcg@10": 0.5354148643398063,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 54.3017
+      },
+      "data-analyst": {
+        "jobs": 200,
+        "eligible_jobs": 108,
+        "recall@5": 0.26273148148148145,
+        "ndcg@10": 0.4828243364199345,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 54.3245
+      },
+      "fullstack-dev": {
+        "jobs": 200,
+        "eligible_jobs": 117,
+        "recall@5": 0.21474358974358973,
+        "ndcg@10": 0.3948556974403853,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 58.2491
+      }
+    },
+    "v1_v2_v3": {
+      "ai-ml-engineer": {
+        "jobs": 200,
+        "eligible_jobs": 113,
+        "recall@5": 0.34513274336283184,
+        "ndcg@10": 0.6117108043784494,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.28,
+        "p95_latency_ms": 884.6676
+      },
+      "data-analyst": {
+        "jobs": 200,
+        "eligible_jobs": 108,
+        "recall@5": 0.33449074074074076,
+        "ndcg@10": 0.5356799436200995,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.875,
+        "p95_latency_ms": 921.9037
+      },
+      "fullstack-dev": {
+        "jobs": 200,
+        "eligible_jobs": 117,
+        "recall@5": 0.2841880341880342,
+        "ndcg@10": 0.5029327042896924,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.955,
+        "p95_latency_ms": 933.5093
+      }
+    },
+    "no_decomposition": {
+      "ai-ml-engineer": {
+        "jobs": 200,
+        "eligible_jobs": 113,
+        "recall@5": 0.3086283185840708,
+        "ndcg@10": 0.524378446746721,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1817.9537
+      },
+      "data-analyst": {
+        "jobs": 200,
+        "eligible_jobs": 108,
+        "recall@5": 0.28935185185185186,
+        "ndcg@10": 0.5623450624115243,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1182.8509
+      },
+      "fullstack-dev": {
+        "jobs": 200,
+        "eligible_jobs": 117,
+        "recall@5": 0.24465811965811965,
+        "ndcg@10": 0.4348003779134131,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1520.2892
+      }
+    },
+    "no_hybrid": {
+      "ai-ml-engineer": {
+        "jobs": 200,
+        "eligible_jobs": 113,
+        "recall@5": 0.34513274336283184,
+        "ndcg@10": 0.6117108043784494,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.28,
+        "p95_latency_ms": 429.4604
+      },
+      "data-analyst": {
+        "jobs": 200,
+        "eligible_jobs": 108,
+        "recall@5": 0.33449074074074076,
+        "ndcg@10": 0.5356799436200995,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.875,
+        "p95_latency_ms": 362.7779
+      },
+      "fullstack-dev": {
+        "jobs": 200,
+        "eligible_jobs": 117,
+        "recall@5": 0.2841880341880342,
+        "ndcg@10": 0.5029327042896924,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.955,
+        "p95_latency_ms": 751.376
+      }
+    },
+    "no_reranking": {
+      "ai-ml-engineer": {
+        "jobs": 200,
+        "eligible_jobs": 113,
+        "recall@5": 0.3860619469026549,
+        "ndcg@10": 0.6457126667074152,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.31,
+        "p95_latency_ms": 46.9852
+      },
+      "data-analyst": {
+        "jobs": 200,
+        "eligible_jobs": 108,
+        "recall@5": 0.3425925925925926,
+        "ndcg@10": 0.5794466380659103,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.115,
+        "p95_latency_ms": 37.5184
+      },
+      "fullstack-dev": {
+        "jobs": 200,
+        "eligible_jobs": 117,
+        "recall@5": 0.31837606837606836,
+        "ndcg@10": 0.5125213189091534,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.375,
+        "p95_latency_ms": 50.2494
+      }
+    }
+  },
+  "by_job_category": {
+    "v0_naive": {
+      "data_analytics": {
+        "jobs": 166,
+        "eligible_jobs": 108,
+        "recall@5": 0.26273148148148145,
+        "ndcg@10": 0.4828243364199345,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 58.6936
+      },
+      "ml_ai": {
+        "jobs": 212,
+        "eligible_jobs": 113,
+        "recall@5": 0.30420353982300885,
+        "ndcg@10": 0.5354148643398063,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 54.0066
+      },
+      "web_dev": {
+        "jobs": 222,
+        "eligible_jobs": 117,
+        "recall@5": 0.21474358974358973,
+        "ndcg@10": 0.3948556974403853,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 54.6681
+      }
+    },
+    "v1_v2_v3": {
+      "data_analytics": {
+        "jobs": 166,
+        "eligible_jobs": 108,
+        "recall@5": 0.33449074074074076,
+        "ndcg@10": 0.5356799436200995,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.150602409638553,
+        "p95_latency_ms": 992.149
+      },
+      "ml_ai": {
+        "jobs": 212,
+        "eligible_jobs": 113,
+        "recall@5": 0.34513274336283184,
+        "ndcg@10": 0.6117108043784494,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.900943396226415,
+        "p95_latency_ms": 878.7151
+      },
+      "web_dev": {
+        "jobs": 222,
+        "eligible_jobs": 117,
+        "recall@5": 0.2841880341880342,
+        "ndcg@10": 0.5029327042896924,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.08108108108108,
+        "p95_latency_ms": 921.9037
+      }
+    },
+    "no_decomposition": {
+      "data_analytics": {
+        "jobs": 166,
+        "eligible_jobs": 108,
+        "recall@5": 0.28935185185185186,
+        "ndcg@10": 0.5623450624115243,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1540.719
+      },
+      "ml_ai": {
+        "jobs": 212,
+        "eligible_jobs": 113,
+        "recall@5": 0.3086283185840708,
+        "ndcg@10": 0.524378446746721,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1817.9537
+      },
+      "web_dev": {
+        "jobs": 222,
+        "eligible_jobs": 117,
+        "recall@5": 0.24465811965811965,
+        "ndcg@10": 0.4348003779134131,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1497.7306
+      }
+    },
+    "no_hybrid": {
+      "data_analytics": {
+        "jobs": 166,
+        "eligible_jobs": 108,
+        "recall@5": 0.33449074074074076,
+        "ndcg@10": 0.5356799436200995,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.150602409638553,
+        "p95_latency_ms": 569.908
+      },
+      "ml_ai": {
+        "jobs": 212,
+        "eligible_jobs": 113,
+        "recall@5": 0.34513274336283184,
+        "ndcg@10": 0.6117108043784494,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.900943396226415,
+        "p95_latency_ms": 661.8653
+      },
+      "web_dev": {
+        "jobs": 222,
+        "eligible_jobs": 117,
+        "recall@5": 0.2841880341880342,
+        "ndcg@10": 0.5029327042896924,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.08108108108108,
+        "p95_latency_ms": 341.5779
+      }
+    },
+    "no_reranking": {
+      "data_analytics": {
+        "jobs": 166,
+        "eligible_jobs": 108,
+        "recall@5": 0.3425925925925926,
+        "ndcg@10": 0.5794466380659103,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.259036144578314,
+        "p95_latency_ms": 45.2114
+      },
+      "ml_ai": {
+        "jobs": 212,
+        "eligible_jobs": 113,
+        "recall@5": 0.3860619469026549,
+        "ndcg@10": 0.6457126667074152,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.358490566037736,
+        "p95_latency_ms": 40.7975
+      },
+      "web_dev": {
+        "jobs": 222,
+        "eligible_jobs": 117,
+        "recall@5": 0.31837606837606836,
+        "ndcg@10": 0.5125213189091534,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.184684684684685,
+        "p95_latency_ms": 50.2494
+      }
+    }
+  },
+  "by_persona_and_job_category": {
+    "v0_naive": {
+      "ai-ml-engineer / data_analytics": {
+        "jobs": 28,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 70.1137
+      },
+      "ai-ml-engineer / ml_ai": {
+        "jobs": 113,
+        "eligible_jobs": 113,
+        "recall@5": 0.30420353982300885,
+        "ndcg@10": 0.5354148643398063,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 52.1042
+      },
+      "ai-ml-engineer / web_dev": {
+        "jobs": 59,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 50.7228
+      },
+      "data-analyst / data_analytics": {
+        "jobs": 108,
+        "eligible_jobs": 108,
+        "recall@5": 0.26273148148148145,
+        "ndcg@10": 0.4828243364199345,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 56.7559
+      },
+      "data-analyst / ml_ai": {
+        "jobs": 46,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 52.3791
+      },
+      "data-analyst / web_dev": {
+        "jobs": 46,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 47.6346
+      },
+      "fullstack-dev / data_analytics": {
+        "jobs": 30,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 55.0965
+      },
+      "fullstack-dev / ml_ai": {
+        "jobs": 53,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 59.7075
+      },
+      "fullstack-dev / web_dev": {
+        "jobs": 117,
+        "eligible_jobs": 117,
+        "recall@5": 0.21474358974358973,
+        "ndcg@10": 0.3948556974403853,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 59.8094
+      }
+    },
+    "v1_v2_v3": {
+      "ai-ml-engineer / data_analytics": {
+        "jobs": 28,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.321428571428571,
+        "p95_latency_ms": 2281.9398
+      },
+      "ai-ml-engineer / ml_ai": {
+        "jobs": 113,
+        "eligible_jobs": 113,
+        "recall@5": 0.34513274336283184,
+        "ndcg@10": 0.6117108043784494,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.56637168141593,
+        "p95_latency_ms": 444.1689
+      },
+      "ai-ml-engineer / web_dev": {
+        "jobs": 59,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.711864406779661,
+        "p95_latency_ms": 2076.7833
+      },
+      "data-analyst / data_analytics": {
+        "jobs": 108,
+        "eligible_jobs": 108,
+        "recall@5": 0.33449074074074076,
+        "ndcg@10": 0.5356799436200995,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.148148148148149,
+        "p95_latency_ms": 699.2706
+      },
+      "data-analyst / ml_ai": {
+        "jobs": 46,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.26086956521739,
+        "p95_latency_ms": 1573.2837
+      },
+      "data-analyst / web_dev": {
+        "jobs": 46,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.847826086956522,
+        "p95_latency_ms": 1474.6527
+      },
+      "fullstack-dev / data_analytics": {
+        "jobs": 30,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.0,
+        "p95_latency_ms": 2752.8378
+      },
+      "fullstack-dev / ml_ai": {
+        "jobs": 53,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.037735849056604,
+        "p95_latency_ms": 933.5093
+      },
+      "fullstack-dev / web_dev": {
+        "jobs": 117,
+        "eligible_jobs": 117,
+        "recall@5": 0.2841880341880342,
+        "ndcg@10": 0.5029327042896924,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.35897435897436,
+        "p95_latency_ms": 666.5918
+      }
+    },
+    "no_decomposition": {
+      "ai-ml-engineer / data_analytics": {
+        "jobs": 28,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1716.6378
+      },
+      "ai-ml-engineer / ml_ai": {
+        "jobs": 113,
+        "eligible_jobs": 113,
+        "recall@5": 0.3086283185840708,
+        "ndcg@10": 0.524378446746721,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1906.3535
+      },
+      "ai-ml-engineer / web_dev": {
+        "jobs": 59,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1585.6336
+      },
+      "data-analyst / data_analytics": {
+        "jobs": 108,
+        "eligible_jobs": 108,
+        "recall@5": 0.28935185185185186,
+        "ndcg@10": 0.5623450624115243,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1223.6162
+      },
+      "data-analyst / ml_ai": {
+        "jobs": 46,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 539.4641
+      },
+      "data-analyst / web_dev": {
+        "jobs": 46,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 734.8209
+      },
+      "fullstack-dev / data_analytics": {
+        "jobs": 30,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1516.7384
+      },
+      "fullstack-dev / ml_ai": {
+        "jobs": 53,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1679.0774
+      },
+      "fullstack-dev / web_dev": {
+        "jobs": 117,
+        "eligible_jobs": 117,
+        "recall@5": 0.24465811965811965,
+        "ndcg@10": 0.4348003779134131,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1410.4503
+      }
+    },
+    "no_hybrid": {
+      "ai-ml-engineer / data_analytics": {
+        "jobs": 28,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.321428571428571,
+        "p95_latency_ms": 1429.3628
+      },
+      "ai-ml-engineer / ml_ai": {
+        "jobs": 113,
+        "eligible_jobs": 113,
+        "recall@5": 0.34513274336283184,
+        "ndcg@10": 0.6117108043784494,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.56637168141593,
+        "p95_latency_ms": 429.4604
+      },
+      "ai-ml-engineer / web_dev": {
+        "jobs": 59,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.711864406779661,
+        "p95_latency_ms": 324.5174
+      },
+      "data-analyst / data_analytics": {
+        "jobs": 108,
+        "eligible_jobs": 108,
+        "recall@5": 0.33449074074074076,
+        "ndcg@10": 0.5356799436200995,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.148148148148149,
+        "p95_latency_ms": 298.9239
+      },
+      "data-analyst / ml_ai": {
+        "jobs": 46,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.26086956521739,
+        "p95_latency_ms": 661.8653
+      },
+      "data-analyst / web_dev": {
+        "jobs": 46,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.847826086956522,
+        "p95_latency_ms": 601.8733
+      },
+      "fullstack-dev / data_analytics": {
+        "jobs": 30,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.0,
+        "p95_latency_ms": 2264.0873
+      },
+      "fullstack-dev / ml_ai": {
+        "jobs": 53,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.037735849056604,
+        "p95_latency_ms": 751.376
+      },
+      "fullstack-dev / web_dev": {
+        "jobs": 117,
+        "eligible_jobs": 117,
+        "recall@5": 0.2841880341880342,
+        "ndcg@10": 0.5029327042896924,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.35897435897436,
+        "p95_latency_ms": 394.2981
+      }
+    },
+    "no_reranking": {
+      "ai-ml-engineer / data_analytics": {
+        "jobs": 28,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.607142857142858,
+        "p95_latency_ms": 52.7125
+      },
+      "ai-ml-engineer / ml_ai": {
+        "jobs": 113,
+        "eligible_jobs": 113,
+        "recall@5": 0.3860619469026549,
+        "ndcg@10": 0.6457126667074152,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.504424778761061,
+        "p95_latency_ms": 38.3218
+      },
+      "ai-ml-engineer / web_dev": {
+        "jobs": 59,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.271186440677965,
+        "p95_latency_ms": 52.9185
+      },
+      "data-analyst / data_analytics": {
+        "jobs": 108,
+        "eligible_jobs": 108,
+        "recall@5": 0.3425925925925926,
+        "ndcg@10": 0.5794466380659103,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.351851851851851,
+        "p95_latency_ms": 38.0726
+      },
+      "data-analyst / ml_ai": {
+        "jobs": 46,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.934782608695652,
+        "p95_latency_ms": 34.0161
+      },
+      "data-analyst / web_dev": {
+        "jobs": 46,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.73913043478261,
+        "p95_latency_ms": 37.1256
+      },
+      "fullstack-dev / data_analytics": {
+        "jobs": 30,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.533333333333333,
+        "p95_latency_ms": 54.0096
+      },
+      "fullstack-dev / ml_ai": {
+        "jobs": 53,
+        "eligible_jobs": 0,
+        "recall@5": null,
+        "ndcg@10": null,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.415094339622641,
+        "p95_latency_ms": 49.2512
+      },
+      "fullstack-dev / web_dev": {
+        "jobs": 117,
+        "eligible_jobs": 117,
+        "recall@5": 0.31837606837606836,
+        "ndcg@10": 0.5125213189091534,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.316239316239317,
+        "p95_latency_ms": 50.8972
+      }
+    }
+  },
+  "by_synthetic_job_type": {
+    "v0_naive": {
+      "normal": {
+        "jobs": 480,
+        "eligible_jobs": 300,
+        "recall@5": 0.2654166666666667,
+        "ndcg@10": 0.4770542426281261,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 54.9823
+      },
+      "scam": {
+        "jobs": 70,
+        "eligible_jobs": 22,
+        "recall@5": 0.18181818181818182,
+        "ndcg@10": 0.356362686149542,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 52.0903
+      },
+      "injection": {
+        "jobs": 50,
+        "eligible_jobs": 16,
+        "recall@5": 0.265625,
+        "ndcg@10": 0.49304829503427217,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 58.6936
+      }
+    },
+    "v1_v2_v3": {
+      "normal": {
+        "jobs": 480,
+        "eligible_jobs": 300,
+        "recall@5": 0.31958333333333333,
+        "ndcg@10": 0.5485130825908261,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.064583333333333,
+        "p95_latency_ms": 113.3758
+      },
+      "scam": {
+        "jobs": 70,
+        "eligible_jobs": 22,
+        "recall@5": 0.3125,
+        "ndcg@10": 0.567255996247463,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.857142857142858,
+        "p95_latency_ms": 3457.0541
+      },
+      "injection": {
+        "jobs": 50,
+        "eligible_jobs": 16,
+        "recall@5": 0.3515625,
+        "ndcg@10": 0.5491452820585936,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.02,
+        "p95_latency_ms": 2297.4221
+      }
+    },
+    "no_decomposition": {
+      "normal": {
+        "jobs": 480,
+        "eligible_jobs": 300,
+        "recall@5": 0.2833333333333333,
+        "ndcg@10": 0.5115258686335903,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1639.7657
+      },
+      "scam": {
+        "jobs": 70,
+        "eligible_jobs": 22,
+        "recall@5": 0.2215909090909091,
+        "ndcg@10": 0.3952868721818025,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1410.4503
+      },
+      "injection": {
+        "jobs": 50,
+        "eligible_jobs": 16,
+        "recall@5": 0.3046875,
+        "ndcg@10": 0.5441002287885442,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1808.7697
+      }
+    },
+    "no_hybrid": {
+      "normal": {
+        "jobs": 480,
+        "eligible_jobs": 300,
+        "recall@5": 0.31958333333333333,
+        "ndcg@10": 0.5485130825908261,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.064583333333333,
+        "p95_latency_ms": 37.3052
+      },
+      "scam": {
+        "jobs": 70,
+        "eligible_jobs": 22,
+        "recall@5": 0.3125,
+        "ndcg@10": 0.567255996247463,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 8.857142857142858,
+        "p95_latency_ms": 2265.1679
+      },
+      "injection": {
+        "jobs": 50,
+        "eligible_jobs": 16,
+        "recall@5": 0.3515625,
+        "ndcg@10": 0.5491452820585936,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.02,
+        "p95_latency_ms": 1458.4369
+      }
+    },
+    "no_reranking": {
+      "normal": {
+        "jobs": 480,
+        "eligible_jobs": 300,
+        "recall@5": 0.3475,
+        "ndcg@10": 0.5754083130551023,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.28125,
+        "p95_latency_ms": 47.7347
+      },
+      "scam": {
+        "jobs": 70,
+        "eligible_jobs": 22,
+        "recall@5": 0.36363636363636365,
+        "ndcg@10": 0.6067250516840038,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.185714285714285,
+        "p95_latency_ms": 45.2383
+      },
+      "injection": {
+        "jobs": 50,
+        "eligible_jobs": 16,
+        "recall@5": 0.3515625,
+        "ndcg@10": 0.5962698442405264,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.24,
+        "p95_latency_ms": 53.3125
+      }
+    }
+  },
+  "by_requirement_count": {
+    "v0_naive": {
+      "4+ requirements": {
+        "jobs": 458,
+        "eligible_jobs": 260,
+        "recall@5": 0.2658653846153846,
+        "ndcg@10": 0.4789947419870073,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 55.0616
+      },
+      "fewer than 4": {
+        "jobs": 142,
+        "eligible_jobs": 78,
+        "recall@5": 0.2403846153846154,
+        "ndcg@10": 0.4398255344571052,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 56.9898
+      }
+    },
+    "v1_v2_v3": {
+      "4+ requirements": {
+        "jobs": 458,
+        "eligible_jobs": 260,
+        "recall@5": 0.3158653846153846,
+        "ndcg@10": 0.5535612116302397,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.508733624454148,
+        "p95_latency_ms": 954.6128
+      },
+      "fewer than 4": {
+        "jobs": 142,
+        "eligible_jobs": 78,
+        "recall@5": 0.33653846153846156,
+        "ndcg@10": 0.5371021305611178,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 7.514084507042254,
+        "p95_latency_ms": 884.6676
+      }
+    },
+    "no_decomposition": {
+      "4+ requirements": {
+        "jobs": 458,
+        "eligible_jobs": 260,
+        "recall@5": 0.28557692307692306,
+        "ndcg@10": 0.5086175497413296,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1701.7275
+      },
+      "fewer than 4": {
+        "jobs": 142,
+        "eligible_jobs": 78,
+        "recall@5": 0.26282051282051283,
+        "ndcg@10": 0.4951168269993298,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 10.0,
+        "p95_latency_ms": 1606.517
+      }
+    },
+    "no_hybrid": {
+      "4+ requirements": {
+        "jobs": 458,
+        "eligible_jobs": 260,
+        "recall@5": 0.3158653846153846,
+        "ndcg@10": 0.5535612116302397,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.508733624454148,
+        "p95_latency_ms": 630.2632
+      },
+      "fewer than 4": {
+        "jobs": 142,
+        "eligible_jobs": 78,
+        "recall@5": 0.33653846153846156,
+        "ndcg@10": 0.5371021305611178,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 7.514084507042254,
+        "p95_latency_ms": 426.9413
+      }
+    },
+    "no_reranking": {
+      "4+ requirements": {
+        "jobs": 458,
+        "eligible_jobs": 260,
+        "recall@5": 0.3528846153846154,
+        "ndcg@10": 0.5940401162887824,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 9.720524017467248,
+        "p95_latency_ms": 49.2512
+      },
+      "fewer than 4": {
+        "jobs": 142,
+        "eligible_jobs": 78,
+        "recall@5": 0.3349358974358974,
+        "ndcg@10": 0.5264145170044073,
+        "empty_result_rate": 0.0,
+        "mean_returned_sources": 7.802816901408451,
+        "p95_latency_ms": 29.9939
+      }
+    }
+  },
+  "paired_recall_deltas": {
+    "v0_naive": {
+      "n": 338,
+      "full_minus_condition_recall@5": 0.060650887573964495,
+      "paired_bootstrap_95ci": [
+        0.04215976331360947,
+        0.07914201183431953
+      ]
+    },
+    "no_decomposition": {
+      "n": 338,
+      "full_minus_condition_recall@5": 0.04031065088757396,
+      "paired_bootstrap_95ci": [
+        0.022559171597633137,
+        0.058801775147928996
+      ]
+    },
+    "no_hybrid": {
+      "n": 338,
+      "full_minus_condition_recall@5": 0.0,
+      "paired_bootstrap_95ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "no_reranking": {
+      "n": 338,
+      "full_minus_condition_recall@5": -0.028106508875739646,
+      "paired_bootstrap_95ci": [
+        -0.04363905325443787,
+        -0.01220414201183432
+      ]
+    }
+  },
+  "hypothesis": {
+    "primary_full_minus_v0_at_least_0_10": false,
+    "each_component_ablation_drops_at_least_0_01": false,
+    "component_ablation_drops": {
+      "no_decomposition": 0.04031065088757396,
+      "no_hybrid": 0.0,
+      "no_reranking": -0.028106508875739646
+    },
+    "primary_recall_uplift": 0.06065088757396453,
+    "secondary_4plus_full_minus_v0_at_least_0_15": false,
+    "secondary_4plus_recall_uplift": 0.04999999999999999,
+    "secondary_4plus_eligible_jobs": 260
+  },
+  "limitations": [
+    "Synthetic rule-derived evidence gold and synthetic portfolios only.",
+    "No-gold scam/injection rows are reported by returned-evidence rate; Recall@5 is undefined for them.",
+    "The preregistration followed inspection of earlier exploratory results; this rerun is not an independent replication.",
+    "No decisions, proposals, simulator replies, or real marketplace outcomes were generated by this retrieval run."
+  ],
+  "b4_calibration": {
+    "n": 30,
+    "agreement": 0.36666666666666664,
+    "kappa": 0.0,
+    "note": "Unweighted Cohen kappa; constant identical labels have undefined kappa.",
+    "status": "calibration_measured",
+    "pack_sha256": "d058e94f039f305e072ab09c35e0be31e784866b47cdff78793dae1265b5e0b5",
+    "disagreements": [
+      "item-135f8a93113a",
+      "item-4439ce361097",
+      "item-5d4c378262d3",
+      "item-701de7b81ee9",
+      "item-7428938027f1",
+      "item-76df113baa73",
+      "item-775d49655499",
+      "item-7af16d582c26",
+      "item-96dbff64e49d",
+      "item-9fc8445a05c4",
+      "item-ae90388267b0",
+      "item-c4dc345fc564",
+      "item-ceaa049ad798",
+      "item-df663f9b929c",
+      "item-edbcf0351d15",
+      "item-efa87eb24514",
+      "item-f3c766af0bc2",
+      "item-f72786e5ebbc",
+      "reference-0753b66fae34"
+    ],
+    "human_source": "personally labelled author ratings; self-attested"
+  },
+  "b4_panel": {
+    "status": "pending_classmates",
+    "raters": 0,
+    "votes": {},
+    "per_persona": {},
+    "pairs_per_rater": 15,
+    "note": "Blind side allocation; self-attested classmates. No generated or inferred human votes."
+  }
+}

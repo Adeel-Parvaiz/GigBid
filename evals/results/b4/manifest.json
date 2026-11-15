@@ -1,0 +1,33 @@
+{
+  "protocol": {
+    "execution_revision": 2,
+    "evaluation_seed": 4016,
+    "simulator_seed": 7,
+    "variants": [
+      "v0_naive",
+      "v8_corrective"
+    ],
+    "personas": [
+      "ai-ml-engineer",
+      "fullstack-dev",
+      "data-analyst"
+    ],
+    "development_jobs_per_persona": 200,
+    "scope": "All 600 synthetic dev cases, two pipelines, actual bid graph and real configured local model. Existing B2 retrieval metrics remain separately identified.",
+    "outcome_policy": "Scripted approval only for unblocked proposals inside disposable project-owned GigSim. No real marketplace writes. Report per-submission and per-fixed-job-set outcomes with denominators.",
+    "price_gold": "Synthetic development price_band; missing bands excluded and counted.",
+    "judge_policy": "Fixed 0-4 overall rubric, labels gathered on 30 items by the author. No calibrated-score claim until human labels exist and kappa is computed. Raw judge output remains provisional.",
+    "panel_policy": "15 anonymous matched V0/V8 pairs, five per persona; random left/right allocation. Require at least two self-attested classmate raters; no automated panel votes.",
+    "usd_policy": "Local model endpoint only: billed inference API cost 0 USD. Hardware/electricity cost unknown and excluded, not assumed free.",
+    "failure_policy": "Persist errors, empty/blocked drafts and timeouts; never silently count them as good proposals or remove them from attempted-case denominators. Resume only incomplete cases."
+  },
+  "protocol_sha256": "d1e3d569cbe359108a421b7f755f5ad46279d30d789b2cffe10e7b6ef1e95537",
+  "planned_case_pairs": 600,
+  "planned_graph_runs": 1200,
+  "hashes": {
+    "data\\processed\\kaggle_2024_v1\\portfolio_items.json": "7529d3c81891b8f5b5c7d90955df4831cec0a84eb9a935ac4fe333a137fffd37",
+    "evals\\datasets\\kaggle_2024_v1\\dev_ai-ml-engineer.json": "2dc74ab2260bc6f58bb87ecb43af3df800dd03775052e3323eb96cd97447966c",
+    "evals\\datasets\\kaggle_2024_v1\\dev_data-analyst.json": "4344cbf84dd5c28cbbb6ac85bfb02764478150670404ea50eb87d188d2d6b95e",
+    "evals\\datasets\\kaggle_2024_v1\\dev_fullstack-dev.json": "a30b47480065b396762b7a68dce7dcda48404317a161bf4d9546f0567919af1d"
+  }
+}

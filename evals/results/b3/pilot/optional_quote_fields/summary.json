@@ -1,0 +1,762 @@
+{
+  "created_at": "2026-11-14T13:04:02.746307+00:00",
+  "backend": "real OpenAICompatLLM semantic check plus deterministic guards",
+  "models": {
+    "analyst": "qwen25-15b",
+    "risk": "qwen25-15b",
+    "writer": "qwen25-15b",
+    "critic": "qwen25-15b",
+    "liaison_intent": "qwen25-15b",
+    "liaison_reply": "qwen25-15b"
+  },
+  "endpoint": "http://localhost:11435/v1",
+  "all": {
+    "proposals": 12,
+    "claims_before": 43,
+    "claims_after": 0,
+    "unsupported_before": 29,
+    "unsupported_after_rechecked": 0,
+    "unsupported_rate_before": 0.6744186046511628,
+    "unsupported_rate_after": 0,
+    "unsupported_per_proposal_before": 2.4166666666666665,
+    "unsupported_per_proposal_after": 0.0,
+    "partly_supported_before": 14,
+    "empty_clean_drafts": 12
+  },
+  "per_persona": {
+    "ai-ml-engineer": {
+      "proposals": 4,
+      "claims_before": 12,
+      "claims_after": 0,
+      "unsupported_before": 7,
+      "unsupported_after_rechecked": 0,
+      "unsupported_rate_before": 0.5833333333333334,
+      "unsupported_rate_after": 0,
+      "unsupported_per_proposal_before": 1.75,
+      "unsupported_per_proposal_after": 0.0,
+      "partly_supported_before": 5,
+      "empty_clean_drafts": 4
+    },
+    "fullstack-dev": {
+      "proposals": 4,
+      "claims_before": 12,
+      "claims_after": 0,
+      "unsupported_before": 9,
+      "unsupported_after_rechecked": 0,
+      "unsupported_rate_before": 0.75,
+      "unsupported_rate_after": 0,
+      "unsupported_per_proposal_before": 2.25,
+      "unsupported_per_proposal_after": 0.0,
+      "partly_supported_before": 3,
+      "empty_clean_drafts": 4
+    },
+    "data-analyst": {
+      "proposals": 4,
+      "claims_before": 19,
+      "claims_after": 0,
+      "unsupported_before": 13,
+      "unsupported_after_rechecked": 0,
+      "unsupported_rate_before": 0.6842105263157895,
+      "unsupported_rate_after": 0,
+      "unsupported_per_proposal_before": 3.25,
+      "unsupported_per_proposal_after": 0.0,
+      "partly_supported_before": 6,
+      "empty_clean_drafts": 4
+    }
+  },
+  "synthetic_controls": [
+    {
+      "name": "exact supported fact",
+      "expected_synthetic_label": "supported",
+      "actual": "unsupported",
+      "correct": false,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline in 2019.",
+          "section": "cover",
+          "label": "unsupported",
+          "support": 0.0,
+          "reason": "semantic check missing, duplicated, or not backed by an exact source quote"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 1,
+        "unsupported_rate_before": 1.0,
+        "partly_supported_before": 0,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline in 2019."
+        ]
+      }
+    },
+    {
+      "name": "fabricated number",
+      "expected_synthetic_label": "unsupported",
+      "actual": "unsupported",
+      "correct": true,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline for 99 banks.",
+          "section": "cover",
+          "label": "unsupported",
+          "support": 0.67,
+          "reason": "guard: numbers not in evidence: ['99']"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 1,
+        "unsupported_rate_before": 1.0,
+        "partly_supported_before": 0,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline for 99 banks."
+        ]
+      }
+    },
+    {
+      "name": "unknown citation",
+      "expected_synthetic_label": "unsupported",
+      "actual": "unsupported",
+      "correct": true,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline.",
+          "section": "cover",
+          "label": "unsupported",
+          "support": 0.0,
+          "reason": "guard: missing or unknown evidence citation"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 1,
+        "unsupported_rate_before": 1.0,
+        "partly_supported_before": 0,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline."
+        ]
+      }
+    },
+    {
+      "name": "substring number",
+      "expected_synthetic_label": "unsupported",
+      "actual": "unsupported",
+      "correct": true,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline in 19.",
+          "section": "cover",
+          "label": "unsupported",
+          "support": 0.8,
+          "reason": "guard: numbers not in evidence: ['19']"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 1,
+        "unsupported_rate_before": 1.0,
+        "partly_supported_before": 0,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline in 19."
+        ]
+      }
+    },
+    {
+      "name": "invented employer",
+      "expected_synthetic_label": "unsupported",
+      "actual": "unsupported",
+      "correct": true,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline at Google.",
+          "section": "cover",
+          "label": "unsupported",
+          "support": 0.8,
+          "reason": "guard: named organization or project is absent from the cited source"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 1,
+        "unsupported_rate_before": 1.0,
+        "partly_supported_before": 0,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline at Google."
+        ]
+      }
+    },
+    {
+      "name": "unsupported extra action",
+      "expected_synthetic_label": "partly_supported",
+      "actual": "partly_supported",
+      "correct": true,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline and deployed it globally.",
+          "section": "cover",
+          "label": "partly_supported",
+          "support": 0.67,
+          "reason": "guard: additional accomplishments absent from the cited source"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 0,
+        "unsupported_rate_before": 0.0,
+        "partly_supported_before": 1,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline and deployed it globally."
+        ]
+      }
+    }
+  ],
+  "usage": [
+    {
+      "stage": "ai-ml-engineer/syn-100002/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 182,
+        "prompt_tokens": 2166,
+        "total_tokens": 2348,
+        "prompt_tokens_details": {
+          "cached_tokens": 2165
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-100002\",\n  \"claims\": [\n    {\n      \"text\": \"I have extensive experience in machine learning, LLM, and deep learning. I have successfully implemented fraud detection models for imbalanced transactions using TensorFlow, machine learning, MLOps, and deep learning. I can provide a detailed project overview and a similar project to showcase my capabilities.\",\n      \"evidence_ids\": [\"ai-ml-engineer-cs-15\", \"ai-ml-engineer-cs-10\", \"ai-ml-engineer-cs-05\", \"ai-ml-engineer-cs-03\", \"ai-ml-engineer-cs-18\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "ai-ml-engineer/syn-100002/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 104,
+        "prompt_tokens": 2405,
+        "total_tokens": 2509,
+        "prompt_tokens_details": {
+          "cached_tokens": 161
+        }
+      },
+      "response": "{\n  \"decisions\": [\n    {\n      \"index\": 2,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence provided shows that the freelancer has successfully automated a customer churn prediction pipeline using TensorFlow, machine learning, MLOps, and deep learning, which resulted in a 50% reduction in manual effort. This aligns with the claim that the freelancer can provide a detailed project overview and a similar project to showcase their capabilities.\"\n    }\n  ]\n}"
+    },
+    {
+      "stage": "ai-ml-engineer/syn-100002/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 501,
+        "total_tokens": 526,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "ai-ml-engineer/syn-100401/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 164,
+        "prompt_tokens": 2164,
+        "total_tokens": 2328,
+        "prompt_tokens_details": {
+          "cached_tokens": 2163
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-100401\",\n  \"claims\": [\n    {\n      \"text\": \"I have experience in building NLP models using scikit-learn and computer vision techniques. I have also worked on sentiment analysis services and OCR workflows, which aligns with the project requirements.\",\n      \"evidence_ids\": [\"ai-ml-engineer-cs-19\", \"ai-ml-engineer-cs-10\", \"ai-ml-engineer-cs-17\", \"ai-ml-engineer-cs-11\", \"ai-ml-engineer-cs-02\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "ai-ml-engineer/syn-100401/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 110,
+        "prompt_tokens": 2402,
+        "total_tokens": 2512,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "response": "{\n  \"decisions\": [\n    {\n      \"index\": 0,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence provided in the 'ai-ml-engineer-cs-02' case study shows that the freelancer has experience in building an image classifier for product photos using scikit-learn, LangChain, RAG, and NLP. This directly supports the claim of having experience in building NLP models using scikit-learn and computer vision techniques.\"\n    }\n  ]\n}"
+    },
+    {
+      "stage": "ai-ml-engineer/syn-100401/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 505,
+        "total_tokens": 530,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101386/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 218,
+        "prompt_tokens": 2158,
+        "total_tokens": 2376,
+        "prompt_tokens_details": {
+          "cached_tokens": 2157
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-101386\",\n  \"claims\": [\n    {\n      \"text\": \"I have extensive experience in computer vision, large language models, RAG, PyTorch, and time series. I have successfully developed and deployed fraud detection models for imbalanced transactions. My projects include a sentiment analysis service, a document question-answering assistant, a support-ticket triage classifier, a demand forecasting model, and an image classifier for product photos. I can confidently approach the client's project and share a similar project to demonstrate my capabilities.\",\n      \"evidence_ids\": [\"ai-ml-engineer-cs-11\", \"ai-ml-engineer-cs-07\", \"ai-ml-engineer-cs-05\", \"ai-ml-engineer-cs-16\", \"ai-ml-engineer-cs-08\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101386/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 263,
+        "prompt_tokens": 2504,
+        "total_tokens": 2767,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "response": "{\n  \"decisions\": [\n    {\n      \"index\": 2,\n      \"label\": \"supported\",\n      \"reason\": \"The projects listed in the claim are all supported by evidence IDs that match the projects in the provided evidence data. For example, the sentiment analysis service is supported by evidence ID 'ai-ml-engineer-cs-11', the document question-answering assistant by 'ai-ml-engineer-cs-07', the support-ticket triage classifier by 'ai-ml-engineer-cs-05', and the demand forecasting model by 'ai-ml-engineer-cs-16'.\"\n    },\n    {\n      \"index\": 3,\n      \"label\": \"supported\",\n      \"reason\": \"The claim text is a general statement about the projects, and the evidence IDs provided match the projects listed in the claim. The evidence IDs 'ai-ml-engineer-cs-11', 'ai-ml-engineer-cs-07', 'ai-ml-engineer-cs-05', 'ai-ml-engineer-cs-16', and 'ai-ml-engineer-cs-08' are all supported by the provided evidence data.\"\n    }\n  ]\n}"
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101386/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 494,
+        "total_tokens": 519,
+        "prompt_tokens_details": {
+          "cached_tokens": 190
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101170/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 198,
+        "prompt_tokens": 2188,
+        "total_tokens": 2386,
+        "prompt_tokens_details": {
+          "cached_tokens": 2187
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-101170\",\n  \"claims\": [\n    {\n      \"text\": \"I have extensive experience in TensorFlow, LLM, time series, scikit-learn, and containerization. I have successfully implemented a support-ticket triage classifier in the past, reducing manual effort by 20%. I can provide a detailed project description and a reproducible notebook for this project.\",\n      \"evidence_ids\": [\"ai-ml-engineer-cs-05\", \"ai-ml-engineer-cs-07\", \"ai-ml-engineer-cs-05\", \"ai-ml-engineer-cs-07\", \"ai-ml-engineer-cs-05\", \"ai-ml-engineer-cs-07\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101170/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 100,
+        "prompt_tokens": 2479,
+        "total_tokens": 2579,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "response": "{\n  \"decisions\": [\n    {\n      \"index\": 2,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence provided in the project description and reproducible notebook for the project aligns with the claim that the project can be described in detail and a reproducible notebook can be provided. The evidence includes a project description and a reproducible notebook, which directly support the claim of detailed project description and reproducible notebook.\"\n    }\n  ]\n}"
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101170/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 494,
+        "total_tokens": 519,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "fullstack-dev/syn-100354/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 161,
+        "prompt_tokens": 2026,
+        "total_tokens": 2187,
+        "prompt_tokens_details": {
+          "cached_tokens": 2025
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-100354\",\n  \"claims\": [\n    {\n      \"text\": \"I have extensive experience with MongoDB, React, JavaScript, and FastAPI. I have successfully developed a portfolio site with a CMS using these technologies. I can confidently approach the project and share a similar project that showcases my skills.\",\n      \"evidence_ids\": [\"fullstack-dev-cs-15\", \"fullstack-dev-cs-13\", \"fullstack-dev-rd-15\", \"fullstack-dev-cs-08\", \"fullstack-dev-cs-14\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "fullstack-dev/syn-100354/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 94,
+        "prompt_tokens": 2155,
+        "total_tokens": 2249,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "response": "{\n  \"decisions\": [\n    {\n      \"index\": 2,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence provided in the 'fullstack-dev-cs-15' case study demonstrates the ability to automate an internal inventory tool using Flask, Mongoose, and JavaScript, which aligns with the claim of being able to approach a project and share a similar project showcasing skills.\"\n    }\n  ]\n}"
+    },
+    {
+      "stage": "fullstack-dev/syn-100354/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 492,
+        "total_tokens": 517,
+        "prompt_tokens_details": {
+          "cached_tokens": 190
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "fullstack-dev/syn-101245/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 164,
+        "prompt_tokens": 2039,
+        "total_tokens": 2203,
+        "prompt_tokens_details": {
+          "cached_tokens": 2038
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-101245\",\n  \"claims\": [\n    {\n      \"text\": \"I have extensive experience with FastAPI, WordPress, and TypeScript. I have successfully automated a SaaS landing page with billing using these technologies. I can confidently approach the project with the skills needed and share a similar project to demonstrate my capabilities.\",\n      \"evidence_ids\": [\"fullstack-dev-cs-10\", \"fullstack-dev-cs-00\", \"fullstack-dev-cs-08\", \"fullstack-dev-rd-15\", \"fullstack-dev-cs-14\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "fullstack-dev/syn-101245/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 212,
+        "prompt_tokens": 2268,
+        "total_tokens": 2480,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "response": "{\n  \"decisions\": [\n    {\n      \"index\": 1,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence provided in the 'fullstack-dev-cs-10' case study clearly demonstrates that the freelancer has successfully automated a SaaS landing page with billing using WordPress, django rest, TypeScript, and Next.js. The freelancer handed over documentation and a walkthrough video, which aligns with the claim of successfully automating the SaaS landing page.\"\n    },\n    {\n      \"index\": 2,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence provided in the 'fullstack-dev-cs-00' case study shows that the freelancer has successfully automated a job board with search filters using Django, WordPress, HTML/CSS, and MongoDB. The freelancer improved the page load by caching and image optimisation, which is consistent with the claim of being able to approach the project with the skills needed and share a similar project to demonstrate capabilities.\"\n    }\n  ]\n}"
+    },
+    {
+      "stage": "fullstack-dev/syn-101245/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 497,
+        "total_tokens": 522,
+        "prompt_tokens_details": {
+          "cached_tokens": 190
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "fullstack-dev/syn-101377/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 263,
+        "prompt_tokens": 2100,
+        "total_tokens": 2363,
+        "prompt_tokens_details": {
+          "cached_tokens": 2099
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-101377\",\n  \"claims\": [\n    {\n      \"text\": \"I have extensive experience in building REST APIs using JavaScript, HTML/CSS, and Node.js. I have successfully completed projects that involved migrating legacy systems to modern technologies without downtime.\",\n      \"evidence_ids\": [\"fullstack-dev-cs-14\", \"fullstack-dev-cs-06\", \"fullstack-dev-cs-12\", \"fullstack-dev-rd-12\", \"fullstack-dev-cs-03\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    },\n    {\n      \"text\": \"I have a proven track record of delivering projects on time and within budget. I have a strong understanding of best practices in web development and can provide detailed project documentation.\",\n      \"evidence_ids\": [\"fullstack-dev-cs-14\", \"fullstack-dev-cs-06\", \"fullstack-dev-cs-12\", \"fullstack-dev-rd-12\", \"fullstack-dev-cs-03\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "fullstack-dev/syn-101377/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 232,
+        "prompt_tokens": 2491,
+        "total_tokens": 2723,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "response": "{\n  \"decisions\": [\n    {\n      \"index\": 1,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence provided in the 'fullstack-dev-cs-14' case study shows that the freelancer successfully migrated a legacy system to modern technologies without downtime, which aligns with the claim of delivering projects without downtime.\"\n    },\n    {\n      \"index\": 2,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence provided in the 'fullstack-dev-cs-14' case study shows that the freelancer successfully delivered projects on time and within budget, which aligns with the claim of having a proven track record of delivering projects on time and within budget.\"\n    },\n    {\n      \"index\": 3,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence provided in the 'fullstack-dev-cs-14' case study shows that the freelancer successfully provided detailed project documentation, which aligns with the claim of having a strong understanding of best practices in web development and being able to provide detailed project documentation.\"\n    }\n  ]\n}"
+    },
+    {
+      "stage": "fullstack-dev/syn-101377/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 528,
+        "total_tokens": 553,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "fullstack-dev/syn-100668/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 147,
+        "prompt_tokens": 2102,
+        "total_tokens": 2249,
+        "prompt_tokens_details": {
+          "cached_tokens": 2101
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-100668\",\n  \"claims\": [\n    {\n      \"text\": \"I have extensive experience with FastAPI, REST API, and React. I have successfully designed and implemented admin dashboards with role-based access using these technologies.\",\n      \"evidence_ids\": [\"fullstack-dev-cs-02\", \"fullstack-dev-cs-14\", \"fullstack-dev-cs-18\", \"fullstack-dev-cs-13\", \"fullstack-dev-cs-03\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "fullstack-dev/syn-100668/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 522,
+        "total_tokens": 547,
+        "prompt_tokens_details": {
+          "cached_tokens": 190
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100349/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 517,
+        "prompt_tokens": 2101,
+        "total_tokens": 2618,
+        "prompt_tokens_details": {
+          "cached_tokens": 2100
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-100349\",\n  \"claims\": [\n    {\n      \"text\": \"I have extensive experience in data cleaning and deduplication workflows, having successfully automated a data cleaning and deduplication workflow using Airflow, dashboarding, and Power BI. I can provide a detailed summary that the client's team can act on.\",\n      \"evidence_ids\": [\"data-analyst-cs-14\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    },\n    {\n      \"text\": \"I have a proven track record of delivering successful projects that cut manual effort by 40% through the use of Airflow, dashboarding, Tableau, and Power BI.\",\n      \"evidence_ids\": [\"data-analyst-cs-10\", \"data-analyst-cs-11\", \"data-analyst-cs-19\", \"data-analyst-cs-12\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    },\n    {\n      \"text\": \"I have experience in survey analysis with statistical tests, including the delivery of a one-page summary that the client's team could act on.\",\n      \"evidence_ids\": [\"data-analyst-cs-10\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    },\n    {\n      \"text\": \"I have a strong background in monthly KPI reporting pipelines, including the documentation of every metric definition to ensure consistency across teams.\",\n      \"evidence_ids\": [\"data-analyst-cs-11\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    },\n    {\n      \"text\": \"I have experience in designing sales performance dashboards using data cleaning, Tableau, and Airflow, and I can provide a detailed summary that the client's team can act on.\",\n      \"evidence_ids\": [\"data-analyst-cs-19\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    },\n    {\n      \"text\": \"I have experience in inventory forecasting through web scraping, Tableau, and dashboarding, and I can provide a detailed summary that the client's team can act on.\",\n      \"evidence_ids\": [\"data-analyst-cs-12\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100349/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 381,
+        "prompt_tokens": 2606,
+        "total_tokens": 2987,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "response": "{\n  \"decisions\": [\n    {\n      \"index\": 1,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence shows that the client's team could act on a detailed summary provided by the data analyst, which aligns with the claim.\"\n    },\n    {\n      \"index\": 2,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence demonstrates that the data analyst has a proven track record of delivering projects that cut manual effort by 40% using Airflow, dashboarding, Tableau, and Power BI, which supports the claim.\"\n    },\n    {\n      \"index\": 3,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence indicates that the data analyst has experience in survey analysis with statistical tests and has delivered a one-page summary that the client's team could act on, which supports the claim.\"\n    },\n    {\n      \"index\": 4,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence shows that the data analyst has experience in designing monthly KPI reporting pipelines and has documented every metric definition to ensure consistency across teams, which supports the claim.\"\n    },\n    {\n      \"index\": 5,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence indicates that the data analyst has experience in designing sales performance dashboards using data cleaning, Tableau, and Airflow, and has provided a detailed summary that the client's team could act on, which supports the claim.\"\n    },\n    {\n      \"index\": 6,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence shows that the data analyst has experience in inventory forecasting through web scraping, Tableau, and dashboarding, and has provided a detailed summary that the client's team could act on, which supports the claim.\"\n    }\n  ]\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100349/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 484,
+        "total_tokens": 509,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100737/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 270,
+        "prompt_tokens": 2051,
+        "total_tokens": 2321,
+        "prompt_tokens_details": {
+          "cached_tokens": 2050
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-100737\",\n  \"claims\": [\n    {\n      \"text\": \"I have extensive experience with Airflow, web scraping, and dbt. I can confidently approach a monthly KPI reporting pipeline with the skills required.\",\n      \"evidence_ids\": [\"data-analyst-cs-06\", \"data-analyst-cs-17\", \"data-analyst-cs-16\", \"data-analyst-cs-01\", \"data-analyst-cs-12\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    },\n    {\n      \"text\": \"I have successfully completed similar projects in the past, including a web-scraped price tracker, a sales performance dashboard, a customer cohort analysis, and an inventory forecasting workbook.\",\n      \"evidence_ids\": [\"data-analyst-cs-06\", \"data-analyst-cs-17\", \"data-analyst-cs-16\", \"data-analyst-cs-01\", \"data-analyst-cs-12\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100737/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 289,
+        "prompt_tokens": 2333,
+        "total_tokens": 2622,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "response": "{\n  \"decisions\": [\n    {\n      \"index\": 1,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence_ids provided include 'data-analyst-cs-06', 'data-analyst-cs-17', 'data-analyst-cs-16', 'data-analyst-cs-01', and 'data-analyst-cs-12'. These evidence_ids correspond to projects that demonstrate the skills required for a monthly KPI reporting pipeline, including web scraping, dashboarding, dbt, Power BI, and more. The evidence provided supports the claim that the freelancer has the necessary skills to approach a monthly KPI reporting pipeline.\"\n    },\n    {\n      \"index\": 2,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence_ids provided include 'data-analyst-cs-06', 'data-analyst-cs-17', 'data-analyst-cs-16', 'data-analyst-cs-01', and 'data-analyst-cs-12'. These evidence_ids correspond to projects that demonstrate the skills required for similar projects, including web scraping, dashboarding, dbt, Power BI, and more. The evidence provided supports the claim that the freelancer has successfully completed similar projects in the past.\"\n    }\n  ]\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100737/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 475,
+        "total_tokens": 500,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100440/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 278,
+        "prompt_tokens": 2156,
+        "total_tokens": 2434,
+        "prompt_tokens_details": {
+          "cached_tokens": 2155
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-100440\",\n  \"claims\": [\n    {\n      \"text\": \"I have extensive experience in data cleaning, dashboarding, and web scraping. I have successfully completed projects that required these skills, including a data cleaning and deduplication workflow using statistics, Airflow, and web scraping.\",\n      \"evidence_ids\": [\"data-analyst-cs-01\", \"data-analyst-cs-06\", \"data-analyst-cs-17\", \"data-analyst-cs-12\", \"data-analyst-cs-14\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    },\n    {\n      \"text\": \"I have used SQL on multiple client projects before, and I can provide examples of how I have used it to analyze data and create dashboards.\",\n      \"evidence_ids\": [\"data-analyst-cs-01\", \"data-analyst-cs-06\", \"data-analyst-cs-17\", \"data-analyst-cs-12\", \"data-analyst-cs-14\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100440/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 183,
+        "prompt_tokens": 2381,
+        "total_tokens": 2564,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "response": "{\n  \"decisions\": [\n    {\n      \"index\": 1,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence provided shows that the freelancer has successfully completed projects that required skills including data cleaning and deduplication workflow, statistics, Airflow, and web scraping. The evidence also mentions that the freelancer delivered a one-page summary the client's team could act on, which aligns with the claim.\"\n    },\n    {\n      \"index\": 2,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence provided shows that the freelancer has used SQL on multiple client projects before, and can provide examples of how they have used it to analyze data and create dashboards. The evidence also mentions that the freelancer can provide examples of how they have used SQL on multiple client projects before, which aligns with the claim.\"\n    }\n  ]\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100440/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 548,
+        "total_tokens": 573,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100288/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 340,
+        "prompt_tokens": 2073,
+        "total_tokens": 2413,
+        "prompt_tokens_details": {
+          "cached_tokens": 2072
+        }
+      },
+      "response": "{\n  \"job_id\": \"syn-100288\",\n  \"claims\": [\n    {\n      \"text\": \"I have extensive experience in Tableau, Excel, and pandas. I have successfully implemented web-scraped price trackers using these tools, including a project where I delivered a one-page summary that the client's team could act on.\",\n      \"evidence_ids\": [\"data-analyst-cs-15\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    },\n    {\n      \"text\": \"I have a proven track record of automating sales performance dashboards and inventory forecasting workbooks using Tableau, Excel, and statistics. I have also handled inventory forecasting workbooks through web scraping and dashboarding, reducing report preparation time from hours to minutes.\",\n      \"evidence_ids\": [\"data-analyst-cs-08\", \"data-analyst-cs-09\", \"data-analyst-cs-12\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    },\n    {\n      \"text\": \"I have a strong understanding of Tableau, Excel, and pandas, and I have successfully implemented web-scraped price trackers using these tools. I have also handled inventory forecasting workbooks through web scraping and dashboarding, reducing report preparation time from hours to minutes.\",\n      \"evidence_ids\": [\"data-analyst-cs-05\", \"data-analyst-cs-15\"],\n      \"kind\": \"claim\",\n      \"section\": \"cover\"\n    }\n  ],\n  \"edited_cover_letter\": null\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100288/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 187,
+        "prompt_tokens": 2346,
+        "total_tokens": 2533,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "response": "{\n  \"decisions\": [\n    {\n      \"index\": 2,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence shows that the freelancer has a proven track record of automating sales performance dashboards and inventory forecasting workbooks using Tableau, Excel, and statistics, which matches the claim.\"\n    },\n    {\n      \"index\": 3,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence shows that the freelancer has handled inventory forecasting workbooks through web scraping and dashboarding, reducing report preparation time from hours to minutes, which matches the claim.\"\n    },\n    {\n      \"index\": 5,\n      \"label\": \"supported\",\n      \"reason\": \"The evidence shows that the freelancer has handled inventory forecasting workbooks through web scraping and dashboarding, reducing report preparation time from hours to minutes, which matches the claim.\"\n    }\n  ]\n}"
+    },
+    {
+      "stage": "data-analyst/syn-100288/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 498,
+        "total_tokens": 523,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      },
+      "response": "{\n  \"passed\": true,\n  \"score\": 1,\n  \"issues\": []\n}"
+    },
+    {
+      "stage": "synthetic-control/exact supported fact",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 45,
+        "prompt_tokens": 597,
+        "total_tokens": 642,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      },
+      "response": "{\"decisions\": [{\"index\": 0, \"label\": \"supported\", \"reason\": \"The evidence directly states that a Python classification baseline was built in 2019.\"}]}"
+    }
+  ],
+  "limits": "Synthetic evidence/gold; 12 natural real-model drafts. Controls are deliberately injected and separately reported. Semantic checker is not human-calibrated and repeat checking is not independent human ground truth. No proposals submitted."
+}

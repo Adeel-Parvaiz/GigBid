@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial,sans-serif;fill:#222}.title{font-size:20px;font-weight:bold}.label{font-size:13px}.small{font-size:11px}</style>
+<text x="20" y="28" class="title">R&amp;D A: Tool-description comparison</text>
+<text x="25" y="50" class="label" font-weight="bold">Correct tool selection</text>
+<line x1="50" y1="177" x2="437" y2="177" stroke="#777"/>
+<rect x="80" y="85.1" width="48" height="91.9" fill="#4c78a8"/>
+<text x="104" y="80.1" text-anchor="middle" class="small">87.5%</text>
+<text x="104" y="194" text-anchor="middle" class="small">Fine-grained</text>
+<rect x="195" y="114.0" width="48" height="63.0" fill="#f58518"/>
+<text x="219" y="109.0" text-anchor="middle" class="small">60.0%</text>
+<text x="219" y="194" text-anchor="middle" class="small">Coarse-grained</text>
+<rect x="310" y="106.1" width="48" height="70.9" fill="#54a24b"/>
+<text x="334" y="101.1" text-anchor="middle" class="small">67.5%</text>
+<text x="334" y="194" text-anchor="middle" class="small">Rewritten/optimized</text>
+<text x="465" y="50" class="label" font-weight="bold">Task completion</text>
+<line x1="490" y1="177" x2="877" y2="177" stroke="#777"/>
+<rect x="520" y="85.1" width="48" height="91.9" fill="#4c78a8"/>
+<text x="544" y="80.1" text-anchor="middle" class="small">87.5%</text>
+<text x="544" y="194" text-anchor="middle" class="small">Fine-grained</text>
+<rect x="635" y="114.0" width="48" height="63.0" fill="#f58518"/>
+<text x="659" y="109.0" text-anchor="middle" class="small">60.0%</text>
+<text x="659" y="194" text-anchor="middle" class="small">Coarse-grained</text>
+<rect x="750" y="106.1" width="48" height="70.9" fill="#54a24b"/>
+<text x="774" y="101.1" text-anchor="middle" class="small">67.5%</text>
+<text x="774" y="194" text-anchor="middle" class="small">Rewritten/optimized</text>
+<text x="25" y="260" class="label" font-weight="bold">Argument/schema validity</text>
+<line x1="50" y1="387" x2="437" y2="387" stroke="#777"/>
+<rect x="80" y="287.2" width="48" height="99.8" fill="#4c78a8"/>
+<text x="104" y="282.2" text-anchor="middle" class="small">95.0%</text>
+<text x="104" y="404" text-anchor="middle" class="small">Fine-grained</text>
+<rect x="195" y="318.8" width="48" height="68.2" fill="#f58518"/>
+<text x="219" y="313.8" text-anchor="middle" class="small">65.0%</text>
+<text x="219" y="404" text-anchor="middle" class="small">Coarse-grained</text>
+<rect x="310" y="297.8" width="48" height="89.2" fill="#54a24b"/>
+<text x="334" y="292.8" text-anchor="middle" class="small">85.0%</text>
+<text x="334" y="404" text-anchor="middle" class="small">Rewritten/optimized</text>
+<text x="465" y="260" class="label" font-weight="bold">Median end-to-end latency (ms)</text>
+<line x1="490" y1="387" x2="877" y2="387" stroke="#777"/>
+<rect x="520" y="301.6" width="48" height="85.4" fill="#4c78a8"/>
+<text x="544" y="296.6" text-anchor="middle" class="small">90</text>
+<text x="544" y="404" text-anchor="middle" class="small">Fine-grained</text>
+<rect x="635" y="302.1" width="48" height="84.9" fill="#f58518"/>
+<text x="659" y="297.1" text-anchor="middle" class="small">89</text>
+<text x="659" y="404" text-anchor="middle" class="small">Coarse-grained</text>
+<rect x="750" y="295.7" width="48" height="91.3" fill="#54a24b"/>
+<text x="774" y="290.7" text-anchor="middle" class="small">96</text>
+<text x="774" y="404" text-anchor="middle" class="small">Rewritten/optimized</text>
+</svg>

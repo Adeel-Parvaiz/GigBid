@@ -1,0 +1,750 @@
+{
+  "created_at": "2026-11-14T13:00:18.829281+00:00",
+  "backend": "real OpenAICompatLLM semantic check plus deterministic guards",
+  "models": {
+    "analyst": "qwen25-15b",
+    "risk": "qwen25-15b",
+    "writer": "qwen25-15b",
+    "critic": "qwen25-15b",
+    "liaison_intent": "qwen25-15b",
+    "liaison_reply": "qwen25-15b"
+  },
+  "endpoint": "http://localhost:11435/v1",
+  "all": {
+    "proposals": 12,
+    "claims_before": 47,
+    "claims_after": 1,
+    "unsupported_before": 38,
+    "unsupported_after_rechecked": 1,
+    "unsupported_rate_before": 0.8085106382978723,
+    "unsupported_rate_after": 1.0,
+    "unsupported_per_proposal_before": 3.1666666666666665,
+    "unsupported_per_proposal_after": 0.08333333333333333,
+    "partly_supported_before": 8,
+    "empty_clean_drafts": 11
+  },
+  "per_persona": {
+    "ai-ml-engineer": {
+      "proposals": 4,
+      "claims_before": 16,
+      "claims_after": 1,
+      "unsupported_before": 8,
+      "unsupported_after_rechecked": 1,
+      "unsupported_rate_before": 0.5,
+      "unsupported_rate_after": 1.0,
+      "unsupported_per_proposal_before": 2.0,
+      "unsupported_per_proposal_after": 0.25,
+      "partly_supported_before": 7,
+      "empty_clean_drafts": 3
+    },
+    "fullstack-dev": {
+      "proposals": 4,
+      "claims_before": 12,
+      "claims_after": 0,
+      "unsupported_before": 12,
+      "unsupported_after_rechecked": 0,
+      "unsupported_rate_before": 1.0,
+      "unsupported_rate_after": 0,
+      "unsupported_per_proposal_before": 3.0,
+      "unsupported_per_proposal_after": 0.0,
+      "partly_supported_before": 0,
+      "empty_clean_drafts": 4
+    },
+    "data-analyst": {
+      "proposals": 4,
+      "claims_before": 19,
+      "claims_after": 0,
+      "unsupported_before": 18,
+      "unsupported_after_rechecked": 0,
+      "unsupported_rate_before": 0.9473684210526315,
+      "unsupported_rate_after": 0,
+      "unsupported_per_proposal_before": 4.5,
+      "unsupported_per_proposal_after": 0.0,
+      "partly_supported_before": 1,
+      "empty_clean_drafts": 4
+    }
+  },
+  "synthetic_controls": [
+    {
+      "name": "exact supported fact",
+      "expected_synthetic_label": "supported",
+      "actual": "unsupported",
+      "correct": false,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline in 2019.",
+          "section": "cover",
+          "label": "unsupported",
+          "support": 0.0,
+          "reason": "semantic check missing, duplicated, or not backed by an exact source quote"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 1,
+        "unsupported_rate_before": 1.0,
+        "partly_supported_before": 0,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline in 2019."
+        ]
+      }
+    },
+    {
+      "name": "fabricated number",
+      "expected_synthetic_label": "unsupported",
+      "actual": "unsupported",
+      "correct": true,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline for 99 banks.",
+          "section": "cover",
+          "label": "unsupported",
+          "support": 0.67,
+          "reason": "guard: numbers not in evidence: ['99']"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 1,
+        "unsupported_rate_before": 1.0,
+        "partly_supported_before": 0,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline for 99 banks."
+        ]
+      }
+    },
+    {
+      "name": "unknown citation",
+      "expected_synthetic_label": "unsupported",
+      "actual": "unsupported",
+      "correct": true,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline.",
+          "section": "cover",
+          "label": "unsupported",
+          "support": 0.0,
+          "reason": "guard: missing or unknown evidence citation"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 1,
+        "unsupported_rate_before": 1.0,
+        "partly_supported_before": 0,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline."
+        ]
+      }
+    },
+    {
+      "name": "substring number",
+      "expected_synthetic_label": "unsupported",
+      "actual": "unsupported",
+      "correct": true,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline in 19.",
+          "section": "cover",
+          "label": "unsupported",
+          "support": 0.8,
+          "reason": "guard: numbers not in evidence: ['19']"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 1,
+        "unsupported_rate_before": 1.0,
+        "partly_supported_before": 0,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline in 19."
+        ]
+      }
+    },
+    {
+      "name": "invented employer",
+      "expected_synthetic_label": "unsupported",
+      "actual": "unsupported",
+      "correct": true,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline at Google.",
+          "section": "cover",
+          "label": "unsupported",
+          "support": 0.8,
+          "reason": "guard: named organization or project is absent from the cited source"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 1,
+        "unsupported_rate_before": 1.0,
+        "partly_supported_before": 0,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline at Google."
+        ]
+      }
+    },
+    {
+      "name": "unsupported extra action",
+      "expected_synthetic_label": "partly_supported",
+      "actual": "partly_supported",
+      "correct": true,
+      "proposal_draft": {
+        "job_id": "control",
+        "questions": [],
+        "claims": [],
+        "edited_cover_letter": null,
+        "cover_letter": "",
+        "screening_answers": []
+      },
+      "claim_verification": [
+        {
+          "text": "Built a Python classification baseline and deployed it globally.",
+          "section": "cover",
+          "label": "partly_supported",
+          "support": 0.67,
+          "reason": "guard: additional accomplishments absent from the cited source"
+        }
+      ],
+      "verification_stats": {
+        "claims_total": 1,
+        "unsupported_before": 0,
+        "unsupported_rate_before": 0.0,
+        "partly_supported_before": 1,
+        "removed_claims": 1,
+        "claims_after": 0,
+        "unsupported_after": 0,
+        "partly_supported_after": 0,
+        "unsupported_rate_after": 0.0,
+        "removed_texts": [
+          "Built a Python classification baseline and deployed it globally."
+        ]
+      }
+    }
+  ],
+  "usage": [
+    {
+      "stage": "ai-ml-engineer/syn-100002/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 182,
+        "prompt_tokens": 2166,
+        "total_tokens": 2348,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-100002/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 83,
+        "prompt_tokens": 1763,
+        "total_tokens": 1846,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-100002/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 501,
+        "total_tokens": 526,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-100401/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 321,
+        "prompt_tokens": 2164,
+        "total_tokens": 2485,
+        "prompt_tokens_details": {
+          "cached_tokens": 7
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-100401/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 323,
+        "prompt_tokens": 1768,
+        "total_tokens": 2091,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-100401/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 505,
+        "total_tokens": 530,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101386/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 233,
+        "prompt_tokens": 2158,
+        "total_tokens": 2391,
+        "prompt_tokens_details": {
+          "cached_tokens": 7
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101386/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 169,
+        "prompt_tokens": 1661,
+        "total_tokens": 1830,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101386/independent-repeat-check",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 117,
+        "prompt_tokens": 1661,
+        "total_tokens": 1778,
+        "prompt_tokens_details": {
+          "cached_tokens": 1660
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101386/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 621,
+        "total_tokens": 646,
+        "prompt_tokens_details": {
+          "cached_tokens": 190
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101170/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 212,
+        "prompt_tokens": 2188,
+        "total_tokens": 2400,
+        "prompt_tokens_details": {
+          "cached_tokens": 7
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101170/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 153,
+        "prompt_tokens": 1798,
+        "total_tokens": 1951,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "ai-ml-engineer/syn-101170/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 494,
+        "total_tokens": 519,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-100354/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 247,
+        "prompt_tokens": 2026,
+        "total_tokens": 2273,
+        "prompt_tokens_details": {
+          "cached_tokens": 7
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-100354/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 87,
+        "prompt_tokens": 1632,
+        "total_tokens": 1719,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-100354/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 492,
+        "total_tokens": 517,
+        "prompt_tokens_details": {
+          "cached_tokens": 190
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-101245/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 164,
+        "prompt_tokens": 2039,
+        "total_tokens": 2203,
+        "prompt_tokens_details": {
+          "cached_tokens": 7
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-101245/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 209,
+        "prompt_tokens": 1713,
+        "total_tokens": 1922,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-101245/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 497,
+        "total_tokens": 522,
+        "prompt_tokens_details": {
+          "cached_tokens": 190
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-101377/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 263,
+        "prompt_tokens": 2100,
+        "total_tokens": 2363,
+        "prompt_tokens_details": {
+          "cached_tokens": 7
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-101377/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 278,
+        "prompt_tokens": 1836,
+        "total_tokens": 2114,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-101377/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 528,
+        "total_tokens": 553,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-100668/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 147,
+        "prompt_tokens": 2102,
+        "total_tokens": 2249,
+        "prompt_tokens_details": {
+          "cached_tokens": 7
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-100668/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 92,
+        "prompt_tokens": 1590,
+        "total_tokens": 1682,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "fullstack-dev/syn-100668/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 522,
+        "total_tokens": 547,
+        "prompt_tokens_details": {
+          "cached_tokens": 190
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100349/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 520,
+        "prompt_tokens": 2101,
+        "total_tokens": 2621,
+        "prompt_tokens_details": {
+          "cached_tokens": 7
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100349/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 705,
+        "prompt_tokens": 1962,
+        "total_tokens": 2667,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100349/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 484,
+        "total_tokens": 509,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100737/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 270,
+        "prompt_tokens": 2051,
+        "total_tokens": 2321,
+        "prompt_tokens_details": {
+          "cached_tokens": 7
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100737/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 211,
+        "prompt_tokens": 1776,
+        "total_tokens": 1987,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100737/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 475,
+        "total_tokens": 500,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100440/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 277,
+        "prompt_tokens": 2156,
+        "total_tokens": 2433,
+        "prompt_tokens_details": {
+          "cached_tokens": 7
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100440/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 242,
+        "prompt_tokens": 1802,
+        "total_tokens": 2044,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100440/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 548,
+        "total_tokens": 573,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100288/writer",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 324,
+        "prompt_tokens": 2073,
+        "total_tokens": 2397,
+        "prompt_tokens_details": {
+          "cached_tokens": 7
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100288/verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 328,
+        "prompt_tokens": 1800,
+        "total_tokens": 2128,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    },
+    {
+      "stage": "data-analyst/syn-100288/critic-after-verification",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 25,
+        "prompt_tokens": 498,
+        "total_tokens": 523,
+        "prompt_tokens_details": {
+          "cached_tokens": 191
+        }
+      }
+    },
+    {
+      "stage": "synthetic-control/exact supported fact",
+      "model": "qwen25-15b",
+      "usage": {
+        "completion_tokens": 57,
+        "prompt_tokens": 482,
+        "total_tokens": 539,
+        "prompt_tokens_details": {
+          "cached_tokens": 3
+        }
+      }
+    }
+  ],
+  "limits": "Synthetic evidence/gold; 12 natural real-model drafts. Controls are deliberately injected and separately reported. Semantic checker is not human-calibrated and repeat checking is not independent human ground truth. No proposals submitted."
+}

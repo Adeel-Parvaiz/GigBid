@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-11-14T12:13:11.000592+00:00",
+  "model": "qwen25-15b",
+  "base_url": "http://127.0.0.1:11435/v1",
+  "seed": 4016,
+  "temperature": 0,
+  "trials": 120,
+  "rewritten_base": "fine",
+  "metrics": {
+    "fine": {
+      "n": 40,
+      "tool_selection_accuracy": 0.95,
+      "argument_accuracy": 0.825,
+      "schema_validity": 1.0,
+      "completion_accuracy": 0.9,
+      "mean_tokens_per_task": 2631.45,
+      "mean_input_tokens": 2585.425,
+      "mean_output_tokens": 46.025
+    },
+    "coarse": {
+      "n": 40,
+      "tool_selection_accuracy": 0.3,
+      "argument_accuracy": 0.15,
+      "schema_validity": 0.175,
+      "completion_accuracy": 0.15,
+      "mean_tokens_per_task": 2686.95,
+      "mean_input_tokens": 2633.425,
+      "mean_output_tokens": 53.525
+    },
+    "rewritten": {
+      "n": 40,
+      "tool_selection_accuracy": 0.9,
+      "argument_accuracy": 0.75,
+      "schema_validity": 1.0,
+      "completion_accuracy": 0.875,
+      "mean_tokens_per_task": 2808.475,
+      "mean_input_tokens": 2763.425,
+      "mean_output_tokens": 45.05
+    }
+  },
+  "tasks_sha256": "98ef73340d53450af310d4261a06c5082bf221292653040922b88450d1890b48",
+  "scope": "Real open-weight LLM selects tool AND generates arguments, executed through official SDK in-memory MCP. Disposable synthetic fixtures only."
+}

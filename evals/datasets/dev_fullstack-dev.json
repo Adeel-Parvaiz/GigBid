@@ -1,0 +1,3622 @@
+{
+ "_note": "SYNTHETIC dev set; gold derived by rule from generation-time tags; not human-labelled",
+ "jobs": [
+  {
+   "job_id": "scam-200086",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    533
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "scam-200082",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-09"
+   ],
+   "price_band": [
+    40,
+    61
+   ],
+   "coverage": 0.83,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200024",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-05"
+   ],
+   "price_band": [
+    242.62,
+    1997.12
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200016",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    119
+   ],
+   "coverage": 0.2,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "scam-200041",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-19"
+   ],
+   "price_band": [
+    400,
+    668
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "inj-200130",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    303
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "scam-200026",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    237.0,
+    1841.5
+   ],
+   "coverage": 0.2,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200071",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    237.0,
+    1841.5
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200035",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4513
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "inj-200131",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-13"
+   ],
+   "price_band": [
+    40,
+    70
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "inj-200119",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    33,
+    50
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "inj-200122",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    178
+   ],
+   "coverage": 0.25,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "scam-200036",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    447
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200034",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2196
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200018",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    322
+   ],
+   "coverage": 0.17,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200048",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    27,
+    43
+   ],
+   "coverage": 0.17,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "scam-200052",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    237.0,
+    1841.5
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200080",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    237.0,
+    1841.5
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "scam-200055",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rv-03",
+    "fullstack-dev-cs-04"
+   ],
+   "price_band": [
+    400,
+    635
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "inj-200104",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    142
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "scam-200004",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    299
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "inj-200137",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    16,
+    28
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "inj-200101",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-14"
+   ],
+   "price_band": [
+    200,
+    277
+   ],
+   "coverage": 0.83,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200000",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4751
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "scam-200029",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    1811
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "inj-200133",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2526
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "inj-200125",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    40,
+    55
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "scam-200066",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-rd-02"
+   ],
+   "price_band": [
+    200,
+    268
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "inj-200134",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-09"
+   ],
+   "price_band": [
+    25,
+    55
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "inj-200118",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    39,
+    50
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200021",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-08"
+   ],
+   "price_band": [
+    242.62,
+    1997.12
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200031",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    42,
+    55
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "scam-200090",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    237.0,
+    1841.5
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "inj-200128",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-09"
+   ],
+   "price_band": [
+    400,
+    691
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200068",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    509
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200088",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    245.12,
+    1882.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "scam-200014",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-rd-05"
+   ],
+   "price_band": [
+    242.62,
+    1997.12
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "inj-200152",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-10"
+   ],
+   "price_band": [
+    100,
+    124
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded"
+  },
+  {
+   "job_id": "scam-200040",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    237.0,
+    1841.5
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "inj-200109",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-rd-05"
+   ],
+   "price_band": [
+    3000,
+    4411
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout"
+  },
+  {
+   "job_id": "syn-100144",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-rd-03"
+   ],
+   "price_band": [
+    1500,
+    2160
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101103",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-15"
+   ],
+   "price_band": [
+    19,
+    41
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100420",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-rv-02",
+    "fullstack-dev-cs-03"
+   ],
+   "price_band": [
+    800,
+    1415
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101386",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-19",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01"
+   ],
+   "price_band": [
+    400,
+    620
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100730",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-05",
+    "fullstack-dev-rd-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03"
+   ],
+   "price_band": [
+    39,
+    61
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100680",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02"
+   ],
+   "price_band": [
+    100,
+    140
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100614",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-00"
+   ],
+   "price_band": [
+    400,
+    707
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100431",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-rv-02",
+    "fullstack-dev-cs-04"
+   ],
+   "price_band": [
+    36,
+    58
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100221",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-rd-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-13"
+   ],
+   "price_band": [
+    45,
+    60
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100066",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02"
+   ],
+   "price_band": [
+    100,
+    120
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100978",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-rv-03",
+    "fullstack-dev-rd-05",
+    "fullstack-dev-rv-05"
+   ],
+   "price_band": [
+    1500,
+    2514
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101091",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-00"
+   ],
+   "price_band": [
+    20,
+    44
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100171",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-19",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-03"
+   ],
+   "price_band": [
+    40,
+    57
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101023",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02"
+   ],
+   "price_band": [
+    20,
+    45
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100802",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-rd-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02"
+   ],
+   "price_band": [
+    800,
+    1307
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100581",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-rv-02"
+   ],
+   "price_band": [
+    27,
+    37
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101019",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-rd-05",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rv-05"
+   ],
+   "price_band": [
+    800,
+    1383
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100541",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-13"
+   ],
+   "price_band": [
+    20,
+    46
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100059",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-19",
+    "fullstack-dev-cs-00"
+   ],
+   "price_band": [
+    1500,
+    2252
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100031",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-03"
+   ],
+   "price_band": [
+    3000,
+    4944
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100130",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-09"
+   ],
+   "price_band": [
+    42,
+    57
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101232",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-08"
+   ],
+   "price_band": [
+    242.62,
+    1997.12
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100728",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-17"
+   ],
+   "price_band": [
+    200,
+    311
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101016",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-19"
+   ],
+   "price_band": [
+    30,
+    41
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100247",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-09"
+   ],
+   "price_band": [
+    3000,
+    4191
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100968",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-13"
+   ],
+   "price_band": [
+    400,
+    530
+   ],
+   "coverage": 0.8,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101325",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-14"
+   ],
+   "price_band": [
+    3000,
+    4147
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100948",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-18"
+   ],
+   "price_band": [
+    100,
+    175
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100250",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-02"
+   ],
+   "price_band": [
+    42,
+    60
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100102",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-16"
+   ],
+   "price_band": [
+    29,
+    43
+   ],
+   "coverage": 0.83,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100520",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-05"
+   ],
+   "price_band": [
+    1500,
+    2516
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101475",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-16"
+   ],
+   "price_band": [
+    3000,
+    3633
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101341",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-14"
+   ],
+   "price_band": [
+    15,
+    41
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101133",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-rd-03"
+   ],
+   "price_band": [
+    1500,
+    2390
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101147",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-03"
+   ],
+   "price_band": [
+    242.62,
+    1997.12
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100831",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-13"
+   ],
+   "price_band": [
+    100,
+    121
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100056",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-19",
+    "fullstack-dev-cs-00"
+   ],
+   "price_band": [
+    3000,
+    4075
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100143",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18"
+   ],
+   "price_band": [
+    3000,
+    3758
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101020",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-05",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-14"
+   ],
+   "price_band": [
+    37,
+    51
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100861",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15"
+   ],
+   "price_band": [
+    400,
+    547
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100385",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-14"
+   ],
+   "price_band": [
+    200,
+    290
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100162",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-17"
+   ],
+   "price_band": [
+    17,
+    31
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100418",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06"
+   ],
+   "price_band": [
+    200,
+    324
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100971",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-13"
+   ],
+   "price_band": [
+    26,
+    51
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100519",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-17"
+   ],
+   "price_band": [
+    31,
+    49
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100451",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-rd-03"
+   ],
+   "price_band": [
+    21,
+    35
+   ],
+   "coverage": 0.75,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100174",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-rd-05",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-14"
+   ],
+   "price_band": [
+    27,
+    41
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100596",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18"
+   ],
+   "price_band": [
+    400,
+    459
+   ],
+   "coverage": 0.83,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100054",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-16"
+   ],
+   "price_band": [
+    200,
+    293
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100803",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-04"
+   ],
+   "price_band": [
+    43,
+    56
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100374",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-03"
+   ],
+   "price_band": [
+    21,
+    33
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101182",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-19",
+    "fullstack-dev-cs-01"
+   ],
+   "price_band": [
+    1500,
+    2394
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101352",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-03"
+   ],
+   "price_band": [
+    1500,
+    2621
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100632",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-rd-02"
+   ],
+   "price_band": [
+    400,
+    605
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101355",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-19"
+   ],
+   "price_band": [
+    200,
+    226
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100253",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06"
+   ],
+   "price_band": [
+    100,
+    133
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100758",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-05"
+   ],
+   "price_band": [
+    1500,
+    2068
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100495",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-16"
+   ],
+   "price_band": [
+    43,
+    67
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100193",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02"
+   ],
+   "price_band": [
+    100,
+    151
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100957",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01"
+   ],
+   "price_band": [
+    200,
+    339
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100873",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-19",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03"
+   ],
+   "price_band": [
+    32,
+    49
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100993",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-19",
+    "fullstack-dev-cs-00"
+   ],
+   "price_band": [
+    35,
+    51
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100375",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-11"
+   ],
+   "price_band": [
+    100,
+    138
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101285",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-16"
+   ],
+   "price_band": [
+    40,
+    50
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101458",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-rd-05",
+    "fullstack-dev-rv-05",
+    "fullstack-dev-cs-07"
+   ],
+   "price_band": [
+    1500,
+    1784
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100755",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-00"
+   ],
+   "price_band": [
+    41,
+    66
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100036",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-17"
+   ],
+   "price_band": [
+    400,
+    657
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100668",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-rd-05",
+    "fullstack-dev-rv-05"
+   ],
+   "price_band": [
+    26,
+    36
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101287",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-rv-03"
+   ],
+   "price_band": [
+    3000,
+    3532
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101310",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-08",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-19"
+   ],
+   "price_band": [
+    44,
+    55
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101193",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-cs-03"
+   ],
+   "price_band": [
+    400,
+    675
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100018",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-19"
+   ],
+   "price_band": [
+    3000,
+    4910
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100834",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01"
+   ],
+   "price_band": [
+    100,
+    166
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100691",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-19"
+   ],
+   "price_band": [
+    800,
+    1168
+   ],
+   "coverage": 0.75,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100898",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02",
+    "fullstack-dev-rv-02"
+   ],
+   "price_band": [
+    100,
+    167
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100962",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-rd-05"
+   ],
+   "price_band": [
+    200,
+    334
+   ],
+   "coverage": 0.83,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100061",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02"
+   ],
+   "price_band": [
+    200,
+    308
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100573",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-19",
+    "fullstack-dev-cs-00"
+   ],
+   "price_band": [
+    100,
+    162
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100894",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02"
+   ],
+   "price_band": [
+    242.62,
+    1997.12
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100177",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-13"
+   ],
+   "price_band": [
+    200,
+    315
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100846",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02"
+   ],
+   "price_band": [
+    24,
+    39
+   ],
+   "coverage": 0.8,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100660",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02"
+   ],
+   "price_band": [
+    400,
+    522
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101043",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-19",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02"
+   ],
+   "price_band": [
+    1500,
+    2601
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101033",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-19"
+   ],
+   "price_band": [
+    16,
+    32
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101403",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-rv-03"
+   ],
+   "price_band": [
+    100,
+    161
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100767",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-13",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-08"
+   ],
+   "price_band": [
+    37,
+    61
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100932",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-07"
+   ],
+   "price_band": [
+    100,
+    138
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100380",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-10"
+   ],
+   "price_band": [
+    31,
+    39
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100458",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-rd-05",
+    "fullstack-dev-rv-05",
+    "fullstack-dev-cs-07"
+   ],
+   "price_band": [
+    100,
+    153
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101330",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-11",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15"
+   ],
+   "price_band": [
+    24,
+    36
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100311",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-08"
+   ],
+   "price_band": [
+    3000,
+    3495
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101186",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-10",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-rd-02"
+   ],
+   "price_band": [
+    3000,
+    5284
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101343",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-rv-03",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-rd-05",
+    "fullstack-dev-rv-05"
+   ],
+   "price_band": [
+    1500,
+    1908
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101146",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-15",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-03"
+   ],
+   "price_band": [
+    3000,
+    5364
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100372",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-05",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-cs-04"
+   ],
+   "price_band": [
+    100,
+    115
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101316",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-02"
+   ],
+   "price_band": [
+    43,
+    63
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101271",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-14",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-08"
+   ],
+   "price_band": [
+    200,
+    220
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101465",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-04",
+    "fullstack-dev-cs-07",
+    "fullstack-dev-cs-12",
+    "fullstack-dev-cs-16",
+    "fullstack-dev-cs-19",
+    "fullstack-dev-cs-00",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02"
+   ],
+   "price_band": [
+    242.62,
+    1997.12
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100482",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-05",
+    "fullstack-dev-rd-05",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-rd-17",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-cs-02",
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-04"
+   ],
+   "price_band": [
+    33,
+    43
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100318",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "fullstack-dev-cs-03",
+    "fullstack-dev-cs-01",
+    "fullstack-dev-rd-03",
+    "fullstack-dev-cs-06",
+    "fullstack-dev-cs-09",
+    "fullstack-dev-cs-17",
+    "fullstack-dev-cs-18",
+    "fullstack-dev-cs-19"
+   ],
+   "price_band": [
+    3000,
+    4544
+   ],
+   "coverage": 1.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100039",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    245.12,
+    1882.0
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100110",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2403
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100702",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1214
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101221",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    17,
+    29
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101214",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    29,
+    53
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100772",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    985
+   ],
+   "coverage": 0.17,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100859",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    244
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101361",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    919
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100434",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    3943
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100652",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    288
+   ],
+   "coverage": 0.25,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101260",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1365
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101150",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40,
+    66
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100129",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    3797
+   ],
+   "coverage": 0.2,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101135",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2354
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100024",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    43,
+    54
+   ],
+   "coverage": 0.17,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101388",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    26,
+    39
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101064",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    164
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100349",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    33,
+    41
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100824",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    1868
+   ],
+   "coverage": 0.25,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100243",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    328
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101425",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    332
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100809",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    42,
+    57
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101251",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1336
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100634",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    595
+   ],
+   "coverage": 0.25,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101382",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40,
+    58
+   ],
+   "coverage": 0.17,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100576",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4081
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100714",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4573
+   ],
+   "coverage": 0.25,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100192",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    34,
+    48
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100686",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    17,
+    36
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100419",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    123
+   ],
+   "coverage": 0.25,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100560",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    1722
+   ],
+   "coverage": 0.25,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101435",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22,
+    41
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100727",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    536
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100236",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2203
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100795",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    19,
+    37
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101430",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22,
+    36
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101142",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40,
+    59
+   ],
+   "coverage": 0.2,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100140",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    245.12,
+    1882.0
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100543",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    685
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100094",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    18,
+    26
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101464",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    153
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100923",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    1949
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100534",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    913
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100002",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    130
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100641",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1247
+   ],
+   "coverage": 0.2,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101195",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    673
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100969",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    157
+   ],
+   "coverage": 0.2,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100921",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    303
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100348",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    713
+   ],
+   "coverage": 0.2,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100008",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4643
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101086",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1104
+   ],
+   "coverage": 0.2,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101066",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4013
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100518",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    596
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101161",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    162
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101105",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    946
+   ],
+   "coverage": 0.2,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100088",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    127
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100695",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    237.0,
+    1841.5
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100540",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    236
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-100943",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    143
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  },
+  {
+   "job_id": "syn-101148",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2200
+   ],
+   "coverage": 0.0,
+   "template_set": null
+  }
+ ]
+}

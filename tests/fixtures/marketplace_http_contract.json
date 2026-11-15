@@ -1,0 +1,18 @@
+{
+  "description": "Local test fixture contract only. NOT the instructor GigSim API.",
+  "auth_header": "Authorization",
+  "auth_scheme": "Bearer",
+  "idempotency_header": "Idempotency-Key",
+  "idempotent_writes_verified": false,
+  "operations": {
+    "search_jobs": {"method": "GET", "path": "/fixture/jobs", "params": {"q": "$query", "limit": "$limit"}, "response_pointer": "/jobs"},
+    "get_job": {"method": "GET", "path": "/fixture/jobs/{job_id}"},
+    "get_client_history": {"method": "GET", "path": "/fixture/clients/{client_id}"},
+    "get_connects_balance": {"method": "GET", "path": "/fixture/balance"},
+    "create_proposal_draft": {"method": "POST", "path": "/fixture/drafts", "json": {"proposal": "$payload", "key": "$idempotency_key", "preview": "$dry_run"}},
+    "submit_proposal": {"method": "POST", "path": "/fixture/drafts/{draft_id}/submit", "json": {"key": "$idempotency_key"}},
+    "list_threads": {"method": "GET", "path": "/fixture/threads", "response_pointer": "/threads"},
+    "list_messages": {"method": "GET", "path": "/fixture/threads/{thread_id}"},
+    "send_message": {"method": "POST", "path": "/fixture/threads/{thread_id}/messages", "json": {"text": "$text", "key": "$idempotency_key"}}
+  }
+}

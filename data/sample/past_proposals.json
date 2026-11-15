@@ -1,0 +1,8 @@
+[
+  {"proposal_id":"prop-001","freelancer_id":"sample-ai-engineer","type":"past_proposal","title":"Proposal: tabular churn model","date":"2026-03-12",
+   "summary":"Opened with the client's churn metric, linked the churn classification study, quoted a fixed price.","skills":["Python","scikit-learn","classification"],"outcome":"won","source":"synthetic dev data"},
+  {"proposal_id":"prop-002","freelancer_id":"sample-ai-engineer","type":"past_proposal","title":"Proposal: dashboard for shop owner","date":"2026-04-02",
+   "summary":"Generic opener, no portfolio link, hourly quote.","skills":["Python","dashboarding"],"outcome":"ignored","source":"synthetic dev data"},
+  {"proposal_id":"prop-003","freelancer_id":"sample-ai-engineer","type":"past_proposal","title":"Proposal: ticket sentiment classifier","date":"2026-05-20",
+   "summary":"Asked one scoping question about label quality, then linked the sentiment study.","skills":["Python","NLP","scikit-learn"],"outcome":"replied","source":"synthetic dev data"}
+]

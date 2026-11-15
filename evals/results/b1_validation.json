@@ -1,0 +1,43 @@
+{
+  "recorded_at": "2026-11-14T12:31:43.503247+00:00",
+  "python": {
+    "passed": 157,
+    "skipped": 2,
+    "failures": 0,
+    "seconds": "48.565"
+  },
+  "final_focused_regression": {
+    "passed": 8,
+    "scope": "ingestion and GitHub tests after synthetic-provenance correction"
+  },
+  "chromium": {
+    "startTime": "2026-11-14T12:27:36.621Z",
+    "duration": 19062.839,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "frontend_build": "passed: tsc -b and vite build",
+  "repository_rules": "ok   secrets\nok   gigsim\nok   prompts\nok   readme-numbers\n",
+  "pdf_library": "pypdf 6.21.4",
+  "evidence": "evals/results/b1/portfolio-upload-search.png",
+  "github_scope": "Real stdio MCP fixture. No authenticated real GitHub account claim; official read-only server integration retained.",
+  "hashes": {
+    "rag/ingest/loaders.py": "370feb4ae2e9719b75aaac1e11cbb479dac2db61360bbd2fb4414ae3ed3bcb16",
+    "rag/ingest/store.py": "8ac0c4ef35c7ffddbd555b5912ce8f5f19f3d3450f23839c86e830eca7228749",
+    "mcp_servers/portfolio/tools.py": "c1cde8954e9099233a510f493c2de8e083adf222912551ce2757fb2f3cfb6fa5",
+    "apps/api/routers/portfolio.py": "d6ddc71a24add581275035dd93c5f3cce8dda930da63089063627e0fd050e1df",
+    "apps/web/src/components/PortfolioIngestion.tsx": "bba0a2bab859d17520f9ab72ab3f4394106a45261b3cba3f23249a21c43088a6",
+    "tests/contract/snapshots/portfolio.json": "5b5071135a7e37ae8e15dba4f55b199a5efdac6b08db434657672554ca2990fb",
+    "apps/web/src/styles.css": "249be97fe492caa261c1db1d7b7ca68e2c7bc0e5d97e5b70662b66a8c94add48",
+    "apps/web/tests/e2e/portfolio-ingestion.spec.ts": "0c64cb3c341b2f4866a861747ea384d6859513dc7d0c77434d2dba287ef14548",
+    "docs/PORTFOLIO_INGESTION.md": "ebb253be62e20d18281fdbd06d006518a2ec7ce6e4516b019c880db47b492c92"
+  },
+  "final_responsive_checks": {
+    "exit_code": 0,
+    "stdout": "\nRunning 2 tests using 2 workers\n\n  \u2713  2 [phone] \u203a tests/e2e/portfolio-ingestion.spec.ts:5:1 \u203a portfolio upload is indexed, updated and searchable without restarting @mobile (3.2s)\n  \u2713  1 [desktop] \u203a tests/e2e/portfolio-ingestion.spec.ts:5:1 \u203a portfolio upload is indexed, updated and searchable without restarting @mobile (3.3s)\n\n  2 passed (7.3s)\n",
+    "build_exit_code": 0
+  },
+  "live_api_routes_verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "recorded_at": "2026-11-14T13:10:36.878788+00:00",
+  "python": {
+    "passed": 168,
+    "skipped": 2,
+    "failures": 0,
+    "seconds": "36.226"
+  },
+  "browser": {
+    "startTime": "2026-11-14T13:04:00.843Z",
+    "duration": 22427.505999999998,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "natural_real_model_drafts": {
+    "proposals": 12,
+    "claims_before": 43,
+    "claims_after": 22,
+    "unsupported_before": 6,
+    "unsupported_after_rechecked": 0,
+    "unsupported_rate_before": 0.13953488372093023,
+    "unsupported_rate_after": 0.0,
+    "retained_claim_fraction": 0.5116279069767442,
+    "unsupported_per_proposal_before": 0.5,
+    "unsupported_per_proposal_after": 0.0,
+    "partly_supported_before": 14,
+    "empty_clean_drafts": 2
+  },
+  "synthetic_controls_passed": 6,
+  "synthetic_controls_total": 6,
+  "repository_rules": "ok   secrets\nok   gigsim\nok   prompts\nok   readme-numbers\n",
+  "scope": "Claim filtering before Critic on synthetic evidence, not calibrated human judgments. No marketplace writes.",
+  "hashes": {
+    "rag/verify.py": "87759cbddab54f018ec33628a3b296840dccf6610586c2921ad672a25dc29e87",
+    "agent/nodes/verifier.py": "d110e797f5bd80cc7c93ec2cc45ada8c4bac634150bf0ad6ce221136f57734bd",
+    "agent/nodes/compliance.py": "3a8de96c73fc75578a64e81a4cdd8ab72591a912ffcf8c9f69e6840ddd227ea0",
+    "agent/prompts/claim_verifier.md": "d3d30f26d27de9391c2c16e593c73a540c3194f7d11dac85766bc5f1c8642ba1",
+    "evals/results/b3/summary.json": "cf000783b6657d8746a1de6d1bf3333352e17b3ee8d6571a0a5a3042ed83f331",
+    "evals/results/b3/proposals.jsonl": "f43cce4d74cfb713273cc5420d2f36b2019ae81c27f9dec0fff11f33e8a8c863"
+  },
+  "service_ports": {
+    "3000": "open",
+    "8000": "open",
+    "8001": "open",
+    "8003": "open",
+    "13000": "closed",
+    "18000": "closed"
+  }
+}

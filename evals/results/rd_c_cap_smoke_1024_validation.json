@@ -1,0 +1,29 @@
+{
+  "sample_job_id": "scam-200004",
+  "max_completion_tokens_per_call": 1024,
+  "excluded_from_comparison": true,
+  "trials": [
+    {
+      "variant": "react",
+      "action": null,
+      "error": "Recommendation JSON truncated; Pydantic JSON validation failed.",
+      "tokens": 6533,
+      "latency_seconds": 17.751
+    },
+    {
+      "variant": "supervisor",
+      "action": null,
+      "error": "Recommendation failed Pydantic validation because price_rationale and boilerplate exceeded schema string limits.",
+      "tokens": 6109,
+      "latency_seconds": 9.9741
+    },
+    {
+      "variant": "hand_built",
+      "action": "skip",
+      "correct": true,
+      "error": null,
+      "tokens": 1496,
+      "latency_seconds": 2.7525
+    }
+  ]
+}

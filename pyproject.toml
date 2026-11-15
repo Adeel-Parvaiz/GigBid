@@ -1,0 +1,53 @@
+[project]
+name = "gigbid"
+version = "0.1.0"
+description = "GigBid: multi-agent freelancer copilot (AI-4016)"
+requires-python = ">=3.11"
+dependencies = [
+  "langgraph>=1.2,<2",
+  "langgraph-checkpoint-sqlite",
+  "pydantic>=2.7",
+  "pyyaml",
+  "httpx",
+  "numpy",
+  "aiosqlite",
+  "fastapi",
+  "uvicorn[standard]",
+  "mcp>=1.30,<2",
+  "langchain-mcp-adapters>=0.3.2,<0.4",
+  "python-dotenv",
+  "itsdangerous",
+  "cryptography>=44",
+  "jsonschema>=4",
+  "arq",
+  "pypdf>=5,<7",
+]
+
+[project.scripts]
+gigbid-portfolio-mcp = "mcp_servers.portfolio.server:main"
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio>=1.5", "ruff", "pyyaml", "reportlab>=4,<5"]
+postgres = ["langgraph-checkpoint-postgres", "psycopg[binary,pool]"]
+embeddings = ["fastembed>=0.9.1,<0.10"]
+evals = ["langchain-openai>=1.0,<2", "langgraph-supervisor>=0.0.31,<0.1"]
+
+[tool.setuptools.packages.find]
+include = ["agent*", "rag*", "mcp_servers*", "apps*", "worker*", "dataprep*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+extend-exclude = ["apps/web/node_modules"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B008", "B904", "UP017", "UP035", "UP040", "UP047"]
+
+[tool.ruff.lint.per-file-ignores]
+"worker/settings.py" = ["RUF012"]

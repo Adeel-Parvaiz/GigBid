@@ -1,0 +1,22 @@
+{
+  "pytest": {
+    "returncode": 0,
+    "stdout": "...........................................ss........................... [ 75%]\n.......................                                                  [100%]\n=============================== warnings summary ===============================\n.venv-linux/lib/python3.14/site-packages/langsmith/_internal/_beta_decorator.py:92: 13 warnings\n  /home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/langsmith/_internal/_beta_decorator.py:92: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead\n    if asyncio.iscoroutinefunction(func):\n\ntests/integration/test_marketplace_mcp.py::test_tool_annotations_and_constraints\n  /usr/lib/python3.14/contextlib.py:109: DeprecationWarning: Use `streamable_http_client` instead.\n    self.gen = func(*args, **kwds)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n93 passed, 2 skipped, 14 warnings in 19.82s\n",
+    "stderr": ""
+  },
+  "repo_rules": {
+    "returncode": 0,
+    "stdout": "ok   secrets\nok   gigsim\nok   prompts\nok   readme-numbers\n",
+    "stderr": ""
+  },
+  "dataset_launcher": {
+    "returncode": 0,
+    "stdout": "Loaded 3190 jobs and 538 portfolio/proposal records from /home/adeel/gigbid/data/processed/kaggle_2024_v1\nLLM backend: openai_compat; profile: open\nModels by node: {'analyst': 'qwen25-15b', 'risk': 'qwen25-15b', 'writer': 'qwen25-15b', 'critic': 'qwen25-15b', 'liaison_intent': 'qwen25-15b', 'liaison_reply': 'qwen25-15b'}\n",
+    "stderr": ""
+  },
+  "real_config_api_smoke": {
+    "docs_http_status": 200,
+    "backend": "openai_compat",
+    "model": "qwen25-15b"
+  }
+}

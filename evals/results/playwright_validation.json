@@ -1,0 +1,23 @@
+{
+  "frontend_build": {
+    "returncode": 0,
+    "stdout": "\n> gigbid-web@0.1.0 build\n> tsc -b && vite build\n\nvite v8.3.7 building client environment for production...\ntransforming...\n\u2713 33 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.38 kB \u2502 gzip:  0.26 kB\ndist/assets/index-sGakA2Do.css    2.93 kB \u2502 gzip:  1.13 kB\ndist/assets/index-CeN6a8je.js   198.67 kB \u2502 gzip: 63.52 kB\n\n\u2713 built in 169ms\n",
+    "stderr": ""
+  },
+  "e2e_types": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "backend_tests": {
+    "returncode": 0,
+    "stdout": "............................................ss.......................... [ 68%]\n.................................                                        [100%]\n=============================== warnings summary ===============================\n.venv-linux/lib/python3.14/site-packages/langsmith/_internal/_beta_decorator.py:92: 13 warnings\n  /home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/langsmith/_internal/_beta_decorator.py:92: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead\n    if asyncio.iscoroutinefunction(func):\n\ntests/integration/test_marketplace_mcp.py::test_tool_annotations_and_constraints\n  /usr/lib/python3.14/contextlib.py:109: DeprecationWarning: Use `streamable_http_client` instead.\n    self.gen = func(*args, **kwds)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n103 passed, 2 skipped, 14 warnings in 11.68s\n",
+    "stderr": ""
+  },
+  "ports_after_tests": {
+    "3000": "closed",
+    "8000": "closed",
+    "13000": "closed",
+    "18000": "closed"
+  }
+}

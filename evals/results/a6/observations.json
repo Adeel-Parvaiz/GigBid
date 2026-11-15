@@ -1,0 +1,38 @@
+{
+  "scope": "Real process kill/restart, API recovery loop, Chromium; HeuristicLLM and synthetic marketplace only",
+  "initial": {
+    "balance": 100,
+    "drafts": 0,
+    "submissions": 0,
+    "sent": 0,
+    "marketplace_pid": 25408,
+    "marketplace_running": true
+  },
+  "down": {
+    "balance": 100,
+    "drafts": 0,
+    "submissions": 0,
+    "sent": 0,
+    "marketplace_pid": 25408,
+    "marketplace_running": false
+  },
+  "recovered": {
+    "balance": 100,
+    "drafts": 0,
+    "submissions": 0,
+    "sent": 0,
+    "marketplace_pid": 25549,
+    "marketplace_running": true
+  },
+  "final": {
+    "balance": 92,
+    "drafts": 1,
+    "submissions": 1,
+    "sent": 0,
+    "marketplace_pid": 25549,
+    "marketplace_running": true
+  },
+  "automatic_recovery": true,
+  "approval_required_after_recovery": true,
+  "no_spend_before_approval": true
+}

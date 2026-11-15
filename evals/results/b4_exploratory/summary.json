@@ -1,0 +1,488 @@
+{
+  "evaluation_scope": "exploratory_random_per_persona",
+  "full_protocol_complete": false,
+  "automated_run_status": "complete",
+  "runs_import_status": "present",
+  "completed_runs": 300,
+  "planned_runs": 300,
+  "metrics": {
+    "v0_naive/ai-ml-engineer": {
+      "attempted": 50,
+      "decision_completed": 50,
+      "errors": 0,
+      "bid_or_skip": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1": 0.8235294117647058
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 0.375,
+        "f1": 0.5454545454545454
+      },
+      "injection_detection": {
+        "precision": 0.125,
+        "recall": 1.0,
+        "f1": 0.2222222222222222
+      },
+      "price_in_fair_band": {
+        "eligible": 14,
+        "rate": 1.0
+      },
+      "proposals": 14,
+      "empty_proposals": 4,
+      "unsupported_per_proposal": 0.0,
+      "submitted": 10,
+      "outcomes_verified": 10,
+      "reply_rate_submitted": 0.5,
+      "hire_rate_submitted": 0.1,
+      "reply_rate_submitted_95ci": [
+        0.237,
+        0.763
+      ],
+      "hire_rate_submitted_95ci": [
+        0.018,
+        0.404
+      ],
+      "reply_rate_attempted": 0.1,
+      "hire_rate_attempted": 0.02,
+      "analysis_p50_seconds": 3.418728099670261,
+      "analysis_p95_seconds": 38.09482799982652,
+      "analysis_mean_tokens": 5913.5,
+      "proposal_pipeline_p50_seconds": 25.95979809947312,
+      "proposal_pipeline_p95_seconds": 38.332098899874836,
+      "proposal_pipeline_mean_tokens": 15823.142857142857,
+      "billed_api_usd_per_job": 0.0,
+      "billed_api_usd_per_proposal": 0.0,
+      "hardware_usd": null,
+      "judge_score": {
+        "mean_overall": 3.0,
+        "scored": 14,
+        "calibration_status": "calibration_measured"
+      }
+    },
+    "v8_corrective/ai-ml-engineer": {
+      "attempted": 50,
+      "decision_completed": 49,
+      "errors": 1,
+      "bid_or_skip": {
+        "precision": 1.0,
+        "recall": 0.7368421052631579,
+        "f1": 0.8484848484848485
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 0.375,
+        "f1": 0.5454545454545454
+      },
+      "injection_detection": {
+        "precision": 0.09090909090909091,
+        "recall": 1.0,
+        "f1": 0.16666666666666666
+      },
+      "price_in_fair_band": {
+        "eligible": 14,
+        "rate": 1.0
+      },
+      "proposals": 14,
+      "empty_proposals": 7,
+      "unsupported_per_proposal": 0.0,
+      "submitted": 7,
+      "outcomes_verified": 7,
+      "reply_rate_submitted": 0.5714285714285714,
+      "hire_rate_submitted": 0.0,
+      "reply_rate_submitted_95ci": [
+        0.25,
+        0.842
+      ],
+      "hire_rate_submitted_95ci": [
+        0.0,
+        0.354
+      ],
+      "reply_rate_attempted": 0.08,
+      "hire_rate_attempted": 0.0,
+      "analysis_p50_seconds": 3.879969600122422,
+      "analysis_p95_seconds": 33.3460714998655,
+      "analysis_mean_tokens": 5297.693877551021,
+      "proposal_pipeline_p50_seconds": 21.484032300300896,
+      "proposal_pipeline_p95_seconds": 35.10410110000521,
+      "proposal_pipeline_mean_tokens": 13352.642857142857,
+      "billed_api_usd_per_job": 0.0,
+      "billed_api_usd_per_proposal": 0.0,
+      "hardware_usd": null,
+      "judge_score": {
+        "mean_overall": 3.0,
+        "scored": 14,
+        "calibration_status": "calibration_measured"
+      }
+    },
+    "v0_naive/fullstack-dev": {
+      "attempted": 50,
+      "decision_completed": 48,
+      "errors": 2,
+      "bid_or_skip": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4
+      },
+      "injection_detection": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5
+      },
+      "price_in_fair_band": {
+        "eligible": 15,
+        "rate": 0.9333333333333333
+      },
+      "proposals": 15,
+      "empty_proposals": 2,
+      "unsupported_per_proposal": 0.0,
+      "submitted": 13,
+      "outcomes_verified": 13,
+      "reply_rate_submitted": 0.38461538461538464,
+      "hire_rate_submitted": 0.07692307692307693,
+      "reply_rate_submitted_95ci": [
+        0.177,
+        0.645
+      ],
+      "hire_rate_submitted_95ci": [
+        0.014,
+        0.333
+      ],
+      "reply_rate_attempted": 0.1,
+      "hire_rate_attempted": 0.02,
+      "analysis_p50_seconds": 3.690058800391853,
+      "analysis_p95_seconds": 43.27317100018263,
+      "analysis_mean_tokens": 6782.625,
+      "proposal_pipeline_p50_seconds": 23.65655740024522,
+      "proposal_pipeline_p95_seconds": 39.03941440070048,
+      "proposal_pipeline_mean_tokens": 16980.733333333334,
+      "billed_api_usd_per_job": 0.0,
+      "billed_api_usd_per_proposal": 0.0,
+      "hardware_usd": null,
+      "judge_score": {
+        "mean_overall": 3.0,
+        "scored": 15,
+        "calibration_status": "calibration_measured"
+      }
+    },
+    "v8_corrective/fullstack-dev": {
+      "attempted": 50,
+      "decision_completed": 49,
+      "errors": 1,
+      "bid_or_skip": {
+        "precision": 0.9473684210526315,
+        "recall": 0.9,
+        "f1": 0.9230769230769231
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4
+      },
+      "injection_detection": {
+        "precision": 0.36363636363636365,
+        "recall": 0.8,
+        "f1": 0.5
+      },
+      "price_in_fair_band": {
+        "eligible": 19,
+        "rate": 0.9473684210526315
+      },
+      "proposals": 19,
+      "empty_proposals": 4,
+      "unsupported_per_proposal": 0.0,
+      "submitted": 15,
+      "outcomes_verified": 15,
+      "reply_rate_submitted": 0.4666666666666667,
+      "hire_rate_submitted": 0.13333333333333333,
+      "reply_rate_submitted_95ci": [
+        0.248,
+        0.699
+      ],
+      "hire_rate_submitted_95ci": [
+        0.037,
+        0.379
+      ],
+      "reply_rate_attempted": 0.14,
+      "hire_rate_attempted": 0.04,
+      "analysis_p50_seconds": 4.6197240999899805,
+      "analysis_p95_seconds": 46.68372119963169,
+      "analysis_mean_tokens": 6864.061224489796,
+      "proposal_pipeline_p50_seconds": 21.222479900345206,
+      "proposal_pipeline_p95_seconds": 47.42575399950147,
+      "proposal_pipeline_mean_tokens": 13889.263157894737,
+      "billed_api_usd_per_job": 0.0,
+      "billed_api_usd_per_proposal": 0.0,
+      "hardware_usd": null,
+      "judge_score": {
+        "mean_overall": 3.0,
+        "scored": 19,
+        "calibration_status": "calibration_measured"
+      }
+    },
+    "v0_naive/data-analyst": {
+      "attempted": 50,
+      "decision_completed": 50,
+      "errors": 0,
+      "bid_or_skip": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8888888888888888
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 0.2857142857142857,
+        "f1": 0.4444444444444444
+      },
+      "injection_detection": {
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "f1": 0.5714285714285714
+      },
+      "price_in_fair_band": {
+        "eligible": 16,
+        "rate": 0.875
+      },
+      "proposals": 16,
+      "empty_proposals": 2,
+      "unsupported_per_proposal": 0.0,
+      "submitted": 14,
+      "outcomes_verified": 14,
+      "reply_rate_submitted": 0.5714285714285714,
+      "hire_rate_submitted": 0.14285714285714285,
+      "reply_rate_submitted_95ci": [
+        0.326,
+        0.786
+      ],
+      "hire_rate_submitted_95ci": [
+        0.04,
+        0.399
+      ],
+      "reply_rate_attempted": 0.16,
+      "hire_rate_attempted": 0.04,
+      "analysis_p50_seconds": 4.048998999875039,
+      "analysis_p95_seconds": 42.33576550008729,
+      "analysis_mean_tokens": 7106.54,
+      "proposal_pipeline_p50_seconds": 30.10013180039823,
+      "proposal_pipeline_p95_seconds": 48.592848100699484,
+      "proposal_pipeline_mean_tokens": 17560.1875,
+      "billed_api_usd_per_job": 0.0,
+      "billed_api_usd_per_proposal": 0.0,
+      "hardware_usd": null,
+      "judge_score": {
+        "mean_overall": 3.0,
+        "scored": 16,
+        "calibration_status": "calibration_measured"
+      }
+    },
+    "v8_corrective/data-analyst": {
+      "attempted": 50,
+      "decision_completed": 49,
+      "errors": 1,
+      "bid_or_skip": {
+        "precision": 1.0,
+        "recall": 0.8947368421052632,
+        "f1": 0.9444444444444444
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 0.2857142857142857,
+        "f1": 0.4444444444444444
+      },
+      "injection_detection": {
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "f1": 0.5714285714285714
+      },
+      "price_in_fair_band": {
+        "eligible": 17,
+        "rate": 0.8823529411764706
+      },
+      "proposals": 17,
+      "empty_proposals": 4,
+      "unsupported_per_proposal": 0.0,
+      "submitted": 13,
+      "outcomes_verified": 13,
+      "reply_rate_submitted": 0.46153846153846156,
+      "hire_rate_submitted": 0.15384615384615385,
+      "reply_rate_submitted_95ci": [
+        0.232,
+        0.709
+      ],
+      "hire_rate_submitted_95ci": [
+        0.043,
+        0.422
+      ],
+      "reply_rate_attempted": 0.12,
+      "hire_rate_attempted": 0.04,
+      "analysis_p50_seconds": 3.871489300392568,
+      "analysis_p95_seconds": 48.51118810009211,
+      "analysis_mean_tokens": 7025.52,
+      "proposal_pipeline_p50_seconds": 20.273597000166774,
+      "proposal_pipeline_p95_seconds": 50.79277310008183,
+      "proposal_pipeline_mean_tokens": 15758.588235294117,
+      "billed_api_usd_per_job": 0.0,
+      "billed_api_usd_per_proposal": 0.0,
+      "hardware_usd": null,
+      "judge_score": {
+        "mean_overall": 2.823529411764706,
+        "scored": 17,
+        "calibration_status": "calibration_measured"
+      }
+    }
+  },
+  "calibration": {
+    "n": 30,
+    "agreement": 0.36666666666666664,
+    "kappa": 0.0,
+    "note": "Unweighted Cohen kappa; constant identical labels have undefined kappa.",
+    "status": "calibration_measured",
+    "pack_sha256": "d058e94f039f305e072ab09c35e0be31e784866b47cdff78793dae1265b5e0b5",
+    "disagreements": [
+      "item-135f8a93113a",
+      "item-4439ce361097",
+      "item-5d4c378262d3",
+      "item-701de7b81ee9",
+      "item-7428938027f1",
+      "item-76df113baa73",
+      "item-775d49655499",
+      "item-7af16d582c26",
+      "item-96dbff64e49d",
+      "item-9fc8445a05c4",
+      "item-ae90388267b0",
+      "item-c4dc345fc564",
+      "item-ceaa049ad798",
+      "item-df663f9b929c",
+      "item-edbcf0351d15",
+      "item-efa87eb24514",
+      "item-f3c766af0bc2",
+      "item-f72786e5ebbc",
+      "reference-0753b66fae34"
+    ],
+    "human_source": "personally labelled author ratings; self-attested"
+  },
+  "panel": {
+    "status": "pending_classmates",
+    "raters": 0,
+    "votes": {},
+    "per_persona": {},
+    "pairs_per_rater": 15,
+    "note": "Blind side allocation; self-attested classmates. No generated or inferred human votes."
+  },
+  "cost_note": "Actual local inference API charges only. Hardware/electricity not measured.",
+  "outcome_note": "Project-owned rule-based GigSim only. Rates are not real hiring outcomes. Only draft-ID-matched outcomes count.",
+  "retrieval": {
+    "source": "measured B2 real-neural full-dev comparison",
+    "scores": [
+      {
+        "variant": "v0_naive",
+        "persona": "ai-ml-engineer",
+        "jobs": 200,
+        "relevance_jobs": 113,
+        "recall@5": 0.30420353982300885,
+        "mrr": 0.7328908554572271,
+        "ndcg@10": 0.5354148643398063,
+        "p50_ms": 11.571189999813214,
+        "p95_ms": 15.942069898119367,
+        "refused": 0
+      },
+      {
+        "variant": "v0_naive",
+        "persona": "all",
+        "jobs": 600,
+        "relevance_jobs": 338,
+        "recall@5": 0.2599852071005917,
+        "mrr": 0.6587947309101155,
+        "ndcg@10": 0.4699556940954915,
+        "p50_ms": 11.35933050136373,
+        "p95_ms": 16.04020205031702,
+        "refused": 0
+      },
+      {
+        "variant": "v0_naive",
+        "persona": "fullstack-dev",
+        "jobs": 200,
+        "relevance_jobs": 117,
+        "recall@5": 0.21474358974358973,
+        "mrr": 0.5452584452584452,
+        "ndcg@10": 0.3948556974403852,
+        "p50_ms": 11.48935600031109,
+        "p95_ms": 15.57305625010484,
+        "refused": 0
+      },
+      {
+        "variant": "v0_naive",
+        "persona": "data-analyst",
+        "jobs": 200,
+        "relevance_jobs": 108,
+        "recall@5": 0.26273148148148145,
+        "mrr": 0.7042658730158728,
+        "ndcg@10": 0.48282433641993444,
+        "p50_ms": 11.106330999609781,
+        "p95_ms": 16.04020205031702,
+        "refused": 0
+      },
+      {
+        "variant": "v8_corrective",
+        "persona": "ai-ml-engineer",
+        "jobs": 200,
+        "relevance_jobs": 113,
+        "recall@5": 0.39048672566371684,
+        "mrr": 0.9026548672566371,
+        "ndcg@10": 0.6472231666643795,
+        "p50_ms": 24.847368498740252,
+        "p95_ms": 46.71017855034734,
+        "refused": 87
+      },
+      {
+        "variant": "v8_corrective",
+        "persona": "all",
+        "jobs": 600,
+        "relevance_jobs": 338,
+        "recall@5": 0.35096153846153844,
+        "mrr": 0.8729078613693998,
+        "ndcg@10": 0.579225180840862,
+        "p50_ms": 25.4705589995865,
+        "p95_ms": 46.71017855034734,
+        "refused": 262
+      },
+      {
+        "variant": "v8_corrective",
+        "persona": "fullstack-dev",
+        "jobs": 200,
+        "relevance_jobs": 117,
+        "recall@5": 0.3194444444444444,
+        "mrr": 0.8331908831908832,
+        "ndcg@10": 0.5130350387388324,
+        "p50_ms": 25.61193949986773,
+        "p95_ms": 45.88425099882443,
+        "refused": 83
+      },
+      {
+        "variant": "v8_corrective",
+        "persona": "data-analyst",
+        "jobs": 200,
+        "relevance_jobs": 108,
+        "recall@5": 0.34375,
+        "mrr": 0.884810405643739,
+        "ndcg@10": 0.5797851273953066,
+        "p50_ms": 25.97245099968859,
+        "p95_ms": 47.025890799159235,
+        "refused": 92
+      }
+    ]
+  },
+  "proposal_rubric": {
+    "eligible": 95,
+    "scored": 95,
+    "mean_overall": 2.968421052631579,
+    "calibration_status": "calibration_measured"
+  },
+  "B4_complete": false
+}

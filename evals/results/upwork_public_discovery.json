@@ -1,0 +1,9 @@
+{
+  "status": "awaiting_authorization",
+  "authorization_origin": "https://www.upwork.com",
+  "authorization_path": "/ab/account-security/oauth2/authorize",
+  "pkce": [
+    "S256"
+  ],
+  "scope": "Unauthenticated official MCP OAuth initiation only; account consent not completed."
+}

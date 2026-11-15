@@ -1,0 +1,5 @@
+{
+  "selected_model_alias": "qwen25-15b",
+  "source": "evals/results/open_model_comparison.json",
+  "selection_rule": "completion rate, mean bid/scam F1, accuracy incl errors, fewer unsupported final claims, lower p95 latency"
+}

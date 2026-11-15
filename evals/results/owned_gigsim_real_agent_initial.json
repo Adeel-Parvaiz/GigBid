@@ -1,0 +1,88 @@
+{
+  "scope": "Real local LLM + actual bid graph + authenticated MCP + project-owned GigSim REST + disposable SQLite",
+  "llm": {
+    "analyst": "qwen25-15b",
+    "risk": "qwen25-15b",
+    "writer": "qwen25-15b",
+    "critic": "qwen25-15b",
+    "liaison_intent": "qwen25-15b",
+    "liaison_reply": "qwen25-15b"
+  },
+  "approval": "Scripted approvals only inside disposable synthetic simulator; not human evaluation or real marketplace writes.",
+  "cases": [
+    {
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100002",
+      "gold_action": "bid",
+      "decision": {
+        "action": "skip",
+        "reasons": [
+          "risk 0.90 > 0.7 (low_client_rating, prompt_injection)"
+        ]
+      },
+      "status_before": "skipped",
+      "approval_gate_reached": false,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 96.9,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 1466.3,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 1907.5,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 2.8,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.0,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "preview_spent_zero_connects": true,
+      "blocking_reasons": [],
+      "sandbox_submission": "not attempted: skipped or blocked by normal gate",
+      "seconds": 2.172
+    },
+    {
+      "persona": "fullstack-dev",
+      "job_id": "syn-100354",
+      "gold_action": "bid",
+      "error": "MarketplaceError: tool_error: Error executing tool create_proposal_draft: 1 validation error for create_proposal_draftArguments\nproposal.cover_letter\n  String should have at least 1 character [type=string_too_short, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_too_short",
+      "seconds": 11.829
+    },
+    {
+      "persona": "data-analyst",
+      "job_id": "syn-100349",
+      "gold_action": "bid",
+      "error": "MarketplaceError: tool_error: Error executing tool create_proposal_draft: 1 validation error for create_proposal_draftArguments\nproposal.cover_letter\n  String should have at least 1 character [type=string_too_short, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_too_short",
+      "seconds": 12.759
+    }
+  ],
+  "outcomes": {
+    "outcomes": []
+  }
+}

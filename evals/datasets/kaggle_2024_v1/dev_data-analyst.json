@@ -1,0 +1,3981 @@
+{
+ "_note": "Synthetic job text; gold labels derived by rule from generation-time tags; not human-labelled.",
+ "provenance_counts": {
+  "synthetic": 200
+ },
+ "label_provenance": "synthetic_rule",
+ "jobs": [
+  {
+   "job_id": "scam-200000",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2514
+   ],
+   "coverage": 0.25,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200144",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    154
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200143",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    5039
+   ],
+   "coverage": 0.25,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200002",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    28,
+    46
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200086",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200135",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-14",
+    "data-analyst-cs-16",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02"
+   ],
+   "price_band": [
+    17,
+    35
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200103",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-12",
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-03",
+    "data-analyst-cs-04",
+    "data-analyst-cs-05"
+   ],
+   "price_band": [
+    800,
+    985
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200146",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-04",
+    "data-analyst-rd-04",
+    "data-analyst-cs-06",
+    "data-analyst-cs-11",
+    "data-analyst-cs-16"
+   ],
+   "price_band": [
+    42,
+    68
+   ],
+   "coverage": 0.8,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200127",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    532
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200098",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11",
+    "data-analyst-cs-14",
+    "data-analyst-cs-19",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03"
+   ],
+   "price_band": [
+    42,
+    62
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200080",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-03",
+    "data-analyst-cs-09",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-rd-03",
+    "data-analyst-cs-07",
+    "data-analyst-cs-10"
+   ],
+   "price_band": [
+    1500,
+    2124
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200039",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-06",
+    "data-analyst-cs-10",
+    "data-analyst-cs-14",
+    "data-analyst-cs-16",
+    "data-analyst-cs-00",
+    "data-analyst-cs-05"
+   ],
+   "price_band": [
+    20.0,
+    250.0
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200001",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200005",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22,
+    32
+   ],
+   "coverage": 0.25,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200090",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200031",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200041",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200048",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4184
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200117",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    142
+   ],
+   "coverage": 0.25,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200132",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    34,
+    44
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200008",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200068",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-09",
+    "data-analyst-cs-03",
+    "data-analyst-cs-11",
+    "data-analyst-cs-16",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-rd-03"
+   ],
+   "price_band": [
+    800,
+    1217
+   ],
+   "coverage": 1.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200038",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200092",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200053",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200027",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200104",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    25,
+    34
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200096",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    17,
+    43
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200051",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 0.25,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200078",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-cs-07",
+    "data-analyst-cs-09",
+    "data-analyst-cs-16",
+    "data-analyst-cs-17"
+   ],
+   "price_band": [
+    40,
+    50
+   ],
+   "coverage": 1.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200141",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    24,
+    42
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200036",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200142",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    3518
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200108",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2579
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200110",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    147
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200040",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200111",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    15,
+    40
+   ],
+   "coverage": 0.0,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200094",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    39,
+    66
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "scam-200013",
+   "gold_action": "skip",
+   "scam": true,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    19,
+    43
+   ],
+   "coverage": 0.0,
+   "template_set": "heldout",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "inj-200119",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": true,
+   "gold_evidence": [],
+   "price_band": [
+    42,
+    53
+   ],
+   "coverage": 0.25,
+   "template_set": "seeded",
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100694",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-06",
+    "data-analyst-cs-17",
+    "data-analyst-cs-03",
+    "data-analyst-cs-07",
+    "data-analyst-cs-12",
+    "data-analyst-cs-13",
+    "data-analyst-rd-13"
+   ],
+   "price_band": [
+    100,
+    110
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100349",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-10",
+    "data-analyst-cs-02",
+    "data-analyst-cs-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-11",
+    "data-analyst-cs-12",
+    "data-analyst-cs-14",
+    "data-analyst-cs-19"
+   ],
+   "price_band": [
+    34,
+    61
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100737",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-06",
+    "data-analyst-cs-01",
+    "data-analyst-cs-16",
+    "data-analyst-cs-17",
+    "data-analyst-cs-18",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-04"
+   ],
+   "price_band": [
+    400,
+    686
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100440",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-06",
+    "data-analyst-cs-01",
+    "data-analyst-cs-18",
+    "data-analyst-cs-00",
+    "data-analyst-cs-04",
+    "data-analyst-rd-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-07"
+   ],
+   "price_band": [
+    15,
+    42
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100288",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09",
+    "data-analyst-cs-15",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03"
+   ],
+   "price_band": [
+    1500,
+    1724
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100095",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-01",
+    "data-analyst-cs-06",
+    "data-analyst-cs-12",
+    "data-analyst-cs-13",
+    "data-analyst-cs-14"
+   ],
+   "price_band": [
+    400,
+    683
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100217",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-02",
+    "data-analyst-cs-11",
+    "data-analyst-cs-16",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-04",
+    "data-analyst-rd-04",
+    "data-analyst-cs-06"
+   ],
+   "price_band": [
+    17,
+    43
+   ],
+   "coverage": 0.75,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101212",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-02",
+    "data-analyst-cs-04",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11",
+    "data-analyst-cs-15",
+    "data-analyst-cs-16",
+    "data-analyst-rd-04",
+    "data-analyst-rv-04"
+   ],
+   "price_band": [
+    1500,
+    1761
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100101",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-04",
+    "data-analyst-cs-00",
+    "data-analyst-rd-04",
+    "data-analyst-cs-11",
+    "data-analyst-cs-15",
+    "data-analyst-cs-17",
+    "data-analyst-cs-19",
+    "data-analyst-cs-01"
+   ],
+   "price_band": [
+    400,
+    622
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100903",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11",
+    "data-analyst-cs-14",
+    "data-analyst-cs-19",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03"
+   ],
+   "price_band": [
+    20.0,
+    250.0
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101066",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-09",
+    "data-analyst-cs-16",
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-cs-05"
+   ],
+   "price_band": [
+    1500,
+    2539
+   ],
+   "coverage": 0.75,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100171",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-11",
+    "data-analyst-cs-04",
+    "data-analyst-rd-04",
+    "data-analyst-cs-16",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-rv-04",
+    "data-analyst-cs-06"
+   ],
+   "price_band": [
+    1500,
+    2362
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101489",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-13",
+    "data-analyst-cs-15",
+    "data-analyst-cs-18",
+    "data-analyst-cs-01"
+   ],
+   "price_band": [
+    20.0,
+    250.0
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100727",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-cs-07",
+    "data-analyst-cs-09",
+    "data-analyst-cs-00",
+    "data-analyst-rd-03",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06"
+   ],
+   "price_band": [
+    400,
+    481
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100795",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-16",
+    "data-analyst-cs-00",
+    "data-analyst-cs-04",
+    "data-analyst-rd-04",
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-09",
+    "data-analyst-cs-11"
+   ],
+   "price_band": [
+    800,
+    1155
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100775",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-10",
+    "data-analyst-cs-14",
+    "data-analyst-cs-03",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-11"
+   ],
+   "price_band": [
+    400,
+    577
+   ],
+   "coverage": 0.83,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100414",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-06",
+    "data-analyst-cs-16",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11",
+    "data-analyst-cs-14",
+    "data-analyst-cs-17"
+   ],
+   "price_band": [
+    20.0,
+    250.0
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100948",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-13",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-rv-03",
+    "data-analyst-cs-04"
+   ],
+   "price_band": [
+    41,
+    59
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100145",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-16",
+    "data-analyst-cs-09",
+    "data-analyst-cs-11",
+    "data-analyst-cs-13",
+    "data-analyst-cs-15",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03"
+   ],
+   "price_band": [
+    33,
+    41
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100744",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-19",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03"
+   ],
+   "price_band": [
+    3000,
+    4621
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100958",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-16",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09",
+    "data-analyst-cs-10"
+   ],
+   "price_band": [
+    100,
+    111
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100590",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-06",
+    "data-analyst-cs-12",
+    "data-analyst-cs-17",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-cs-04",
+    "data-analyst-cs-05"
+   ],
+   "price_band": [
+    33,
+    52
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100310",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-15",
+    "data-analyst-cs-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09",
+    "data-analyst-cs-13",
+    "data-analyst-cs-16",
+    "data-analyst-cs-00"
+   ],
+   "price_band": [
+    100,
+    133
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101398",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-19",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-cs-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09"
+   ],
+   "price_band": [
+    33,
+    47
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100541",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-06",
+    "data-analyst-cs-17",
+    "data-analyst-cs-04",
+    "data-analyst-rd-04",
+    "data-analyst-cs-11",
+    "data-analyst-cs-16"
+   ],
+   "price_band": [
+    400,
+    625
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100405",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-cs-05",
+    "data-analyst-cs-07",
+    "data-analyst-cs-09",
+    "data-analyst-cs-13",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01"
+   ],
+   "price_band": [
+    33,
+    53
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101356",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09",
+    "data-analyst-cs-13",
+    "data-analyst-cs-15",
+    "data-analyst-cs-16"
+   ],
+   "price_band": [
+    1500,
+    2292
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100154",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-16",
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03"
+   ],
+   "price_band": [
+    400,
+    639
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100799",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-02",
+    "data-analyst-cs-07",
+    "data-analyst-cs-12",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-cs-04"
+   ],
+   "price_band": [
+    100,
+    112
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101094",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-10",
+    "data-analyst-cs-18",
+    "data-analyst-cs-19",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01"
+   ],
+   "price_band": [
+    100,
+    174
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100939",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-16",
+    "data-analyst-cs-09",
+    "data-analyst-cs-11",
+    "data-analyst-cs-13",
+    "data-analyst-cs-15",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03"
+   ],
+   "price_band": [
+    29,
+    59
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101470",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-06",
+    "data-analyst-cs-01",
+    "data-analyst-cs-10",
+    "data-analyst-cs-14",
+    "data-analyst-cs-16",
+    "data-analyst-cs-18",
+    "data-analyst-cs-02",
+    "data-analyst-cs-05"
+   ],
+   "price_band": [
+    100,
+    155
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101213",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-16",
+    "data-analyst-cs-17",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-06",
+    "data-analyst-cs-11",
+    "data-analyst-cs-00",
+    "data-analyst-cs-03"
+   ],
+   "price_band": [
+    100,
+    112
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101410",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11",
+    "data-analyst-cs-14",
+    "data-analyst-cs-02",
+    "data-analyst-rd-03"
+   ],
+   "price_band": [
+    1500,
+    2153
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101061",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-01",
+    "data-analyst-cs-06",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-13",
+    "data-analyst-cs-14",
+    "data-analyst-cs-18"
+   ],
+   "price_band": [
+    30,
+    48
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101468",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-cs-10",
+    "data-analyst-cs-15"
+   ],
+   "price_band": [
+    34,
+    56
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100087",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11",
+    "data-analyst-cs-14"
+   ],
+   "price_band": [
+    800,
+    1274
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100808",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-cs-05",
+    "data-analyst-cs-07",
+    "data-analyst-cs-09",
+    "data-analyst-cs-13",
+    "data-analyst-cs-01"
+   ],
+   "price_band": [
+    1500,
+    2202
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100234",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-10",
+    "data-analyst-cs-12",
+    "data-analyst-cs-19",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02"
+   ],
+   "price_band": [
+    200,
+    266
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100436",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-04",
+    "data-analyst-rd-04",
+    "data-analyst-cs-06",
+    "data-analyst-cs-11",
+    "data-analyst-cs-16"
+   ],
+   "price_band": [
+    35,
+    49
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101412",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09",
+    "data-analyst-cs-15",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03"
+   ],
+   "price_band": [
+    39,
+    64
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100617",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-cs-10",
+    "data-analyst-cs-14",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-rd-03",
+    "data-analyst-rv-03"
+   ],
+   "price_band": [
+    400,
+    486
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101474",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-06",
+    "data-analyst-cs-05",
+    "data-analyst-cs-07",
+    "data-analyst-cs-10",
+    "data-analyst-cs-12",
+    "data-analyst-cs-14",
+    "data-analyst-cs-18"
+   ],
+   "price_band": [
+    800,
+    1327
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100886",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-02",
+    "data-analyst-cs-10",
+    "data-analyst-cs-00",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-cs-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-07"
+   ],
+   "price_band": [
+    25,
+    33
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100413",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-12",
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-03",
+    "data-analyst-cs-04",
+    "data-analyst-cs-05"
+   ],
+   "price_band": [
+    42,
+    72
+   ],
+   "coverage": 0.75,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101032",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-02",
+    "data-analyst-cs-10",
+    "data-analyst-cs-01",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-08",
+    "data-analyst-cs-12",
+    "data-analyst-cs-14"
+   ],
+   "price_band": [
+    39,
+    47
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100628",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-02",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09",
+    "data-analyst-cs-10",
+    "data-analyst-cs-15",
+    "data-analyst-cs-16",
+    "data-analyst-cs-00"
+   ],
+   "price_band": [
+    16,
+    35
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101203",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-10",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-14",
+    "data-analyst-cs-18",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-04"
+   ],
+   "price_band": [
+    29,
+    39
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100993",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-12"
+   ],
+   "price_band": [
+    800,
+    894
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100680",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-06",
+    "data-analyst-cs-13",
+    "data-analyst-cs-16",
+    "data-analyst-cs-01",
+    "data-analyst-cs-04",
+    "data-analyst-rd-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-07"
+   ],
+   "price_band": [
+    3000,
+    3839
+   ],
+   "coverage": 0.83,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100591",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-10",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-cs-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-11"
+   ],
+   "price_band": [
+    800,
+    967
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101233",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-02",
+    "data-analyst-cs-16",
+    "data-analyst-cs-04",
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11",
+    "data-analyst-cs-12"
+   ],
+   "price_band": [
+    1500,
+    1754
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101292",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-10",
+    "data-analyst-cs-08",
+    "data-analyst-cs-14",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-06",
+    "data-analyst-cs-12"
+   ],
+   "price_band": [
+    25,
+    38
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100244",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-02",
+    "data-analyst-cs-04",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11",
+    "data-analyst-cs-15",
+    "data-analyst-cs-16",
+    "data-analyst-rd-04",
+    "data-analyst-rv-04"
+   ],
+   "price_band": [
+    26,
+    55
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100147",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-06",
+    "data-analyst-cs-10",
+    "data-analyst-cs-14",
+    "data-analyst-cs-18",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03"
+   ],
+   "price_band": [
+    28,
+    58
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100400",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-cs-04",
+    "data-analyst-cs-09",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11",
+    "data-analyst-cs-15"
+   ],
+   "price_band": [
+    400,
+    490
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100944",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-06",
+    "data-analyst-cs-16",
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11"
+   ],
+   "price_band": [
+    800,
+    1217
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101147",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-10",
+    "data-analyst-cs-01",
+    "data-analyst-cs-05",
+    "data-analyst-cs-14",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-cs-06"
+   ],
+   "price_band": [
+    100,
+    159
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101479",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11"
+   ],
+   "price_band": [
+    100,
+    138
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101030",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-19",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03"
+   ],
+   "price_band": [
+    18,
+    39
+   ],
+   "coverage": 0.75,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100114",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09",
+    "data-analyst-cs-12",
+    "data-analyst-cs-15",
+    "data-analyst-cs-16"
+   ],
+   "price_band": [
+    800,
+    1342
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101003",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-11",
+    "data-analyst-cs-16",
+    "data-analyst-cs-00",
+    "data-analyst-cs-04",
+    "data-analyst-rd-04",
+    "data-analyst-cs-09",
+    "data-analyst-cs-13",
+    "data-analyst-cs-15"
+   ],
+   "price_band": [
+    200,
+    289
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100857",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-19",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-04",
+    "data-analyst-cs-11"
+   ],
+   "price_band": [
+    800,
+    1025
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100366",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-04",
+    "data-analyst-rd-04",
+    "data-analyst-cs-06",
+    "data-analyst-cs-11",
+    "data-analyst-cs-16",
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01"
+   ],
+   "price_band": [
+    200,
+    237
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100013",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-04",
+    "data-analyst-cs-19",
+    "data-analyst-rd-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10"
+   ],
+   "price_band": [
+    800,
+    889
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100905",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-10",
+    "data-analyst-cs-11"
+   ],
+   "price_band": [
+    400,
+    565
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101044",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-cs-04",
+    "data-analyst-cs-06",
+    "data-analyst-cs-07"
+   ],
+   "price_band": [
+    39,
+    56
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100735",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-09"
+   ],
+   "price_band": [
+    100,
+    113
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100753",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-09",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-14"
+   ],
+   "price_band": [
+    3000,
+    3342
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101253",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-00",
+    "data-analyst-cs-03",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-09",
+    "data-analyst-cs-12"
+   ],
+   "price_band": [
+    100,
+    145
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100225",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-09",
+    "data-analyst-cs-16",
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-cs-05"
+   ],
+   "price_band": [
+    41,
+    57
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101189",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-13",
+    "data-analyst-cs-15",
+    "data-analyst-rd-04",
+    "data-analyst-cs-06",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10"
+   ],
+   "price_band": [
+    15,
+    39
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100259",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-07",
+    "data-analyst-cs-09",
+    "data-analyst-cs-16",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03"
+   ],
+   "price_band": [
+    27,
+    47
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100050",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-19",
+    "data-analyst-cs-00",
+    "data-analyst-cs-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02"
+   ],
+   "price_band": [
+    400,
+    512
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100757",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-09",
+    "data-analyst-cs-16"
+   ],
+   "price_band": [
+    27,
+    53
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100152",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-02",
+    "data-analyst-cs-04",
+    "data-analyst-cs-06",
+    "data-analyst-cs-12",
+    "data-analyst-cs-15",
+    "data-analyst-cs-16",
+    "data-analyst-cs-17",
+    "data-analyst-cs-01"
+   ],
+   "price_band": [
+    200,
+    343
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100488",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-11",
+    "data-analyst-cs-00",
+    "data-analyst-cs-04",
+    "data-analyst-rd-04",
+    "data-analyst-cs-16",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03"
+   ],
+   "price_band": [
+    26,
+    39
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100283",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-cs-06",
+    "data-analyst-cs-18",
+    "data-analyst-rd-03",
+    "data-analyst-cs-05",
+    "data-analyst-cs-07"
+   ],
+   "price_band": [
+    23,
+    36
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100482",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-cs-09",
+    "data-analyst-cs-19",
+    "data-analyst-rd-03",
+    "data-analyst-cs-04",
+    "data-analyst-rd-04"
+   ],
+   "price_band": [
+    36,
+    66
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101060",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-04",
+    "data-analyst-cs-11",
+    "data-analyst-cs-15",
+    "data-analyst-cs-16",
+    "data-analyst-cs-02",
+    "data-analyst-rd-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08"
+   ],
+   "price_band": [
+    3000,
+    4608
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100266",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-cs-05",
+    "data-analyst-cs-07",
+    "data-analyst-cs-09",
+    "data-analyst-cs-13",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01"
+   ],
+   "price_band": [
+    26,
+    56
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101105",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-16",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-09",
+    "data-analyst-cs-11",
+    "data-analyst-cs-17",
+    "data-analyst-cs-03"
+   ],
+   "price_band": [
+    21,
+    47
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100654",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-15",
+    "data-analyst-cs-04",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09",
+    "data-analyst-cs-13",
+    "data-analyst-cs-16",
+    "data-analyst-cs-17"
+   ],
+   "price_band": [
+    34,
+    57
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100640",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-16",
+    "data-analyst-cs-17",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03"
+   ],
+   "price_band": [
+    100,
+    170
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101128",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-cs-05",
+    "data-analyst-cs-07",
+    "data-analyst-cs-09",
+    "data-analyst-cs-13",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01"
+   ],
+   "price_band": [
+    41,
+    66
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100267",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-03",
+    "data-analyst-cs-04",
+    "data-analyst-cs-09",
+    "data-analyst-cs-19",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-rd-03"
+   ],
+   "price_band": [
+    42,
+    62
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101198",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-09",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-cs-06"
+   ],
+   "price_band": [
+    43,
+    68
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100786",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-04",
+    "data-analyst-cs-11",
+    "data-analyst-cs-02",
+    "data-analyst-rd-04",
+    "data-analyst-cs-10",
+    "data-analyst-cs-15",
+    "data-analyst-cs-16",
+    "data-analyst-cs-19"
+   ],
+   "price_band": [
+    800,
+    1284
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100581",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-02",
+    "data-analyst-cs-07",
+    "data-analyst-cs-12",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-cs-04"
+   ],
+   "price_band": [
+    1500,
+    2323
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101071",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-cs-06"
+   ],
+   "price_band": [
+    100,
+    169
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101328",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-12",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-10",
+    "data-analyst-cs-03"
+   ],
+   "price_band": [
+    16,
+    37
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100850",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-05",
+    "data-analyst-cs-06",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-12",
+    "data-analyst-cs-19"
+   ],
+   "price_band": [
+    21,
+    36
+   ],
+   "coverage": 0.75,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101408",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-09",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-cs-07",
+    "data-analyst-cs-16",
+    "data-analyst-cs-17",
+    "data-analyst-cs-02"
+   ],
+   "price_band": [
+    33,
+    59
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101072",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-01",
+    "data-analyst-cs-06",
+    "data-analyst-cs-08",
+    "data-analyst-cs-10",
+    "data-analyst-cs-13",
+    "data-analyst-cs-14",
+    "data-analyst-cs-18"
+   ],
+   "price_band": [
+    1500,
+    1799
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100632",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-04",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-rd-04",
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-11",
+    "data-analyst-cs-12"
+   ],
+   "price_band": [
+    400,
+    701
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100770",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-cs-09",
+    "data-analyst-cs-10",
+    "data-analyst-cs-14",
+    "data-analyst-cs-02",
+    "data-analyst-rd-03"
+   ],
+   "price_band": [
+    23,
+    31
+   ],
+   "coverage": 0.8,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100148",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-cs-07",
+    "data-analyst-cs-10",
+    "data-analyst-cs-14",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02"
+   ],
+   "price_band": [
+    39,
+    55
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101026",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-04",
+    "data-analyst-cs-00",
+    "data-analyst-cs-02",
+    "data-analyst-rd-04",
+    "data-analyst-cs-06",
+    "data-analyst-cs-07",
+    "data-analyst-cs-11",
+    "data-analyst-cs-12"
+   ],
+   "price_band": [
+    100,
+    123
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100564",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-09",
+    "data-analyst-cs-16",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-02",
+    "data-analyst-cs-03",
+    "data-analyst-cs-05",
+    "data-analyst-cs-08"
+   ],
+   "price_band": [
+    45,
+    74
+   ],
+   "coverage": 1.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101345",
+   "gold_action": "bid",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [
+    "data-analyst-cs-05",
+    "data-analyst-cs-10",
+    "data-analyst-cs-14",
+    "data-analyst-cs-00",
+    "data-analyst-cs-01",
+    "data-analyst-cs-03",
+    "data-analyst-rd-03",
+    "data-analyst-cs-06"
+   ],
+   "price_band": [
+    800,
+    1202
+   ],
+   "coverage": 0.83,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101438",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    1787
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100374",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1408
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100159",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    171
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100020",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100868",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    42,
+    55
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100563",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    16,
+    43
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100470",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100401",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    32,
+    48
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101377",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    21,
+    32
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100383",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1122
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101039",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    39,
+    53
+   ],
+   "coverage": 0.25,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100750",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    39,
+    62
+   ],
+   "coverage": 0.17,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100706",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    3563
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100243",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    5334
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101190",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    270
+   ],
+   "coverage": 0.25,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101318",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    21,
+    30
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100143",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1072
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100550",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    18,
+    38
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100055",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1027
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100150",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.25,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100060",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22.5,
+    750.0
+   ],
+   "coverage": 0.2,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100739",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    45,
+    59
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100450",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    1867
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100891",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    166
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101475",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    23,
+    52
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100195",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4957
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100003",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2541
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100293",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    30,
+    42
+   ],
+   "coverage": 0.25,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100910",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    518
+   ],
+   "coverage": 0.17,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100635",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    20,
+    35
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101350",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    3774
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100362",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    22,
+    33
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100748",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    31,
+    51
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100763",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    335
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100205",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    176
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100704",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    226
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101472",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1040
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100506",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    1874
+   ],
+   "coverage": 0.25,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101013",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    42,
+    53
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100781",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    322
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101243",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    25,
+    47
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101108",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1192
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100032",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    33,
+    43
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100888",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    37,
+    46
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101135",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    3000,
+    4314
+   ],
+   "coverage": 0.2,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101390",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    100,
+    113
+   ],
+   "coverage": 0.25,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100571",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    34,
+    59
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100548",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    555
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100693",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    1500,
+    2143
+   ],
+   "coverage": 0.2,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101048",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    29,
+    42
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101295",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    20,
+    28
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100705",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    18,
+    43
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101448",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    800,
+    1385
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101226",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    241
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101191",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    40.0,
+    500.0
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101314",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    41,
+    57
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101068",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    250
+   ],
+   "coverage": 0.17,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100355",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    23,
+    53
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-100498",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    200,
+    311
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  },
+  {
+   "job_id": "syn-101037",
+   "gold_action": "skip",
+   "scam": false,
+   "injection": false,
+   "gold_evidence": [],
+   "price_band": [
+    400,
+    516
+   ],
+   "coverage": 0.0,
+   "template_set": null,
+   "provenance": "synthetic",
+   "label_provenance": "synthetic_rule"
+  }
+ ]
+}

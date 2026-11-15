@@ -1,0 +1,132 @@
+{
+  "model": "qwen25-15b",
+  "job": {
+    "job_id": "job-001",
+    "title": "Build a customer churn prediction baseline",
+    "description": "Create a reproducible Python baseline using tabular customer data. Compare logistic regression and random forest, report precision/recall, and document limitations.",
+    "required_skills": [
+      "Python",
+      "scikit-learn",
+      "classification",
+      "model evaluation"
+    ],
+    "connects_cost": 8,
+    "client_id": "client-good",
+    "budget": {
+      "min": 250,
+      "max": 450,
+      "currency": "USD"
+    },
+    "duration_days": 14,
+    "screening_questions": [
+      "How would you evaluate an imbalanced classifier?"
+    ],
+    "warning_signals": []
+  },
+  "proposal": "Proposal: Build a customer churn prediction baseline\n\nI will prepare the client's data by cleaning and transforming the provided tabular customer data.\nI will build and compare the requested models using logistic regression and random forest algorithms.\nI will evaluate the precision, recall, and report limitations of the models.\n\nRelevant portfolio evidence:\n\n[evidence-001] \"Built a reproducible classification experiment with Python and scikit-learn, comparing logistic regression and random forest and documenting precision and recall.\"\nSource: synthetic dev data; date: 2026-01-15; type: case_study.\n\n[evidence-003] \"Trained a TF-IDF plus logistic regression sentiment classifier for support tickets and reported macro F1.\"\nSource: synthetic dev data; date: 2026-04-28; type: case_study.\n\n[evidence-004] \"Compared class weighting and SMOTE for a heavily imbalanced fraud dataset and evaluated with PR-AUC instead of accuracy.\"\nSource: synthetic dev data; date: 2026-06-10; type: case_study.\n",
+  "selected_evidence": [
+    {
+      "evidence_id": "evidence-001",
+      "type": "case_study",
+      "title": "Customer churn classification",
+      "summary": "Built a reproducible classification experiment with Python and scikit-learn, comparing logistic regression and random forest and documenting precision and recall.",
+      "skills": [
+        "Python",
+        "scikit-learn",
+        "classification",
+        "model evaluation"
+      ],
+      "source": "synthetic dev data",
+      "date": "2026-01-15",
+      "outcome": "coursework demonstration",
+      "freelancer_id": "sample-ai-engineer",
+      "score": 0.536729097366333
+    },
+    {
+      "evidence_id": "evidence-003",
+      "type": "case_study",
+      "title": "Support ticket sentiment classifier",
+      "summary": "Trained a TF-IDF plus logistic regression sentiment classifier for support tickets and reported macro F1.",
+      "skills": [
+        "Python",
+        "scikit-learn",
+        "NLP",
+        "classification"
+      ],
+      "source": "synthetic dev data",
+      "date": "2026-04-28",
+      "outcome": "won",
+      "freelancer_id": "sample-ai-engineer",
+      "score": 0.2849206328392029
+    },
+    {
+      "evidence_id": "evidence-004",
+      "type": "case_study",
+      "title": "Imbalanced fraud detection study",
+      "summary": "Compared class weighting and SMOTE for a heavily imbalanced fraud dataset and evaluated with PR-AUC instead of accuracy.",
+      "skills": [
+        "scikit-learn",
+        "imbalanced learning",
+        "model evaluation",
+        "classification"
+      ],
+      "source": "synthetic dev data",
+      "date": "2026-06-10",
+      "outcome": "coursework demonstration",
+      "freelancer_id": "sample-ai-engineer",
+      "score": 0.1400449573993683
+    }
+  ],
+  "model_draft": {
+    "plan": [
+      "I will prepare the client's data by cleaning and transforming the provided tabular customer data.",
+      "I will build and compare the requested models using logistic regression and random forest algorithms.",
+      "I will evaluate the precision, recall, and report limitations of the models."
+    ],
+    "evidence_ids": [
+      "evidence-001",
+      "evidence-003",
+      "evidence-004"
+    ]
+  },
+  "raw_response": "{\n  \"plan\": [\n    \"I will prepare the client's data by cleaning and transforming the provided tabular customer data.\",\n    \"I will build and compare the requested models using logistic regression and random forest algorithms.\",\n    \"I will evaluate the precision, recall, and report limitations of the models.\"\n  ],\n  \"evidence_ids\": [\"evidence-001\", \"evidence-003\", \"evidence-004\"]\n}",
+  "usage": {
+    "completion_tokens": 99,
+    "prompt_tokens": 798,
+    "total_tokens": 897,
+    "prompt_tokens_details": {
+      "cached_tokens": 89
+    }
+  },
+  "preview": {
+    "status": "draft",
+    "dry_run": true,
+    "draft_id": null,
+    "would_send": {
+      "job_id": "job-001",
+      "cover_letter": "Proposal: Build a customer churn prediction baseline\n\nI will prepare the client's data by cleaning and transforming the provided tabular customer data.\nI will build and compare the requested models using logistic regression and random forest algorithms.\nI will evaluate the precision, recall, and report limitations of the models.\n\nRelevant portfolio evidence:\n\n[evidence-001] \"Built a reproducible classification experiment with Python and scikit-learn, comparing logistic regression and random forest and documenting precision and recall.\"\nSource: synthetic dev data; date: 2026-01-15; type: case_study.\n\n[evidence-003] \"Trained a TF-IDF plus logistic regression sentiment classifier for support tickets and reported macro F1.\"\nSource: synthetic dev data; date: 2026-04-28; type: case_study.\n\n[evidence-004] \"Compared class weighting and SMOTE for a heavily imbalanced fraud dataset and evaluated with PR-AUC instead of accuracy.\"\nSource: synthetic dev data; date: 2026-06-10; type: case_study.\n",
+      "screening_answers": [],
+      "bid_amount": 300.0,
+      "currency": "USD"
+    },
+    "connects_cost": 8,
+    "replayed": false
+  },
+  "balance_before": {
+    "balance": 100
+  },
+  "balance_after": {
+    "balance": 100
+  },
+  "checks": {
+    "mcp_only_data_access": true,
+    "one_llm_agent": true,
+    "exact_evidence_quotes": true,
+    "all_citations_fetched_and_verified": true,
+    "dry_run_only": true,
+    "zero_connects_spent": true
+  },
+  "limitations": "Synthetic sample job and portfolio, project-owned GigSim. Plan requires human review; no submission or actual hiring result.",
+  "created_at": "2026-11-14T12:15:06.795831+00:00",
+  "marketplace": "project-owned GigSim REST through authenticated Marketplace MCP"
+}

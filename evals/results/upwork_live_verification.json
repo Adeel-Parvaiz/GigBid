@@ -1,0 +1,37 @@
+{
+  "date_pkt": "2026-11-14",
+  "provider": "https://mcp.upwork.com/mcp",
+  "authenticated": true,
+  "tool_count": 33,
+  "schema_sha256": "7fa90d52f17241829ddc926a158c5eecd51b5a37eb6f9ad6c4e48ad2c22ca0c7",
+  "checks": {
+    "encrypted_tokens_persisted": true,
+    "freelancer_account_discovered": true,
+    "common_port_search": true,
+    "common_port_job_detail": true,
+    "common_port_client_history": true,
+    "common_port_balance": true,
+    "common_port_thread_list": true,
+    "read_only_write_denied": true,
+    "authorization_survived_api_restart": true
+  },
+  "limitations": {
+    "message_history": "Not exercised: account has no rooms",
+    "live_proposal_and_message_writes": "Not exercised against real account; official action contracts and two approval gates passed against local OAuth/MCP fixture.",
+    "can_apply_to_smoke_job": false,
+    "public_search_cost": "Unknown until job detail, never represented as zero"
+  },
+  "writes_sent": 0,
+  "connects_spent_by_verification": 0,
+  "configured_operations": [
+    "get_client_history",
+    "get_connects_balance",
+    "get_job",
+    "list_messages",
+    "list_threads",
+    "message_draft",
+    "proposal_draft",
+    "search_jobs"
+  ],
+  "default_mode_after_verification": "simulator"
+}

@@ -1,0 +1,282 @@
+{
+  "trace_type": "skipped_scam",
+  "job_id": "scam-200004",
+  "variant": "hand_built",
+  "trial": {
+    "variant": "hand_built",
+    "persona": "ai-ml-engineer",
+    "job_id": "scam-200004",
+    "job_type": "scam",
+    "gold_action": "skip",
+    "action": "skip",
+    "accuracy_action": "skip",
+    "correct": true,
+    "proposal_present": false,
+    "unsupported_before": null,
+    "unsupported_after": null,
+    "partly_supported_before": null,
+    "raw_violations": [],
+    "caught_violations": 0,
+    "blocking_reasons": [],
+    "submission": null,
+    "replied": null,
+    "tokens": 1498,
+    "token_usage_complete": true,
+    "latency_seconds": 5.1523,
+    "error": null,
+    "internal_verification": null,
+    "critic_revisions": 0,
+    "node_trace": [
+      {
+        "node": "load_job",
+        "ms": 416.7,
+        "wrote": [
+          "client",
+          "job"
+        ]
+      },
+      {
+        "node": "analyst",
+        "ms": 3292.6,
+        "wrote": [
+          "job_spec",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "risk",
+        "ms": 4703.5,
+        "wrote": [
+          "risk_report",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "fit_matcher",
+        "ms": 9.5,
+        "wrote": [
+          "evidence",
+          "fit_report"
+        ]
+      },
+      {
+        "node": "decide",
+        "ms": 0.1,
+        "wrote": [
+          "decision",
+          "status"
+        ]
+      }
+    ],
+    "risk_report": {
+      "score": 1.0,
+      "flags": [
+        "no_budget",
+        "off_platform_contact",
+        "payment_unverified",
+        "unpaid_work"
+      ],
+      "explanation": "rule flags: ['no_budget', 'off_platform_contact', 'payment_unverified', 'unpaid_work'] | The client provides no budget, is on an off-platform contact, has unverified payment, and is an unpaid task. These are serious warning signs."
+    },
+    "raw_draft": null,
+    "evidence": [
+      {
+        "freelancer_id": "ai-ml-engineer",
+        "project_id": "ai-ml-engineer-p17",
+        "source": "synthetic",
+        "provenance": "synthetic",
+        "date": "2025-12-20",
+        "evidence_id": "ai-ml-engineer-cs-17",
+        "type": "case_study",
+        "title": "An OCR and extraction workflow",
+        "summary": "Shipped an OCR and extraction workflow using openai api, computer vision, random forest and NLP. Deployed behind an API with a simple health check. Cut manual effort by 30%.",
+        "skills": [
+          "LLM",
+          "computer vision",
+          "machine learning",
+          "NLP"
+        ],
+        "outcome": "5-star review",
+        "parent_evidence_id": "ai-ml-engineer-cs-17",
+        "chunk_index": 0,
+        "persona": "ai-ml-engineer",
+        "project": "ai-ml-engineer-p17",
+        "client_industry": null,
+        "score": 0.03252247488101534
+      },
+      {
+        "freelancer_id": "ai-ml-engineer",
+        "project_id": "ai-ml-engineer-p05",
+        "source": "synthetic",
+        "provenance": "synthetic",
+        "date": "2024-05-12",
+        "evidence_id": "ai-ml-engineer-cs-05",
+        "type": "case_study",
+        "title": "A support-ticket triage classifier",
+        "summary": "Automated a support-ticket triage classifier using LLM, time series, retrieval augmented generation and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 20%.",
+        "skills": [
+          "LLM",
+          "time series",
+          "RAG",
+          "deep learning"
+        ],
+        "outcome": "won",
+        "parent_evidence_id": "ai-ml-engineer-cs-05",
+        "chunk_index": 0,
+        "persona": "ai-ml-engineer",
+        "project": "ai-ml-engineer-p05",
+        "client_industry": null,
+        "score": 0.03200204813108039
+      },
+      {
+        "freelancer_id": "ai-ml-engineer",
+        "project_id": "ai-ml-engineer-p02",
+        "source": "synthetic",
+        "provenance": "synthetic",
+        "date": "2024-04-06",
+        "evidence_id": "ai-ml-engineer-cs-02",
+        "type": "case_study",
+        "title": "An image classifier for product photos",
+        "summary": "Built an image classifier for product photos using scikit-learn, LangChain, RAG and NLP. Compared two baselines and kept the simpler one.",
+        "skills": [
+          "scikit-learn",
+          "LangChain",
+          "RAG",
+          "NLP"
+        ],
+        "outcome": "client replied",
+        "parent_evidence_id": "ai-ml-engineer-cs-02",
+        "chunk_index": 0,
+        "persona": "ai-ml-engineer",
+        "project": "ai-ml-engineer-p02",
+        "client_industry": null,
+        "score": 0.01639344262295082
+      },
+      {
+        "freelancer_id": "ai-ml-engineer",
+        "project_id": "ai-ml-engineer-p15",
+        "source": "synthetic",
+        "provenance": "synthetic",
+        "date": "2026-06-12",
+        "evidence_id": "ai-ml-engineer-cs-15",
+        "type": "case_study",
+        "title": "A customer churn prediction pipeline",
+        "summary": "Automated a customer churn prediction pipeline using TensorFlow, machine learning, MLOps and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 50%.",
+        "skills": [
+          "TensorFlow",
+          "machine learning",
+          "MLOps",
+          "deep learning"
+        ],
+        "outcome": "personal project",
+        "parent_evidence_id": "ai-ml-engineer-cs-15",
+        "chunk_index": 0,
+        "persona": "ai-ml-engineer",
+        "project": "ai-ml-engineer-p15",
+        "client_industry": null,
+        "score": 0.01639344262295082
+      },
+      {
+        "freelancer_id": "ai-ml-engineer",
+        "project_id": "ai-ml-engineer-p13",
+        "source": "synthetic",
+        "provenance": "synthetic",
+        "date": "2025-10-03",
+        "evidence_id": "ai-ml-engineer-rv-13",
+        "type": "review",
+        "title": "Client review: A document question-answering assistant",
+        "summary": "Clean work, well documented, would hire again. (5/5) on a document question-answering assistant.",
+        "skills": [
+          "TensorFlow"
+        ],
+        "outcome": "5-star review",
+        "parent_evidence_id": "ai-ml-engineer-rv-13",
+        "chunk_index": 0,
+        "persona": "ai-ml-engineer",
+        "project": "ai-ml-engineer-p13",
+        "client_industry": null,
+        "score": 0.01639344262295082
+      }
+    ],
+    "reply_eligible": false,
+    "tool_call_attempts_blocked": []
+  },
+  "trace": {
+    "variant": "hand_built",
+    "job_id": "scam-200004",
+    "tool_calls": [],
+    "action": "skip",
+    "status": "skipped",
+    "risk_report": {
+      "score": 1.0,
+      "flags": [
+        "no_budget",
+        "off_platform_contact",
+        "payment_unverified",
+        "unpaid_work"
+      ],
+      "explanation": "rule flags: ['no_budget', 'off_platform_contact', 'payment_unverified', 'unpaid_work'] | The client provides no budget, is on an off-platform contact, has unverified payment, and is an unpaid task. These are serious warning signs."
+    },
+    "node_trace": [
+      {
+        "node": "load_job",
+        "ms": 416.7,
+        "wrote": [
+          "client",
+          "job"
+        ]
+      },
+      {
+        "node": "analyst",
+        "ms": 3292.6,
+        "wrote": [
+          "job_spec",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "risk",
+        "ms": 4703.5,
+        "wrote": [
+          "risk_report",
+          "tokens_used"
+        ]
+      },
+      {
+        "node": "fit_matcher",
+        "ms": 9.5,
+        "wrote": [
+          "evidence",
+          "fit_report"
+        ]
+      },
+      {
+        "node": "decide",
+        "ms": 0.1,
+        "wrote": [
+          "decision",
+          "status"
+        ]
+      }
+    ],
+    "raw_draft": null,
+    "final_draft": null,
+    "approval": null,
+    "submission": null,
+    "internal_verification": null,
+    "critic_revisions": 0,
+    "common_approval_gate": {
+      "allowed": false,
+      "reason": "eligible local GigSim write only"
+    },
+    "common_evaluation": {
+      "proposal_present": false,
+      "unsupported_before": null,
+      "unsupported_after": null,
+      "partly_supported_before": null,
+      "raw_violations": [],
+      "caught_violations": 0,
+      "blocking_reasons": []
+    }
+  }
+}

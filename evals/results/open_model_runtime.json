@@ -1,0 +1,65 @@
+{
+  "runtime": "llama.cpp release b12359, CUDA 12.8",
+  "backend": "CUDA 12.8; RTX 4050 Laptop GPU 6GB",
+  "threads": 6,
+  "context": 8192,
+  "models": [
+    {
+      "name": "qwen2.5:0.5b",
+      "model": "qwen2.5:0.5b",
+      "modified_at": "2026-11-14T02:26:40.184223441+05:00",
+      "size": 397821319,
+      "digest": "a8b0c51577010a279d933d14c2a8ab4b268079d44c5c8830c0a93900f1827c67",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "494.03M",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 896,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    },
+    {
+      "name": "qwen2.5:1.5b",
+      "model": "qwen2.5:1.5b",
+      "modified_at": "2026-11-14T02:23:18.856223271+05:00",
+      "size": 986061892,
+      "digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "1.5B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 1536,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    }
+  ],
+  "weights_sha256": {
+    "qwen2.5:1.5b.gguf": "183715c435899236895da3869489cc30ac241476b4971a20285b1a462818a5b4",
+    "qwen2.5:0.5b.gguf": "c5396e06af294bd101b30dce59131a76d2b773e76950acc870eda801d3ab0515"
+  },
+  "model_aliases": {
+    "qwen25-15b": "qwen2.5:1.5b",
+    "qwen25-05b": "qwen2.5:0.5b"
+  },
+  "runtime_version_output": "version: 1.0.0-dev (build 12359, commit b1b770d90)\nbuilt with GNU 13.3.0 for Linux x86_64\n"
+}

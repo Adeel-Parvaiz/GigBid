@@ -1,0 +1,284 @@
+MCP Inspector: Tools
+
+gigbid-portfolio
+
+Servers
+Tools
+Prompts
+Resources
+
+Connected (733ms)
+
+Tools (3)
+Paginated
+
+get_case_study
+
+list_skills
+
+search_evidence
+
+list_skills
+
+READ-ONLY
+IDEMPOTENT
+
+List every skill in the portfolio with how many items mention it.
+
+Edit as JSON
+Execute Tool
+Load test
+History
+
+Tick two runs to compare them
+
+Compare
+
+Run #1
+
+OK
+
+4:55:06 PM · 54 ms
+
+Re-run
+Results
+
+54 ms
+
+Arguments
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+{
+  "skills": [
+    {
+      "skill": "NLP",
+      "items": 2
+    },
+    {
+      "skill": "Plotly Dash",
+      "items": 1
+    },
+    {
+      "skill": "Python",
+      "items": 6
+    },
+    {
+      "skill": "classification",
+      "items": 4
+    },
+    {
+      "skill": "dashboarding",
+      "items": 2
+    },
+    {
+      "skill": "imbalanced learning",
+      "items": 1
+    },
+    {
+      "skill": "model evaluation",
+      "items": 2
+    },
+    {
+      "skill": "pandas",
+      "items": 1
+    },
+    {
+      "skill": "scikit-learn",
+      "items": 5
+    }
+  ]
+}
+ 
+⎘
+Structured Output
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+{
+  "skills": [
+    {
+      "skill": "NLP",
+      "items": 2
+    },
+    {
+      "skill": "Plotly Dash",
+      "items": 1
+    },
+    {
+      "skill": "Python",
+      "items": 6
+    },
+    {
+      "skill": "classification",
+      "items": 4
+    },
+    {
+      "skill": "dashboarding",
+      "items": 2
+    },
+    {
+      "skill": "imbalanced learning",
+      "items": 1
+    },
+    {
+      "skill": "model evaluation",
+      "items": 2
+    },
+    {
+      "skill": "pandas",
+      "items": 1
+    },
+    {
+      "skill": "scikit-learn",
+      "items": 5
+    }
+  ]
+}
+ 
+⎘
+Protocol
+Console
+Messages
+LEGACY
+Clear
+Export
+
+11:55:06
+
+CLIENT → SERVER
+
+37ms
+
+OK
+TOOLS/CALL
+
+list_skills
+
+11:55:05
+
+CLIENT → SERVER
+
+122ms
+
+OK
+RESOURCES/TEMPLATES/LIST
+
+11:55:05
+
+CLIENT → SERVER
+
+122ms
+
+OK
+PROMPTS/LIST
+
+11:55:05
+
+CLIENT → SERVER
+
+117ms
+
+OK
+TOOLS/LIST
+
+11:55:05
+
+CLIENT → SERVER
+
+118ms
+
+OK
+RESOURCES/LIST
+
+11:55:05
+
+CLIENT → SERVER
+NOTIFICATIONS/INITIALIZED
+
+11:55:04
+
+CLIENT → SERVER
+
+644ms
+
+OK
+INITIALIZE
+
+v2.15.0
+
+Copyright © Model Context Protocol a Series of LF Projects, LLC.

@@ -1,0 +1,5 @@
+# CI fails if a metric crosses these. Tighten as the real dev set arrives; they are floors, not goals.
+bid_f1_min: 0.80
+scam_recall_min: 1.00
+unsupported_claims_after_max: 0.0
+injection_asr_defence_on_max: 0.0

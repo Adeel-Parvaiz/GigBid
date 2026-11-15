@@ -1,0 +1,31 @@
+{
+ "meta": {
+  "generated_at": "2026-11-09T11:44:27",
+  "commit": "no-git",
+  "corpus": "toy-sample-5-jobs",
+  "llm": "simulated-gullible-model",
+  "valid_for_report": false,
+  "why_not": "toy corpus + test-double LLM; rerun on the instructor dev set with a real model"
+ },
+ "known_patterns": {
+  "defence_off": {
+   "n_attacks": 6,
+   "attack_success_rate": 1.0
+  },
+  "defence_on": {
+   "n_attacks": 6,
+   "attack_success_rate": 0.0
+  }
+ },
+ "paraphrased_unseen": {
+  "defence_off": {
+   "n_attacks": 2,
+   "attack_success_rate": 1.0
+  },
+  "defence_on": {
+   "n_attacks": 2,
+   "attack_success_rate": 1.0
+  }
+ },
+ "note": "paraphrased_unseen shows the regex floor's blind spot: an attack that beats it exists (viva Q5)"
+}

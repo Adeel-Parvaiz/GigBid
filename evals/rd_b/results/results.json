@@ -1,0 +1,1954 @@
+{
+  "experiment": "R&D B: real local embedding model evaluation",
+  "seed": 4016,
+  "evaluation_status": "synthetic_data_only",
+  "instructor_dataset_available": false,
+  "marketplace_performance_claimed": false,
+  "dataset": {
+    "data_dir": "data\\processed\\kaggle_2024_v1",
+    "manifest_seed": 7,
+    "manifest_sha256": "21a81829334590fcdb0e917f36fc832d1bdbf87f75a33eb9852dbd816a5f6894",
+    "job_provenance_counts": {
+      "synthetic": 1653,
+      "real": 3000
+    },
+    "dev_jobs_per_persona": {
+      "ai-ml-engineer": 200,
+      "fullstack-dev": 200,
+      "data-analyst": 200
+    },
+    "dev_job_provenance": {
+      "ai-ml-engineer": [
+        "synthetic"
+      ],
+      "fullstack-dev": [
+        "synthetic"
+      ],
+      "data-analyst": [
+        "synthetic"
+      ]
+    },
+    "dev_label_provenance": {
+      "ai-ml-engineer": [
+        "synthetic_rule"
+      ],
+      "fullstack-dev": [
+        "synthetic_rule"
+      ],
+      "data-analyst": [
+        "synthetic_rule"
+      ]
+    },
+    "portfolio_items": 88,
+    "portfolio_provenance": [
+      "synthetic"
+    ]
+  },
+  "configuration": {
+    "fastembed_version": "0.9.1",
+    "baseline": "HashingEmbedder, 512 dimensions, in-repo deterministic test baseline",
+    "real_embedder": {
+      "provider": "fastembed",
+      "package_version": "0.9.1",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "source": "Qdrant/all-MiniLM-L6-v2-onnx",
+      "revision": "d13954661f83248295ba75c1ed411eef3b7b936e",
+      "model_file": "model.onnx",
+      "model_file_sha256": "bbd7b466f6d58e646fdc2bd5fd67b2f5e93c0b687011bd4548c420f7bd46f0c5",
+      "dimensions": 384,
+      "license": "apache-2.0",
+      "batch_size": 32,
+      "corpus_items_reembedded": 88,
+      "portfolio_corpus_sha256": "7529d3c81891b8f5b5c7d90955df4831cec0a84eb9a935ac4fe333a137fffd37",
+      "embedding_matrix_sha256": "83f85ed0c8a8368056329bbd21035deed39843b9df54850f953e1902d268fc62",
+      "embedding_dimension": 384,
+      "index_build_ms": 562.12,
+      "saved_vectors": "evals\\rd_b\\results\\portfolio_embeddings_fastembed.npz",
+      "saved_vectors_sha256": "9f131eda07a8539b8f0a6703b165cb6d3067eb20fe7938d9fb151c132ee7a189"
+    },
+    "embedding_conditions": {
+      "hashing": {
+        "provider": "in-repo hashing baseline",
+        "model": "HashingEmbedder",
+        "dimensions": 512,
+        "corpus_items_reembedded": 88,
+        "portfolio_corpus_sha256": "7529d3c81891b8f5b5c7d90955df4831cec0a84eb9a935ac4fe333a137fffd37",
+        "embedding_matrix_sha256": "76605184cdd3e3b710521f72d1c3bb775a14ae063555a2e536db61f1479dead4",
+        "embedding_dimension": 512,
+        "index_build_ms": 14.946,
+        "saved_vectors": "evals\\rd_b\\results\\portfolio_embeddings_hashing.npz",
+        "saved_vectors_sha256": "94fcaec9b8e9b5bae462836b68eb7091a9e7d4ae771e5d22d0abca541527771c"
+      },
+      "fastembed": {
+        "provider": "fastembed",
+        "package_version": "0.9.1",
+        "model": "sentence-transformers/all-MiniLM-L6-v2",
+        "source": "Qdrant/all-MiniLM-L6-v2-onnx",
+        "revision": "d13954661f83248295ba75c1ed411eef3b7b936e",
+        "model_file": "model.onnx",
+        "model_file_sha256": "bbd7b466f6d58e646fdc2bd5fd67b2f5e93c0b687011bd4548c420f7bd46f0c5",
+        "dimensions": 384,
+        "license": "apache-2.0",
+        "batch_size": 32,
+        "corpus_items_reembedded": 88,
+        "portfolio_corpus_sha256": "7529d3c81891b8f5b5c7d90955df4831cec0a84eb9a935ac4fe333a137fffd37",
+        "embedding_matrix_sha256": "83f85ed0c8a8368056329bbd21035deed39843b9df54850f953e1902d268fc62",
+        "embedding_dimension": 384,
+        "index_build_ms": 562.12,
+        "saved_vectors": "evals\\rd_b\\results\\portfolio_embeddings_fastembed.npz",
+        "saved_vectors_sha256": "9f131eda07a8539b8f0a6703b165cb6d3067eb20fe7938d9fb151c132ee7a189"
+      }
+    },
+    "conditions": [
+      "hashing",
+      "fastembed"
+    ],
+    "retrieval_variants": [
+      "v0_naive",
+      "v1_decomposed",
+      "v1_v2_hybrid_decomposed",
+      "v1_v2_v3",
+      "v2_hybrid",
+      "v3_rerank",
+      "v8_corrective"
+    ],
+    "decision_variants": [
+      "v1_decomposed",
+      "v1_v2_v3"
+    ],
+    "decision_llm": "HeuristicLLM deterministic test double",
+    "vector_index": "DenseIndex: in-memory NumPy cosine similarity; not an external vector database",
+    "retrieval_k": 10,
+    "claim_verification": "existing lexical grounding verifier; no LLM judge"
+  },
+  "results_files": {
+    "retrieval_per_job": "evals\\rd_b\\results\\retrieval_per_job.jsonl",
+    "decision_per_job": "evals\\rd_b\\results\\decision_per_job.jsonl"
+  },
+  "statistical_significance_claimed": false,
+  "retrieval": {
+    "hashing": {
+      "v0_naive": {
+        "n_queries": 338,
+        "recall@5": 0.2906804733727811,
+        "mrr": 0.6661500892270122,
+        "ndcg@10": 0.521964400303625,
+        "relevant_evidence_recall@5_micro": 0.2906804733727811,
+        "relevant_evidence_retrieved_at_5": 786,
+        "relevant_evidence_retrieved_at_10": 1516,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 0.39835,
+        "latency_ms_p95": 1.32,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.29646017699115046,
+            "mrr": 0.6743714004775951,
+            "ndcg@10": 0.5173748204714654,
+            "relevant_evidence_recall@5_micro": 0.29646017699115046,
+            "relevant_evidence_retrieved_at_5": 268,
+            "relevant_evidence_retrieved_at_10": 496,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 0.6087,
+            "latency_ms_p95": 1.7832
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.25961538461538464,
+            "mrr": 0.603093203093203,
+            "ndcg@10": 0.47502103717033034,
+            "relevant_evidence_recall@5_micro": 0.25961538461538464,
+            "relevant_evidence_retrieved_at_5": 243,
+            "relevant_evidence_retrieved_at_10": 489,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 0.3226,
+            "latency_ms_p95": 0.5242
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.31828703703703703,
+            "mrr": 0.7258597883597884,
+            "ndcg@10": 0.5776217707446388,
+            "relevant_evidence_recall@5_micro": 0.31828703703703703,
+            "relevant_evidence_retrieved_at_5": 275,
+            "relevant_evidence_retrieved_at_10": 531,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 0.3754,
+            "latency_ms_p95": 0.7958
+          }
+        }
+      },
+      "v1_decomposed": {
+        "n_queries": 338,
+        "recall@5": 0.34763313609467456,
+        "mrr": 0.9051845590307129,
+        "ndcg@10": 0.612348828485796,
+        "relevant_evidence_recall@5_micro": 0.34763313609467456,
+        "relevant_evidence_retrieved_at_5": 940,
+        "relevant_evidence_retrieved_at_10": 1570,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 0.8289500000000001,
+        "latency_ms_p95": 3.7448,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.3661504424778761,
+            "mrr": 0.9454277286135693,
+            "ndcg@10": 0.652046910731993,
+            "relevant_evidence_recall@5_micro": 0.3661504424778761,
+            "relevant_evidence_retrieved_at_5": 331,
+            "relevant_evidence_retrieved_at_10": 556,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 0.7764,
+            "latency_ms_p95": 1.9962
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.3386752136752137,
+            "mrr": 0.8742368742368742,
+            "ndcg@10": 0.6055554256969587,
+            "relevant_evidence_recall@5_micro": 0.3386752136752137,
+            "relevant_evidence_retrieved_at_5": 317,
+            "relevant_evidence_retrieved_at_10": 549,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 1.0858,
+            "latency_ms_p95": 4.9126
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.33796296296296297,
+            "mrr": 0.8966049382716049,
+            "ndcg@10": 0.5781723917494412,
+            "relevant_evidence_recall@5_micro": 0.33796296296296297,
+            "relevant_evidence_retrieved_at_5": 292,
+            "relevant_evidence_retrieved_at_10": 465,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 0.73325,
+            "latency_ms_p95": 2.3785
+          }
+        }
+      },
+      "v1_v2_hybrid_decomposed": {
+        "n_queries": 338,
+        "recall@5": 0.3594674556213018,
+        "mrr": 0.9144054663285434,
+        "ndcg@10": 0.611539922000259,
+        "relevant_evidence_recall@5_micro": 0.3594674556213018,
+        "relevant_evidence_retrieved_at_5": 972,
+        "relevant_evidence_retrieved_at_10": 1544,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 0.5990500000000001,
+        "latency_ms_p95": 1.1569,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.39601769911504425,
+            "mrr": 0.9845132743362832,
+            "ndcg@10": 0.6670975266304041,
+            "relevant_evidence_recall@5_micro": 0.39601769911504425,
+            "relevant_evidence_retrieved_at_5": 358,
+            "relevant_evidence_retrieved_at_10": 552,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 0.597,
+            "latency_ms_p95": 1.3531
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.35363247863247865,
+            "mrr": 0.8770858770858772,
+            "ndcg@10": 0.5876170472822745,
+            "relevant_evidence_recall@5_micro": 0.35363247863247865,
+            "relevant_evidence_retrieved_at_5": 331,
+            "relevant_evidence_retrieved_at_10": 515,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 0.5741,
+            "latency_ms_p95": 1.1199
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.3275462962962963,
+            "mrr": 0.8814814814814815,
+            "ndcg@10": 0.5793266536557938,
+            "relevant_evidence_recall@5_micro": 0.3275462962962963,
+            "relevant_evidence_retrieved_at_5": 283,
+            "relevant_evidence_retrieved_at_10": 477,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 0.62415,
+            "latency_ms_p95": 1.1569
+          }
+        }
+      },
+      "v1_v2_v3": {
+        "n_queries": 338,
+        "recall@5": 0.3613165680473373,
+        "mrr": 0.8896978021978023,
+        "ndcg@10": 0.6097685350719693,
+        "relevant_evidence_recall@5_micro": 0.3613165680473373,
+        "relevant_evidence_retrieved_at_5": 977,
+        "relevant_evidence_retrieved_at_10": 1565,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 1.2712500000000002,
+        "latency_ms_p95": 2.3146,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.3827433628318584,
+            "mrr": 0.9014749262536873,
+            "ndcg@10": 0.6311542276367719,
+            "relevant_evidence_recall@5_micro": 0.3827433628318584,
+            "relevant_evidence_retrieved_at_5": 346,
+            "relevant_evidence_retrieved_at_10": 541,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 1.3061,
+            "latency_ms_p95": 2.4842
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.3247863247863248,
+            "mrr": 0.8500101750101751,
+            "ndcg@10": 0.5597619578898836,
+            "relevant_evidence_recall@5_micro": 0.3247863247863248,
+            "relevant_evidence_retrieved_at_5": 304,
+            "relevant_evidence_retrieved_at_10": 497,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 1.2832,
+            "latency_ms_p95": 2.2143
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.3784722222222222,
+            "mrr": 0.9203703703703704,
+            "ndcg@10": 0.6415665560949447,
+            "relevant_evidence_recall@5_micro": 0.3784722222222222,
+            "relevant_evidence_retrieved_at_5": 327,
+            "relevant_evidence_retrieved_at_10": 527,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 1.2502499999999999,
+            "latency_ms_p95": 2.321
+          }
+        }
+      },
+      "v2_hybrid": {
+        "n_queries": 338,
+        "recall@5": 0.3132396449704142,
+        "mrr": 0.6663367615290693,
+        "ndcg@10": 0.5514415139771247,
+        "relevant_evidence_recall@5_micro": 0.3132396449704142,
+        "relevant_evidence_retrieved_at_5": 847,
+        "relevant_evidence_retrieved_at_10": 1618,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 0.3775,
+        "latency_ms_p95": 0.7956,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.3396017699115044,
+            "mrr": 0.6818092428711897,
+            "ndcg@10": 0.5727488836494331,
+            "relevant_evidence_recall@5_micro": 0.3396017699115044,
+            "relevant_evidence_retrieved_at_5": 307,
+            "relevant_evidence_retrieved_at_10": 554,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 0.3479,
+            "latency_ms_p95": 0.7956
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.2777777777777778,
+            "mrr": 0.5914631664631664,
+            "ndcg@10": 0.49111286641172336,
+            "relevant_evidence_recall@5_micro": 0.2777777777777778,
+            "relevant_evidence_retrieved_at_5": 260,
+            "relevant_evidence_retrieved_at_10": 515,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 0.4414,
+            "latency_ms_p95": 0.7962
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.32407407407407407,
+            "mrr": 0.7312610229276897,
+            "ndcg@10": 0.5945037268676905,
+            "relevant_evidence_recall@5_micro": 0.32407407407407407,
+            "relevant_evidence_retrieved_at_5": 280,
+            "relevant_evidence_retrieved_at_10": 549,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 0.36224999999999996,
+            "latency_ms_p95": 0.7293
+          }
+        }
+      },
+      "v3_rerank": {
+        "n_queries": 338,
+        "recall@5": 0.35502958579881655,
+        "mrr": 0.7881938574246267,
+        "ndcg@10": 0.6037632087787178,
+        "relevant_evidence_recall@5_micro": 0.35502958579881655,
+        "relevant_evidence_retrieved_at_5": 960,
+        "relevant_evidence_retrieved_at_10": 1659,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 0.585,
+        "latency_ms_p95": 1.03,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.38163716814159293,
+            "mrr": 0.8458702064896755,
+            "ndcg@10": 0.644964944633858,
+            "relevant_evidence_recall@5_micro": 0.38163716814159293,
+            "relevant_evidence_retrieved_at_5": 345,
+            "relevant_evidence_retrieved_at_10": 580,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 0.5842,
+            "latency_ms_p95": 1.1412
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.28739316239316237,
+            "mrr": 0.6591982091982092,
+            "ndcg@10": 0.5091486379525468,
+            "relevant_evidence_recall@5_micro": 0.28739316239316237,
+            "relevant_evidence_retrieved_at_5": 269,
+            "relevant_evidence_retrieved_at_10": 509,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 0.6012,
+            "latency_ms_p95": 1.1002
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.40046296296296297,
+            "mrr": 0.8675925925925926,
+            "ndcg@10": 0.663153103547525,
+            "relevant_evidence_recall@5_micro": 0.40046296296296297,
+            "relevant_evidence_retrieved_at_5": 346,
+            "relevant_evidence_retrieved_at_10": 570,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 0.55975,
+            "latency_ms_p95": 0.9444
+          }
+        }
+      },
+      "v8_corrective": {
+        "n_queries": 338,
+        "recall@5": 0.3620562130177515,
+        "mrr": 0.9144054663285434,
+        "ndcg@10": 0.6130937261789668,
+        "relevant_evidence_recall@5_micro": 0.3620562130177515,
+        "relevant_evidence_retrieved_at_5": 979,
+        "relevant_evidence_retrieved_at_10": 1544,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 0.8524,
+        "latency_ms_p95": 1.5954,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.3993362831858407,
+            "mrr": 0.9845132743362832,
+            "ndcg@10": 0.669084720703762,
+            "relevant_evidence_recall@5_micro": 0.3993362831858407,
+            "relevant_evidence_retrieved_at_5": 361,
+            "relevant_evidence_retrieved_at_10": 552,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 0.8694,
+            "latency_ms_p95": 1.6902
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.35363247863247865,
+            "mrr": 0.8770858770858772,
+            "ndcg@10": 0.5889071833037152,
+            "relevant_evidence_recall@5_micro": 0.35363247863247865,
+            "relevant_evidence_retrieved_at_5": 331,
+            "relevant_evidence_retrieved_at_10": 515,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 0.8102,
+            "latency_ms_p95": 1.411
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.33217592592592593,
+            "mrr": 0.8814814814814815,
+            "ndcg@10": 0.5807126440965836,
+            "relevant_evidence_recall@5_micro": 0.33217592592592593,
+            "relevant_evidence_retrieved_at_5": 287,
+            "relevant_evidence_retrieved_at_10": 477,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 0.88205,
+            "latency_ms_p95": 1.5794
+          }
+        }
+      }
+    },
+    "fastembed": {
+      "v0_naive": {
+        "n_queries": 338,
+        "recall@5": 0.2599852071005917,
+        "mrr": 0.6587947309101155,
+        "ndcg@10": 0.4699556940954915,
+        "relevant_evidence_recall@5_micro": 0.2599852071005917,
+        "relevant_evidence_retrieved_at_5": 703,
+        "relevant_evidence_retrieved_at_10": 1335,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 8.60365,
+        "latency_ms_p95": 10.4042,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.30420353982300885,
+            "mrr": 0.7328908554572271,
+            "ndcg@10": 0.5354148643398063,
+            "relevant_evidence_recall@5_micro": 0.30420353982300885,
+            "relevant_evidence_retrieved_at_5": 275,
+            "relevant_evidence_retrieved_at_10": 497,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 8.7764,
+            "latency_ms_p95": 10.8698
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.21474358974358973,
+            "mrr": 0.5452584452584452,
+            "ndcg@10": 0.3948556974403853,
+            "relevant_evidence_recall@5_micro": 0.21474358974358973,
+            "relevant_evidence_retrieved_at_5": 201,
+            "relevant_evidence_retrieved_at_10": 404,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 8.6775,
+            "latency_ms_p95": 10.966
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.26273148148148145,
+            "mrr": 0.704265873015873,
+            "ndcg@10": 0.4828243364199345,
+            "relevant_evidence_recall@5_micro": 0.26273148148148145,
+            "relevant_evidence_retrieved_at_5": 227,
+            "relevant_evidence_retrieved_at_10": 434,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 8.16305,
+            "latency_ms_p95": 9.6299
+          }
+        }
+      },
+      "v1_decomposed": {
+        "n_queries": 338,
+        "recall@5": 0.3032544378698225,
+        "mrr": 0.7761540809617733,
+        "ndcg@10": 0.5149753805275625,
+        "relevant_evidence_recall@5_micro": 0.3032544378698225,
+        "relevant_evidence_retrieved_at_5": 820,
+        "relevant_evidence_retrieved_at_10": 1360,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 7.9337,
+        "latency_ms_p95": 12.7914,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.372787610619469,
+            "mrr": 0.8891838741396263,
+            "ndcg@10": 0.6352548724849637,
+            "relevant_evidence_recall@5_micro": 0.372787610619469,
+            "relevant_evidence_retrieved_at_5": 337,
+            "relevant_evidence_retrieved_at_10": 554,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 7.982,
+            "latency_ms_p95": 12.4218
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.2553418803418803,
+            "mrr": 0.6722222222222223,
+            "ndcg@10": 0.4046969345282575,
+            "relevant_evidence_recall@5_micro": 0.2553418803418803,
+            "relevant_evidence_retrieved_at_5": 239,
+            "relevant_evidence_retrieved_at_10": 364,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 8.0961,
+            "latency_ms_p95": 12.9661
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.2824074074074074,
+            "mrr": 0.7704842739564961,
+            "ndcg@10": 0.5085957100713805,
+            "relevant_evidence_recall@5_micro": 0.2824074074074074,
+            "relevant_evidence_retrieved_at_5": 244,
+            "relevant_evidence_retrieved_at_10": 442,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 7.796950000000001,
+            "latency_ms_p95": 12.4767
+          }
+        }
+      },
+      "v1_v2_hybrid_decomposed": {
+        "n_queries": 338,
+        "recall@5": 0.34874260355029585,
+        "mrr": 0.8726120033812341,
+        "ndcg@10": 0.5784342087616189,
+        "relevant_evidence_recall@5_micro": 0.34874260355029585,
+        "relevant_evidence_retrieved_at_5": 943,
+        "relevant_evidence_retrieved_at_10": 1457,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 20.46185,
+        "latency_ms_p95": 28.5748,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.3860619469026549,
+            "mrr": 0.9022123893805309,
+            "ndcg@10": 0.6457126667074152,
+            "relevant_evidence_recall@5_micro": 0.3860619469026549,
+            "relevant_evidence_retrieved_at_5": 349,
+            "relevant_evidence_retrieved_at_10": 552,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 19.8314,
+            "latency_ms_p95": 28.0338
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.31837606837606836,
+            "mrr": 0.8327635327635328,
+            "ndcg@10": 0.5125213189091534,
+            "relevant_evidence_recall@5_micro": 0.31837606837606836,
+            "relevant_evidence_retrieved_at_5": 298,
+            "relevant_evidence_retrieved_at_10": 440,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 20.5499,
+            "latency_ms_p95": 27.8287
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.3425925925925926,
+            "mrr": 0.884810405643739,
+            "ndcg@10": 0.5794466380659103,
+            "relevant_evidence_recall@5_micro": 0.3425925925925926,
+            "relevant_evidence_retrieved_at_5": 296,
+            "relevant_evidence_retrieved_at_10": 465,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 21.457700000000003,
+            "latency_ms_p95": 29.8952
+          }
+        }
+      },
+      "v1_v2_v3": {
+        "n_queries": 338,
+        "recall@5": 0.3683431952662722,
+        "mrr": 0.8942589461820231,
+        "ndcg@10": 0.616163693899464,
+        "relevant_evidence_recall@5_micro": 0.3683431952662722,
+        "relevant_evidence_retrieved_at_5": 996,
+        "relevant_evidence_retrieved_at_10": 1569,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 22.0641,
+        "latency_ms_p95": 29.8966,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.3241150442477876,
+            "mrr": 0.8916772018541931,
+            "ndcg@10": 0.5868059005573115,
+            "relevant_evidence_recall@5_micro": 0.3241150442477876,
+            "relevant_evidence_retrieved_at_5": 293,
+            "relevant_evidence_retrieved_at_10": 501,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 21.2344,
+            "latency_ms_p95": 29.9354
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.37713675213675213,
+            "mrr": 0.915954415954416,
+            "ndcg@10": 0.6094694618204392,
+            "relevant_evidence_recall@5_micro": 0.37713675213675213,
+            "relevant_evidence_retrieved_at_5": 353,
+            "relevant_evidence_retrieved_at_10": 518,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 22.4087,
+            "latency_ms_p95": 30.6252
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.4050925925925926,
+            "mrr": 0.8734567901234568,
+            "ndcg@10": 0.6541327290930672,
+            "relevant_evidence_recall@5_micro": 0.4050925925925926,
+            "relevant_evidence_retrieved_at_5": 350,
+            "relevant_evidence_retrieved_at_10": 550,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 20.9955,
+            "latency_ms_p95": 28.9551
+          }
+        }
+      },
+      "v2_hybrid": {
+        "n_queries": 338,
+        "recall@5": 0.3106508875739645,
+        "mrr": 0.6887433079740772,
+        "ndcg@10": 0.5469138647090339,
+        "relevant_evidence_recall@5_micro": 0.3106508875739645,
+        "relevant_evidence_retrieved_at_5": 840,
+        "relevant_evidence_retrieved_at_10": 1571,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 8.278849999999998,
+        "latency_ms_p95": 10.7781,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.3561946902654867,
+            "mrr": 0.7427728613569322,
+            "ndcg@10": 0.6130523261220857,
+            "relevant_evidence_recall@5_micro": 0.3561946902654867,
+            "relevant_evidence_retrieved_at_5": 322,
+            "relevant_evidence_retrieved_at_10": 581,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 8.472,
+            "latency_ms_p95": 11.8893
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.26282051282051283,
+            "mrr": 0.5858363858363859,
+            "ndcg@10": 0.4645655203878786,
+            "relevant_evidence_recall@5_micro": 0.26282051282051283,
+            "relevant_evidence_retrieved_at_5": 246,
+            "relevant_evidence_retrieved_at_10": 477,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 8.5435,
+            "latency_ms_p95": 10.5899
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.3148148148148148,
+            "mrr": 0.743694885361552,
+            "ndcg@10": 0.5669241438377406,
+            "relevant_evidence_recall@5_micro": 0.3148148148148148,
+            "relevant_evidence_retrieved_at_5": 272,
+            "relevant_evidence_retrieved_at_10": 513,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 7.8130500000000005,
+            "latency_ms_p95": 9.3769
+          }
+        }
+      },
+      "v3_rerank": {
+        "n_queries": 338,
+        "recall@5": 0.34393491124260356,
+        "mrr": 0.7751972386587771,
+        "ndcg@10": 0.5876143988911879,
+        "relevant_evidence_recall@5_micro": 0.34393491124260356,
+        "relevant_evidence_retrieved_at_5": 930,
+        "relevant_evidence_retrieved_at_10": 1614,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 8.83925,
+        "latency_ms_p95": 10.5245,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.38716814159292035,
+            "mrr": 0.8355457227138644,
+            "ndcg@10": 0.6569629572570418,
+            "relevant_evidence_recall@5_micro": 0.38716814159292035,
+            "relevant_evidence_retrieved_at_5": 350,
+            "relevant_evidence_retrieved_at_10": 600,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 8.9521,
+            "latency_ms_p95": 10.5417
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.266025641025641,
+            "mrr": 0.635897435897436,
+            "ndcg@10": 0.4747272874183702,
+            "relevant_evidence_recall@5_micro": 0.266025641025641,
+            "relevant_evidence_retrieved_at_5": 249,
+            "relevant_evidence_retrieved_at_10": 472,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 8.8815,
+            "latency_ms_p95": 10.8608
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.38310185185185186,
+            "mrr": 0.862962962962963,
+            "ndcg@10": 0.6373496298817267,
+            "relevant_evidence_recall@5_micro": 0.38310185185185186,
+            "relevant_evidence_retrieved_at_5": 331,
+            "relevant_evidence_retrieved_at_10": 542,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 8.607199999999999,
+            "latency_ms_p95": 10.2152
+          }
+        }
+      },
+      "v8_corrective": {
+        "n_queries": 338,
+        "recall@5": 0.35096153846153844,
+        "mrr": 0.8729078613693998,
+        "ndcg@10": 0.579225180840862,
+        "relevant_evidence_recall@5_micro": 0.35096153846153844,
+        "relevant_evidence_retrieved_at_5": 949,
+        "relevant_evidence_retrieved_at_10": 1457,
+        "relevant_evidence_total": 2704,
+        "latency_ms_median": 20.6426,
+        "latency_ms_p95": 28.3562,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_queries": 113,
+            "recall@5": 0.39048672566371684,
+            "mrr": 0.9026548672566371,
+            "ndcg@10": 0.6472231666643795,
+            "relevant_evidence_recall@5_micro": 0.39048672566371684,
+            "relevant_evidence_retrieved_at_5": 353,
+            "relevant_evidence_retrieved_at_10": 552,
+            "relevant_evidence_total": 904,
+            "latency_ms_median": 20.9745,
+            "latency_ms_p95": 28.7442
+          },
+          "fullstack-dev": {
+            "n_queries": 117,
+            "recall@5": 0.3194444444444444,
+            "mrr": 0.8331908831908832,
+            "ndcg@10": 0.5130350387388324,
+            "relevant_evidence_recall@5_micro": 0.3194444444444444,
+            "relevant_evidence_retrieved_at_5": 299,
+            "relevant_evidence_retrieved_at_10": 440,
+            "relevant_evidence_total": 936,
+            "latency_ms_median": 20.1863,
+            "latency_ms_p95": 28.1917
+          },
+          "data-analyst": {
+            "n_queries": 108,
+            "recall@5": 0.34375,
+            "mrr": 0.884810405643739,
+            "ndcg@10": 0.5797851273953067,
+            "relevant_evidence_recall@5_micro": 0.34375,
+            "relevant_evidence_retrieved_at_5": 297,
+            "relevant_evidence_retrieved_at_10": 465,
+            "relevant_evidence_total": 864,
+            "latency_ms_median": 19.9777,
+            "latency_ms_p95": 28.3702
+          }
+        }
+      }
+    }
+  },
+  "decisions": {
+    "hashing": {
+      "v1_decomposed": {
+        "overall": {
+          "n_jobs": 600,
+          "accuracy": 0.97,
+          "bid_precision": 0.9347826086956522,
+          "bid_recall": 1.0,
+          "bid_f1": 0.9662921348314606,
+          "confusion": {
+            "true_positive_bid": 258,
+            "false_positive_bid": 18,
+            "false_negative_bid": 0,
+            "true_negative_skip": 324
+          },
+          "claims_evaluated": 1666,
+          "claim_verdict_counts": {
+            "supported": 1666,
+            "partly_supported": 0,
+            "unsupported": 0
+          },
+          "claim_verdict_rates": {
+            "supported": 1.0,
+            "partly_supported": 0.0,
+            "unsupported": 0.0
+          },
+          "graph_latency_ms_median": 9.55865,
+          "graph_latency_ms_p95": 19.9473
+        },
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_jobs": 200,
+            "accuracy": 0.97,
+            "bid_precision": 0.927710843373494,
+            "bid_recall": 1.0,
+            "bid_f1": 0.9625,
+            "confusion": {
+              "true_positive_bid": 77,
+              "false_positive_bid": 6,
+              "false_negative_bid": 0,
+              "true_negative_skip": 117
+            },
+            "claims_evaluated": 499,
+            "claim_verdict_counts": {
+              "supported": 499,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 8.22905,
+            "graph_latency_ms_p95": 15.5532
+          },
+          "fullstack-dev": {
+            "n_jobs": 200,
+            "accuracy": 0.955,
+            "bid_precision": 0.9090909090909091,
+            "bid_recall": 1.0,
+            "bid_f1": 0.9523809523809523,
+            "confusion": {
+              "true_positive_bid": 90,
+              "false_positive_bid": 9,
+              "false_negative_bid": 0,
+              "true_negative_skip": 101
+            },
+            "claims_evaluated": 594,
+            "claim_verdict_counts": {
+              "supported": 594,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 10.141300000000001,
+            "graph_latency_ms_p95": 20.2489
+          },
+          "data-analyst": {
+            "n_jobs": 200,
+            "accuracy": 0.985,
+            "bid_precision": 0.9680851063829787,
+            "bid_recall": 1.0,
+            "bid_f1": 0.9837837837837838,
+            "confusion": {
+              "true_positive_bid": 91,
+              "false_positive_bid": 3,
+              "false_negative_bid": 0,
+              "true_negative_skip": 106
+            },
+            "claims_evaluated": 573,
+            "claim_verdict_counts": {
+              "supported": 573,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 9.17945,
+            "graph_latency_ms_p95": 25.6309
+          }
+        }
+      },
+      "v1_v2_v3": {
+        "overall": {
+          "n_jobs": 600,
+          "accuracy": 0.97,
+          "bid_precision": 0.9347826086956522,
+          "bid_recall": 1.0,
+          "bid_f1": 0.9662921348314606,
+          "confusion": {
+            "true_positive_bid": 258,
+            "false_positive_bid": 18,
+            "false_negative_bid": 0,
+            "true_negative_skip": 324
+          },
+          "claims_evaluated": 1666,
+          "claim_verdict_counts": {
+            "supported": 1666,
+            "partly_supported": 0,
+            "unsupported": 0
+          },
+          "claim_verdict_rates": {
+            "supported": 1.0,
+            "partly_supported": 0.0,
+            "unsupported": 0.0
+          },
+          "graph_latency_ms_median": 10.63945,
+          "graph_latency_ms_p95": 19.6486
+        },
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_jobs": 200,
+            "accuracy": 0.97,
+            "bid_precision": 0.927710843373494,
+            "bid_recall": 1.0,
+            "bid_f1": 0.9625,
+            "confusion": {
+              "true_positive_bid": 77,
+              "false_positive_bid": 6,
+              "false_negative_bid": 0,
+              "true_negative_skip": 117
+            },
+            "claims_evaluated": 499,
+            "claim_verdict_counts": {
+              "supported": 499,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 9.4475,
+            "graph_latency_ms_p95": 18.4117
+          },
+          "fullstack-dev": {
+            "n_jobs": 200,
+            "accuracy": 0.955,
+            "bid_precision": 0.9090909090909091,
+            "bid_recall": 1.0,
+            "bid_f1": 0.9523809523809523,
+            "confusion": {
+              "true_positive_bid": 90,
+              "false_positive_bid": 9,
+              "false_negative_bid": 0,
+              "true_negative_skip": 101
+            },
+            "claims_evaluated": 594,
+            "claim_verdict_counts": {
+              "supported": 594,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 12.2665,
+            "graph_latency_ms_p95": 23.3845
+          },
+          "data-analyst": {
+            "n_jobs": 200,
+            "accuracy": 0.985,
+            "bid_precision": 0.9680851063829787,
+            "bid_recall": 1.0,
+            "bid_f1": 0.9837837837837838,
+            "confusion": {
+              "true_positive_bid": 91,
+              "false_positive_bid": 3,
+              "false_negative_bid": 0,
+              "true_negative_skip": 106
+            },
+            "claims_evaluated": 573,
+            "claim_verdict_counts": {
+              "supported": 573,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 10.16245,
+            "graph_latency_ms_p95": 16.0762
+          }
+        }
+      }
+    },
+    "fastembed": {
+      "v1_decomposed": {
+        "overall": {
+          "n_jobs": 600,
+          "accuracy": 0.9366666666666666,
+          "bid_precision": 0.9404761904761905,
+          "bid_recall": 0.9793388429752066,
+          "bid_f1": 0.9595141700404859,
+          "confusion": {
+            "true_positive_bid": 237,
+            "false_positive_bid": 15,
+            "false_negative_bid": 5,
+            "true_negative_skip": 325
+          },
+          "claims_evaluated": 1517,
+          "claim_verdict_counts": {
+            "supported": 1517,
+            "partly_supported": 0,
+            "unsupported": 0
+          },
+          "claim_verdict_rates": {
+            "supported": 1.0,
+            "partly_supported": 0.0,
+            "unsupported": 0.0
+          },
+          "graph_latency_ms_median": 17.369,
+          "graph_latency_ms_p95": 26.5913
+        },
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_jobs": 200,
+            "accuracy": 0.96,
+            "bid_precision": 0.9259259259259259,
+            "bid_recall": 0.9868421052631579,
+            "bid_f1": 0.9554140127388535,
+            "confusion": {
+              "true_positive_bid": 75,
+              "false_positive_bid": 6,
+              "false_negative_bid": 1,
+              "true_negative_skip": 117
+            },
+            "claims_evaluated": 487,
+            "claim_verdict_counts": {
+              "supported": 487,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 16.965049999999998,
+            "graph_latency_ms_p95": 25.9253
+          },
+          "fullstack-dev": {
+            "n_jobs": 200,
+            "accuracy": 0.91,
+            "bid_precision": 0.9204545454545454,
+            "bid_recall": 0.9642857142857143,
+            "bid_f1": 0.941860465116279,
+            "confusion": {
+              "true_positive_bid": 81,
+              "false_positive_bid": 7,
+              "false_negative_bid": 3,
+              "true_negative_skip": 101
+            },
+            "claims_evaluated": 527,
+            "claim_verdict_counts": {
+              "supported": 527,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 17.5412,
+            "graph_latency_ms_p95": 24.9847
+          },
+          "data-analyst": {
+            "n_jobs": 200,
+            "accuracy": 0.94,
+            "bid_precision": 0.9759036144578314,
+            "bid_recall": 0.9878048780487805,
+            "bid_f1": 0.9818181818181818,
+            "confusion": {
+              "true_positive_bid": 81,
+              "false_positive_bid": 2,
+              "false_negative_bid": 1,
+              "true_negative_skip": 107
+            },
+            "claims_evaluated": 503,
+            "claim_verdict_counts": {
+              "supported": 503,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 17.483449999999998,
+            "graph_latency_ms_p95": 28.1873
+          }
+        }
+      },
+      "v1_v2_v3": {
+        "overall": {
+          "n_jobs": 600,
+          "accuracy": 0.9683333333333334,
+          "bid_precision": 0.9345454545454546,
+          "bid_recall": 1.0,
+          "bid_f1": 0.9661654135338346,
+          "confusion": {
+            "true_positive_bid": 257,
+            "false_positive_bid": 18,
+            "false_negative_bid": 0,
+            "true_negative_skip": 324
+          },
+          "claims_evaluated": 1660,
+          "claim_verdict_counts": {
+            "supported": 1660,
+            "partly_supported": 0,
+            "unsupported": 0
+          },
+          "claim_verdict_rates": {
+            "supported": 1.0,
+            "partly_supported": 0.0,
+            "unsupported": 0.0
+          },
+          "graph_latency_ms_median": 30.98535,
+          "graph_latency_ms_p95": 44.3488
+        },
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_jobs": 200,
+            "accuracy": 0.97,
+            "bid_precision": 0.927710843373494,
+            "bid_recall": 1.0,
+            "bid_f1": 0.9625,
+            "confusion": {
+              "true_positive_bid": 77,
+              "false_positive_bid": 6,
+              "false_negative_bid": 0,
+              "true_negative_skip": 117
+            },
+            "claims_evaluated": 499,
+            "claim_verdict_counts": {
+              "supported": 499,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 31.37885,
+            "graph_latency_ms_p95": 44.3488
+          },
+          "fullstack-dev": {
+            "n_jobs": 200,
+            "accuracy": 0.95,
+            "bid_precision": 0.9081632653061225,
+            "bid_recall": 1.0,
+            "bid_f1": 0.9518716577540107,
+            "confusion": {
+              "true_positive_bid": 89,
+              "false_positive_bid": 9,
+              "false_negative_bid": 0,
+              "true_negative_skip": 101
+            },
+            "claims_evaluated": 588,
+            "claim_verdict_counts": {
+              "supported": 588,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 31.02095,
+            "graph_latency_ms_p95": 40.6553
+          },
+          "data-analyst": {
+            "n_jobs": 200,
+            "accuracy": 0.985,
+            "bid_precision": 0.9680851063829787,
+            "bid_recall": 1.0,
+            "bid_f1": 0.9837837837837838,
+            "confusion": {
+              "true_positive_bid": 91,
+              "false_positive_bid": 3,
+              "false_negative_bid": 0,
+              "true_negative_skip": 106
+            },
+            "claims_evaluated": 573,
+            "claim_verdict_counts": {
+              "supported": 573,
+              "partly_supported": 0,
+              "unsupported": 0
+            },
+            "claim_verdict_rates": {
+              "supported": 1.0,
+              "partly_supported": 0.0,
+              "unsupported": 0.0
+            },
+            "graph_latency_ms_median": 30.821550000000002,
+            "graph_latency_ms_p95": 47.2489
+          }
+        }
+      }
+    }
+  },
+  "paired_decision_analysis": {
+    "primary_variant": "v1_decomposed",
+    "by_variant": {
+      "v1_decomposed": {
+        "n_paired_jobs": 338,
+        "decision_accuracy_baseline_on_paired_jobs": 0.9467455621301775,
+        "decision_accuracy_fastembed_on_paired_jobs": 0.8875739644970414,
+        "decision_accuracy_delta_on_paired_jobs": -0.059171597633136064,
+        "recall_improved": 90,
+        "recall_unchanged": 85,
+        "recall_decreased": 163,
+        "decision_action_changed": 24,
+        "decision_correctness_improved": 1,
+        "decision_correctness_decreased": 21,
+        "recall_improved_but_decision_correctness_unchanged": 89,
+        "recall_improved_but_decision_still_incorrect": 4,
+        "retrieval_decreased_and_decision_correctness_decreased": 16,
+        "retrieval_decreased_but_decision_correctness_improved": 1,
+        "action_changed_without_correctness_change": 2,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_paired_jobs": 113,
+            "recall_improved": 40,
+            "recall_decreased": 41,
+            "decision_action_changed": 2,
+            "decision_correctness_improved": 0,
+            "decision_correctness_decreased": 2
+          },
+          "data-analyst": {
+            "n_paired_jobs": 108,
+            "recall_improved": 28,
+            "recall_decreased": 55,
+            "decision_action_changed": 11,
+            "decision_correctness_improved": 1,
+            "decision_correctness_decreased": 10
+          },
+          "fullstack-dev": {
+            "n_paired_jobs": 117,
+            "recall_improved": 22,
+            "recall_decreased": 67,
+            "decision_action_changed": 11,
+            "decision_correctness_improved": 0,
+            "decision_correctness_decreased": 9
+          }
+        },
+        "examples_recall_improved_no_correctness_gain": [
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "inj-200132",
+            "recall_delta": 0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": false,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "scam-200051",
+            "recall_delta": 0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": false,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "scam-200086",
+            "recall_delta": 0.25,
+            "baseline_action": "skip",
+            "fastembed_action": "skip",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-101386",
+            "recall_delta": 0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-100086",
+            "recall_delta": 0.125,
+            "baseline_action": "skip",
+            "fastembed_action": "skip",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-101170",
+            "recall_delta": 0.375,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-100084",
+            "recall_delta": 0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-100370",
+            "recall_delta": 0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-100793",
+            "recall_delta": 0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-100104",
+            "recall_delta": 0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          }
+        ],
+        "examples_retrieval_decrease_with_decision_harm": [
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-101288",
+            "recall_delta": -0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "skip",
+            "baseline_correct": true,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-101039",
+            "recall_delta": -0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "watch",
+            "baseline_correct": true,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "fullstack-dev",
+            "job_id": "syn-100849",
+            "recall_delta": -0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "watch",
+            "baseline_correct": true,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "fullstack-dev",
+            "job_id": "syn-101027",
+            "recall_delta": -0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "watch",
+            "baseline_correct": true,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "fullstack-dev",
+            "job_id": "syn-101417",
+            "recall_delta": -0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "watch",
+            "baseline_correct": true,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "fullstack-dev",
+            "job_id": "syn-100441",
+            "recall_delta": -0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "skip",
+            "baseline_correct": true,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "fullstack-dev",
+            "job_id": "syn-100108",
+            "recall_delta": -0.375,
+            "baseline_action": "bid",
+            "fastembed_action": "watch",
+            "baseline_correct": true,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "fullstack-dev",
+            "job_id": "syn-101488",
+            "recall_delta": -0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "skip",
+            "baseline_correct": true,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "fullstack-dev",
+            "job_id": "syn-100404",
+            "recall_delta": -0.375,
+            "baseline_action": "bid",
+            "fastembed_action": "skip",
+            "baseline_correct": true,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_decomposed",
+            "persona": "fullstack-dev",
+            "job_id": "syn-100616",
+            "recall_delta": -0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "watch",
+            "baseline_correct": true,
+            "fastembed_correct": false
+          }
+        ],
+        "examples_retrieval_decrease_but_decision_improved": [
+          {
+            "variant": "v1_decomposed",
+            "persona": "data-analyst",
+            "job_id": "inj-200146",
+            "recall_delta": -0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "skip",
+            "baseline_correct": false,
+            "fastembed_correct": true
+          }
+        ]
+      },
+      "v1_v2_v3": {
+        "n_paired_jobs": 338,
+        "decision_accuracy_baseline_on_paired_jobs": 0.9467455621301775,
+        "decision_accuracy_fastembed_on_paired_jobs": 0.9437869822485208,
+        "decision_accuracy_delta_on_paired_jobs": -0.002958579881656709,
+        "recall_improved": 113,
+        "recall_unchanged": 122,
+        "recall_decreased": 103,
+        "decision_action_changed": 1,
+        "decision_correctness_improved": 0,
+        "decision_correctness_decreased": 1,
+        "recall_improved_but_decision_correctness_unchanged": 113,
+        "recall_improved_but_decision_still_incorrect": 9,
+        "retrieval_decreased_and_decision_correctness_decreased": 1,
+        "retrieval_decreased_but_decision_correctness_improved": 0,
+        "action_changed_without_correctness_change": 0,
+        "by_persona": {
+          "ai-ml-engineer": {
+            "n_paired_jobs": 113,
+            "recall_improved": 19,
+            "recall_decreased": 56,
+            "decision_action_changed": 0,
+            "decision_correctness_improved": 0,
+            "decision_correctness_decreased": 0
+          },
+          "data-analyst": {
+            "n_paired_jobs": 108,
+            "recall_improved": 42,
+            "recall_decreased": 27,
+            "decision_action_changed": 0,
+            "decision_correctness_improved": 0,
+            "decision_correctness_decreased": 0
+          },
+          "fullstack-dev": {
+            "n_paired_jobs": 117,
+            "recall_improved": 52,
+            "recall_decreased": 20,
+            "decision_action_changed": 1,
+            "decision_correctness_improved": 0,
+            "decision_correctness_decreased": 1
+          }
+        },
+        "examples_recall_improved_no_correctness_gain": [
+          {
+            "variant": "v1_v2_v3",
+            "persona": "ai-ml-engineer",
+            "job_id": "inj-200112",
+            "recall_delta": 0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": false,
+            "fastembed_correct": false
+          },
+          {
+            "variant": "v1_v2_v3",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-100002",
+            "recall_delta": 0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_v2_v3",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-100149",
+            "recall_delta": 0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_v2_v3",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-100800",
+            "recall_delta": 0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_v2_v3",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-101354",
+            "recall_delta": 0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_v2_v3",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-100043",
+            "recall_delta": 0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_v2_v3",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-100032",
+            "recall_delta": 0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_v2_v3",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-101018",
+            "recall_delta": 0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_v2_v3",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-101268",
+            "recall_delta": 0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          },
+          {
+            "variant": "v1_v2_v3",
+            "persona": "ai-ml-engineer",
+            "job_id": "syn-101171",
+            "recall_delta": 0.25,
+            "baseline_action": "bid",
+            "fastembed_action": "bid",
+            "baseline_correct": true,
+            "fastembed_correct": true
+          }
+        ],
+        "examples_retrieval_decrease_with_decision_harm": [
+          {
+            "variant": "v1_v2_v3",
+            "persona": "fullstack-dev",
+            "job_id": "syn-100790",
+            "recall_delta": -0.125,
+            "baseline_action": "bid",
+            "fastembed_action": "watch",
+            "baseline_correct": true,
+            "fastembed_correct": false
+          }
+        ],
+        "examples_retrieval_decrease_but_decision_improved": []
+      }
+    }
+  },
+  "paired_v1_job_analysis": {
+    "n_paired_jobs": 338,
+    "decision_accuracy_baseline_on_paired_jobs": 0.9467455621301775,
+    "decision_accuracy_fastembed_on_paired_jobs": 0.8875739644970414,
+    "decision_accuracy_delta_on_paired_jobs": -0.059171597633136064,
+    "recall_improved": 90,
+    "recall_unchanged": 85,
+    "recall_decreased": 163,
+    "decision_action_changed": 24,
+    "decision_correctness_improved": 1,
+    "decision_correctness_decreased": 21,
+    "recall_improved_but_decision_correctness_unchanged": 89,
+    "recall_improved_but_decision_still_incorrect": 4,
+    "retrieval_decreased_and_decision_correctness_decreased": 16,
+    "retrieval_decreased_but_decision_correctness_improved": 1,
+    "action_changed_without_correctness_change": 2,
+    "by_persona": {
+      "ai-ml-engineer": {
+        "n_paired_jobs": 113,
+        "recall_improved": 40,
+        "recall_decreased": 41,
+        "decision_action_changed": 2,
+        "decision_correctness_improved": 0,
+        "decision_correctness_decreased": 2
+      },
+      "data-analyst": {
+        "n_paired_jobs": 108,
+        "recall_improved": 28,
+        "recall_decreased": 55,
+        "decision_action_changed": 11,
+        "decision_correctness_improved": 1,
+        "decision_correctness_decreased": 10
+      },
+      "fullstack-dev": {
+        "n_paired_jobs": 117,
+        "recall_improved": 22,
+        "recall_decreased": 67,
+        "decision_action_changed": 11,
+        "decision_correctness_improved": 0,
+        "decision_correctness_decreased": 9
+      }
+    },
+    "examples_recall_improved_no_correctness_gain": [
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "inj-200132",
+        "recall_delta": 0.125,
+        "baseline_action": "bid",
+        "fastembed_action": "bid",
+        "baseline_correct": false,
+        "fastembed_correct": false
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "scam-200051",
+        "recall_delta": 0.125,
+        "baseline_action": "bid",
+        "fastembed_action": "bid",
+        "baseline_correct": false,
+        "fastembed_correct": false
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "scam-200086",
+        "recall_delta": 0.25,
+        "baseline_action": "skip",
+        "fastembed_action": "skip",
+        "baseline_correct": true,
+        "fastembed_correct": true
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "syn-101386",
+        "recall_delta": 0.25,
+        "baseline_action": "bid",
+        "fastembed_action": "bid",
+        "baseline_correct": true,
+        "fastembed_correct": true
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "syn-100086",
+        "recall_delta": 0.125,
+        "baseline_action": "skip",
+        "fastembed_action": "skip",
+        "baseline_correct": true,
+        "fastembed_correct": true
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "syn-101170",
+        "recall_delta": 0.375,
+        "baseline_action": "bid",
+        "fastembed_action": "bid",
+        "baseline_correct": true,
+        "fastembed_correct": true
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "syn-100084",
+        "recall_delta": 0.25,
+        "baseline_action": "bid",
+        "fastembed_action": "bid",
+        "baseline_correct": true,
+        "fastembed_correct": true
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "syn-100370",
+        "recall_delta": 0.25,
+        "baseline_action": "bid",
+        "fastembed_action": "bid",
+        "baseline_correct": true,
+        "fastembed_correct": true
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "syn-100793",
+        "recall_delta": 0.25,
+        "baseline_action": "bid",
+        "fastembed_action": "bid",
+        "baseline_correct": true,
+        "fastembed_correct": true
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "syn-100104",
+        "recall_delta": 0.25,
+        "baseline_action": "bid",
+        "fastembed_action": "bid",
+        "baseline_correct": true,
+        "fastembed_correct": true
+      }
+    ],
+    "examples_retrieval_decrease_with_decision_harm": [
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "syn-101288",
+        "recall_delta": -0.125,
+        "baseline_action": "bid",
+        "fastembed_action": "skip",
+        "baseline_correct": true,
+        "fastembed_correct": false
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "ai-ml-engineer",
+        "job_id": "syn-101039",
+        "recall_delta": -0.25,
+        "baseline_action": "bid",
+        "fastembed_action": "watch",
+        "baseline_correct": true,
+        "fastembed_correct": false
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "fullstack-dev",
+        "job_id": "syn-100849",
+        "recall_delta": -0.25,
+        "baseline_action": "bid",
+        "fastembed_action": "watch",
+        "baseline_correct": true,
+        "fastembed_correct": false
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "fullstack-dev",
+        "job_id": "syn-101027",
+        "recall_delta": -0.25,
+        "baseline_action": "bid",
+        "fastembed_action": "watch",
+        "baseline_correct": true,
+        "fastembed_correct": false
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "fullstack-dev",
+        "job_id": "syn-101417",
+        "recall_delta": -0.125,
+        "baseline_action": "bid",
+        "fastembed_action": "watch",
+        "baseline_correct": true,
+        "fastembed_correct": false
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "fullstack-dev",
+        "job_id": "syn-100441",
+        "recall_delta": -0.25,
+        "baseline_action": "bid",
+        "fastembed_action": "skip",
+        "baseline_correct": true,
+        "fastembed_correct": false
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "fullstack-dev",
+        "job_id": "syn-100108",
+        "recall_delta": -0.375,
+        "baseline_action": "bid",
+        "fastembed_action": "watch",
+        "baseline_correct": true,
+        "fastembed_correct": false
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "fullstack-dev",
+        "job_id": "syn-101488",
+        "recall_delta": -0.125,
+        "baseline_action": "bid",
+        "fastembed_action": "skip",
+        "baseline_correct": true,
+        "fastembed_correct": false
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "fullstack-dev",
+        "job_id": "syn-100404",
+        "recall_delta": -0.375,
+        "baseline_action": "bid",
+        "fastembed_action": "skip",
+        "baseline_correct": true,
+        "fastembed_correct": false
+      },
+      {
+        "variant": "v1_decomposed",
+        "persona": "fullstack-dev",
+        "job_id": "syn-100616",
+        "recall_delta": -0.25,
+        "baseline_action": "bid",
+        "fastembed_action": "watch",
+        "baseline_correct": true,
+        "fastembed_correct": false
+      }
+    ],
+    "examples_retrieval_decrease_but_decision_improved": [
+      {
+        "variant": "v1_decomposed",
+        "persona": "data-analyst",
+        "job_id": "inj-200146",
+        "recall_delta": -0.125,
+        "baseline_action": "bid",
+        "fastembed_action": "skip",
+        "baseline_correct": false,
+        "fastembed_correct": true
+      }
+    ]
+  }
+}

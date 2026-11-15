@@ -1,0 +1,147 @@
+{
+ "meta": {
+  "generated_at": "2026-11-11T20:35:51",
+  "commit": "no-git",
+  "corpus": "synthetic+local-sim",
+  "llm": "heuristic-double",
+  "valid_for_report": false,
+  "why_not": "toy corpus + test-double LLM; rerun on the instructor dev set with a real model"
+ },
+ "persona": "ai-ml-engineer",
+ "variants": {
+  "v0_naive": {
+   "gold_bid_jobs_tried": 40,
+   "recommended_bid": 38,
+   "blocked": 0,
+   "submitted": 38,
+   "reply_rate": 0.5789473684210527,
+   "reply_rate_95ci": [
+    0.422,
+    0.721
+   ],
+   "hire_rate": 0.10526315789473684,
+   "hire_rate_95ci": [
+    0.042,
+    0.241
+   ],
+   "mean_p_reply": 0.652,
+   "mean_fit": 0.8046,
+   "mean_unsupported_before": 0.0
+  },
+  "v1_decomposed": {
+   "gold_bid_jobs_tried": 40,
+   "recommended_bid": 40,
+   "blocked": 0,
+   "submitted": 40,
+   "reply_rate": 0.85,
+   "reply_rate_95ci": [
+    0.709,
+    0.929
+   ],
+   "hire_rate": 0.2,
+   "hire_rate_95ci": [
+    0.105,
+    0.348
+   ],
+   "mean_p_reply": 0.7775,
+   "mean_fit": 0.9421,
+   "mean_unsupported_before": 0.0
+  },
+  "v1_v2_hybrid_decomposed": {
+   "gold_bid_jobs_tried": 40,
+   "recommended_bid": 40,
+   "blocked": 0,
+   "submitted": 40,
+   "reply_rate": 0.775,
+   "reply_rate_95ci": [
+    0.625,
+    0.877
+   ],
+   "hire_rate": 0.25,
+   "hire_rate_95ci": [
+    0.142,
+    0.402
+   ],
+   "mean_p_reply": 0.7438,
+   "mean_fit": 0.9471,
+   "mean_unsupported_before": 0.0
+  },
+  "v1_v2_v3": {
+   "gold_bid_jobs_tried": 40,
+   "recommended_bid": 40,
+   "blocked": 0,
+   "submitted": 40,
+   "reply_rate": 0.75,
+   "reply_rate_95ci": [
+    0.598,
+    0.858
+   ],
+   "hire_rate": 0.175,
+   "hire_rate_95ci": [
+    0.087,
+    0.32
+   ],
+   "mean_p_reply": 0.7438,
+   "mean_fit": 0.9512,
+   "mean_unsupported_before": 0.0
+  },
+  "v2_hybrid": {
+   "gold_bid_jobs_tried": 40,
+   "recommended_bid": 37,
+   "blocked": 0,
+   "submitted": 37,
+   "reply_rate": 0.6486486486486487,
+   "reply_rate_95ci": [
+    0.488,
+    0.782
+   ],
+   "hire_rate": 0.1891891891891892,
+   "hire_rate_95ci": [
+    0.095,
+    0.342
+   ],
+   "mean_p_reply": 0.6723,
+   "mean_fit": 0.8021,
+   "mean_unsupported_before": 0.0
+  },
+  "v3_rerank": {
+   "gold_bid_jobs_tried": 40,
+   "recommended_bid": 38,
+   "blocked": 0,
+   "submitted": 38,
+   "reply_rate": 0.631578947368421,
+   "reply_rate_95ci": [
+    0.473,
+    0.766
+   ],
+   "hire_rate": 0.0,
+   "hire_rate_95ci": [
+    0.0,
+    0.092
+   ],
+   "mean_p_reply": 0.7112,
+   "mean_fit": 0.8442,
+   "mean_unsupported_before": 0.0
+  },
+  "v8_corrective": {
+   "gold_bid_jobs_tried": 40,
+   "recommended_bid": 40,
+   "blocked": 0,
+   "submitted": 40,
+   "reply_rate": 0.775,
+   "reply_rate_95ci": [
+    0.625,
+    0.877
+   ],
+   "hire_rate": 0.25,
+   "hire_rate_95ci": [
+    0.142,
+    0.402
+   ],
+   "mean_p_reply": 0.7438,
+   "mean_fit": 0.9471,
+   "mean_unsupported_before": 0.0
+  }
+ },
+ "caveat": "rates come from a rule-based simulated client; compare variants, do not quote as real reply rates; intervals are wide at this n"
+}

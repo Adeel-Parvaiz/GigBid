@@ -1,0 +1,4 @@
+[
+  {"client_id":"client-good","completed_projects":12,"average_rating":4.8,"payment_verified":true},
+  {"client_id":"client-shady","completed_projects":0,"average_rating":null,"payment_verified":false}
+]

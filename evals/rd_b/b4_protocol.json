@@ -1,0 +1,15 @@
+{
+  "execution_revision": 2,
+  "evaluation_seed": 4016,
+  "simulator_seed": 7,
+  "variants": ["v0_naive", "v8_corrective"],
+  "personas": ["ai-ml-engineer", "fullstack-dev", "data-analyst"],
+  "development_jobs_per_persona": 200,
+  "scope": "All 600 synthetic dev cases, two pipelines, actual bid graph and real configured local model. Existing B2 retrieval metrics remain separately identified.",
+  "outcome_policy": "Scripted approval only for unblocked proposals inside disposable project-owned GigSim. No real marketplace writes. Report per-submission and per-fixed-job-set outcomes with denominators.",
+  "price_gold": "Synthetic development price_band; missing bands excluded and counted.",
+  "judge_policy": "Fixed 0-4 overall rubric, labels gathered on 30 items by the author. No calibrated-score claim until human labels exist and kappa is computed. Raw judge output remains provisional.",
+  "panel_policy": "15 anonymous matched V0/V8 pairs, five per persona; random left/right allocation. Require at least two self-attested classmate raters; no automated panel votes.",
+  "usd_policy": "Local model endpoint only: billed inference API cost 0 USD. Hardware/electricity cost unknown and excluded, not assumed free.",
+  "failure_policy": "Persist errors, empty/blocked drafts and timeouts; never silently count them as good proposals or remove them from attempted-case denominators. Resume only incomplete cases."
+}

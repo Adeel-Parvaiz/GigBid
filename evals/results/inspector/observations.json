@@ -1,0 +1,25 @@
+{
+  "capturedAt": "2026-11-14T11:55:11.890Z",
+  "inspector": "@modelcontextprotocol/inspector@2.15.0",
+  "environment": "isolated sample fixtures; no live accounts or writes",
+  "observations": [
+    {
+      "server": "Portfolio",
+      "tool": "list_skills",
+      "structuredOutput": true,
+      "screenshot": "01-portfolio.png"
+    },
+    {
+      "server": "Marketplace",
+      "tool": "get_connects_balance",
+      "structuredOutput": true,
+      "screenshot": "02-marketplace.png"
+    },
+    {
+      "server": "Workspace",
+      "tool": "get_free_slots",
+      "structuredOutput": true,
+      "screenshot": "03-workspace.png"
+    }
+  ]
+}

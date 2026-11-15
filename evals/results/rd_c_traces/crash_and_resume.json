@@ -1,0 +1,13 @@
+{
+  "trace_type": "crash_and_resume",
+  "status": "covered_by_existing_C6_postgres_durability_test",
+  "test_file": "tests/integration/test_postgres_durability.py",
+  "test_name": "test_api_restart_with_pending_postgres_approval_submits_once",
+  "assertions": [
+    "pending approval survives API restart",
+    "proposal is submitted exactly once after approval",
+    "one Connects charge is recorded"
+  ],
+  "note": "The C6 integration test kills/restarts the API around a pending approval and verifies one submission after resume. This is durability evidence, not one of the 50 R&D C trials.",
+  "sample_sha256": "f4ec4f9f060f05afef8b5ef9cade1fce7c28a9bf770771a3a2c1dea736bb5a49"
+}

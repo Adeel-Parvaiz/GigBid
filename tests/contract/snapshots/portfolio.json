@@ -1,0 +1,543 @@
+{
+ "get_case_study": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "id": {
+     "title": "Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id"
+   ],
+   "title": "get_case_studyArguments",
+   "type": "object"
+  },
+  "output": {
+   "properties": {
+    "chunk_index": {
+     "anyOf": [
+      {
+       "type": "integer"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Chunk Index"
+    },
+    "client_industry": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Client Industry"
+    },
+    "date": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Date"
+    },
+    "document_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Document Id"
+    },
+    "evidence_id": {
+     "title": "Evidence Id",
+     "type": "string"
+    },
+    "freelancer_id": {
+     "title": "Freelancer Id",
+     "type": "string"
+    },
+    "limitations": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Limitations"
+    },
+    "outcome": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Outcome"
+    },
+    "parent_evidence_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Parent Evidence Id"
+    },
+    "persona": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Persona"
+    },
+    "project": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Project"
+    },
+    "provenance": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Provenance"
+    },
+    "score": {
+     "default": 0.0,
+     "title": "Score",
+     "type": "number"
+    },
+    "skills": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Skills",
+     "type": "array"
+    },
+    "source": {
+     "title": "Source",
+     "type": "string"
+    },
+    "summary": {
+     "title": "Summary",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "type": {
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "evidence_id",
+    "type",
+    "title",
+    "summary",
+    "skills",
+    "source",
+    "freelancer_id"
+   ],
+   "title": "EvidenceItem",
+   "type": "object"
+  }
+ },
+ "list_skills": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {},
+   "title": "list_skillsArguments",
+   "type": "object"
+  },
+  "output": {
+   "$defs": {
+    "SkillCount": {
+     "properties": {
+      "items": {
+       "title": "Items",
+       "type": "integer"
+      },
+      "skill": {
+       "title": "Skill",
+       "type": "string"
+      }
+     },
+     "required": [
+      "skill",
+      "items"
+     ],
+     "title": "SkillCount",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "skills": {
+     "items": {
+      "$ref": "#/$defs/SkillCount"
+     },
+     "title": "Skills",
+     "type": "array"
+    }
+   },
+   "required": [
+    "skills"
+   ],
+   "title": "SkillList",
+   "type": "object"
+  }
+ },
+ "search_evidence": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "input": {
+   "$defs": {
+    "SearchFilters": {
+     "properties": {
+      "freelancer_id": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "Whose portfolio. Defaults to the server's bound freelancer.",
+       "title": "Freelancer Id"
+      },
+      "retrieval_layer": {
+       "anyOf": [
+        {
+         "enum": [
+          "dense",
+          "hybrid",
+          "rerank",
+          "hybrid_rerank"
+         ],
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "B2 retrieval layer; query decomposition remains client-side.",
+       "title": "Retrieval Layer"
+      },
+      "skill": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "Only items listing this skill (case-insensitive).",
+       "title": "Skill"
+      },
+      "type": {
+       "anyOf": [
+        {
+         "enum": [
+          "case_study",
+          "past_proposal",
+          "cv",
+          "readme",
+          "code",
+          "review"
+         ],
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "description": "Restrict to one item type. Past proposals are excluded unless asked for.",
+       "title": "Type"
+      }
+     },
+     "title": "SearchFilters",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "filters": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/SearchFilters"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "k": {
+     "default": 5,
+     "title": "K",
+     "type": "integer"
+    },
+    "requirement": {
+     "title": "Requirement",
+     "type": "string"
+    }
+   },
+   "required": [
+    "requirement"
+   ],
+   "title": "search_evidenceArguments",
+   "type": "object"
+  },
+  "output": {
+   "$defs": {
+    "EvidenceItem": {
+     "properties": {
+      "chunk_index": {
+       "anyOf": [
+        {
+         "type": "integer"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Chunk Index"
+      },
+      "client_industry": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Client Industry"
+      },
+      "date": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Date"
+      },
+      "document_id": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Document Id"
+      },
+      "evidence_id": {
+       "title": "Evidence Id",
+       "type": "string"
+      },
+      "freelancer_id": {
+       "title": "Freelancer Id",
+       "type": "string"
+      },
+      "limitations": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Limitations"
+      },
+      "outcome": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Outcome"
+      },
+      "parent_evidence_id": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Parent Evidence Id"
+      },
+      "persona": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Persona"
+      },
+      "project": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Project"
+      },
+      "provenance": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Provenance"
+      },
+      "score": {
+       "default": 0.0,
+       "title": "Score",
+       "type": "number"
+      },
+      "skills": {
+       "items": {
+        "type": "string"
+       },
+       "title": "Skills",
+       "type": "array"
+      },
+      "source": {
+       "title": "Source",
+       "type": "string"
+      },
+      "summary": {
+       "title": "Summary",
+       "type": "string"
+      },
+      "title": {
+       "title": "Title",
+       "type": "string"
+      },
+      "type": {
+       "title": "Type",
+       "type": "string"
+      }
+     },
+     "required": [
+      "evidence_id",
+      "type",
+      "title",
+      "summary",
+      "skills",
+      "source",
+      "freelancer_id"
+     ],
+     "title": "EvidenceItem",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "items": {
+     "items": {
+      "$ref": "#/$defs/EvidenceItem"
+     },
+     "title": "Items",
+     "type": "array"
+    }
+   },
+   "required": [
+    "items"
+   ],
+   "title": "SearchEvidenceResult",
+   "type": "object"
+  }
+ }
+}

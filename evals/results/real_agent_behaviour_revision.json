@@ -1,0 +1,18 @@
+{
+  "captured_at_pkt": "2026-11-14T11:13:20.427348+05:00",
+  "scope": "Application source after the successful real HTTP behavior verification",
+  "sha256": {
+    "apps/api/runs.py": "3503c73628440c1ac99de5d4017f4bfc2c3810eb19d75d46e371b3995b1a8887",
+    "apps/api/routers/approvals.py": "3198b5224719458c5f1c9a478b85aa372b372bec495ac3ee1aedb1d74c8b344c",
+    "agent/config.yaml": "b907297b2ce3a8910d65c51893f9f057e0eabdca3abf8ef626487d6409ff0797",
+    "agent/nodes/liaison.py": "e70d3ef3f46408485a496baac8c74487e89a1647bd812ad9f96456f3abb3ae9c",
+    "agent/nodes/compliance.py": "7f9ceca804db3f7e2ecf7b98a0365934f665743d53dd38049a68be90d03188fc",
+    "agent/nodes/critic.py": "d2c8ec42d3af5b436463dcf9ab80e69793b05bc98b133e4f2fe015b979a00816",
+    "agent/nodes/verifier.py": "1f98bb0819ccc71f3a46c4a10a8014d347277231f67554baf290eb1e0f7b492a",
+    "agent/nodes/writer.py": "8251cf8ac9969e94d067dc68252dd023a27234661f60c3baa3116cef07014b2e",
+    "agent/prompts/liaison_intent.md": "2fdddf5255f7cff4ca5cd6dedc902cbd0db60adc367fe35e6e3e6cbfd03722f4",
+    "agent/prompts/liaison_reply.md": "9ac675c56c005f5d6c9dab058543ecbeebf2fac3dcccb34c3fe3ddb53e3380f9",
+    "rag/verify.py": "86d9eb5b412cb58530776921199c64f57efbb0ddda910a9b868ab0776c7a6326",
+    "scripts/run_dataset.py": "ef918493fa34c9d32e7f5183ca8d7c9c631bf6d36954370c76062e77073600fa"
+  }
+}

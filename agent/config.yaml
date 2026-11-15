@@ -1,0 +1,149 @@
+# Everything a platform policy change might touch lives here, not in code.
+marketplace:
+  mode: sample            # sample (in-process) | mcp (Marketplace MCP server -> sample/GigSim/upwork adapter)
+  url: http://localhost:8001/mcp
+  token_env: MARKETPLACE_MCP_TOKEN
+  max_requests_per_minute: 20
+
+llm:
+  backend: heuristic      # heuristic = offline test double | openai_compat
+  profile: open
+  profiles:
+    open:
+      base_url: http://localhost:11434/v1      # Ollama; swap for Groq/OpenRouter/vLLM URL
+      billing: local
+      hardware_note: "Local Ollama inference; hardware and electricity costs are not measured."
+      api_key_env: LLM_API_KEY
+      nodes:                                   # choose by measurement, not by default
+        analyst: qwen3:4b
+        risk: qwen3:4b
+        writer: gpt-oss:20b
+        critic: gpt-oss:20b
+        liaison_intent: qwen3:4b
+        liaison_reply: gpt-oss:20b
+      fallback_nodes: {analyst: qwen2.5:3b, risk: qwen2.5:3b, liaison_intent: qwen2.5:3b}
+    paid:
+      base_url: https://api.openai.com/v1
+      billing: provider_api
+      api_key_env: LLM_API_KEY
+      nodes: {analyst: gpt-4o-mini, risk: gpt-4o-mini, writer: gpt-4o, critic: gpt-4o, liaison_intent: gpt-4o-mini, liaison_reply: gpt-4o}
+      fallback_nodes: {analyst: gpt-4o-mini, risk: gpt-4o-mini, liaison_intent: gpt-4o-mini}
+    pricing:
+      source: https://developers.openai.com/api/docs/pricing
+      checked: "2026-11-15"
+      usd_per_million_tokens:
+        gpt-4o-mini: {input: 0.15, output: 0.60}
+        gpt-4o: {input: 2.50, output: 10.00}
+
+portfolio:
+  source: local        # local | mcp  (mcp = Portfolio MCP server)
+  transport: stdio      # stdio | streamable_http
+  url: http://localhost:8765/mcp
+
+workspace:
+  source: mcp           # application capabilities must go through MCP
+  transport: stdio      # stdio needs no daemon; launcher/Compose use streamable_http
+  url: http://localhost:8002/mcp
+
+rag:
+  variant: v1_decomposed  # v0_naive | v1_decomposed | ...
+  k: 5
+  chunk_size: 1200
+  chunk_overlap: 150
+  corrective_min_coverage: 0.5
+  embedder: hashing       # hashing (offline/test) | ollama | fastembed
+  ollama_embed_model: nomic-embed-text
+  fastembed_model: sentence-transformers/all-MiniLM-L6-v2
+  fastembed_batch_size: 32
+  cache_dir: .local-models/rag-cache
+  model_threads: 2
+  reranker: lexical       # CI fixture; measured real runs use fastembed
+  reranker_model: Xenova/ms-marco-MiniLM-L-6-v2
+
+budgets:
+  max_graph_steps: 30
+  max_revisions: 2        # Critic may send back at most twice
+  max_tokens_per_job: 12000
+
+resilience:
+  defaults:
+    timeout_seconds: 45
+    max_attempts: 3
+    retry_initial_interval_seconds: 0.25
+    retry_max_interval_seconds: 2
+  nodes:
+    load_job: {timeout_seconds: 20, max_attempts: 3}
+    analyst: {timeout_seconds: 45, max_attempts: 3}
+    risk: {timeout_seconds: 45, max_attempts: 3}
+    fit_matcher: {timeout_seconds: 45, max_attempts: 2}
+    decide: {timeout_seconds: 10, max_attempts: 1}
+    pricing: {timeout_seconds: 20, max_attempts: 2}
+    writer: {timeout_seconds: 90, max_attempts: 2}
+    verifier: {timeout_seconds: 45, max_attempts: 2}
+    critic: {timeout_seconds: 60, max_attempts: 2}
+    compliance: {timeout_seconds: 60, max_attempts: 2}
+    approval: {timeout_seconds: 30, max_attempts: 2}
+    submit: {timeout_seconds: 30, max_attempts: 1}
+    learn: {timeout_seconds: 20, max_attempts: 2}
+    load_thread: {timeout_seconds: 20, max_attempts: 3}
+    classify: {timeout_seconds: 45, max_attempts: 3}
+    propose_slots: {timeout_seconds: 20, max_attempts: 2}
+    draft_reply: {timeout_seconds: 90, max_attempts: 2}
+    send_reply: {timeout_seconds: 30, max_attempts: 1}
+
+thresholds:
+  minimum_fit_score: 0.60
+  watch_margin: 0.15      # fit in [min-margin, min) -> watch instead of skip
+  maximum_risk_score: 0.70
+
+pricing:
+  default_hours_per_day: 4
+
+risk:
+  flag_weights:
+    unpaid_work: 0.8
+    off_platform_contact: 0.8
+    prompt_injection: 0.9
+    payment_unverified: 0.3
+    low_client_rating: 0.3
+    no_budget: 0.2
+  low_rating_below: 4.0
+  patterns:
+    unpaid_work: '(?i)\b(unpaid|for free|free (trial|sample|work|test))\b'
+    off_platform_contact: '(?i)\b(whatsapp|telegram|skype|gift ?card|outside (the )?platform)\b'
+    prompt_injection: '(?i)(ignore (all |any )?(the )?(previous|prior|above) (instructions|prompts)|disregard (the )?(system|previous)|you are now|^\s*system\s*:|mark this (job )?as (a )?(perfect|best))'
+
+critic:
+  min_words: 40
+  max_words: 300
+  generic_openers: '(?i)^(dear (sir|madam|hiring)|i am writing to apply|to whom it may concern)'
+
+verification:
+  backend: auto  # real OpenAI-compatible LLM: semantic checks + hard guards; offline doubles: explicit rules
+  supported_at: 0.70
+  partly_at: 0.35
+
+compliance:
+  rules:
+    - {id: contact_email, pattern: '[\w.+-]+@[\w-]+\.[\w.-]+', action: scrub}
+    - {id: contact_phone, pattern: '(?<![\d-])(?!\d{4}-\d{2}-\d{2})\+?\d[\d\s().-]{8,}\d', action: scrub}
+    - {id: off_platform, pattern: '(?i)\b(whatsapp|telegram|skype|paypal|wire transfer|outside (the )?platform)\b', action: block}
+    - {id: guarantee, pattern: '(?i)(\bguarantee[sd]?\b|100%|\brisk-free\b)', action: drop_sentence}
+
+conversation:
+  scam_patterns: '(?i)(telegram|whatsapp|gift ?card|western union|send (me )?your (api key|password)|outside (the )?platform)'
+  slots: {days: 5, duration_minutes: 30, offer: 3}
+  start_date: today
+  timezone: Asia/Karachi
+  interview_patterns: '(?i)\b(schedule|interview|meeting|call|meet)\b'
+
+memory:
+  promote_after: 3        # a style signal must recur in this many distinct jobs
+  min_outcomes: 5         # category outcome stats stay hidden below this many results
+
+worker:
+  scout_interval_minutes: 5     # sample/GigSim. Live Upwork: use >= 120 (see docs/RUNBOOK.md); never poll like a scraper.
+
+defences:                  # switches exist so evals can measure with/without; ship with both true
+  risk_rule_floor: true
+  verify_claims: true

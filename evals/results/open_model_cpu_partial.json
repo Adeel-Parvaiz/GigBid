@@ -1,0 +1,576 @@
+{
+  "meta": {
+    "models": [
+      "qwen2.5:1.5b",
+      "qwen2.5:0.5b"
+    ],
+    "endpoint": "http://localhost:11435/v1",
+    "seed": 4016,
+    "dev_per_persona": 20,
+    "label_provenance": "synthetic_rule",
+    "excluded_pilot_jobs": [
+      [
+        "ai-ml-engineer",
+        "scam-200010"
+      ],
+      [
+        "ai-ml-engineer",
+        "scam-200049"
+      ],
+      [
+        "ai-ml-engineer",
+        "scam-200064"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-100036"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-100222"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-100243"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-100253"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-100590"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-100606"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-100761"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-100784"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-100793"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-101122"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-101131"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-101219"
+      ],
+      [
+        "ai-ml-engineer",
+        "syn-101416"
+      ]
+    ],
+    "manifest_sha256": "21a81829334590fcdb0e917f36fc832d1bdbf87f75a33eb9852dbd816a5f6894",
+    "python": "3.14.4",
+    "hardware": "Intel Core i5-13420H, 6 CPU inference threads; WSL2 7.6GiB RAM; GPU not used",
+    "prompt_sha256": {
+      "analyst.md": "b03803a92516b12d5a90cec81be187abd9998cc547f2c87da1546209e84a6442",
+      "critic.md": "902d9b631efe5a7c6bc45a05e9ef61019d9c00c14d728a91d1fbf4c48ed3da11",
+      "liaison_intent.md": "659defd4251210e4a66b409df70ce01b7be3e38500756154343c5dfdd8ae7b07",
+      "liaison_reply.md": "f504bb57d395dcfff05397932a6b7474c0faa5bc26f5f3676dd09a356122b051",
+      "risk.md": "c9893ffe73ad3283c7972057b8de4014123f465595291b07b15e912f92854169",
+      "writer.md": "5b69fb54bb514613fb312d4adcacb56d64060cfb9723cad3fd60899598b9992e"
+    },
+    "local_inference": true,
+    "api_cost_usd": 0,
+    "cost_note": "Local inference has no API charge; electricity and hardware costs are not measured.",
+    "limitations": [
+      "Synthetic gold; not instructor data or marketplace outcomes.",
+      "Lexical verifier and hashing retrieval held constant.",
+      "Wall-clock latency includes model loading and schema repair.",
+      "No calibrated judge or human panel is claimed."
+    ],
+    "dev_sha256": {
+      "ai-ml-engineer": "2dc74ab2260bc6f58bb87ecb43af3df800dd03775052e3323eb96cd97447966c",
+      "fullstack-dev": "a30b47480065b396762b7a68dce7dcda48404317a161bf4d9546f0567919af1d",
+      "data-analyst": "4344cbf84dd5c28cbbb6ac85bfb02764478150670404ea50eb87d188d2d6b95e"
+    }
+  },
+  "status": "interrupted_cpu_runtime_pilot",
+  "started_at_utc": "2026-11-13T21:30:35.935632+00:00",
+  "rows": [
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100066",
+      "gold": "bid",
+      "completed": false,
+      "error_type": "ValueError",
+      "seconds": 141.145,
+      "calls": [
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 677,
+          "completion_tokens": 40,
+          "seconds": 4.5518877869999415
+        },
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 294,
+          "completion_tokens": 109,
+          "seconds": 12.697577740999805
+        },
+        {
+          "node": "writer",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 1534,
+          "completion_tokens": 718,
+          "seconds": 62.20889770900021
+        },
+        {
+          "node": "writer",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 2387,
+          "completion_tokens": 766,
+          "seconds": 66.22545635100005
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "syn-100800",
+      "gold": "bid",
+      "completed": false,
+      "error_type": "ValueError",
+      "seconds": 78.277,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 316,
+          "completion_tokens": 128,
+          "seconds": 10.315241287999925
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 699,
+          "completion_tokens": 38,
+          "seconds": 15.757270548999713
+        },
+        {
+          "node": "writer",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 1616,
+          "completion_tokens": 282,
+          "seconds": 37.39132207600005
+        },
+        {
+          "node": "writer",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 2025,
+          "completion_tokens": 276,
+          "seconds": 25.113792205999744
+        }
+      ]
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "persona": "ai-ml-engineer",
+      "job_id": "scam-200004",
+      "gold": "skip",
+      "completed": true,
+      "action": "skip",
+      "status": "skipped",
+      "scam_pred": true,
+      "scam_gold": true,
+      "claims_total": 0,
+      "unsupported_before": 0,
+      "unsupported_after": 0,
+      "price_in_band": null,
+      "compliance": null,
+      "risk_report": {
+        "score": 1.0,
+        "flags": [
+          "no_budget",
+          "off_platform_contact",
+          "payment_unverified",
+          "unpaid_work"
+        ],
+        "explanation": "rule flags: ['no_budget', 'off_platform_contact', 'payment_unverified', 'unpaid_work'] | The client is not verified, the job is unpaid, the client contacts outside the platform, and the job is for an OCR and extraction workflow, which is not a typical project for an LLM."
+      },
+      "job_spec": {
+        "job_id": "scam-200004",
+        "title": "A resume screening ranker (LLM)",
+        "deliverables": [],
+        "required_skills": [
+          "LLM",
+          "NLP",
+          "machine learning",
+          "Docker"
+        ],
+        "budget_min": null,
+        "budget_max": null,
+        "duration_days": 7,
+        "screening_questions": [
+          "Have you used LLM on a client project before? Please link an example."
+        ],
+        "hidden_needs": []
+      },
+      "fit_report": {
+        "score": 0.75,
+        "matched_skills": [
+          "LLM",
+          "NLP",
+          "machine learning"
+        ],
+        "missing_skills": [
+          "Docker"
+        ],
+        "evidence_ids": [
+          "ai-ml-engineer-cs-17",
+          "ai-ml-engineer-cs-05",
+          "ai-ml-engineer-cs-02",
+          "ai-ml-engineer-cs-15",
+          "ai-ml-engineer-rv-13"
+        ],
+        "variant": "v1_decomposed"
+      },
+      "draft": null,
+      "critique": null,
+      "trace": [
+        {
+          "node": "load_job",
+          "ms": 0.0,
+          "wrote": [
+            "client",
+            "job"
+          ]
+        },
+        {
+          "node": "analyst",
+          "ms": 8052.5,
+          "wrote": [
+            "job_spec"
+          ]
+        },
+        {
+          "node": "risk",
+          "ms": 15802.4,
+          "wrote": [
+            "risk_report"
+          ]
+        },
+        {
+          "node": "fit_matcher",
+          "ms": 4.2,
+          "wrote": [
+            "evidence",
+            "fit_report"
+          ]
+        },
+        {
+          "node": "decide",
+          "ms": 0.1,
+          "wrote": [
+            "decision",
+            "status"
+          ]
+        }
+      ],
+      "seconds": 15.811,
+      "calls": [
+        {
+          "node": "analyst",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 277,
+          "completion_tokens": 85,
+          "seconds": 8.050944818000062
+        },
+        {
+          "node": "risk",
+          "model": "qwen2.5:1.5b",
+          "http_status": 200,
+          "prompt_tokens": 674,
+          "completion_tokens": 77,
+          "seconds": 15.801377511999817
+        }
+      ]
+    }
+  ],
+  "summaries": {
+    "qwen2.5:1.5b": {
+      "all": {
+        "attempted": 3,
+        "completed": 1,
+        "errors": 2,
+        "completion_rate": 0.3333333333333333,
+        "accuracy_including_errors": 0.3333333333333333,
+        "bid_f1_completed": {
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "scam_detection_completed": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drafts": 0,
+        "unsupported_before_per_draft": null,
+        "priced_jobs": 0,
+        "price_in_band_rate": null,
+        "unsupported_after_per_draft": null,
+        "latency_seconds_p50": 78.277,
+        "latency_seconds_p95": 141.145,
+        "http_calls": 10,
+        "usage_complete": true,
+        "prompt_tokens": 10499,
+        "completion_tokens": 2519,
+        "completion_tokens_per_http_second": 9.759262433606075,
+        "tokens_per_job": 4339.333333333333,
+        "draft_job_seconds_p95": null
+      },
+      "personas": {
+        "ai-ml-engineer": {
+          "attempted": 3,
+          "completed": 1,
+          "errors": 2,
+          "completion_rate": 0.3333333333333333,
+          "accuracy_including_errors": 0.3333333333333333,
+          "bid_f1_completed": {
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "scam_detection_completed": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "drafts": 0,
+          "unsupported_before_per_draft": null,
+          "priced_jobs": 0,
+          "price_in_band_rate": null,
+          "unsupported_after_per_draft": null,
+          "latency_seconds_p50": 78.277,
+          "latency_seconds_p95": 141.145,
+          "http_calls": 10,
+          "usage_complete": true,
+          "prompt_tokens": 10499,
+          "completion_tokens": 2519,
+          "completion_tokens_per_http_second": 9.759262433606075,
+          "tokens_per_job": 4339.333333333333,
+          "draft_job_seconds_p95": null
+        },
+        "fullstack-dev": {
+          "attempted": 0,
+          "completed": 0,
+          "errors": 0,
+          "completion_rate": null,
+          "accuracy_including_errors": null,
+          "bid_f1_completed": {
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "scam_detection_completed": {
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "drafts": 0,
+          "unsupported_before_per_draft": null,
+          "priced_jobs": 0,
+          "price_in_band_rate": null,
+          "unsupported_after_per_draft": null,
+          "latency_seconds_p50": null,
+          "latency_seconds_p95": null,
+          "http_calls": 0,
+          "usage_complete": true,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "completion_tokens_per_http_second": null,
+          "tokens_per_job": null,
+          "draft_job_seconds_p95": null
+        },
+        "data-analyst": {
+          "attempted": 0,
+          "completed": 0,
+          "errors": 0,
+          "completion_rate": null,
+          "accuracy_including_errors": null,
+          "bid_f1_completed": {
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "scam_detection_completed": {
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "drafts": 0,
+          "unsupported_before_per_draft": null,
+          "priced_jobs": 0,
+          "price_in_band_rate": null,
+          "unsupported_after_per_draft": null,
+          "latency_seconds_p50": null,
+          "latency_seconds_p95": null,
+          "http_calls": 0,
+          "usage_complete": true,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "completion_tokens_per_http_second": null,
+          "tokens_per_job": null,
+          "draft_job_seconds_p95": null
+        }
+      }
+    },
+    "qwen2.5:0.5b": {
+      "all": {
+        "attempted": 0,
+        "completed": 0,
+        "errors": 0,
+        "completion_rate": null,
+        "accuracy_including_errors": null,
+        "bid_f1_completed": {
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "scam_detection_completed": {
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "drafts": 0,
+        "unsupported_before_per_draft": null,
+        "priced_jobs": 0,
+        "price_in_band_rate": null,
+        "unsupported_after_per_draft": null,
+        "latency_seconds_p50": null,
+        "latency_seconds_p95": null,
+        "http_calls": 0,
+        "usage_complete": true,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "completion_tokens_per_http_second": null,
+        "tokens_per_job": null,
+        "draft_job_seconds_p95": null
+      },
+      "personas": {
+        "ai-ml-engineer": {
+          "attempted": 0,
+          "completed": 0,
+          "errors": 0,
+          "completion_rate": null,
+          "accuracy_including_errors": null,
+          "bid_f1_completed": {
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "scam_detection_completed": {
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "drafts": 0,
+          "unsupported_before_per_draft": null,
+          "priced_jobs": 0,
+          "price_in_band_rate": null,
+          "unsupported_after_per_draft": null,
+          "latency_seconds_p50": null,
+          "latency_seconds_p95": null,
+          "http_calls": 0,
+          "usage_complete": true,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "completion_tokens_per_http_second": null,
+          "tokens_per_job": null,
+          "draft_job_seconds_p95": null
+        },
+        "fullstack-dev": {
+          "attempted": 0,
+          "completed": 0,
+          "errors": 0,
+          "completion_rate": null,
+          "accuracy_including_errors": null,
+          "bid_f1_completed": {
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "scam_detection_completed": {
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "drafts": 0,
+          "unsupported_before_per_draft": null,
+          "priced_jobs": 0,
+          "price_in_band_rate": null,
+          "unsupported_after_per_draft": null,
+          "latency_seconds_p50": null,
+          "latency_seconds_p95": null,
+          "http_calls": 0,
+          "usage_complete": true,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "completion_tokens_per_http_second": null,
+          "tokens_per_job": null,
+          "draft_job_seconds_p95": null
+        },
+        "data-analyst": {
+          "attempted": 0,
+          "completed": 0,
+          "errors": 0,
+          "completion_rate": null,
+          "accuracy_including_errors": null,
+          "bid_f1_completed": {
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "scam_detection_completed": {
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "drafts": 0,
+          "unsupported_before_per_draft": null,
+          "priced_jobs": 0,
+          "price_in_band_rate": null,
+          "unsupported_after_per_draft": null,
+          "latency_seconds_p50": null,
+          "latency_seconds_p95": null,
+          "http_calls": 0,
+          "usage_complete": true,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "completion_tokens_per_http_second": null,
+          "tokens_per_job": null,
+          "draft_job_seconds_p95": null
+        }
+      }
+    }
+  },
+  "note": "CPU runtime pilot; final paired comparison will use a single GPU runtime. Canceled in-flight calls are not included."
+}

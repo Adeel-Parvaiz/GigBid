@@ -1,0 +1,282 @@
+{
+  "scope": "Retrieval only; synthetic gold and synthetic portfolio evidence; no LLM decisions or human labels.",
+  "limitations": [
+    "Queries without gold evidence excluded; no relevance metrics for those queries.",
+    "Shared process caches; latency includes warm-cache effects and is not an isolated serving benchmark.",
+    "Same development set used for comparison; no held-out generalization claim."
+  ],
+  "portfolio_sha256": "7529d3c81891b8f5b5c7d90955df4831cec0a84eb9a935ac4fe333a137fffd37",
+  "dev_sha256": {
+    "ai-ml-engineer": "2dc74ab2260bc6f58bb87ecb43af3df800dd03775052e3323eb96cd97447966c",
+    "fullstack-dev": "a30b47480065b396762b7a68dce7dcda48404317a161bf4d9546f0567919af1d",
+    "data-analyst": "4344cbf84dd5c28cbbb6ac85bfb02764478150670404ea50eb87d188d2d6b95e"
+  },
+  "dev_cases": {
+    "ai-ml-engineer": 200,
+    "fullstack-dev": 200,
+    "data-analyst": 200
+  },
+  "models": {
+    "hashing_lexical": {
+      "embedding": {
+        "model": "HashingEmbedder"
+      },
+      "index_build_seconds": 0.007983735000379966
+    },
+    "neural_lexical": {
+      "embedding": {
+        "provider": "fastembed",
+        "package_version": "0.9.1",
+        "model": "sentence-transformers/all-MiniLM-L6-v2",
+        "source": "Qdrant/all-MiniLM-L6-v2-onnx",
+        "revision": "d13954661f83248295ba75c1ed411eef3b7b936e",
+        "model_file": "model.onnx",
+        "model_file_sha256": "bbd7b466f6d58e646fdc2bd5fd67b2f5e93c0b687011bd4548c420f7bd46f0c5",
+        "dimensions": 384,
+        "license": "apache-2.0",
+        "batch_size": 32
+      },
+      "index_build_seconds": 0.7644386730007682
+    },
+    "neural_cross_encoder": {
+      "embedding": {
+        "provider": "fastembed",
+        "package_version": "0.9.1",
+        "model": "sentence-transformers/all-MiniLM-L6-v2",
+        "source": "Qdrant/all-MiniLM-L6-v2-onnx",
+        "revision": "d13954661f83248295ba75c1ed411eef3b7b936e",
+        "model_file": "model.onnx",
+        "model_file_sha256": "bbd7b466f6d58e646fdc2bd5fd67b2f5e93c0b687011bd4548c420f7bd46f0c5",
+        "dimensions": 384,
+        "license": "apache-2.0",
+        "batch_size": 32
+      },
+      "index_build_seconds": 0.7317789730004733,
+      "reranking": {
+        "provider": "fastembed-cross-encoder",
+        "package_version": "0.9.1",
+        "model": "Xenova/ms-marco-MiniLM-L-6-v2",
+        "source": "Xenova/ms-marco-MiniLM-L-6-v2",
+        "revision": "a09144355adeed5f58c8ed011d209bf8ee5a1fec",
+        "model_file": "onnx/model.onnx",
+        "sha256": "c623d0bcb99f4622beb413eaef00cfbe5db20df9f1dd982da4b4f26022881870",
+        "license": "apache-2.0",
+        "threads": 2,
+        "pair_cache_limit": 8192
+      }
+    }
+  },
+  "scores": [
+    {
+      "pipeline": "hashing_lexical",
+      "variant": "v0_naive",
+      "n": 338,
+      "recall@5": 0.2906804733727811,
+      "mrr": 0.6661500892270124,
+      "ndcg@10": 0.521964400303625,
+      "latency_p50_ms": 0.218,
+      "latency_p95_ms": 0.36335999999999996
+    },
+    {
+      "pipeline": "hashing_lexical",
+      "variant": "v1_decomposed",
+      "n": 338,
+      "recall@5": 0.34763313609467456,
+      "mrr": 0.9051845590307129,
+      "ndcg@10": 0.612348828485796,
+      "latency_p50_ms": 0.8439,
+      "latency_p95_ms": 1.2184549999999998
+    },
+    {
+      "pipeline": "hashing_lexical",
+      "variant": "v2_hybrid",
+      "n": 338,
+      "recall@5": 0.3132396449704142,
+      "mrr": 0.6663367615290693,
+      "ndcg@10": 0.5514415139771247,
+      "latency_p50_ms": 0.2303,
+      "latency_p95_ms": 0.285585
+    },
+    {
+      "pipeline": "hashing_lexical",
+      "variant": "v3_rerank",
+      "n": 338,
+      "recall@5": 0.34615384615384615,
+      "mrr": 0.7510672020287406,
+      "ndcg@10": 0.5988251179760344,
+      "latency_p50_ms": 0.46709999999999996,
+      "latency_p95_ms": 0.6038999999999999
+    },
+    {
+      "pipeline": "hashing_lexical",
+      "variant": "v1_v2_hybrid_decomposed",
+      "n": 338,
+      "recall@5": 0.3594674556213018,
+      "mrr": 0.9144054663285434,
+      "ndcg@10": 0.611539922000259,
+      "latency_p50_ms": 0.3859,
+      "latency_p95_ms": 0.52123
+    },
+    {
+      "pipeline": "hashing_lexical",
+      "variant": "v1_v2_v3",
+      "n": 338,
+      "recall@5": 0.3594674556213018,
+      "mrr": 0.9144054663285434,
+      "ndcg@10": 0.611539922000259,
+      "latency_p50_ms": 1.5554000000000001,
+      "latency_p95_ms": 2.1539349999999997
+    },
+    {
+      "pipeline": "hashing_lexical",
+      "variant": "v8_corrective",
+      "n": 338,
+      "recall@5": 0.3620562130177515,
+      "mrr": 0.9144054663285434,
+      "ndcg@10": 0.6130937261789668,
+      "latency_p50_ms": 0.54815,
+      "latency_p95_ms": 0.7868999999999999
+    },
+    {
+      "pipeline": "neural_lexical",
+      "variant": "v0_naive",
+      "n": 338,
+      "recall@5": 0.2599852071005917,
+      "mrr": 0.6587947309101155,
+      "ndcg@10": 0.4699556940954915,
+      "latency_p50_ms": 8.38645,
+      "latency_p95_ms": 10.662125
+    },
+    {
+      "pipeline": "neural_lexical",
+      "variant": "v1_decomposed",
+      "n": 338,
+      "recall@5": 0.3032544378698225,
+      "mrr": 0.7761540809617733,
+      "ndcg@10": 0.5149753805275625,
+      "latency_p50_ms": 6.31115,
+      "latency_p95_ms": 8.910105000000001
+    },
+    {
+      "pipeline": "neural_lexical",
+      "variant": "v2_hybrid",
+      "n": 338,
+      "recall@5": 0.3106508875739645,
+      "mrr": 0.6887433079740772,
+      "ndcg@10": 0.5469138647090339,
+      "latency_p50_ms": 8.0273,
+      "latency_p95_ms": 10.563669999999998
+    },
+    {
+      "pipeline": "neural_lexical",
+      "variant": "v3_rerank",
+      "n": 338,
+      "recall@5": 0.33949704142011833,
+      "mrr": 0.7570266272189349,
+      "ndcg@10": 0.5910322934155123,
+      "latency_p50_ms": 8.4997,
+      "latency_p95_ms": 10.56616
+    },
+    {
+      "pipeline": "neural_lexical",
+      "variant": "v1_v2_hybrid_decomposed",
+      "n": 338,
+      "recall@5": 0.34874260355029585,
+      "mrr": 0.8726120033812341,
+      "ndcg@10": 0.5784342087616189,
+      "latency_p50_ms": 13.3177,
+      "latency_p95_ms": 18.02866
+    },
+    {
+      "pipeline": "neural_lexical",
+      "variant": "v1_v2_v3",
+      "n": 338,
+      "recall@5": 0.35022189349112426,
+      "mrr": 0.8711327134404057,
+      "ndcg@10": 0.5795626273508572,
+      "latency_p50_ms": 13.729,
+      "latency_p95_ms": 19.115454999999997
+    },
+    {
+      "pipeline": "neural_lexical",
+      "variant": "v8_corrective",
+      "n": 338,
+      "recall@5": 0.35096153846153844,
+      "mrr": 0.8729078613693998,
+      "ndcg@10": 0.579225180840862,
+      "latency_p50_ms": 13.665299999999998,
+      "latency_p95_ms": 19.433889999999998
+    },
+    {
+      "pipeline": "neural_cross_encoder",
+      "variant": "v0_naive",
+      "n": 338,
+      "recall@5": 0.2599852071005917,
+      "mrr": 0.6587947309101155,
+      "ndcg@10": 0.4699556940954915,
+      "latency_p50_ms": 8.4339,
+      "latency_p95_ms": 18.284054999999988
+    },
+    {
+      "pipeline": "neural_cross_encoder",
+      "variant": "v1_decomposed",
+      "n": 338,
+      "recall@5": 0.3032544378698225,
+      "mrr": 0.7761540809617733,
+      "ndcg@10": 0.5149753805275625,
+      "latency_p50_ms": 7.3131,
+      "latency_p95_ms": 18.272259999999992
+    },
+    {
+      "pipeline": "neural_cross_encoder",
+      "variant": "v2_hybrid",
+      "n": 338,
+      "recall@5": 0.3106508875739645,
+      "mrr": 0.6887433079740772,
+      "ndcg@10": 0.5469138647090339,
+      "latency_p50_ms": 8.146650000000001,
+      "latency_p95_ms": 10.468239999999998
+    },
+    {
+      "pipeline": "neural_cross_encoder",
+      "variant": "v3_rerank",
+      "n": 338,
+      "recall@5": 0.27847633136094674,
+      "mrr": 0.6516636141636142,
+      "ndcg@10": 0.4993641762367368,
+      "latency_p50_ms": 314.5063,
+      "latency_p95_ms": 390.20515499999993
+    },
+    {
+      "pipeline": "neural_cross_encoder",
+      "variant": "v1_v2_hybrid_decomposed",
+      "n": 338,
+      "recall@5": 0.34874260355029585,
+      "mrr": 0.8726120033812341,
+      "ndcg@10": 0.5784342087616189,
+      "latency_p50_ms": 14.00475,
+      "latency_p95_ms": 20.59613999999999
+    },
+    {
+      "pipeline": "neural_cross_encoder",
+      "variant": "v1_v2_v3",
+      "n": 338,
+      "recall@5": 0.3206360946745562,
+      "mrr": 0.835757725180802,
+      "ndcg@10": 0.5497629621527501,
+      "latency_p50_ms": 14.8439,
+      "latency_p95_ms": 158.79757999999995
+    },
+    {
+      "pipeline": "neural_cross_encoder",
+      "variant": "v8_corrective",
+      "n": 338,
+      "recall@5": 0.35096153846153844,
+      "mrr": 0.8729078613693998,
+      "ndcg@10": 0.579225180840862,
+      "latency_p50_ms": 14.0687,
+      "latency_p95_ms": 18.963939999999994
+    }
+  ],
+  "trials": 7098
+}

@@ -1,0 +1,612 @@
+{
+ "create_proposal_draft": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": false
+  },
+  "input": {
+   "$defs": {
+    "ProposalInput": {
+     "properties": {
+      "bid_amount": {
+       "exclusiveMinimum": 0,
+       "maximum": 1000000,
+       "title": "Bid Amount",
+       "type": "number"
+      },
+      "cover_letter": {
+       "maxLength": 5000,
+       "minLength": 1,
+       "title": "Cover Letter",
+       "type": "string"
+      },
+      "currency": {
+       "default": "USD",
+       "pattern": "^[A-Z]{3}$",
+       "title": "Currency",
+       "type": "string"
+      },
+      "dry_run": {
+       "default": false,
+       "description": "If true, nothing is created; returns exactly what would be sent and its Connects cost",
+       "title": "Dry Run",
+       "type": "boolean"
+      },
+      "freelancer_id": {
+       "anyOf": [
+        {
+         "description": "Opaque marketplace id",
+         "pattern": "^[\\w.-]{1,64}$",
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Freelancer Id"
+      },
+      "idempotency_key": {
+       "description": "Idempotency key: a retry with the same key never repeats the action",
+       "maxLength": 64,
+       "minLength": 8,
+       "title": "Idempotency Key",
+       "type": "string"
+      },
+      "job_id": {
+       "description": "Opaque marketplace id",
+       "pattern": "^[\\w.-]{1,64}$",
+       "title": "Job Id",
+       "type": "string"
+      },
+      "screening_answers": {
+       "default": [],
+       "items": {
+        "maxLength": 3000,
+        "type": "string"
+       },
+       "maxItems": 20,
+       "title": "Screening Answers",
+       "type": "array"
+      }
+     },
+     "required": [
+      "job_id",
+      "cover_letter",
+      "bid_amount",
+      "idempotency_key"
+     ],
+     "title": "ProposalInput",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "proposal": {
+     "$ref": "#/$defs/ProposalInput"
+    }
+   },
+   "required": [
+    "proposal"
+   ],
+   "title": "create_proposal_draftArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "properties": {
+    "connects_cost": {
+     "default": 0,
+     "title": "Connects Cost",
+     "type": "integer"
+    },
+    "draft_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Draft Id"
+    },
+    "dry_run": {
+     "default": false,
+     "title": "Dry Run",
+     "type": "boolean"
+    },
+    "replayed": {
+     "default": false,
+     "title": "Replayed",
+     "type": "boolean"
+    },
+    "status": {
+     "default": "draft",
+     "title": "Status",
+     "type": "string"
+    },
+    "would_send": {
+     "anyOf": [
+      {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Would Send"
+    }
+   },
+   "title": "DraftOut",
+   "type": "object"
+  }
+ },
+ "get_client_history": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "client_id": {
+     "description": "Opaque marketplace id",
+     "pattern": "^[\\w.-]{1,64}$",
+     "title": "Client Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "client_id"
+   ],
+   "title": "get_client_historyArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "properties": {
+    "client_id": {
+     "title": "Client Id",
+     "type": "string"
+    },
+    "completed_projects": {
+     "default": 0,
+     "title": "Completed Projects",
+     "type": "integer"
+    },
+    "payment_verified": {
+     "default": false,
+     "title": "Payment Verified",
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "client_id"
+   ],
+   "title": "ClientOut",
+   "type": "object"
+  }
+ },
+ "get_connects_balance": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {},
+   "title": "get_connects_balanceArguments",
+   "type": "object"
+  },
+  "output": {
+   "properties": {
+    "balance": {
+     "title": "Balance",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "balance"
+   ],
+   "title": "BalanceOut",
+   "type": "object"
+  }
+ },
+ "get_job": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "job_id": {
+     "description": "Opaque marketplace id",
+     "pattern": "^[\\w.-]{1,64}$",
+     "title": "Job Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "job_id"
+   ],
+   "title": "get_jobArguments",
+   "type": "object"
+  },
+  "output": {
+   "additionalProperties": true,
+   "properties": {
+    "connects_cost": {
+     "default": 0,
+     "title": "Connects Cost",
+     "type": "integer"
+    },
+    "description": {
+     "default": "",
+     "title": "Description",
+     "type": "string"
+    },
+    "job_id": {
+     "title": "Job Id",
+     "type": "string"
+    },
+    "required_skills": {
+     "default": [],
+     "items": {
+      "type": "string"
+     },
+     "title": "Required Skills",
+     "type": "array"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    }
+   },
+   "required": [
+    "job_id",
+    "title"
+   ],
+   "title": "JobOut",
+   "type": "object"
+  }
+ },
+ "list_messages": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "thread_id": {
+     "description": "Opaque marketplace id",
+     "pattern": "^[\\w.-]{1,64}$",
+     "title": "Thread Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "thread_id"
+   ],
+   "title": "list_messagesArguments",
+   "type": "object"
+  },
+  "output": {
+   "$defs": {
+    "MessageOut": {
+     "additionalProperties": true,
+     "properties": {
+      "id": {
+       "title": "Id",
+       "type": "string"
+      },
+      "text": {
+       "title": "Text",
+       "type": "string"
+      }
+     },
+     "required": [
+      "id",
+      "text"
+     ],
+     "title": "MessageOut",
+     "type": "object"
+    }
+   },
+   "additionalProperties": true,
+   "properties": {
+    "messages": {
+     "items": {
+      "$ref": "#/$defs/MessageOut"
+     },
+     "title": "Messages",
+     "type": "array"
+    },
+    "thread_id": {
+     "title": "Thread Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "thread_id",
+    "messages"
+   ],
+   "title": "ThreadOut",
+   "type": "object"
+  }
+ },
+ "list_threads": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {},
+   "title": "list_threadsArguments",
+   "type": "object"
+  },
+  "output": {
+   "$defs": {
+    "ThreadSummary": {
+     "additionalProperties": true,
+     "properties": {
+      "client_id": {
+       "title": "Client Id",
+       "type": "string"
+      },
+      "job_id": {
+       "title": "Job Id",
+       "type": "string"
+      },
+      "thread_id": {
+       "title": "Thread Id",
+       "type": "string"
+      }
+     },
+     "required": [
+      "thread_id",
+      "job_id",
+      "client_id"
+     ],
+     "title": "ThreadSummary",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "threads": {
+     "items": {
+      "$ref": "#/$defs/ThreadSummary"
+     },
+     "title": "Threads",
+     "type": "array"
+    }
+   },
+   "required": [
+    "threads"
+   ],
+   "title": "ThreadList",
+   "type": "object"
+  }
+ },
+ "search_jobs": {
+  "annotations": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": true
+  },
+  "input": {
+   "properties": {
+    "limit": {
+     "default": 20,
+     "maximum": 50,
+     "minimum": 1,
+     "title": "Limit",
+     "type": "integer"
+    },
+    "query": {
+     "anyOf": [
+      {
+       "maxLength": 200,
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Query"
+    }
+   },
+   "title": "search_jobsArguments",
+   "type": "object"
+  },
+  "output": {
+   "$defs": {
+    "JobOut": {
+     "additionalProperties": true,
+     "properties": {
+      "connects_cost": {
+       "default": 0,
+       "title": "Connects Cost",
+       "type": "integer"
+      },
+      "description": {
+       "default": "",
+       "title": "Description",
+       "type": "string"
+      },
+      "job_id": {
+       "title": "Job Id",
+       "type": "string"
+      },
+      "required_skills": {
+       "default": [],
+       "items": {
+        "type": "string"
+       },
+       "title": "Required Skills",
+       "type": "array"
+      },
+      "title": {
+       "title": "Title",
+       "type": "string"
+      }
+     },
+     "required": [
+      "job_id",
+      "title"
+     ],
+     "title": "JobOut",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "jobs": {
+     "items": {
+      "$ref": "#/$defs/JobOut"
+     },
+     "title": "Jobs",
+     "type": "array"
+    }
+   },
+   "required": [
+    "jobs"
+   ],
+   "title": "JobList",
+   "type": "object"
+  }
+ },
+ "send_message": {
+  "annotations": {
+   "destructiveHint": true,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": false
+  },
+  "input": {
+   "properties": {
+    "idempotency_key": {
+     "description": "Idempotency key: a retry with the same key never repeats the action",
+     "maxLength": 64,
+     "minLength": 8,
+     "title": "Idempotency Key",
+     "type": "string"
+    },
+    "text": {
+     "maxLength": 4000,
+     "minLength": 1,
+     "title": "Text",
+     "type": "string"
+    },
+    "thread_id": {
+     "description": "Opaque marketplace id",
+     "pattern": "^[\\w.-]{1,64}$",
+     "title": "Thread Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "thread_id",
+    "text",
+    "idempotency_key"
+   ],
+   "title": "send_messageArguments",
+   "type": "object"
+  },
+  "output": {
+   "properties": {
+    "message_id": {
+     "title": "Message Id",
+     "type": "string"
+    },
+    "replayed": {
+     "title": "Replayed",
+     "type": "boolean"
+    },
+    "thread_id": {
+     "title": "Thread Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "message_id",
+    "thread_id",
+    "replayed"
+   ],
+   "title": "SendOut",
+   "type": "object"
+  }
+ },
+ "submit_proposal": {
+  "annotations": {
+   "destructiveHint": true,
+   "idempotentHint": true,
+   "openWorldHint": true,
+   "readOnlyHint": false
+  },
+  "input": {
+   "properties": {
+    "draft_id": {
+     "description": "Opaque marketplace id",
+     "pattern": "^[\\w.-]{1,64}$",
+     "title": "Draft Id",
+     "type": "string"
+    },
+    "idempotency_key": {
+     "description": "Idempotency key: a retry with the same key never repeats the action",
+     "maxLength": 64,
+     "minLength": 8,
+     "title": "Idempotency Key",
+     "type": "string"
+    }
+   },
+   "required": [
+    "draft_id",
+    "idempotency_key"
+   ],
+   "title": "submit_proposalArguments",
+   "type": "object"
+  },
+  "output": {
+   "properties": {
+    "connects_spent": {
+     "title": "Connects Spent",
+     "type": "integer"
+    },
+    "draft_id": {
+     "title": "Draft Id",
+     "type": "string"
+    },
+    "replayed": {
+     "title": "Replayed",
+     "type": "boolean"
+    },
+    "status": {
+     "title": "Status",
+     "type": "string"
+    }
+   },
+   "required": [
+    "draft_id",
+    "status",
+    "connects_spent",
+    "replayed"
+   ],
+   "title": "SubmitOut",
+   "type": "object"
+  }
+ }
+}

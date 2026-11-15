@@ -1,0 +1,212 @@
+{
+  "scope": "Actual official SDK MCP sessions; synthetic local sample evidence, real embedding and cross-encoder inference.",
+  "variants": [
+    {
+      "variant": "v0_naive",
+      "ids": [
+        "evidence-001",
+        "evidence-004",
+        "evidence-003",
+        "evidence-002"
+      ],
+      "last_requested_layer": "dense"
+    },
+    {
+      "variant": "v1_decomposed",
+      "ids": [
+        "evidence-003",
+        "evidence-001",
+        "evidence-004"
+      ],
+      "last_requested_layer": "dense"
+    },
+    {
+      "variant": "v2_hybrid",
+      "ids": [
+        "evidence-001",
+        "evidence-004",
+        "evidence-003",
+        "evidence-002"
+      ],
+      "last_requested_layer": "hybrid"
+    },
+    {
+      "variant": "v3_rerank",
+      "ids": [
+        "evidence-001",
+        "evidence-004",
+        "evidence-003",
+        "evidence-002"
+      ],
+      "last_requested_layer": "rerank"
+    },
+    {
+      "variant": "v8_corrective",
+      "ids": [
+        "evidence-001",
+        "evidence-003",
+        "evidence-004"
+      ],
+      "last_requested_layer": "hybrid"
+    }
+  ],
+  "calls": [
+    {
+      "query": "Build and evaluate a scikit-learn churn classification baseline.",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "dense"
+      },
+      "count": 4
+    },
+    {
+      "query": "scikit-learn",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "dense"
+      },
+      "count": 3
+    },
+    {
+      "query": "classification",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "dense"
+      },
+      "count": 3
+    },
+    {
+      "query": "Build and evaluate a scikit-learn churn classification baseline.",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "hybrid"
+      },
+      "count": 4
+    },
+    {
+      "query": "Build and evaluate a scikit-learn churn classification baseline.",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "rerank"
+      },
+      "count": 4
+    },
+    {
+      "query": "scikit-learn",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "hybrid"
+      },
+      "count": 3
+    },
+    {
+      "query": "classification",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "hybrid"
+      },
+      "count": 3
+    },
+    {
+      "query": "Rust",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "hybrid"
+      },
+      "count": 3
+    },
+    {
+      "query": "Kubernetes",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "hybrid"
+      },
+      "count": 3
+    },
+    {
+      "query": "Kafka",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "hybrid"
+      },
+      "count": 3
+    },
+    {
+      "query": "gRPC",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "hybrid"
+      },
+      "count": 3
+    },
+    {
+      "query": "Rust Kubernetes Kafka gRPC\nFocus on missing evidence: Rust; Kubernetes; Kafka; gRPC",
+      "filters": {
+        "freelancer_id": "sample-ai-engineer",
+        "retrieval_layer": "hybrid"
+      },
+      "count": 4
+    }
+  ],
+  "refusal_trace": [
+    {
+      "node": "retrieve",
+      "returned": 4
+    },
+    {
+      "node": "grade",
+      "coverage": 0.0,
+      "missing": [
+        "Rust",
+        "Kubernetes",
+        "Kafka",
+        "gRPC"
+      ],
+      "accepted": false
+    },
+    {
+      "node": "requery",
+      "query": "Rust Kubernetes Kafka gRPC\nFocus on missing evidence: Rust; Kubernetes; Kafka; gRPC",
+      "returned": 4
+    },
+    {
+      "node": "grade",
+      "coverage": 0.0,
+      "missing": [
+        "Rust",
+        "Kubernetes",
+        "Kafka",
+        "gRPC"
+      ],
+      "accepted": false
+    },
+    {
+      "node": "refuse",
+      "reason": "Evidence coverage below threshold"
+    }
+  ],
+  "embedding": {
+    "provider": "fastembed",
+    "package_version": "0.9.1",
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "source": "Qdrant/all-MiniLM-L6-v2-onnx",
+    "revision": "d13954661f83248295ba75c1ed411eef3b7b936e",
+    "model_file": "model.onnx",
+    "model_file_sha256": "bbd7b466f6d58e646fdc2bd5fd67b2f5e93c0b687011bd4548c420f7bd46f0c5",
+    "dimensions": 384,
+    "license": "apache-2.0",
+    "batch_size": 32
+  },
+  "reranker": {
+    "provider": "fastembed-cross-encoder",
+    "package_version": "0.9.1",
+    "model": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "source": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "revision": "a09144355adeed5f58c8ed011d209bf8ee5a1fec",
+    "model_file": "onnx/model.onnx",
+    "sha256": "c623d0bcb99f4622beb413eaef00cfbe5db20df9f1dd982da4b4f26022881870",
+    "license": "apache-2.0",
+    "threads": 2,
+    "pair_cache_limit": 8192
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-11-14T12:15:33.611913+00:00",
+  "command": "python -m pytest -q --junitxml=test-results/rd-a.xml",
+  "passed": 152,
+  "skipped": 2,
+  "failures": 0,
+  "seconds": "46.046",
+  "focused_after_final_scoring_changes": {
+    "exit_code": 0,
+    "output": "...                                                                      [100%]\n=============================== warnings summary ===============================\n.venv-linux/lib/python3.14/site-packages/langsmith/_internal/_beta_decorator.py:92: 13 warnings\n  /home/adeel/gigbid/.venv-linux/lib/python3.14/site-packages/langsmith/_internal/_beta_decorator.py:92: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead\n    if asyncio.iscoroutinefunction(func):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n3 passed, 13 warnings in 0.05s\n"
+  },
+  "live_services_and_last_disposable_mcp_port": {
+    "3000": "open",
+    "8000": "open",
+    "8001": "open",
+    "8003": "open",
+    "33055": "closed"
+  },
+  "scope": "R&D A: real LLM 120-call comparison, exact/default-normalized argument scoring, real single-agent GigSim draft verification",
+  "hashes": {
+    "evals/rd_a/llm_experiment.py": "f011ed72624d0cc8e2c79c2716c6e0a50282b33d6c080c2cc6f8a3eec9a1a00b",
+    "agent/prompts/rd_a_selector.md": "cedd29f5b223b136c350fe9a81df17abda7b97b5a3fcd258eeb00f6df02ab057",
+    "evals/runners/single_grounded_proposal.py": "ce0b6dcdebaacf93d2d0cc358b80a2302b8aac383c241b31e042797eab2594a3",
+    "agent/prompts/grounded_single_agent.md": "83e16bd8d985663e240b092b0795daf11e5a0e7dd90aad7119f558401853d5ef",
+    "evals/results/rd_a_llm/trials.jsonl": "2653d013e10155610254bde75017d33de9fee643bd14fcbd8820c6ca3a2d87da",
+    "evals/results/single_grounded_proposal.json": "3853df1d27dfb34f39d4d855d71a01e082f93011b7f7278e9938c24da7c9f702"
+  }
+}

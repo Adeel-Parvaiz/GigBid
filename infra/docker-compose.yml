@@ -1,0 +1,105 @@
+# docker compose -f infra/docker-compose.yml --env-file .env up --build
+# Secrets come only from the environment (.env is git-ignored; see .env.example).
+x-py: &py
+  build: {context: .., dockerfile: infra/docker/api.Dockerfile}
+  restart: unless-stopped
+x-agent-env: &agent-env
+  APP_SECRET_KEY: ${APP_SECRET_KEY:?set APP_SECRET_KEY}
+  DATABASE_URL: postgresql://gigbid:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}@postgres:5432/gigbid
+  REDIS_URL: redis://redis:6379/0
+  MARKETPLACE_MCP_TOKEN: ${MARKETPLACE_MCP_TOKEN:?set MARKETPLACE_MCP_TOKEN}
+  LLM_BACKEND: ${LLM_BACKEND:-openai_compat}
+  LLM_API_KEY: ${LLM_API_KEY:-}
+  GIGBID_DATA_DIR: ${GIGBID_DATA_DIR:-data/sample}
+  GIGBID__portfolio__source: mcp
+  GIGBID__portfolio__transport: streamable_http
+  GIGBID__portfolio__url: http://portfolio-mcp:8765/mcp
+  GIGBID__marketplace__mode: mcp
+  GIGBID__marketplace__url: http://marketplace-mcp:8001/mcp
+  GIGBID__workspace__source: mcp
+  GIGBID__workspace__transport: streamable_http
+  GIGBID__workspace__url: http://workspace-mcp:8002/mcp
+  GIGBID__llm__profiles__open__base_url: ${OPEN_LLM_BASE_URL:-http://ollama:11434/v1}
+  RUNS_DB: /data/runs.sqlite
+  USERS_DB: /data/users.sqlite
+  OAUTH_DB: /data/oauth/tokens.sqlite
+  OAUTH_ENCRYPTION_KEY: ${OAUTH_ENCRYPTION_KEY:?set a persistent Fernet key for per-user OAuth tokens}
+  UPWORK_CALLBACK_URL: ${UPWORK_CALLBACK_URL:-http://127.0.0.1:8000/connections/upwork/callback}
+  REVIEWER_EMAIL: ${REVIEWER_EMAIL:-reviewer@gigbid.test}
+  REVIEWER_PASSWORD: ${REVIEWER_PASSWORD:?set REVIEWER_PASSWORD}
+
+services:
+  postgres:
+    image: postgres:16
+    environment: {POSTGRES_USER: gigbid, POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}", POSTGRES_DB: gigbid}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U gigbid"], interval: 5s, retries: 10}
+  redis:
+    image: redis:7
+    command: ["redis-server", "--appendonly", "yes", "--appendfsync", "everysec"]
+    volumes: [redisdata:/data]
+    healthcheck: {test: ["CMD", "redis-cli", "ping"], interval: 5s, retries: 10}
+  ollama:                      # open profile: local open-weight models (pull with: docker compose exec ollama ollama pull qwen3:4b)
+    image: ollama/ollama
+    volumes: [ollama:/root/.ollama]
+    ports: ["11434:11434"]
+  gigsim:
+    build: {context: .., dockerfile: infra/docker/api.Dockerfile}
+    command: ["uvicorn", "apps.gigsim.main:create_app", "--factory", "--host", "0.0.0.0", "--port", "8003"]
+    environment:
+      GIGBID_DATA_DIR: ${GIGBID_DATA_DIR:-data/processed/kaggle_2024_v1}
+      GIGSIM_DB: /data/gigsim/state.sqlite
+      GIGSIM_TOKENS_JSON: "{\"${GIGSIM_API_TOKEN:?set GIGSIM_API_TOKEN}\":\"local-reviewer\"}"
+    volumes: [appdata:/data]
+    ports: ["127.0.0.1:13003:8003"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8003/health', timeout=2)"]
+      interval: 5s
+      retries: 10
+      start_period: 5s
+  portfolio-mcp:
+    <<: *py
+    build: {context: .., dockerfile: infra/docker/portfolio-mcp.Dockerfile}
+    environment:
+      HOST: 0.0.0.0
+      PORT: "8765"
+      GIGBID_DATA_DIR: ${GIGBID_DATA_DIR:-data/sample}
+  marketplace-mcp:
+    <<: *py
+    build: {context: .., dockerfile: infra/docker/marketplace-mcp.Dockerfile}
+    environment:
+      HOST: 0.0.0.0
+      PORT: "8001"
+      MARKETPLACE_MODE: ${MARKETPLACE_MODE:-gigsim}
+      GIGBID_DATA_DIR: ${GIGBID_DATA_DIR:-data/sample}
+      MARKETPLACE_MCP_TOKENS: ${MARKETPLACE_MCP_TOKEN}:agent
+      MARKETPLACE_AUDIT: /data/marketplace_audit.jsonl
+      GIGSIM_API_URL: http://gigsim:8003
+      GIGSIM_API_TOKEN: ${GIGSIM_API_TOKEN:?set GIGSIM_API_TOKEN}
+      GIGSIM_CONTRACT: /app/config/gigsim_contract.json
+    volumes: [appdata:/data]
+    depends_on: {gigsim: {condition: service_healthy}}
+  workspace-mcp:
+    <<: *py
+    build: {context: .., dockerfile: infra/docker/workspace-mcp.Dockerfile}
+    environment: {HOST: 0.0.0.0, PORT: "8002", WORKSPACE_DB: /data/workspace.sqlite}
+    volumes: [appdata:/data]
+  api:
+    <<: *py
+    build: {context: .., dockerfile: infra/docker/api.Dockerfile}
+    environment: *agent-env
+    volumes: [appdata:/data]
+    depends_on: {postgres: {condition: service_healthy}, redis: {condition: service_healthy}, portfolio-mcp: {condition: service_started}, marketplace-mcp: {condition: service_started}}
+    ports: ["8000:8000"]
+  worker:
+    <<: *py
+    build: {context: .., dockerfile: infra/docker/worker.Dockerfile}
+    environment: *agent-env
+    volumes: [appdata:/data]
+    depends_on: {postgres: {condition: service_healthy}, redis: {condition: service_healthy}, api: {condition: service_started}}
+  web:
+    build: {context: .., dockerfile: infra/docker/web.Dockerfile}
+    ports: ["3000:80"]
+    depends_on: [api]
+
+volumes: {pgdata: {}, redisdata: {}, ollama: {}, appdata: {}}

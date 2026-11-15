@@ -1,0 +1,12 @@
+# Candidate source-column names per canonical field (matched case-insensitively, ignoring punctuation).
+# UNVERIFIED against the real Kaggle files: run `python -m dataprep.ingest inspect your.csv` and edit.
+title: [title, jobtitle, job_title, name]
+description: [description, jobdescription, job_description, details, text, summary]
+published: [published_date, publisheddate, date, posted, posteddate, created_at, publishdate]
+is_hourly: [is_hourly, ishourly, hourly, payment_type, jobtype, job_type]
+hourly_low: [hourly_low, hourlylow, hourly_min, minhourly, min_rate, hourlyrate_min]
+hourly_high: [hourly_high, hourlyhigh, hourly_max, maxhourly, max_rate, hourlyrate_max]
+budget: [budget, fixed_budget, fixedprice, fixed_price, amount, price, project_budget]
+country: [country, client_country, location]
+url: [link, url, job_url]
+skills: [skills, skill, tags, required_skills, skills_required]

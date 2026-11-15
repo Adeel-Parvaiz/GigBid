@@ -1,0 +1,7 @@
+{
+  "version": "v2.1.0",
+  "source": "https://github.com/github/github-mcp-server/releases/download/v2.1.0/github-mcp-server_Linux_x86_64.tar.gz",
+  "archive_sha256": "a442f9db287cea01008bcb55fe6bc0292270301046c3edbd1a8b22d6e4157b2b",
+  "checksum_source": "https://github.com/github/github-mcp-server/releases/download/v2.1.0/github-mcp-server_2.1.0_checksums.txt",
+  "binary_sha256": "cdd2dfbf269ca249f7e31148e20d072a22e224dd7cab0d5a176d146900b85324"
+}

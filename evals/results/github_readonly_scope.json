@@ -1,0 +1,17 @@
+{
+  "date_pkt": "2026-11-14",
+  "oauth_scopes": [
+    "read:user"
+  ],
+  "repository_scopes_requested": [],
+  "official_server_read_only": true,
+  "client_allowlist": [
+    "get_me",
+    "get_file_contents",
+    "search_repositories"
+  ],
+  "official_binary_required_tools_discovered_without_repository_scope": true,
+  "previous_authorization_cancelled_locally": true,
+  "checks": "4 targeted MCP/scope tests passed; frontend production build passed",
+  "scope": "OAuth narrowing verified; user account authorization still required."
+}

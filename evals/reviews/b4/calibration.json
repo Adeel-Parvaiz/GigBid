@@ -1,0 +1,4262 @@
+{
+  "kind": "calibration",
+  "rubric": {
+    "0": "Unusable: empty, misleading, unsafe or no meaningful response to the job.",
+    "1": "Poor: major grounding, relevance or completeness problems.",
+    "2": "Mixed: partly useful, but substantial edits needed.",
+    "3": "Good: relevant, grounded and clear; only minor edits needed.",
+    "4": "Excellent: specific evidence, a credible plan, complete answers and professional wording."
+  },
+  "instructions": "Personally read all 30 items and source evidence. Give an overall quality score, 0\u20134. Do not consult model scores. Unknown job details must not be inferred.",
+  "scope": "24 actual B3 draft/filtered items and six code-generated grounded reference stimuli. Synthetic jobs/evidence. No labels are prefilled.",
+  "items": [
+    {
+      "id": "reference-0753b66fae34",
+      "job": {
+        "job_id": "syn-101377",
+        "client_id": "client-0382",
+        "title": "A job board with search filters (REST API)",
+        "description": "We need help with a job board with search filters. Skills we expect: REST API, nodejs, HTML/CSS. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "REST API",
+          "JavaScript",
+          "HTML/CSS"
+        ],
+        "budget": {
+          "min": 21,
+          "max": 32,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 14,
+        "screening_questions": [
+          "How would you approach JavaScript for this project?",
+          "Have you used JavaScript on a client project before? Please link an example."
+        ],
+        "warning_signals": [],
+        "connects_cost": 8,
+        "category": "web_dev",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2025-03-13"
+      },
+      "proposal": "Relevant portfolio work: Designed a REST API for a mobile app using REST API, JavaScript, Django and TypeScript. Shipped on time with automated tests and a deploy script. Cut manual effort by 40%.\n\nI will first confirm the data, acceptance criteria and scope with you, then implement a reproducible baseline, compare alternatives against agreed metrics and document the limitations. Could you share a representative sample and your highest-priority deliverable?",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "fullstack-dev-cs-14",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Designed a REST API for a mobile app using REST API, JavaScript, Django and TypeScript. Shipped on time with automated tests and a deploy script. Cut manual effort by 40%.",
+          "skills": [
+            "REST API",
+            "JavaScript",
+            "Django",
+            "TypeScript"
+          ],
+          "source": "synthetic",
+          "date": "2026-10-12",
+          "outcome": "5-star review",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-14",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03131881575727918
+        }
+      ]
+    },
+    {
+      "id": "item-ceaa049ad798",
+      "job": {
+        "job_id": "syn-100440",
+        "client_id": "client-0197",
+        "title": "An A/B test readout (data cleaning)",
+        "description": "We need help with an A/B test readout. Skills we expect: data cleaning, dashboarding, Airflow, dbt, web scraping, SQL. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "data cleaning",
+          "dashboarding",
+          "Airflow",
+          "dbt",
+          "web scraping",
+          "SQL"
+        ],
+        "budget": {
+          "min": 15,
+          "max": 42,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 3,
+        "screening_questions": [
+          "How would you approach dashboarding for this project?",
+          "Have you used SQL on a client project before? Please link an example."
+        ],
+        "warning_signals": [],
+        "connects_cost": 4,
+        "category": "data_analytics",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-01-21"
+      },
+      "proposal": "I have extensive experience in data cleaning, dashboarding, and web scraping. I have successfully completed projects that required these skills, including a data cleaning and deduplication workflow using statistics, Airflow, and web scraping.\n\nI have used SQL on multiple client projects before, and I can provide examples of how I have used it to analyze data and create dashboards.",
+      "screening_answers": [
+        "",
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "data-analyst-cs-01",
+          "type": "case_study",
+          "title": "A data cleaning and deduplication workflow",
+          "summary": "Automated a data cleaning and deduplication workflow using statistics, dashboarding, etl and web scraping. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "statistics",
+            "dashboarding",
+            "Airflow",
+            "web scraping"
+          ],
+          "source": "synthetic",
+          "date": "2025-12-15",
+          "outcome": "client replied",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-01",
+          "persona": "data-analyst",
+          "project": "data-analyst-p01",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "data-analyst-cs-06",
+          "type": "case_study",
+          "title": "A web-scraped price tracker",
+          "summary": "Shipped a web-scraped price tracker using Airflow, scrapy, dashboarding and dbt. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "Airflow",
+            "web scraping",
+            "dashboarding",
+            "dbt"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-13",
+          "outcome": "personal project",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-06",
+          "persona": "data-analyst",
+          "project": "data-analyst-p06",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "data-analyst-cs-17",
+          "type": "case_study",
+          "title": "A sales performance dashboard",
+          "summary": "Automated a sales performance dashboard using web scraping, dbt and statistical analysis. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "web scraping",
+            "dbt",
+            "statistics"
+          ],
+          "source": "synthetic",
+          "date": "2025-12-20",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-17",
+          "persona": "data-analyst",
+          "project": "data-analyst-p17",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03149801587301587
+        },
+        {
+          "evidence_id": "data-analyst-cs-12",
+          "type": "case_study",
+          "title": "An inventory forecasting workbook",
+          "summary": "Built an inventory forecasting workbook using web scraping, Tableau and dashboarding. Cut report preparation from hours to minutes.",
+          "skills": [
+            "web scraping",
+            "Tableau",
+            "dashboarding"
+          ],
+          "source": "synthetic",
+          "date": "2026-06-13",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-12",
+          "persona": "data-analyst",
+          "project": "data-analyst-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03076923076923077
+        },
+        {
+          "evidence_id": "data-analyst-cs-14",
+          "type": "case_study",
+          "title": "A data cleaning and deduplication workflow",
+          "summary": "Automated a data cleaning and deduplication workflow using Airflow, dashboarding and Power BI. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "Airflow",
+            "dashboarding",
+            "Power BI"
+          ],
+          "source": "synthetic",
+          "date": "2024-03-22",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-14",
+          "persona": "data-analyst",
+          "project": "data-analyst-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03057889822595705
+        }
+      ]
+    },
+    {
+      "id": "item-7428938027f1",
+      "job": {
+        "job_id": "syn-100349",
+        "client_id": "client-0315",
+        "title": "A data cleaning and deduplication workflow (Tableau)",
+        "description": "We need help with a data cleaning and deduplication workflow. Skills we expect: Tableau, dashboarding, data cleansing, Power BI. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "Tableau",
+          "dashboarding",
+          "data cleaning",
+          "Power BI"
+        ],
+        "budget": {
+          "min": 34,
+          "max": 61,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 7,
+        "screening_questions": [],
+        "warning_signals": [],
+        "connects_cost": 12,
+        "category": "data_analytics",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-08-05"
+      },
+      "proposal": "I can provide a detailed summary that the client's team can act on.\n\nI have a proven track record of delivering successful projects that cut manual effort by 40% through the use of Airflow, dashboarding, Tableau, and Power BI.\n\nI have experience in survey analysis with statistical tests, including the delivery of a one-page summary that the client's team could act on.\n\nI have a strong background in monthly KPI reporting pipelines, including the documentation of every metric definition to ensure consistency across teams.\n\nI have experience in designing sales performance dashboards using data cleaning, Tableau, and Airflow, and I can provide a detailed summary that the client's team can act on.\n\nI have experience in inventory forecasting through web scraping, Tableau, and dashboarding, and I can provide a detailed summary that the client's team can act on.",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "data-analyst-cs-14",
+          "type": "case_study",
+          "title": "A data cleaning and deduplication workflow",
+          "summary": "Automated a data cleaning and deduplication workflow using Airflow, dashboarding and Power BI. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "Airflow",
+            "dashboarding",
+            "Power BI"
+          ],
+          "source": "synthetic",
+          "date": "2024-03-22",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-14",
+          "persona": "data-analyst",
+          "project": "data-analyst-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "data-analyst-cs-10",
+          "type": "case_study",
+          "title": "A survey analysis with statistical tests",
+          "summary": "Shipped a survey analysis with statistical tests using Airflow, dashboarding, Tableau and Power BI. Delivered a one-page summary the client's team could act on. Cut manual effort by 40%.",
+          "skills": [
+            "Airflow",
+            "dashboarding",
+            "Tableau",
+            "Power BI"
+          ],
+          "source": "synthetic",
+          "date": "2025-05-24",
+          "outcome": "client replied",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-10",
+          "persona": "data-analyst",
+          "project": "data-analyst-p10",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.031024531024531024
+        },
+        {
+          "evidence_id": "data-analyst-cs-11",
+          "type": "case_study",
+          "title": "A monthly KPI reporting pipeline",
+          "summary": "Shipped a monthly KPI reporting pipeline using powerbi, data cleaning and dbt. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "Power BI",
+            "data cleaning",
+            "dbt"
+          ],
+          "source": "synthetic",
+          "date": "2026-12-28",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-11",
+          "persona": "data-analyst",
+          "project": "data-analyst-p11",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.029709507042253523
+        },
+        {
+          "evidence_id": "data-analyst-cs-19",
+          "type": "case_study",
+          "title": "A sales performance dashboard",
+          "summary": "Designed a sales performance dashboard using data cleaning, Tableau and Airflow. Delivered a one-page summary the client's team could act on. Cut manual effort by 40%.",
+          "skills": [
+            "data cleaning",
+            "Tableau",
+            "Airflow"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-07",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-19",
+          "persona": "data-analyst",
+          "project": "data-analyst-p19",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.02928692699490662
+        },
+        {
+          "evidence_id": "data-analyst-cs-12",
+          "type": "case_study",
+          "title": "An inventory forecasting workbook",
+          "summary": "Built an inventory forecasting workbook using web scraping, Tableau and dashboarding. Cut report preparation from hours to minutes.",
+          "skills": [
+            "web scraping",
+            "Tableau",
+            "dashboarding"
+          ],
+          "source": "synthetic",
+          "date": "2026-06-13",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-12",
+          "persona": "data-analyst",
+          "project": "data-analyst-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.025974025974025976
+        }
+      ]
+    },
+    {
+      "id": "item-c4dc345fc564",
+      "job": {
+        "job_id": "syn-100440",
+        "client_id": "client-0197",
+        "title": "An A/B test readout (data cleaning)",
+        "description": "We need help with an A/B test readout. Skills we expect: data cleaning, dashboarding, Airflow, dbt, web scraping, SQL. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "data cleaning",
+          "dashboarding",
+          "Airflow",
+          "dbt",
+          "web scraping",
+          "SQL"
+        ],
+        "budget": {
+          "min": 15,
+          "max": 42,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 3,
+        "screening_questions": [
+          "How would you approach dashboarding for this project?",
+          "Have you used SQL on a client project before? Please link an example."
+        ],
+        "warning_signals": [],
+        "connects_cost": 4,
+        "category": "data_analytics",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-01-21"
+      },
+      "proposal": "I have successfully completed projects that required these skills, including a data cleaning and deduplication workflow using statistics, Airflow, and web scraping.\n\nI have used SQL on multiple client projects before, and I can provide examples of how I have used it to analyze data and create dashboards.",
+      "screening_answers": [
+        "",
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "data-analyst-cs-01",
+          "type": "case_study",
+          "title": "A data cleaning and deduplication workflow",
+          "summary": "Automated a data cleaning and deduplication workflow using statistics, dashboarding, etl and web scraping. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "statistics",
+            "dashboarding",
+            "Airflow",
+            "web scraping"
+          ],
+          "source": "synthetic",
+          "date": "2025-12-15",
+          "outcome": "client replied",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-01",
+          "persona": "data-analyst",
+          "project": "data-analyst-p01",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "data-analyst-cs-06",
+          "type": "case_study",
+          "title": "A web-scraped price tracker",
+          "summary": "Shipped a web-scraped price tracker using Airflow, scrapy, dashboarding and dbt. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "Airflow",
+            "web scraping",
+            "dashboarding",
+            "dbt"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-13",
+          "outcome": "personal project",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-06",
+          "persona": "data-analyst",
+          "project": "data-analyst-p06",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "data-analyst-cs-17",
+          "type": "case_study",
+          "title": "A sales performance dashboard",
+          "summary": "Automated a sales performance dashboard using web scraping, dbt and statistical analysis. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "web scraping",
+            "dbt",
+            "statistics"
+          ],
+          "source": "synthetic",
+          "date": "2025-12-20",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-17",
+          "persona": "data-analyst",
+          "project": "data-analyst-p17",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03149801587301587
+        },
+        {
+          "evidence_id": "data-analyst-cs-12",
+          "type": "case_study",
+          "title": "An inventory forecasting workbook",
+          "summary": "Built an inventory forecasting workbook using web scraping, Tableau and dashboarding. Cut report preparation from hours to minutes.",
+          "skills": [
+            "web scraping",
+            "Tableau",
+            "dashboarding"
+          ],
+          "source": "synthetic",
+          "date": "2026-06-13",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-12",
+          "persona": "data-analyst",
+          "project": "data-analyst-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03076923076923077
+        },
+        {
+          "evidence_id": "data-analyst-cs-14",
+          "type": "case_study",
+          "title": "A data cleaning and deduplication workflow",
+          "summary": "Automated a data cleaning and deduplication workflow using Airflow, dashboarding and Power BI. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "Airflow",
+            "dashboarding",
+            "Power BI"
+          ],
+          "source": "synthetic",
+          "date": "2024-03-22",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-14",
+          "persona": "data-analyst",
+          "project": "data-analyst-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03057889822595705
+        }
+      ]
+    },
+    {
+      "id": "item-9fc8445a05c4",
+      "job": {
+        "job_id": "syn-100354",
+        "client_id": "client-0032",
+        "title": "A portfolio site with a CMS (MongoDB)",
+        "description": "We need help with a portfolio site with a CMS. Skills we expect: MongoDB, React, JavaScript, django rest. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "MongoDB",
+          "React",
+          "JavaScript",
+          "FastAPI"
+        ],
+        "budget": {
+          "min": 40,
+          "max": 69,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 60,
+        "screening_questions": [
+          "What is your experience with JavaScript?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 12,
+        "category": "web_dev",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2025-11-09"
+      },
+      "proposal": "I can confidently approach the project and share a similar project that showcases my skills.",
+      "screening_answers": [
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "fullstack-dev-cs-15",
+          "type": "case_study",
+          "title": "An internal inventory tool",
+          "summary": "Automated an internal inventory tool using flask, mongoose and JavaScript. Migrated the client from a legacy PHP site without downtime.",
+          "skills": [
+            "FastAPI",
+            "MongoDB",
+            "JavaScript"
+          ],
+          "source": "synthetic",
+          "date": "2024-11-24",
+          "outcome": "personal project",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-15",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-13",
+          "type": "case_study",
+          "title": "A job board with search filters",
+          "summary": "Designed a job board with search filters using Vue, FastAPI and React. Improved page load by caching and image optimisation.",
+          "skills": [
+            "Vue",
+            "FastAPI",
+            "React"
+          ],
+          "source": "synthetic",
+          "date": "2024-07-03",
+          "outcome": "client replied",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-13",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p13",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.029116045245077504
+        },
+        {
+          "evidence_id": "fullstack-dev-rd-15",
+          "type": "readme",
+          "title": "README: An internal inventory tool",
+          "summary": "Overview and setup for an internal inventory tool. Stack: django rest, mongoose, node.js.",
+          "skills": [
+            "FastAPI",
+            "MongoDB"
+          ],
+          "source": "synthetic",
+          "date": "2024-11-24",
+          "outcome": null,
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-rd-15",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.015873015873015872
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-08",
+          "type": "case_study",
+          "title": "A real-time chat widget",
+          "summary": "Shipped a real-time chat widget using WordPress, MongoDB and nextjs. Handed over documentation and a walkthrough video.",
+          "skills": [
+            "WordPress",
+            "MongoDB",
+            "Next.js"
+          ],
+          "source": "synthetic",
+          "date": "2025-03-18",
+          "outcome": "personal project",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-08",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p08",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.014285714285714285
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-14",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Designed a REST API for a mobile app using REST API, JavaScript, Django and TypeScript. Shipped on time with automated tests and a deploy script. Cut manual effort by 40%.",
+          "skills": [
+            "REST API",
+            "JavaScript",
+            "Django",
+            "TypeScript"
+          ],
+          "source": "synthetic",
+          "date": "2026-10-12",
+          "outcome": "5-star review",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-14",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.014084507042253521
+        }
+      ]
+    },
+    {
+      "id": "item-edbcf0351d15",
+      "job": {
+        "job_id": "syn-101386",
+        "client_id": "client-0100",
+        "title": "A fraud detection model for imbalanced transactions (computer vision)",
+        "description": "We need help with a fraud detection model for imbalanced transactions. Skills we expect: computer vision, large language model, RAG, PyTorch, time series. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "computer vision",
+          "LLM",
+          "RAG",
+          "PyTorch",
+          "time series"
+        ],
+        "budget": {
+          "min": 26,
+          "max": 37,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 14,
+        "screening_questions": [],
+        "warning_signals": [],
+        "connects_cost": 16,
+        "category": "ml_ai",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-03-13"
+      },
+      "proposal": "I have extensive experience in computer vision, large language models, RAG, PyTorch, and time series. I have successfully developed and deployed fraud detection models for imbalanced transactions. My projects include a sentiment analysis service, a document question-answering assistant, a support-ticket triage classifier, a demand forecasting model, and an image classifier for product photos. I can confidently approach the client's project and share a similar project to demonstrate my capabilities.",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "ai-ml-engineer-cs-11",
+          "type": "case_study",
+          "title": "A sentiment analysis service",
+          "summary": "Automated a sentiment analysis service using RAG, machine learning and computer vision. Deployed behind an API with a simple health check.",
+          "skills": [
+            "RAG",
+            "machine learning",
+            "computer vision"
+          ],
+          "source": "synthetic",
+          "date": "2026-03-27",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-11",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p11",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-07",
+          "type": "case_study",
+          "title": "A document question-answering assistant",
+          "summary": "Shipped a document question-answering assistant using PyTorch, time series, TensorFlow and chroma. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "PyTorch",
+            "time series",
+            "TensorFlow",
+            "RAG"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-27",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-07",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p07",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-05",
+          "type": "case_study",
+          "title": "A support-ticket triage classifier",
+          "summary": "Automated a support-ticket triage classifier using LLM, time series, retrieval augmented generation and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 20%.",
+          "skills": [
+            "LLM",
+            "time series",
+            "RAG",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2024-05-12",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-05",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p05",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03149801587301587
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-16",
+          "type": "case_study",
+          "title": "A demand forecasting model",
+          "summary": "Built a demand forecasting model using time series, PyTorch and machine learning. Compared two baselines and kept the simpler one. Cut manual effort by 40%.",
+          "skills": [
+            "time series",
+            "PyTorch",
+            "machine learning"
+          ],
+          "source": "synthetic",
+          "date": "2026-04-28",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-16",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p16",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030309988518943745
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-08",
+          "type": "case_study",
+          "title": "An image classifier for product photos",
+          "summary": "Shipped an image classifier for product photos using PyTorch, time series and machine learning. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "PyTorch",
+            "time series",
+            "machine learning"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-16",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-08",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p08",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030158730158730156
+        }
+      ]
+    },
+    {
+      "id": "item-76df113baa73",
+      "job": {
+        "job_id": "syn-100668",
+        "client_id": "client-0230",
+        "title": "An admin dashboard with role-based access (FastAPI)",
+        "description": "We need help with an admin dashboard with role-based access. Skills we expect: FastAPI, REST API, reactjs. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "FastAPI",
+          "REST API",
+          "React"
+        ],
+        "budget": {
+          "min": 800,
+          "max": 911,
+          "currency": "USD",
+          "unit": "project"
+        },
+        "duration_days": 60,
+        "screening_questions": [
+          "How would you approach FastAPI for this project?",
+          "How would you approach FastAPI for this project?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 4,
+        "category": "web_dev",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-05-22"
+      },
+      "proposal": "I have extensive experience with FastAPI, REST API, and React. I have successfully designed and implemented admin dashboards with role-based access using these technologies.",
+      "screening_answers": [
+        "",
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "fullstack-dev-cs-02",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Designed a REST API for a mobile app using REST API, Django, FastAPI and Next.js. Handed over documentation and a walkthrough video. Cut manual effort by 40%.",
+          "skills": [
+            "REST API",
+            "Django",
+            "FastAPI",
+            "Next.js"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-22",
+          "outcome": "client replied",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-02",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p02",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03278688524590164
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-14",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Designed a REST API for a mobile app using REST API, JavaScript, Django and TypeScript. Shipped on time with automated tests and a deploy script. Cut manual effort by 40%.",
+          "skills": [
+            "REST API",
+            "JavaScript",
+            "Django",
+            "TypeScript"
+          ],
+          "source": "synthetic",
+          "date": "2026-10-12",
+          "outcome": "5-star review",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-14",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03007688828584351
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-18",
+          "type": "case_study",
+          "title": "A real-time chat widget",
+          "summary": "Designed a real-time chat widget using mongoose, Django, REST API and Vue. Migrated the client from a legacy PHP site without downtime.",
+          "skills": [
+            "MongoDB",
+            "Django",
+            "REST API",
+            "Vue"
+          ],
+          "source": "synthetic",
+          "date": "2026-08-09",
+          "outcome": "personal project",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-18",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p18",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.025657894736842105
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-13",
+          "type": "case_study",
+          "title": "A job board with search filters",
+          "summary": "Designed a job board with search filters using Vue, FastAPI and React. Improved page load by caching and image optimisation.",
+          "skills": [
+            "Vue",
+            "FastAPI",
+            "React"
+          ],
+          "source": "synthetic",
+          "date": "2024-07-03",
+          "outcome": "client replied",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-13",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p13",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.015384615384615385
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-03",
+          "type": "case_study",
+          "title": "A SaaS landing page with billing",
+          "summary": "Designed a SaaS landing page with billing using restful, HTML/CSS, AWS and react.js. Handed over documentation and a walkthrough video.",
+          "skills": [
+            "REST API",
+            "HTML/CSS",
+            "AWS",
+            "React"
+          ],
+          "source": "synthetic",
+          "date": "2025-07-15",
+          "outcome": "won",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-03",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p03",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.013513513513513514
+        }
+      ]
+    },
+    {
+      "id": "item-4439ce361097",
+      "job": {
+        "job_id": "syn-100668",
+        "client_id": "client-0230",
+        "title": "An admin dashboard with role-based access (FastAPI)",
+        "description": "We need help with an admin dashboard with role-based access. Skills we expect: FastAPI, REST API, reactjs. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "FastAPI",
+          "REST API",
+          "React"
+        ],
+        "budget": {
+          "min": 800,
+          "max": 911,
+          "currency": "USD",
+          "unit": "project"
+        },
+        "duration_days": 60,
+        "screening_questions": [
+          "How would you approach FastAPI for this project?",
+          "How would you approach FastAPI for this project?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 4,
+        "category": "web_dev",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-05-22"
+      },
+      "proposal": "",
+      "screening_answers": [
+        "",
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "fullstack-dev-cs-02",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Designed a REST API for a mobile app using REST API, Django, FastAPI and Next.js. Handed over documentation and a walkthrough video. Cut manual effort by 40%.",
+          "skills": [
+            "REST API",
+            "Django",
+            "FastAPI",
+            "Next.js"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-22",
+          "outcome": "client replied",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-02",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p02",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03278688524590164
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-14",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Designed a REST API for a mobile app using REST API, JavaScript, Django and TypeScript. Shipped on time with automated tests and a deploy script. Cut manual effort by 40%.",
+          "skills": [
+            "REST API",
+            "JavaScript",
+            "Django",
+            "TypeScript"
+          ],
+          "source": "synthetic",
+          "date": "2026-10-12",
+          "outcome": "5-star review",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-14",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03007688828584351
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-18",
+          "type": "case_study",
+          "title": "A real-time chat widget",
+          "summary": "Designed a real-time chat widget using mongoose, Django, REST API and Vue. Migrated the client from a legacy PHP site without downtime.",
+          "skills": [
+            "MongoDB",
+            "Django",
+            "REST API",
+            "Vue"
+          ],
+          "source": "synthetic",
+          "date": "2026-08-09",
+          "outcome": "personal project",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-18",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p18",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.025657894736842105
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-13",
+          "type": "case_study",
+          "title": "A job board with search filters",
+          "summary": "Designed a job board with search filters using Vue, FastAPI and React. Improved page load by caching and image optimisation.",
+          "skills": [
+            "Vue",
+            "FastAPI",
+            "React"
+          ],
+          "source": "synthetic",
+          "date": "2024-07-03",
+          "outcome": "client replied",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-13",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p13",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.015384615384615385
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-03",
+          "type": "case_study",
+          "title": "A SaaS landing page with billing",
+          "summary": "Designed a SaaS landing page with billing using restful, HTML/CSS, AWS and react.js. Handed over documentation and a walkthrough video.",
+          "skills": [
+            "REST API",
+            "HTML/CSS",
+            "AWS",
+            "React"
+          ],
+          "source": "synthetic",
+          "date": "2025-07-15",
+          "outcome": "won",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-03",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p03",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.013513513513513514
+        }
+      ]
+    },
+    {
+      "id": "reference-cf0564aee2ea",
+      "job": {
+        "job_id": "syn-100349",
+        "client_id": "client-0315",
+        "title": "A data cleaning and deduplication workflow (Tableau)",
+        "description": "We need help with a data cleaning and deduplication workflow. Skills we expect: Tableau, dashboarding, data cleansing, Power BI. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "Tableau",
+          "dashboarding",
+          "data cleaning",
+          "Power BI"
+        ],
+        "budget": {
+          "min": 34,
+          "max": 61,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 7,
+        "screening_questions": [],
+        "warning_signals": [],
+        "connects_cost": 12,
+        "category": "data_analytics",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-08-05"
+      },
+      "proposal": "Relevant portfolio work: Automated a data cleaning and deduplication workflow using Airflow, dashboarding and Power BI. Delivered a one-page summary the client's team could act on.\n\nI will first confirm the data, acceptance criteria and scope with you, then implement a reproducible baseline, compare alternatives against agreed metrics and document the limitations. Could you share a representative sample and your highest-priority deliverable?",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "data-analyst-cs-14",
+          "type": "case_study",
+          "title": "A data cleaning and deduplication workflow",
+          "summary": "Automated a data cleaning and deduplication workflow using Airflow, dashboarding and Power BI. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "Airflow",
+            "dashboarding",
+            "Power BI"
+          ],
+          "source": "synthetic",
+          "date": "2024-03-22",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-14",
+          "persona": "data-analyst",
+          "project": "data-analyst-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        }
+      ]
+    },
+    {
+      "id": "item-f72786e5ebbc",
+      "job": {
+        "job_id": "syn-101245",
+        "client_id": "client-0086",
+        "title": "A storefront with checkout (MongoDB)",
+        "description": "We need help with a storefront with checkout. Skills we expect: mongoose, django rest, woocommerce, Django, TypeScript. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "MongoDB",
+          "FastAPI",
+          "WordPress",
+          "Django",
+          "TypeScript"
+        ],
+        "budget": {
+          "min": 43,
+          "max": 58,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 60,
+        "screening_questions": [
+          "What is your experience with FastAPI?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 8,
+        "category": "web_dev",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2026-03-08"
+      },
+      "proposal": "I have successfully automated a SaaS landing page with billing using these technologies.\n\nI can confidently approach the project with the skills needed and share a similar project to demonstrate my capabilities.",
+      "screening_answers": [
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "fullstack-dev-cs-10",
+          "type": "case_study",
+          "title": "A SaaS landing page with billing",
+          "summary": "Automated a SaaS landing page with billing using WordPress, django rest, TypeScript and Next.js. Handed over documentation and a walkthrough video.",
+          "skills": [
+            "WordPress",
+            "FastAPI",
+            "TypeScript",
+            "Next.js"
+          ],
+          "source": "synthetic",
+          "date": "2025-04-03",
+          "outcome": "client replied",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-10",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p10",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03278688524590164
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-00",
+          "type": "case_study",
+          "title": "A job board with search filters",
+          "summary": "Automated a job board with search filters using Django, WordPress, HTML/CSS and MongoDB. Improved page load by caching and image optimisation.",
+          "skills": [
+            "Django",
+            "WordPress",
+            "HTML/CSS",
+            "MongoDB"
+          ],
+          "source": "synthetic",
+          "date": "2025-08-28",
+          "outcome": "personal project",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-00",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p00",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03225806451612903
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-08",
+          "type": "case_study",
+          "title": "A real-time chat widget",
+          "summary": "Shipped a real-time chat widget using WordPress, MongoDB and nextjs. Handed over documentation and a walkthrough video.",
+          "skills": [
+            "WordPress",
+            "MongoDB",
+            "Next.js"
+          ],
+          "source": "synthetic",
+          "date": "2025-03-18",
+          "outcome": "personal project",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-08",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p08",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03125763125763126
+        },
+        {
+          "evidence_id": "fullstack-dev-rd-15",
+          "type": "readme",
+          "title": "README: An internal inventory tool",
+          "summary": "Overview and setup for an internal inventory tool. Stack: django rest, mongoose, node.js.",
+          "skills": [
+            "FastAPI",
+            "MongoDB"
+          ],
+          "source": "synthetic",
+          "date": "2024-11-24",
+          "outcome": null,
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-rd-15",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03125763125763126
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-14",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Designed a REST API for a mobile app using REST API, JavaScript, Django and TypeScript. Shipped on time with automated tests and a deploy script. Cut manual effort by 40%.",
+          "skills": [
+            "REST API",
+            "JavaScript",
+            "Django",
+            "TypeScript"
+          ],
+          "source": "synthetic",
+          "date": "2026-10-12",
+          "outcome": "5-star review",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-14",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03125
+        }
+      ]
+    },
+    {
+      "id": "item-f3c766af0bc2",
+      "job": {
+        "job_id": "syn-100002",
+        "client_id": "client-0202",
+        "title": "A fraud detection model for imbalanced transactions (machine learning)",
+        "description": "We need help with a fraud detection model for imbalanced transactions. Skills we expect: machine learning, LLM, deep learning. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "machine learning",
+          "LLM",
+          "deep learning"
+        ],
+        "budget": {
+          "min": 800,
+          "max": 909,
+          "currency": "USD",
+          "unit": "project"
+        },
+        "duration_days": 7,
+        "screening_questions": [
+          "How would you approach LLM for this project?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 16,
+        "category": "ml_ai",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2026-02-21"
+      },
+      "proposal": "I have extensive experience in machine learning, LLM, and deep learning. I have successfully implemented fraud detection models for imbalanced transactions using TensorFlow, machine learning, MLOps, and deep learning. I can provide a detailed project overview and a similar project to showcase my capabilities.",
+      "screening_answers": [
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ai-ml-engineer-cs-15",
+          "type": "case_study",
+          "title": "A customer churn prediction pipeline",
+          "summary": "Automated a customer churn prediction pipeline using TensorFlow, machine learning, MLOps and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 50%.",
+          "skills": [
+            "TensorFlow",
+            "machine learning",
+            "MLOps",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2026-06-12",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-15",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030330882352941176
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-10",
+          "type": "case_study",
+          "title": "A sentiment analysis service",
+          "summary": "Shipped a sentiment analysis service using opencv, ml model, deep learning and scikit-learn. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "computer vision",
+            "machine learning",
+            "deep learning",
+            "scikit-learn"
+          ],
+          "source": "synthetic",
+          "date": "2026-05-08",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-10",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p10",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030303030303030304
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-05",
+          "type": "case_study",
+          "title": "A support-ticket triage classifier",
+          "summary": "Automated a support-ticket triage classifier using LLM, time series, retrieval augmented generation and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 20%.",
+          "skills": [
+            "LLM",
+            "time series",
+            "RAG",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2024-05-12",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-05",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p05",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.014084507042253521
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-03",
+          "type": "case_study",
+          "title": "A support-ticket triage classifier",
+          "summary": "Automated a support-ticket triage classifier using LangChain, PyTorch and deep learning. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "LangChain",
+            "PyTorch",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2026-07-04",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-03",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p03",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.013157894736842105
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-18",
+          "type": "case_study",
+          "title": "A document question-answering assistant",
+          "summary": "Automated a document question-answering assistant using keras, mlflow and deep learning. Handed over a reproducible notebook and a short evaluation report.",
+          "skills": [
+            "TensorFlow",
+            "MLOps",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-15",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-18",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p18",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.012987012987012988
+        }
+      ]
+    },
+    {
+      "id": "reference-34ddf1934c2e",
+      "job": {
+        "job_id": "syn-100354",
+        "client_id": "client-0032",
+        "title": "A portfolio site with a CMS (MongoDB)",
+        "description": "We need help with a portfolio site with a CMS. Skills we expect: MongoDB, React, JavaScript, django rest. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "MongoDB",
+          "React",
+          "JavaScript",
+          "FastAPI"
+        ],
+        "budget": {
+          "min": 40,
+          "max": 69,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 60,
+        "screening_questions": [
+          "What is your experience with JavaScript?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 12,
+        "category": "web_dev",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2025-11-09"
+      },
+      "proposal": "Relevant portfolio work: Automated an internal inventory tool using flask, mongoose and JavaScript. Migrated the client from a legacy PHP site without downtime.\n\nI will first confirm the data, acceptance criteria and scope with you, then implement a reproducible baseline, compare alternatives against agreed metrics and document the limitations. Could you share a representative sample and your highest-priority deliverable?",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "fullstack-dev-cs-15",
+          "type": "case_study",
+          "title": "An internal inventory tool",
+          "summary": "Automated an internal inventory tool using flask, mongoose and JavaScript. Migrated the client from a legacy PHP site without downtime.",
+          "skills": [
+            "FastAPI",
+            "MongoDB",
+            "JavaScript"
+          ],
+          "source": "synthetic",
+          "date": "2024-11-24",
+          "outcome": "personal project",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-15",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        }
+      ]
+    },
+    {
+      "id": "item-57900498df16",
+      "job": {
+        "job_id": "syn-100354",
+        "client_id": "client-0032",
+        "title": "A portfolio site with a CMS (MongoDB)",
+        "description": "We need help with a portfolio site with a CMS. Skills we expect: MongoDB, React, JavaScript, django rest. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "MongoDB",
+          "React",
+          "JavaScript",
+          "FastAPI"
+        ],
+        "budget": {
+          "min": 40,
+          "max": 69,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 60,
+        "screening_questions": [
+          "What is your experience with JavaScript?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 12,
+        "category": "web_dev",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2025-11-09"
+      },
+      "proposal": "I have extensive experience with MongoDB, React, JavaScript, and FastAPI. I have successfully developed a portfolio site with a CMS using these technologies. I can confidently approach the project and share a similar project that showcases my skills.",
+      "screening_answers": [
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "fullstack-dev-cs-15",
+          "type": "case_study",
+          "title": "An internal inventory tool",
+          "summary": "Automated an internal inventory tool using flask, mongoose and JavaScript. Migrated the client from a legacy PHP site without downtime.",
+          "skills": [
+            "FastAPI",
+            "MongoDB",
+            "JavaScript"
+          ],
+          "source": "synthetic",
+          "date": "2024-11-24",
+          "outcome": "personal project",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-15",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-13",
+          "type": "case_study",
+          "title": "A job board with search filters",
+          "summary": "Designed a job board with search filters using Vue, FastAPI and React. Improved page load by caching and image optimisation.",
+          "skills": [
+            "Vue",
+            "FastAPI",
+            "React"
+          ],
+          "source": "synthetic",
+          "date": "2024-07-03",
+          "outcome": "client replied",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-13",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p13",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.029116045245077504
+        },
+        {
+          "evidence_id": "fullstack-dev-rd-15",
+          "type": "readme",
+          "title": "README: An internal inventory tool",
+          "summary": "Overview and setup for an internal inventory tool. Stack: django rest, mongoose, node.js.",
+          "skills": [
+            "FastAPI",
+            "MongoDB"
+          ],
+          "source": "synthetic",
+          "date": "2024-11-24",
+          "outcome": null,
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-rd-15",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.015873015873015872
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-08",
+          "type": "case_study",
+          "title": "A real-time chat widget",
+          "summary": "Shipped a real-time chat widget using WordPress, MongoDB and nextjs. Handed over documentation and a walkthrough video.",
+          "skills": [
+            "WordPress",
+            "MongoDB",
+            "Next.js"
+          ],
+          "source": "synthetic",
+          "date": "2025-03-18",
+          "outcome": "personal project",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-08",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p08",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.014285714285714285
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-14",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Designed a REST API for a mobile app using REST API, JavaScript, Django and TypeScript. Shipped on time with automated tests and a deploy script. Cut manual effort by 40%.",
+          "skills": [
+            "REST API",
+            "JavaScript",
+            "Django",
+            "TypeScript"
+          ],
+          "source": "synthetic",
+          "date": "2026-10-12",
+          "outcome": "5-star review",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-14",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.014084507042253521
+        }
+      ]
+    },
+    {
+      "id": "item-ae90388267b0",
+      "job": {
+        "job_id": "syn-101377",
+        "client_id": "client-0382",
+        "title": "A job board with search filters (REST API)",
+        "description": "We need help with a job board with search filters. Skills we expect: REST API, nodejs, HTML/CSS. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "REST API",
+          "JavaScript",
+          "HTML/CSS"
+        ],
+        "budget": {
+          "min": 21,
+          "max": 32,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 14,
+        "screening_questions": [
+          "How would you approach JavaScript for this project?",
+          "Have you used JavaScript on a client project before? Please link an example."
+        ],
+        "warning_signals": [],
+        "connects_cost": 8,
+        "category": "web_dev",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2025-03-13"
+      },
+      "proposal": "I have extensive experience in building REST APIs using JavaScript, HTML/CSS, and Node.js. I have successfully completed projects that involved migrating legacy systems to modern technologies without downtime.\n\nI have a proven track record of delivering projects on time and within budget. I have a strong understanding of best practices in web development and can provide detailed project documentation.",
+      "screening_answers": [
+        "",
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "fullstack-dev-cs-14",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Designed a REST API for a mobile app using REST API, JavaScript, Django and TypeScript. Shipped on time with automated tests and a deploy script. Cut manual effort by 40%.",
+          "skills": [
+            "REST API",
+            "JavaScript",
+            "Django",
+            "TypeScript"
+          ],
+          "source": "synthetic",
+          "date": "2026-10-12",
+          "outcome": "5-star review",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-14",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03131881575727918
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-06",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Shipped a REST API for a mobile app using HTML/CSS, woocommerce and Next.js. Migrated the client from a legacy PHP site without downtime. Cut manual effort by 30%.",
+          "skills": [
+            "HTML/CSS",
+            "WordPress",
+            "Next.js"
+          ],
+          "source": "synthetic",
+          "date": "2025-01-26",
+          "outcome": "won",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-06",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p06",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.029571646010002173
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-12",
+          "type": "case_study",
+          "title": "An admin dashboard with role-based access",
+          "summary": "Built an admin dashboard with role-based access using REST API, HTML/CSS and AWS. Shipped on time with automated tests and a deploy script. Cut manual effort by 20%.",
+          "skills": [
+            "REST API",
+            "HTML/CSS",
+            "AWS"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-14",
+          "outcome": "5-star review",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-12",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.02878726010616578
+        },
+        {
+          "evidence_id": "fullstack-dev-rd-12",
+          "type": "readme",
+          "title": "README: An admin dashboard with role-based access",
+          "summary": "Overview and setup for an admin dashboard with role-based access. Stack: restful, html, s3.",
+          "skills": [
+            "REST API",
+            "HTML/CSS"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-14",
+          "outcome": null,
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-rd-12",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.015625
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-03",
+          "type": "case_study",
+          "title": "A SaaS landing page with billing",
+          "summary": "Designed a SaaS landing page with billing using restful, HTML/CSS, AWS and react.js. Handed over documentation and a walkthrough video.",
+          "skills": [
+            "REST API",
+            "HTML/CSS",
+            "AWS",
+            "React"
+          ],
+          "source": "synthetic",
+          "date": "2025-07-15",
+          "outcome": "won",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-03",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p03",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.015151515151515152
+        }
+      ]
+    },
+    {
+      "id": "item-a9e091e7331f",
+      "job": {
+        "job_id": "syn-100349",
+        "client_id": "client-0315",
+        "title": "A data cleaning and deduplication workflow (Tableau)",
+        "description": "We need help with a data cleaning and deduplication workflow. Skills we expect: Tableau, dashboarding, data cleansing, Power BI. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "Tableau",
+          "dashboarding",
+          "data cleaning",
+          "Power BI"
+        ],
+        "budget": {
+          "min": 34,
+          "max": 61,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 7,
+        "screening_questions": [],
+        "warning_signals": [],
+        "connects_cost": 12,
+        "category": "data_analytics",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-08-05"
+      },
+      "proposal": "I have extensive experience in data cleaning and deduplication workflows, having successfully automated a data cleaning and deduplication workflow using Airflow, dashboarding, and Power BI. I can provide a detailed summary that the client's team can act on.\n\nI have a proven track record of delivering successful projects that cut manual effort by 40% through the use of Airflow, dashboarding, Tableau, and Power BI.\n\nI have experience in survey analysis with statistical tests, including the delivery of a one-page summary that the client's team could act on.\n\nI have a strong background in monthly KPI reporting pipelines, including the documentation of every metric definition to ensure consistency across teams.\n\nI have experience in designing sales performance dashboards using data cleaning, Tableau, and Airflow, and I can provide a detailed summary that the client's team can act on.\n\nI have experience in inventory forecasting through web scraping, Tableau, and dashboarding, and I can provide a detailed summary that the client's team can act on.",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "data-analyst-cs-14",
+          "type": "case_study",
+          "title": "A data cleaning and deduplication workflow",
+          "summary": "Automated a data cleaning and deduplication workflow using Airflow, dashboarding and Power BI. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "Airflow",
+            "dashboarding",
+            "Power BI"
+          ],
+          "source": "synthetic",
+          "date": "2024-03-22",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-14",
+          "persona": "data-analyst",
+          "project": "data-analyst-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "data-analyst-cs-10",
+          "type": "case_study",
+          "title": "A survey analysis with statistical tests",
+          "summary": "Shipped a survey analysis with statistical tests using Airflow, dashboarding, Tableau and Power BI. Delivered a one-page summary the client's team could act on. Cut manual effort by 40%.",
+          "skills": [
+            "Airflow",
+            "dashboarding",
+            "Tableau",
+            "Power BI"
+          ],
+          "source": "synthetic",
+          "date": "2025-05-24",
+          "outcome": "client replied",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-10",
+          "persona": "data-analyst",
+          "project": "data-analyst-p10",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.031024531024531024
+        },
+        {
+          "evidence_id": "data-analyst-cs-11",
+          "type": "case_study",
+          "title": "A monthly KPI reporting pipeline",
+          "summary": "Shipped a monthly KPI reporting pipeline using powerbi, data cleaning and dbt. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "Power BI",
+            "data cleaning",
+            "dbt"
+          ],
+          "source": "synthetic",
+          "date": "2026-12-28",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-11",
+          "persona": "data-analyst",
+          "project": "data-analyst-p11",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.029709507042253523
+        },
+        {
+          "evidence_id": "data-analyst-cs-19",
+          "type": "case_study",
+          "title": "A sales performance dashboard",
+          "summary": "Designed a sales performance dashboard using data cleaning, Tableau and Airflow. Delivered a one-page summary the client's team could act on. Cut manual effort by 40%.",
+          "skills": [
+            "data cleaning",
+            "Tableau",
+            "Airflow"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-07",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-19",
+          "persona": "data-analyst",
+          "project": "data-analyst-p19",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.02928692699490662
+        },
+        {
+          "evidence_id": "data-analyst-cs-12",
+          "type": "case_study",
+          "title": "An inventory forecasting workbook",
+          "summary": "Built an inventory forecasting workbook using web scraping, Tableau and dashboarding. Cut report preparation from hours to minutes.",
+          "skills": [
+            "web scraping",
+            "Tableau",
+            "dashboarding"
+          ],
+          "source": "synthetic",
+          "date": "2026-06-13",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-12",
+          "persona": "data-analyst",
+          "project": "data-analyst-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.025974025974025976
+        }
+      ]
+    },
+    {
+      "id": "item-8ea147d34e7c",
+      "job": {
+        "job_id": "syn-101170",
+        "client_id": "client-0351",
+        "title": "A support-ticket triage classifier (TensorFlow)",
+        "description": "We need help with a support-ticket triage classifier. Skills we expect: TensorFlow, LLM, time series, scikit-learn, containerization. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "TensorFlow",
+          "LLM",
+          "time series",
+          "scikit-learn",
+          "Docker"
+        ],
+        "budget": {
+          "min": 3000,
+          "max": 5154,
+          "currency": "USD",
+          "unit": "project"
+        },
+        "duration_days": 30,
+        "screening_questions": [],
+        "warning_signals": [],
+        "connects_cost": 12,
+        "category": "ml_ai",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2025-11-20"
+      },
+      "proposal": "I have extensive experience in TensorFlow, LLM, time series, scikit-learn, and containerization. I have successfully implemented a support-ticket triage classifier in the past, reducing manual effort by 20%. I can provide a detailed project description and a reproducible notebook for this project.",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "ai-ml-engineer-cs-01",
+          "type": "case_study",
+          "title": "A customer churn prediction pipeline",
+          "summary": "Designed a customer churn prediction pipeline using TensorFlow, time series, MLOps and torch. Deployed behind an API with a simple health check. Cut manual effort by 50%.",
+          "skills": [
+            "TensorFlow",
+            "time series",
+            "MLOps",
+            "PyTorch"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-10",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-01",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p01",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.031054405392392875
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-04",
+          "type": "case_study",
+          "title": "An OCR and extraction workflow",
+          "summary": "Built an OCR and extraction workflow using TensorFlow, pinecone, forecasting and machine learning. Deployed behind an API with a simple health check. Cut manual effort by 20%.",
+          "skills": [
+            "TensorFlow",
+            "RAG",
+            "time series",
+            "machine learning"
+          ],
+          "source": "synthetic",
+          "date": "2024-09-15",
+          "outcome": "5-star review",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-04",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p04",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.031024531024531024
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-07",
+          "type": "case_study",
+          "title": "A document question-answering assistant",
+          "summary": "Shipped a document question-answering assistant using PyTorch, time series, TensorFlow and chroma. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "PyTorch",
+            "time series",
+            "TensorFlow",
+            "RAG"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-27",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-07",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p07",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030679156908665108
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-05",
+          "type": "case_study",
+          "title": "A support-ticket triage classifier",
+          "summary": "Automated a support-ticket triage classifier using LLM, time series, retrieval augmented generation and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 20%.",
+          "skills": [
+            "LLM",
+            "time series",
+            "RAG",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2024-05-12",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-05",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p05",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.02976190476190476
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-16",
+          "type": "case_study",
+          "title": "A demand forecasting model",
+          "summary": "Built a demand forecasting model using time series, PyTorch and machine learning. Compared two baselines and kept the simpler one. Cut manual effort by 40%.",
+          "skills": [
+            "time series",
+            "PyTorch",
+            "machine learning"
+          ],
+          "source": "synthetic",
+          "date": "2026-04-28",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-16",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p16",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.026334026334026334
+        }
+      ]
+    },
+    {
+      "id": "item-efa87eb24514",
+      "job": {
+        "job_id": "syn-100737",
+        "client_id": "client-0120",
+        "title": "A monthly KPI reporting pipeline (Airflow)",
+        "description": "We need help with a monthly KPI reporting pipeline. Skills we expect: Airflow, web scraping, dbt. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "Airflow",
+          "web scraping",
+          "dbt"
+        ],
+        "budget": {
+          "min": 400,
+          "max": 686,
+          "currency": "USD",
+          "unit": "project"
+        },
+        "duration_days": 60,
+        "screening_questions": [],
+        "warning_signals": [],
+        "connects_cost": 6,
+        "category": "data_analytics",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2025-01-13"
+      },
+      "proposal": "I can confidently approach a monthly KPI reporting pipeline with the skills required.\n\nI have successfully completed similar projects in the past, including a web-scraped price tracker, a sales performance dashboard, a customer cohort analysis, and an inventory forecasting workbook.",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "data-analyst-cs-06",
+          "type": "case_study",
+          "title": "A web-scraped price tracker",
+          "summary": "Shipped a web-scraped price tracker using Airflow, scrapy, dashboarding and dbt. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "Airflow",
+            "web scraping",
+            "dashboarding",
+            "dbt"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-13",
+          "outcome": "personal project",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-06",
+          "persona": "data-analyst",
+          "project": "data-analyst-p06",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03278688524590164
+        },
+        {
+          "evidence_id": "data-analyst-cs-17",
+          "type": "case_study",
+          "title": "A sales performance dashboard",
+          "summary": "Automated a sales performance dashboard using web scraping, dbt and statistical analysis. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "web scraping",
+            "dbt",
+            "statistics"
+          ],
+          "source": "synthetic",
+          "date": "2025-12-20",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-17",
+          "persona": "data-analyst",
+          "project": "data-analyst-p17",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03225806451612903
+        },
+        {
+          "evidence_id": "data-analyst-cs-16",
+          "type": "case_study",
+          "title": "A customer cohort analysis",
+          "summary": "Automated a customer cohort analysis using powerbi, dbt, scraper and spreadsheet. Cut report preparation from hours to minutes.",
+          "skills": [
+            "Power BI",
+            "dbt",
+            "web scraping",
+            "Excel"
+          ],
+          "source": "synthetic",
+          "date": "2025-02-21",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-16",
+          "persona": "data-analyst",
+          "project": "data-analyst-p16",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03125763125763126
+        },
+        {
+          "evidence_id": "data-analyst-cs-01",
+          "type": "case_study",
+          "title": "A data cleaning and deduplication workflow",
+          "summary": "Automated a data cleaning and deduplication workflow using statistics, dashboarding, etl and web scraping. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "statistics",
+            "dashboarding",
+            "Airflow",
+            "web scraping"
+          ],
+          "source": "synthetic",
+          "date": "2025-12-15",
+          "outcome": "client replied",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-01",
+          "persona": "data-analyst",
+          "project": "data-analyst-p01",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03125
+        },
+        {
+          "evidence_id": "data-analyst-cs-12",
+          "type": "case_study",
+          "title": "An inventory forecasting workbook",
+          "summary": "Built an inventory forecasting workbook using web scraping, Tableau and dashboarding. Cut report preparation from hours to minutes.",
+          "skills": [
+            "web scraping",
+            "Tableau",
+            "dashboarding"
+          ],
+          "source": "synthetic",
+          "date": "2026-06-13",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-12",
+          "persona": "data-analyst",
+          "project": "data-analyst-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.029411764705882353
+        }
+      ]
+    },
+    {
+      "id": "item-4c06e39094ae",
+      "job": {
+        "job_id": "syn-100288",
+        "client_id": "client-0182",
+        "title": "A web-scraped price tracker (Tableau)",
+        "description": "We need help with a web-scraped price tracker. Skills we expect: Tableau, Excel, dataframe. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "Tableau",
+          "Excel",
+          "pandas"
+        ],
+        "budget": {
+          "min": 1500,
+          "max": 1724,
+          "currency": "USD",
+          "unit": "project"
+        },
+        "duration_days": 7,
+        "screening_questions": [
+          "How would you approach Tableau for this project?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 4,
+        "category": "data_analytics",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-04-24"
+      },
+      "proposal": "I have extensive experience in Tableau, Excel, and pandas. I have successfully implemented web-scraped price trackers using these tools, including a project where I delivered a one-page summary that the client's team could act on.\n\nI have a proven track record of automating sales performance dashboards and inventory forecasting workbooks using Tableau, Excel, and statistics. I have also handled inventory forecasting workbooks through web scraping and dashboarding, reducing report preparation time from hours to minutes.\n\nI have a strong understanding of Tableau, Excel, and pandas, and I have successfully implemented web-scraped price trackers using these tools. I have also handled inventory forecasting workbooks through web scraping and dashboarding, reducing report preparation time from hours to minutes.",
+      "screening_answers": [
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "data-analyst-cs-08",
+          "type": "case_study",
+          "title": "A sales performance dashboard",
+          "summary": "Automated a sales performance dashboard using Airflow, Tableau and Excel. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "Airflow",
+            "Tableau",
+            "Excel"
+          ],
+          "source": "synthetic",
+          "date": "2026-11-18",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-08",
+          "persona": "data-analyst",
+          "project": "data-analyst-p08",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03225806451612903
+        },
+        {
+          "evidence_id": "data-analyst-cs-15",
+          "type": "case_study",
+          "title": "A web-scraped price tracker",
+          "summary": "Shipped a web-scraped price tracker using Tableau, Excel and dbt. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "Tableau",
+            "Excel",
+            "dbt"
+          ],
+          "source": "synthetic",
+          "date": "2025-11-01",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-15",
+          "persona": "data-analyst",
+          "project": "data-analyst-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.031746031746031744
+        },
+        {
+          "evidence_id": "data-analyst-cs-09",
+          "type": "case_study",
+          "title": "An inventory forecasting workbook",
+          "summary": "Automated an inventory forecasting workbook using statistics, vba and pandas. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "statistics",
+            "Excel",
+            "pandas"
+          ],
+          "source": "synthetic",
+          "date": "2025-01-22",
+          "outcome": "client replied",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-09",
+          "persona": "data-analyst",
+          "project": "data-analyst-p09",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030886196246139225
+        },
+        {
+          "evidence_id": "data-analyst-cs-05",
+          "type": "case_study",
+          "title": "A monthly KPI reporting pipeline",
+          "summary": "Automated a monthly KPI reporting pipeline using Tableau, etl, vba and dashboarding. Replaced a manual weekly spreadsheet with an automated refresh.",
+          "skills": [
+            "Tableau",
+            "Airflow",
+            "Excel",
+            "dashboarding"
+          ],
+          "source": "synthetic",
+          "date": "2026-11-22",
+          "outcome": "client replied",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-05",
+          "persona": "data-analyst",
+          "project": "data-analyst-p05",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030330882352941176
+        },
+        {
+          "evidence_id": "data-analyst-cs-12",
+          "type": "case_study",
+          "title": "An inventory forecasting workbook",
+          "summary": "Built an inventory forecasting workbook using web scraping, Tableau and dashboarding. Cut report preparation from hours to minutes.",
+          "skills": [
+            "web scraping",
+            "Tableau",
+            "dashboarding"
+          ],
+          "source": "synthetic",
+          "date": "2026-06-13",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-12",
+          "persona": "data-analyst",
+          "project": "data-analyst-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.02900988017658188
+        }
+      ]
+    },
+    {
+      "id": "reference-8f6120f5815b",
+      "job": {
+        "job_id": "syn-101386",
+        "client_id": "client-0100",
+        "title": "A fraud detection model for imbalanced transactions (computer vision)",
+        "description": "We need help with a fraud detection model for imbalanced transactions. Skills we expect: computer vision, large language model, RAG, PyTorch, time series. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "computer vision",
+          "LLM",
+          "RAG",
+          "PyTorch",
+          "time series"
+        ],
+        "budget": {
+          "min": 26,
+          "max": 37,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 14,
+        "screening_questions": [],
+        "warning_signals": [],
+        "connects_cost": 16,
+        "category": "ml_ai",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-03-13"
+      },
+      "proposal": "Relevant portfolio work: Automated a sentiment analysis service using RAG, machine learning and computer vision. Deployed behind an API with a simple health check.\n\nI will first confirm the data, acceptance criteria and scope with you, then implement a reproducible baseline, compare alternatives against agreed metrics and document the limitations. Could you share a representative sample and your highest-priority deliverable?",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "ai-ml-engineer-cs-11",
+          "type": "case_study",
+          "title": "A sentiment analysis service",
+          "summary": "Automated a sentiment analysis service using RAG, machine learning and computer vision. Deployed behind an API with a simple health check.",
+          "skills": [
+            "RAG",
+            "machine learning",
+            "computer vision"
+          ],
+          "source": "synthetic",
+          "date": "2026-03-27",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-11",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p11",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        }
+      ]
+    },
+    {
+      "id": "item-96dbff64e49d",
+      "job": {
+        "job_id": "syn-100401",
+        "client_id": "client-0231",
+        "title": "A support-ticket triage classifier (NLP)",
+        "description": "We need help with a support-ticket triage classifier. Skills we expect: NLP, image classification, scikit-learn, time series. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "NLP",
+          "computer vision",
+          "scikit-learn",
+          "time series"
+        ],
+        "budget": {
+          "min": 32,
+          "max": 48,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 7,
+        "screening_questions": [
+          "How would you approach NLP for this project?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 4,
+        "category": "ml_ai",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2026-05-17"
+      },
+      "proposal": "I have experience in building NLP models using scikit-learn and computer vision techniques.",
+      "screening_answers": [
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ai-ml-engineer-cs-19",
+          "type": "case_study",
+          "title": "A resume screening ranker",
+          "summary": "Built a resume screening ranker using scikit-learn, computer vision, retrieval augmented generation and MLOps. Handed over a reproducible notebook and a short evaluation report.",
+          "skills": [
+            "scikit-learn",
+            "computer vision",
+            "RAG",
+            "MLOps"
+          ],
+          "source": "synthetic",
+          "date": "2024-10-21",
+          "outcome": "5-star review",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-19",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p19",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03278688524590164
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-10",
+          "type": "case_study",
+          "title": "A sentiment analysis service",
+          "summary": "Shipped a sentiment analysis service using opencv, ml model, deep learning and scikit-learn. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "computer vision",
+            "machine learning",
+            "deep learning",
+            "scikit-learn"
+          ],
+          "source": "synthetic",
+          "date": "2026-05-08",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-10",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p10",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03200204813108039
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-17",
+          "type": "case_study",
+          "title": "An OCR and extraction workflow",
+          "summary": "Shipped an OCR and extraction workflow using openai api, computer vision, random forest and NLP. Deployed behind an API with a simple health check. Cut manual effort by 30%.",
+          "skills": [
+            "LLM",
+            "computer vision",
+            "machine learning",
+            "NLP"
+          ],
+          "source": "synthetic",
+          "date": "2025-12-20",
+          "outcome": "5-star review",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-17",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p17",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03128054740957967
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-11",
+          "type": "case_study",
+          "title": "A sentiment analysis service",
+          "summary": "Automated a sentiment analysis service using RAG, machine learning and computer vision. Deployed behind an API with a simple health check.",
+          "skills": [
+            "RAG",
+            "machine learning",
+            "computer vision"
+          ],
+          "source": "synthetic",
+          "date": "2026-03-27",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-11",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p11",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03057889822595705
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-02",
+          "type": "case_study",
+          "title": "An image classifier for product photos",
+          "summary": "Built an image classifier for product photos using scikit-learn, LangChain, RAG and NLP. Compared two baselines and kept the simpler one.",
+          "skills": [
+            "scikit-learn",
+            "LangChain",
+            "RAG",
+            "NLP"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-06",
+          "outcome": "client replied",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-02",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p02",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.029418126757516764
+        }
+      ]
+    },
+    {
+      "id": "reference-737fa3baed22",
+      "job": {
+        "job_id": "syn-100002",
+        "client_id": "client-0202",
+        "title": "A fraud detection model for imbalanced transactions (machine learning)",
+        "description": "We need help with a fraud detection model for imbalanced transactions. Skills we expect: machine learning, LLM, deep learning. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "machine learning",
+          "LLM",
+          "deep learning"
+        ],
+        "budget": {
+          "min": 800,
+          "max": 909,
+          "currency": "USD",
+          "unit": "project"
+        },
+        "duration_days": 7,
+        "screening_questions": [
+          "How would you approach LLM for this project?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 16,
+        "category": "ml_ai",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2026-02-21"
+      },
+      "proposal": "Relevant portfolio work: Automated a customer churn prediction pipeline using TensorFlow, machine learning, MLOps and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 50%.\n\nI will first confirm the data, acceptance criteria and scope with you, then implement a reproducible baseline, compare alternatives against agreed metrics and document the limitations. Could you share a representative sample and your highest-priority deliverable?",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "ai-ml-engineer-cs-15",
+          "type": "case_study",
+          "title": "A customer churn prediction pipeline",
+          "summary": "Automated a customer churn prediction pipeline using TensorFlow, machine learning, MLOps and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 50%.",
+          "skills": [
+            "TensorFlow",
+            "machine learning",
+            "MLOps",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2026-06-12",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-15",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030330882352941176
+        }
+      ]
+    },
+    {
+      "id": "item-775d49655499",
+      "job": {
+        "job_id": "syn-100002",
+        "client_id": "client-0202",
+        "title": "A fraud detection model for imbalanced transactions (machine learning)",
+        "description": "We need help with a fraud detection model for imbalanced transactions. Skills we expect: machine learning, LLM, deep learning. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "machine learning",
+          "LLM",
+          "deep learning"
+        ],
+        "budget": {
+          "min": 800,
+          "max": 909,
+          "currency": "USD",
+          "unit": "project"
+        },
+        "duration_days": 7,
+        "screening_questions": [
+          "How would you approach LLM for this project?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 16,
+        "category": "ml_ai",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2026-02-21"
+      },
+      "proposal": "I can provide a detailed project overview and a similar project to showcase my capabilities.",
+      "screening_answers": [
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ai-ml-engineer-cs-15",
+          "type": "case_study",
+          "title": "A customer churn prediction pipeline",
+          "summary": "Automated a customer churn prediction pipeline using TensorFlow, machine learning, MLOps and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 50%.",
+          "skills": [
+            "TensorFlow",
+            "machine learning",
+            "MLOps",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2026-06-12",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-15",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030330882352941176
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-10",
+          "type": "case_study",
+          "title": "A sentiment analysis service",
+          "summary": "Shipped a sentiment analysis service using opencv, ml model, deep learning and scikit-learn. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "computer vision",
+            "machine learning",
+            "deep learning",
+            "scikit-learn"
+          ],
+          "source": "synthetic",
+          "date": "2026-05-08",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-10",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p10",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030303030303030304
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-05",
+          "type": "case_study",
+          "title": "A support-ticket triage classifier",
+          "summary": "Automated a support-ticket triage classifier using LLM, time series, retrieval augmented generation and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 20%.",
+          "skills": [
+            "LLM",
+            "time series",
+            "RAG",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2024-05-12",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-05",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p05",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.014084507042253521
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-03",
+          "type": "case_study",
+          "title": "A support-ticket triage classifier",
+          "summary": "Automated a support-ticket triage classifier using LangChain, PyTorch and deep learning. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "LangChain",
+            "PyTorch",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2026-07-04",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-03",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p03",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.013157894736842105
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-18",
+          "type": "case_study",
+          "title": "A document question-answering assistant",
+          "summary": "Automated a document question-answering assistant using keras, mlflow and deep learning. Handed over a reproducible notebook and a short evaluation report.",
+          "skills": [
+            "TensorFlow",
+            "MLOps",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-15",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-18",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p18",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.012987012987012988
+        }
+      ]
+    },
+    {
+      "id": "item-6d19a1e119d2",
+      "job": {
+        "job_id": "syn-100401",
+        "client_id": "client-0231",
+        "title": "A support-ticket triage classifier (NLP)",
+        "description": "We need help with a support-ticket triage classifier. Skills we expect: NLP, image classification, scikit-learn, time series. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "NLP",
+          "computer vision",
+          "scikit-learn",
+          "time series"
+        ],
+        "budget": {
+          "min": 32,
+          "max": 48,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 7,
+        "screening_questions": [
+          "How would you approach NLP for this project?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 4,
+        "category": "ml_ai",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2026-05-17"
+      },
+      "proposal": "I have experience in building NLP models using scikit-learn and computer vision techniques. I have also worked on sentiment analysis services and OCR workflows, which aligns with the project requirements.",
+      "screening_answers": [
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ai-ml-engineer-cs-19",
+          "type": "case_study",
+          "title": "A resume screening ranker",
+          "summary": "Built a resume screening ranker using scikit-learn, computer vision, retrieval augmented generation and MLOps. Handed over a reproducible notebook and a short evaluation report.",
+          "skills": [
+            "scikit-learn",
+            "computer vision",
+            "RAG",
+            "MLOps"
+          ],
+          "source": "synthetic",
+          "date": "2024-10-21",
+          "outcome": "5-star review",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-19",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p19",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03278688524590164
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-10",
+          "type": "case_study",
+          "title": "A sentiment analysis service",
+          "summary": "Shipped a sentiment analysis service using opencv, ml model, deep learning and scikit-learn. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "computer vision",
+            "machine learning",
+            "deep learning",
+            "scikit-learn"
+          ],
+          "source": "synthetic",
+          "date": "2026-05-08",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-10",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p10",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03200204813108039
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-17",
+          "type": "case_study",
+          "title": "An OCR and extraction workflow",
+          "summary": "Shipped an OCR and extraction workflow using openai api, computer vision, random forest and NLP. Deployed behind an API with a simple health check. Cut manual effort by 30%.",
+          "skills": [
+            "LLM",
+            "computer vision",
+            "machine learning",
+            "NLP"
+          ],
+          "source": "synthetic",
+          "date": "2025-12-20",
+          "outcome": "5-star review",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-17",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p17",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03128054740957967
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-11",
+          "type": "case_study",
+          "title": "A sentiment analysis service",
+          "summary": "Automated a sentiment analysis service using RAG, machine learning and computer vision. Deployed behind an API with a simple health check.",
+          "skills": [
+            "RAG",
+            "machine learning",
+            "computer vision"
+          ],
+          "source": "synthetic",
+          "date": "2026-03-27",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-11",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p11",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03057889822595705
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-02",
+          "type": "case_study",
+          "title": "An image classifier for product photos",
+          "summary": "Built an image classifier for product photos using scikit-learn, LangChain, RAG and NLP. Compared two baselines and kept the simpler one.",
+          "skills": [
+            "scikit-learn",
+            "LangChain",
+            "RAG",
+            "NLP"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-06",
+          "outcome": "client replied",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-02",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p02",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.029418126757516764
+        }
+      ]
+    },
+    {
+      "id": "item-5d4c378262d3",
+      "job": {
+        "job_id": "syn-101377",
+        "client_id": "client-0382",
+        "title": "A job board with search filters (REST API)",
+        "description": "We need help with a job board with search filters. Skills we expect: REST API, nodejs, HTML/CSS. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "REST API",
+          "JavaScript",
+          "HTML/CSS"
+        ],
+        "budget": {
+          "min": 21,
+          "max": 32,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 14,
+        "screening_questions": [
+          "How would you approach JavaScript for this project?",
+          "Have you used JavaScript on a client project before? Please link an example."
+        ],
+        "warning_signals": [],
+        "connects_cost": 8,
+        "category": "web_dev",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2025-03-13"
+      },
+      "proposal": "I have successfully completed projects that involved migrating legacy systems to modern technologies without downtime.\n\nI have a proven track record of delivering projects on time and within budget.\n\nI have a strong understanding of best practices in web development and can provide detailed project documentation.",
+      "screening_answers": [
+        "",
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "fullstack-dev-cs-14",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Designed a REST API for a mobile app using REST API, JavaScript, Django and TypeScript. Shipped on time with automated tests and a deploy script. Cut manual effort by 40%.",
+          "skills": [
+            "REST API",
+            "JavaScript",
+            "Django",
+            "TypeScript"
+          ],
+          "source": "synthetic",
+          "date": "2026-10-12",
+          "outcome": "5-star review",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-14",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03131881575727918
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-06",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Shipped a REST API for a mobile app using HTML/CSS, woocommerce and Next.js. Migrated the client from a legacy PHP site without downtime. Cut manual effort by 30%.",
+          "skills": [
+            "HTML/CSS",
+            "WordPress",
+            "Next.js"
+          ],
+          "source": "synthetic",
+          "date": "2025-01-26",
+          "outcome": "won",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-06",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p06",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.029571646010002173
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-12",
+          "type": "case_study",
+          "title": "An admin dashboard with role-based access",
+          "summary": "Built an admin dashboard with role-based access using REST API, HTML/CSS and AWS. Shipped on time with automated tests and a deploy script. Cut manual effort by 20%.",
+          "skills": [
+            "REST API",
+            "HTML/CSS",
+            "AWS"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-14",
+          "outcome": "5-star review",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-12",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.02878726010616578
+        },
+        {
+          "evidence_id": "fullstack-dev-rd-12",
+          "type": "readme",
+          "title": "README: An admin dashboard with role-based access",
+          "summary": "Overview and setup for an admin dashboard with role-based access. Stack: restful, html, s3.",
+          "skills": [
+            "REST API",
+            "HTML/CSS"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-14",
+          "outcome": null,
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-rd-12",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.015625
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-03",
+          "type": "case_study",
+          "title": "A SaaS landing page with billing",
+          "summary": "Designed a SaaS landing page with billing using restful, HTML/CSS, AWS and react.js. Handed over documentation and a walkthrough video.",
+          "skills": [
+            "REST API",
+            "HTML/CSS",
+            "AWS",
+            "React"
+          ],
+          "source": "synthetic",
+          "date": "2025-07-15",
+          "outcome": "won",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-03",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p03",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.015151515151515152
+        }
+      ]
+    },
+    {
+      "id": "item-bd775d6eac46",
+      "job": {
+        "job_id": "syn-100288",
+        "client_id": "client-0182",
+        "title": "A web-scraped price tracker (Tableau)",
+        "description": "We need help with a web-scraped price tracker. Skills we expect: Tableau, Excel, dataframe. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "Tableau",
+          "Excel",
+          "pandas"
+        ],
+        "budget": {
+          "min": 1500,
+          "max": 1724,
+          "currency": "USD",
+          "unit": "project"
+        },
+        "duration_days": 7,
+        "screening_questions": [
+          "How would you approach Tableau for this project?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 4,
+        "category": "data_analytics",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-04-24"
+      },
+      "proposal": "I have a proven track record of automating sales performance dashboards and inventory forecasting workbooks using Tableau, Excel, and statistics.\n\nI have also handled inventory forecasting workbooks through web scraping and dashboarding, reducing report preparation time from hours to minutes.",
+      "screening_answers": [
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "data-analyst-cs-08",
+          "type": "case_study",
+          "title": "A sales performance dashboard",
+          "summary": "Automated a sales performance dashboard using Airflow, Tableau and Excel. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "Airflow",
+            "Tableau",
+            "Excel"
+          ],
+          "source": "synthetic",
+          "date": "2026-11-18",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-08",
+          "persona": "data-analyst",
+          "project": "data-analyst-p08",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03225806451612903
+        },
+        {
+          "evidence_id": "data-analyst-cs-15",
+          "type": "case_study",
+          "title": "A web-scraped price tracker",
+          "summary": "Shipped a web-scraped price tracker using Tableau, Excel and dbt. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "Tableau",
+            "Excel",
+            "dbt"
+          ],
+          "source": "synthetic",
+          "date": "2025-11-01",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-15",
+          "persona": "data-analyst",
+          "project": "data-analyst-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.031746031746031744
+        },
+        {
+          "evidence_id": "data-analyst-cs-09",
+          "type": "case_study",
+          "title": "An inventory forecasting workbook",
+          "summary": "Automated an inventory forecasting workbook using statistics, vba and pandas. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "statistics",
+            "Excel",
+            "pandas"
+          ],
+          "source": "synthetic",
+          "date": "2025-01-22",
+          "outcome": "client replied",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-09",
+          "persona": "data-analyst",
+          "project": "data-analyst-p09",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030886196246139225
+        },
+        {
+          "evidence_id": "data-analyst-cs-05",
+          "type": "case_study",
+          "title": "A monthly KPI reporting pipeline",
+          "summary": "Automated a monthly KPI reporting pipeline using Tableau, etl, vba and dashboarding. Replaced a manual weekly spreadsheet with an automated refresh.",
+          "skills": [
+            "Tableau",
+            "Airflow",
+            "Excel",
+            "dashboarding"
+          ],
+          "source": "synthetic",
+          "date": "2026-11-22",
+          "outcome": "client replied",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-05",
+          "persona": "data-analyst",
+          "project": "data-analyst-p05",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030330882352941176
+        },
+        {
+          "evidence_id": "data-analyst-cs-12",
+          "type": "case_study",
+          "title": "An inventory forecasting workbook",
+          "summary": "Built an inventory forecasting workbook using web scraping, Tableau and dashboarding. Cut report preparation from hours to minutes.",
+          "skills": [
+            "web scraping",
+            "Tableau",
+            "dashboarding"
+          ],
+          "source": "synthetic",
+          "date": "2026-06-13",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-12",
+          "persona": "data-analyst",
+          "project": "data-analyst-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.02900988017658188
+        }
+      ]
+    },
+    {
+      "id": "reference-73f877325791",
+      "job": {
+        "job_id": "syn-100440",
+        "client_id": "client-0197",
+        "title": "An A/B test readout (data cleaning)",
+        "description": "We need help with an A/B test readout. Skills we expect: data cleaning, dashboarding, Airflow, dbt, web scraping, SQL. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "data cleaning",
+          "dashboarding",
+          "Airflow",
+          "dbt",
+          "web scraping",
+          "SQL"
+        ],
+        "budget": {
+          "min": 15,
+          "max": 42,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 3,
+        "screening_questions": [
+          "How would you approach dashboarding for this project?",
+          "Have you used SQL on a client project before? Please link an example."
+        ],
+        "warning_signals": [],
+        "connects_cost": 4,
+        "category": "data_analytics",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-01-21"
+      },
+      "proposal": "Relevant portfolio work: Automated a data cleaning and deduplication workflow using statistics, dashboarding, etl and web scraping. Delivered a one-page summary the client's team could act on.\n\nI will first confirm the data, acceptance criteria and scope with you, then implement a reproducible baseline, compare alternatives against agreed metrics and document the limitations. Could you share a representative sample and your highest-priority deliverable?",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "data-analyst-cs-01",
+          "type": "case_study",
+          "title": "A data cleaning and deduplication workflow",
+          "summary": "Automated a data cleaning and deduplication workflow using statistics, dashboarding, etl and web scraping. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "statistics",
+            "dashboarding",
+            "Airflow",
+            "web scraping"
+          ],
+          "source": "synthetic",
+          "date": "2025-12-15",
+          "outcome": "client replied",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-01",
+          "persona": "data-analyst",
+          "project": "data-analyst-p01",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        }
+      ]
+    },
+    {
+      "id": "item-701de7b81ee9",
+      "job": {
+        "job_id": "syn-100737",
+        "client_id": "client-0120",
+        "title": "A monthly KPI reporting pipeline (Airflow)",
+        "description": "We need help with a monthly KPI reporting pipeline. Skills we expect: Airflow, web scraping, dbt. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "Airflow",
+          "web scraping",
+          "dbt"
+        ],
+        "budget": {
+          "min": 400,
+          "max": 686,
+          "currency": "USD",
+          "unit": "project"
+        },
+        "duration_days": 60,
+        "screening_questions": [],
+        "warning_signals": [],
+        "connects_cost": 6,
+        "category": "data_analytics",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2025-01-13"
+      },
+      "proposal": "I have extensive experience with Airflow, web scraping, and dbt. I can confidently approach a monthly KPI reporting pipeline with the skills required.\n\nI have successfully completed similar projects in the past, including a web-scraped price tracker, a sales performance dashboard, a customer cohort analysis, and an inventory forecasting workbook.",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "data-analyst-cs-06",
+          "type": "case_study",
+          "title": "A web-scraped price tracker",
+          "summary": "Shipped a web-scraped price tracker using Airflow, scrapy, dashboarding and dbt. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "Airflow",
+            "web scraping",
+            "dashboarding",
+            "dbt"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-13",
+          "outcome": "personal project",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-06",
+          "persona": "data-analyst",
+          "project": "data-analyst-p06",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03278688524590164
+        },
+        {
+          "evidence_id": "data-analyst-cs-17",
+          "type": "case_study",
+          "title": "A sales performance dashboard",
+          "summary": "Automated a sales performance dashboard using web scraping, dbt and statistical analysis. Documented every metric definition so numbers match across teams.",
+          "skills": [
+            "web scraping",
+            "dbt",
+            "statistics"
+          ],
+          "source": "synthetic",
+          "date": "2025-12-20",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-17",
+          "persona": "data-analyst",
+          "project": "data-analyst-p17",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03225806451612903
+        },
+        {
+          "evidence_id": "data-analyst-cs-16",
+          "type": "case_study",
+          "title": "A customer cohort analysis",
+          "summary": "Automated a customer cohort analysis using powerbi, dbt, scraper and spreadsheet. Cut report preparation from hours to minutes.",
+          "skills": [
+            "Power BI",
+            "dbt",
+            "web scraping",
+            "Excel"
+          ],
+          "source": "synthetic",
+          "date": "2025-02-21",
+          "outcome": "5-star review",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-16",
+          "persona": "data-analyst",
+          "project": "data-analyst-p16",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03125763125763126
+        },
+        {
+          "evidence_id": "data-analyst-cs-01",
+          "type": "case_study",
+          "title": "A data cleaning and deduplication workflow",
+          "summary": "Automated a data cleaning and deduplication workflow using statistics, dashboarding, etl and web scraping. Delivered a one-page summary the client's team could act on.",
+          "skills": [
+            "statistics",
+            "dashboarding",
+            "Airflow",
+            "web scraping"
+          ],
+          "source": "synthetic",
+          "date": "2025-12-15",
+          "outcome": "client replied",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-01",
+          "persona": "data-analyst",
+          "project": "data-analyst-p01",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03125
+        },
+        {
+          "evidence_id": "data-analyst-cs-12",
+          "type": "case_study",
+          "title": "An inventory forecasting workbook",
+          "summary": "Built an inventory forecasting workbook using web scraping, Tableau and dashboarding. Cut report preparation from hours to minutes.",
+          "skills": [
+            "web scraping",
+            "Tableau",
+            "dashboarding"
+          ],
+          "source": "synthetic",
+          "date": "2026-06-13",
+          "outcome": "won",
+          "freelancer_id": "data-analyst",
+          "parent_evidence_id": "data-analyst-cs-12",
+          "persona": "data-analyst",
+          "project": "data-analyst-p12",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.029411764705882353
+        }
+      ]
+    },
+    {
+      "id": "item-df663f9b929c",
+      "job": {
+        "job_id": "syn-101386",
+        "client_id": "client-0100",
+        "title": "A fraud detection model for imbalanced transactions (computer vision)",
+        "description": "We need help with a fraud detection model for imbalanced transactions. Skills we expect: computer vision, large language model, RAG, PyTorch, time series. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "computer vision",
+          "LLM",
+          "RAG",
+          "PyTorch",
+          "time series"
+        ],
+        "budget": {
+          "min": 26,
+          "max": 37,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 14,
+        "screening_questions": [],
+        "warning_signals": [],
+        "connects_cost": 16,
+        "category": "ml_ai",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2024-03-13"
+      },
+      "proposal": "My projects include a sentiment analysis service, a document question-answering assistant, a support-ticket triage classifier, a demand forecasting model, and an image classifier for product photos.\n\nI can confidently approach the client's project and share a similar project to demonstrate my capabilities.",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "ai-ml-engineer-cs-11",
+          "type": "case_study",
+          "title": "A sentiment analysis service",
+          "summary": "Automated a sentiment analysis service using RAG, machine learning and computer vision. Deployed behind an API with a simple health check.",
+          "skills": [
+            "RAG",
+            "machine learning",
+            "computer vision"
+          ],
+          "source": "synthetic",
+          "date": "2026-03-27",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-11",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p11",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-07",
+          "type": "case_study",
+          "title": "A document question-answering assistant",
+          "summary": "Shipped a document question-answering assistant using PyTorch, time series, TensorFlow and chroma. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "PyTorch",
+            "time series",
+            "TensorFlow",
+            "RAG"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-27",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-07",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p07",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03252247488101534
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-05",
+          "type": "case_study",
+          "title": "A support-ticket triage classifier",
+          "summary": "Automated a support-ticket triage classifier using LLM, time series, retrieval augmented generation and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 20%.",
+          "skills": [
+            "LLM",
+            "time series",
+            "RAG",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2024-05-12",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-05",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p05",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03149801587301587
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-16",
+          "type": "case_study",
+          "title": "A demand forecasting model",
+          "summary": "Built a demand forecasting model using time series, PyTorch and machine learning. Compared two baselines and kept the simpler one. Cut manual effort by 40%.",
+          "skills": [
+            "time series",
+            "PyTorch",
+            "machine learning"
+          ],
+          "source": "synthetic",
+          "date": "2026-04-28",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-16",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p16",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030309988518943745
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-08",
+          "type": "case_study",
+          "title": "An image classifier for product photos",
+          "summary": "Shipped an image classifier for product photos using PyTorch, time series and machine learning. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "PyTorch",
+            "time series",
+            "machine learning"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-16",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-08",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p08",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030158730158730156
+        }
+      ]
+    },
+    {
+      "id": "item-7af16d582c26",
+      "job": {
+        "job_id": "syn-101245",
+        "client_id": "client-0086",
+        "title": "A storefront with checkout (MongoDB)",
+        "description": "We need help with a storefront with checkout. Skills we expect: mongoose, django rest, woocommerce, Django, TypeScript. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "MongoDB",
+          "FastAPI",
+          "WordPress",
+          "Django",
+          "TypeScript"
+        ],
+        "budget": {
+          "min": 43,
+          "max": 58,
+          "currency": "USD",
+          "unit": "hour"
+        },
+        "duration_days": 60,
+        "screening_questions": [
+          "What is your experience with FastAPI?"
+        ],
+        "warning_signals": [],
+        "connects_cost": 8,
+        "category": "web_dev",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2026-03-08"
+      },
+      "proposal": "I have extensive experience with FastAPI, WordPress, and TypeScript. I have successfully automated a SaaS landing page with billing using these technologies. I can confidently approach the project with the skills needed and share a similar project to demonstrate my capabilities.",
+      "screening_answers": [
+        ""
+      ],
+      "evidence": [
+        {
+          "evidence_id": "fullstack-dev-cs-10",
+          "type": "case_study",
+          "title": "A SaaS landing page with billing",
+          "summary": "Automated a SaaS landing page with billing using WordPress, django rest, TypeScript and Next.js. Handed over documentation and a walkthrough video.",
+          "skills": [
+            "WordPress",
+            "FastAPI",
+            "TypeScript",
+            "Next.js"
+          ],
+          "source": "synthetic",
+          "date": "2025-04-03",
+          "outcome": "client replied",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-10",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p10",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03278688524590164
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-00",
+          "type": "case_study",
+          "title": "A job board with search filters",
+          "summary": "Automated a job board with search filters using Django, WordPress, HTML/CSS and MongoDB. Improved page load by caching and image optimisation.",
+          "skills": [
+            "Django",
+            "WordPress",
+            "HTML/CSS",
+            "MongoDB"
+          ],
+          "source": "synthetic",
+          "date": "2025-08-28",
+          "outcome": "personal project",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-00",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p00",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03225806451612903
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-08",
+          "type": "case_study",
+          "title": "A real-time chat widget",
+          "summary": "Shipped a real-time chat widget using WordPress, MongoDB and nextjs. Handed over documentation and a walkthrough video.",
+          "skills": [
+            "WordPress",
+            "MongoDB",
+            "Next.js"
+          ],
+          "source": "synthetic",
+          "date": "2025-03-18",
+          "outcome": "personal project",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-08",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p08",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03125763125763126
+        },
+        {
+          "evidence_id": "fullstack-dev-rd-15",
+          "type": "readme",
+          "title": "README: An internal inventory tool",
+          "summary": "Overview and setup for an internal inventory tool. Stack: django rest, mongoose, node.js.",
+          "skills": [
+            "FastAPI",
+            "MongoDB"
+          ],
+          "source": "synthetic",
+          "date": "2024-11-24",
+          "outcome": null,
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-rd-15",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p15",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03125763125763126
+        },
+        {
+          "evidence_id": "fullstack-dev-cs-14",
+          "type": "case_study",
+          "title": "A REST API for a mobile app",
+          "summary": "Designed a REST API for a mobile app using REST API, JavaScript, Django and TypeScript. Shipped on time with automated tests and a deploy script. Cut manual effort by 40%.",
+          "skills": [
+            "REST API",
+            "JavaScript",
+            "Django",
+            "TypeScript"
+          ],
+          "source": "synthetic",
+          "date": "2026-10-12",
+          "outcome": "5-star review",
+          "freelancer_id": "fullstack-dev",
+          "parent_evidence_id": "fullstack-dev-cs-14",
+          "persona": "fullstack-dev",
+          "project": "fullstack-dev-p14",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.03125
+        }
+      ]
+    },
+    {
+      "id": "item-135f8a93113a",
+      "job": {
+        "job_id": "syn-101170",
+        "client_id": "client-0351",
+        "title": "A support-ticket triage classifier (TensorFlow)",
+        "description": "We need help with a support-ticket triage classifier. Skills we expect: TensorFlow, LLM, time series, scikit-learn, containerization. Please explain how you would approach it and share a similar project.",
+        "required_skills": [
+          "TensorFlow",
+          "LLM",
+          "time series",
+          "scikit-learn",
+          "Docker"
+        ],
+        "budget": {
+          "min": 3000,
+          "max": 5154,
+          "currency": "USD",
+          "unit": "project"
+        },
+        "duration_days": 30,
+        "screening_questions": [],
+        "warning_signals": [],
+        "connects_cost": 12,
+        "category": "ml_ai",
+        "provenance": "synthetic",
+        "label": {
+          "scam": false,
+          "injection": false
+        },
+        "published_date": "2025-11-20"
+      },
+      "proposal": "",
+      "screening_answers": [],
+      "evidence": [
+        {
+          "evidence_id": "ai-ml-engineer-cs-01",
+          "type": "case_study",
+          "title": "A customer churn prediction pipeline",
+          "summary": "Designed a customer churn prediction pipeline using TensorFlow, time series, MLOps and torch. Deployed behind an API with a simple health check. Cut manual effort by 50%.",
+          "skills": [
+            "TensorFlow",
+            "time series",
+            "MLOps",
+            "PyTorch"
+          ],
+          "source": "synthetic",
+          "date": "2024-04-10",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-01",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p01",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.031054405392392875
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-04",
+          "type": "case_study",
+          "title": "An OCR and extraction workflow",
+          "summary": "Built an OCR and extraction workflow using TensorFlow, pinecone, forecasting and machine learning. Deployed behind an API with a simple health check. Cut manual effort by 20%.",
+          "skills": [
+            "TensorFlow",
+            "RAG",
+            "time series",
+            "machine learning"
+          ],
+          "source": "synthetic",
+          "date": "2024-09-15",
+          "outcome": "5-star review",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-04",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p04",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.031024531024531024
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-07",
+          "type": "case_study",
+          "title": "A document question-answering assistant",
+          "summary": "Shipped a document question-answering assistant using PyTorch, time series, TensorFlow and chroma. Documented limitations and monitoring steps for the client.",
+          "skills": [
+            "PyTorch",
+            "time series",
+            "TensorFlow",
+            "RAG"
+          ],
+          "source": "synthetic",
+          "date": "2026-09-27",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-07",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p07",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.030679156908665108
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-05",
+          "type": "case_study",
+          "title": "A support-ticket triage classifier",
+          "summary": "Automated a support-ticket triage classifier using LLM, time series, retrieval augmented generation and deep learning. Handed over a reproducible notebook and a short evaluation report. Cut manual effort by 20%.",
+          "skills": [
+            "LLM",
+            "time series",
+            "RAG",
+            "deep learning"
+          ],
+          "source": "synthetic",
+          "date": "2024-05-12",
+          "outcome": "won",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-05",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p05",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.02976190476190476
+        },
+        {
+          "evidence_id": "ai-ml-engineer-cs-16",
+          "type": "case_study",
+          "title": "A demand forecasting model",
+          "summary": "Built a demand forecasting model using time series, PyTorch and machine learning. Compared two baselines and kept the simpler one. Cut manual effort by 40%.",
+          "skills": [
+            "time series",
+            "PyTorch",
+            "machine learning"
+          ],
+          "source": "synthetic",
+          "date": "2026-04-28",
+          "outcome": "personal project",
+          "freelancer_id": "ai-ml-engineer",
+          "parent_evidence_id": "ai-ml-engineer-cs-16",
+          "persona": "ai-ml-engineer",
+          "project": "ai-ml-engineer-p16",
+          "client_industry": null,
+          "document_id": null,
+          "chunk_index": 0,
+          "provenance": "synthetic",
+          "limitations": null,
+          "score": 0.026334026334026334
+        }
+      ]
+    }
+  ]
+}

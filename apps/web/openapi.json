@@ -1,0 +1,3724 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "GigBid API",
+  "version": "0.1.0"
+ },
+ "paths": {
+  "/auth/register": {
+   "post": {
+    "tags": [
+     "auth"
+    ],
+    "summary": "Register",
+    "operationId": "register_auth_register_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/RegisterIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/TokenOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/auth/login": {
+   "post": {
+    "tags": [
+     "auth"
+    ],
+    "summary": "Login",
+    "operationId": "login_auth_login_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/LoginIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/TokenOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/auth/me": {
+   "get": {
+    "tags": [
+     "auth"
+    ],
+    "summary": "Me",
+    "operationId": "me_auth_me_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/UserOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/auth/personas": {
+   "get": {
+    "tags": [
+     "auth"
+    ],
+    "summary": "Personas",
+    "description": "Public: personas a new user can choose at onboarding (synthetic freelancer profiles).",
+    "operationId": "personas_auth_personas_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     }
+    }
+   }
+  },
+  "/jobs": {
+   "get": {
+    "tags": [
+     "jobs"
+    ],
+    "summary": "Inbox",
+    "description": "Job inbox: new jobs, ranked by fit where a run has already analysed them.",
+    "operationId": "inbox_jobs_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "array",
+         "items": {
+          "$ref": "#/components/schemas/JobCard"
+         },
+         "title": "Response Inbox Jobs Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/jobs/{job_id}/runs": {
+   "post": {
+    "tags": [
+     "jobs"
+    ],
+    "summary": "Analyse Job",
+    "operationId": "analyse_job_jobs__job_id__runs_post",
+    "parameters": [
+     {
+      "name": "job_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Job Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "202": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/RunOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/runs": {
+   "get": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "List Runs",
+    "operationId": "list_runs_runs_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "array",
+         "items": {
+          "$ref": "#/components/schemas/RunOut"
+         },
+         "title": "Response List Runs Runs Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/runs/dead-letters": {
+   "get": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "Dead Letters",
+    "operationId": "dead_letters_runs_dead_letters_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/runs/{run_id}": {
+   "get": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "Run Detail",
+    "operationId": "run_detail_runs__run_id__get",
+    "parameters": [
+     {
+      "name": "run_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Run Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/RunDetail"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/runs/{run_id}/history": {
+   "get": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "Checkpoint History",
+    "operationId": "checkpoint_history_runs__run_id__history_get",
+    "parameters": [
+     {
+      "name": "run_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Run Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/runs/{run_id}/replay": {
+   "post": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "Replay",
+    "operationId": "replay_runs__run_id__replay_post",
+    "parameters": [
+     {
+      "name": "run_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Run Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ReplayIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "202": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/RunOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/runs/{run_id}/events": {
+   "get": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "Run Events",
+    "description": "Server-Sent Events: node-by-node progress; the stream ends at an approval gate or when the run is done.",
+    "operationId": "run_events_runs__run_id__events_get",
+    "parameters": [
+     {
+      "name": "run_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Run Id"
+      }
+     },
+     {
+      "name": "after",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "integer",
+       "minimum": 0,
+       "default": 0,
+       "title": "After"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/runs/{run_id}/retry": {
+   "post": {
+    "tags": [
+     "runs"
+    ],
+    "summary": "Retry",
+    "operationId": "retry_runs__run_id__retry_post",
+    "parameters": [
+     {
+      "name": "run_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Run Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "202": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/RunOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/runs/{run_id}/regenerate-paragraph": {
+   "post": {
+    "tags": [
+     "approvals"
+    ],
+    "summary": "Regenerate Paragraph",
+    "operationId": "regenerate_paragraph_runs__run_id__regenerate_paragraph_post",
+    "parameters": [
+     {
+      "name": "run_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Run Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ParagraphRegenerationIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ParagraphRegenerationOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/approvals/pending": {
+   "get": {
+    "tags": [
+     "approvals"
+    ],
+    "summary": "Pending",
+    "description": "What a page refresh calls. Read from the checkpoint, so it survives refreshes and API restarts.",
+    "operationId": "pending_approvals_pending_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/runs/{run_id}/approval": {
+   "post": {
+    "tags": [
+     "approvals"
+    ],
+    "summary": "Decide",
+    "operationId": "decide_runs__run_id__approval_post",
+    "parameters": [
+     {
+      "name": "run_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Run Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ApprovalDecision"
+       }
+      }
+     }
+    },
+    "responses": {
+     "202": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/RunOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/conversations": {
+   "get": {
+    "tags": [
+     "messages"
+    ],
+    "summary": "Threads",
+    "operationId": "threads_conversations_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "array",
+         "items": {
+          "$ref": "#/components/schemas/ThreadCard"
+         },
+         "title": "Response Threads Conversations Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/conversations/{thread_id}/runs": {
+   "post": {
+    "tags": [
+     "messages"
+    ],
+    "summary": "Handle Thread",
+    "operationId": "handle_thread_conversations__thread_id__runs_post",
+    "parameters": [
+     {
+      "name": "thread_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Thread Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "202": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/RunOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/pipeline": {
+   "get": {
+    "tags": [
+     "analytics"
+    ],
+    "summary": "Pipeline",
+    "operationId": "pipeline_pipeline_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/PipelineOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/runs/{run_id}/outcome": {
+   "post": {
+    "tags": [
+     "analytics"
+    ],
+    "summary": "Outcome",
+    "description": "Marketplace event (viewed/replied/...): moves the card and feeds outcome memory through its promotion rule.",
+    "operationId": "outcome_runs__run_id__outcome_post",
+    "parameters": [
+     {
+      "name": "run_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Run Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/OutcomeIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/analytics": {
+   "get": {
+    "tags": [
+     "analytics"
+    ],
+    "summary": "Analytics",
+    "operationId": "analytics_analytics_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AnalyticsOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/memory": {
+   "get": {
+    "tags": [
+     "analytics"
+    ],
+    "summary": "Memory",
+    "operationId": "memory_memory_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/MemoryOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/memory/style/{rule_id}": {
+   "delete": {
+    "tags": [
+     "analytics"
+    ],
+    "summary": "Forget Style",
+    "operationId": "forget_style_memory_style__rule_id__delete",
+    "parameters": [
+     {
+      "name": "rule_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Rule Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/memory/outcome/{category}": {
+   "delete": {
+    "tags": [
+     "analytics"
+    ],
+    "summary": "Forget Outcome",
+    "operationId": "forget_outcome_memory_outcome__category__delete",
+    "parameters": [
+     {
+      "name": "category",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Category"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/settings": {
+   "get": {
+    "tags": [
+     "settings"
+    ],
+    "summary": "Get Settings",
+    "operationId": "get_settings_settings_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/SettingsOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   },
+   "put": {
+    "tags": [
+     "settings"
+    ],
+    "summary": "Put Settings",
+    "operationId": "put_settings_settings_put",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/SettingsIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/SettingsOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/settings/searches/{query}": {
+   "post": {
+    "tags": [
+     "settings"
+    ],
+    "summary": "Add Search",
+    "operationId": "add_search_settings_searches__query__post",
+    "parameters": [
+     {
+      "name": "query",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Query"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/SettingsOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   },
+   "delete": {
+    "tags": [
+     "settings"
+    ],
+    "summary": "Remove Search",
+    "operationId": "remove_search_settings_searches__query__delete",
+    "parameters": [
+     {
+      "name": "query",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Query"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/SettingsOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/connections/upwork": {
+   "get": {
+    "tags": [
+     "connections"
+    ],
+    "summary": "Status",
+    "operationId": "status_connections_upwork_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/ConnectionStatus"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   },
+   "delete": {
+    "tags": [
+     "connections"
+    ],
+    "summary": "Disconnect",
+    "operationId": "disconnect_connections_upwork_delete",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/connections/upwork/authorize": {
+   "post": {
+    "tags": [
+     "connections"
+    ],
+    "summary": "Authorize",
+    "operationId": "authorize_connections_upwork_authorize_post",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/AuthorizationOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/connections/upwork/callback": {
+   "get": {
+    "tags": [
+     "connections"
+    ],
+    "summary": "Callback",
+    "operationId": "callback_connections_upwork_callback_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     }
+    }
+   }
+  },
+  "/connections/upwork/catalog": {
+   "get": {
+    "tags": [
+     "connections"
+    ],
+    "summary": "Catalog",
+    "operationId": "catalog_connections_upwork_catalog_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/connections/upwork/mapping": {
+   "put": {
+    "tags": [
+     "connections"
+    ],
+    "summary": "Mapping",
+    "operationId": "mapping_connections_upwork_mapping_put",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/MappingIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/connections/upwork/mode": {
+   "put": {
+    "tags": [
+     "connections"
+    ],
+    "summary": "Mode",
+    "operationId": "mode_connections_upwork_mode_put",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ModeIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/runs/{run_id}/platform-confirmation": {
+   "post": {
+    "tags": [
+     "platform confirmation"
+    ],
+    "summary": "Confirm",
+    "operationId": "confirm_runs__run_id__platform_confirmation_post",
+    "parameters": [
+     {
+      "name": "run_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Run Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/PlatformConfirmationIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/connections/github": {
+   "get": {
+    "tags": [
+     "GitHub MCP"
+    ],
+    "summary": "Status",
+    "operationId": "status_connections_github_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/GitHubStatus"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   },
+   "delete": {
+    "tags": [
+     "GitHub MCP"
+    ],
+    "summary": "Disconnect",
+    "operationId": "disconnect_connections_github_delete",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/connections/github/authorize": {
+   "post": {
+    "tags": [
+     "GitHub MCP"
+    ],
+    "summary": "Authorize",
+    "operationId": "authorize_connections_github_authorize_post",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/GitHubStatus"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/connections/github/imports": {
+   "post": {
+    "tags": [
+     "GitHub MCP"
+    ],
+    "summary": "Import Readme",
+    "operationId": "import_readme_connections_github_imports_post",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ImportReadme"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   },
+   "get": {
+    "tags": [
+     "GitHub MCP"
+    ],
+    "summary": "Imports",
+    "operationId": "imports_connections_github_imports_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/GitHubImportsOut"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/portfolio/documents": {
+   "get": {
+    "tags": [
+     "Portfolio ingestion"
+    ],
+    "summary": "Documents",
+    "operationId": "documents_portfolio_documents_get",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   },
+   "post": {
+    "tags": [
+     "Portfolio ingestion"
+    ],
+    "summary": "Upload",
+    "operationId": "upload_portfolio_documents_post",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/UploadIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/portfolio/github": {
+   "post": {
+    "tags": [
+     "Portfolio ingestion"
+    ],
+    "summary": "Repository",
+    "operationId": "repository_portfolio_github_post",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/RepositoryIn"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/portfolio/documents/{document_id}": {
+   "delete": {
+    "tags": [
+     "Portfolio ingestion"
+    ],
+    "summary": "Delete",
+    "operationId": "delete_portfolio_documents__document_id__delete",
+    "parameters": [
+     {
+      "name": "document_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Document Id"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/portfolio/search": {
+   "get": {
+    "tags": [
+     "Portfolio ingestion"
+    ],
+    "summary": "Search",
+    "operationId": "search_portfolio_search_get",
+    "parameters": [
+     {
+      "name": "query",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "portfolio",
+       "title": "Query"
+      }
+     },
+     {
+      "name": "kind",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Kind"
+      }
+     },
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/upwork-connected": {
+   "get": {
+    "summary": "Upwork Connected",
+    "operationId": "upwork_connected_upwork_connected_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     }
+    }
+   }
+  },
+  "/upwork-connection-failed": {
+   "get": {
+    "summary": "Upwork Failed",
+    "operationId": "upwork_failed_upwork_connection_failed_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     }
+    }
+   }
+  },
+  "/health": {
+   "get": {
+    "tags": [
+     "ops"
+    ],
+    "summary": "Health",
+    "operationId": "health_health_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HealthOut"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/admin/retry-degraded": {
+   "post": {
+    "tags": [
+     "ops"
+    ],
+    "summary": "Retry Degraded",
+    "operationId": "retry_degraded_admin_retry_degraded_post",
+    "parameters": [
+     {
+      "name": "authorization",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "",
+       "title": "Authorization"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "AnalyticsOut": {
+    "properties": {
+     "runs": {
+      "type": "integer",
+      "title": "Runs"
+     },
+     "by_status": {
+      "additionalProperties": {
+       "type": "integer"
+      },
+      "type": "object",
+      "title": "By Status"
+     },
+     "connects_spent": {
+      "type": "integer",
+      "title": "Connects Spent"
+     },
+     "latency_ms_p50": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Latency Ms P50"
+     },
+     "latency_ms_p95": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Latency Ms P95"
+     },
+     "jobs_analyzed": {
+      "type": "integer",
+      "title": "Jobs Analyzed"
+     },
+     "proposals": {
+      "type": "integer",
+      "title": "Proposals"
+     },
+     "average_tokens_per_job": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Average Tokens Per Job"
+     },
+     "average_tokens_per_proposal": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Average Tokens Per Proposal"
+     },
+     "average_output_tokens_per_second": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Average Output Tokens Per Second"
+     },
+     "average_cost_per_proposal_usd": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Average Cost Per Proposal Usd"
+     },
+     "priced_proposals": {
+      "type": "integer",
+      "title": "Priced Proposals"
+     },
+     "unpriced_proposals": {
+      "type": "integer",
+      "title": "Unpriced Proposals"
+     },
+     "billing": {
+      "type": "string",
+      "title": "Billing"
+     },
+     "hardware_note": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Hardware Note"
+     },
+     "run_metrics": {
+      "items": {
+       "$ref": "#/components/schemas/RunMetricOut"
+      },
+      "type": "array",
+      "title": "Run Metrics"
+     },
+     "top_skip_reasons": {
+      "items": {
+       "prefixItems": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "integer"
+        }
+       ],
+       "type": "array",
+       "maxItems": 2,
+       "minItems": 2
+      },
+      "type": "array",
+      "title": "Top Skip Reasons"
+     },
+     "top_rejection_reasons": {
+      "items": {
+       "prefixItems": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "integer"
+        }
+       ],
+       "type": "array",
+       "maxItems": 2,
+       "minItems": 2
+      },
+      "type": "array",
+      "title": "Top Rejection Reasons"
+     },
+     "reply_rate_by_category": {
+      "additionalProperties": {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      "type": "object",
+      "title": "Reply Rate By Category"
+     }
+    },
+    "type": "object",
+    "required": [
+     "runs",
+     "by_status",
+     "connects_spent",
+     "latency_ms_p50",
+     "latency_ms_p95",
+     "jobs_analyzed",
+     "proposals",
+     "average_tokens_per_job",
+     "average_tokens_per_proposal",
+     "average_output_tokens_per_second",
+     "average_cost_per_proposal_usd",
+     "priced_proposals",
+     "unpriced_proposals",
+     "billing",
+     "hardware_note",
+     "run_metrics",
+     "top_skip_reasons",
+     "top_rejection_reasons",
+     "reply_rate_by_category"
+    ],
+    "title": "AnalyticsOut"
+   },
+   "ApprovalDecision": {
+    "properties": {
+     "action": {
+      "type": "string",
+      "enum": [
+       "approve",
+       "edit",
+       "reject"
+      ],
+      "title": "Action"
+     },
+     "edited_cover_letter": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Edited Cover Letter"
+     },
+     "reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Reason"
+     }
+    },
+    "type": "object",
+    "required": [
+     "action"
+    ],
+    "title": "ApprovalDecision",
+    "description": "What the web UI sends back to resume the interrupted thread."
+   },
+   "AuthorizationOut": {
+    "properties": {
+     "authorization_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Authorization Url"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status"
+     }
+    },
+    "type": "object",
+    "required": [
+     "authorization_url",
+     "status"
+    ],
+    "title": "AuthorizationOut"
+   },
+   "ConnectionStatus": {
+    "properties": {
+     "connected": {
+      "type": "boolean",
+      "title": "Connected"
+     },
+     "mode": {
+      "type": "string",
+      "title": "Mode"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status"
+     },
+     "mapped_operations": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Mapped Operations"
+     },
+     "required_operations": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Required Operations"
+     },
+     "ready": {
+      "type": "boolean",
+      "title": "Ready"
+     },
+     "reads_ready": {
+      "type": "boolean",
+      "title": "Reads Ready",
+      "default": false
+     }
+    },
+    "type": "object",
+    "required": [
+     "connected",
+     "mode",
+     "status",
+     "mapped_operations",
+     "required_operations",
+     "ready"
+    ],
+    "title": "ConnectionStatus"
+   },
+   "DocumentMetadata": {
+    "properties": {
+     "title": {
+      "type": "string",
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Title"
+     },
+     "project": {
+      "type": "string",
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Project"
+     },
+     "skills": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "maxItems": 50,
+      "title": "Skills"
+     },
+     "date": {
+      "anyOf": [
+       {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Date"
+     },
+     "client_industry": {
+      "anyOf": [
+       {
+        "type": "string",
+        "maxLength": 200
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Client Industry"
+     },
+     "outcome": {
+      "anyOf": [
+       {
+        "type": "string",
+        "maxLength": 1000
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Outcome"
+     },
+     "provenance": {
+      "type": "string",
+      "pattern": "^(user-upload|synthetic)$",
+      "title": "Provenance",
+      "default": "user-upload"
+     },
+     "authorship_confirmed": {
+      "type": "boolean",
+      "title": "Authorship Confirmed",
+      "default": false
+     }
+    },
+    "type": "object",
+    "required": [
+     "title",
+     "project"
+    ],
+    "title": "DocumentMetadata"
+   },
+   "GitHubImportsOut": {
+    "properties": {
+     "items": {
+      "items": {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      "type": "array",
+      "title": "Items",
+      "default": []
+     }
+    },
+    "type": "object",
+    "title": "GitHubImportsOut"
+   },
+   "GitHubStatus": {
+    "properties": {
+     "connected": {
+      "type": "boolean",
+      "title": "Connected"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status"
+     },
+     "authorization_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Authorization Url"
+     },
+     "authorization_message": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Authorization Message"
+     },
+     "login": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Login"
+     },
+     "read_only": {
+      "type": "boolean",
+      "title": "Read Only",
+      "default": true
+     }
+    },
+    "type": "object",
+    "required": [
+     "connected",
+     "status"
+    ],
+    "title": "GitHubStatus"
+   },
+   "HTTPValidationError": {
+    "properties": {
+     "detail": {
+      "items": {
+       "$ref": "#/components/schemas/ValidationError"
+      },
+      "type": "array",
+      "title": "Detail"
+     }
+    },
+    "type": "object",
+    "title": "HTTPValidationError"
+   },
+   "HealthOut": {
+    "properties": {
+     "api": {
+      "type": "string",
+      "title": "Api",
+      "default": "ok"
+     },
+     "marketplace": {
+      "type": "string",
+      "enum": [
+       "ok",
+       "degraded"
+      ],
+      "title": "Marketplace"
+     },
+     "queued_degraded_runs": {
+      "type": "integer",
+      "title": "Queued Degraded Runs"
+     }
+    },
+    "type": "object",
+    "required": [
+     "marketplace",
+     "queued_degraded_runs"
+    ],
+    "title": "HealthOut"
+   },
+   "ImportReadme": {
+    "properties": {
+     "owner": {
+      "type": "string",
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Owner"
+     },
+     "repo": {
+      "type": "string",
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Repo"
+     },
+     "path": {
+      "type": "string",
+      "maxLength": 300,
+      "minLength": 1,
+      "title": "Path",
+      "default": "README.md"
+     },
+     "ref": {
+      "anyOf": [
+       {
+        "type": "string",
+        "maxLength": 200
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Ref"
+     },
+     "authorship_confirmed": {
+      "type": "boolean",
+      "title": "Authorship Confirmed",
+      "default": false
+     }
+    },
+    "type": "object",
+    "required": [
+     "owner",
+     "repo"
+    ],
+    "title": "ImportReadme"
+   },
+   "JobCard": {
+    "properties": {
+     "job_id": {
+      "type": "string",
+      "title": "Job Id"
+     },
+     "title": {
+      "type": "string",
+      "title": "Title"
+     },
+     "description": {
+      "type": "string",
+      "title": "Description",
+      "default": ""
+     },
+     "client_id": {
+      "type": "string",
+      "title": "Client Id",
+      "default": ""
+     },
+     "connects_cost": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Connects Cost"
+     },
+     "budget_max": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Budget Max"
+     },
+     "required_skills": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Required Skills",
+      "default": []
+     },
+     "latest_run": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/RunOut"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "fit_score": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Fit Score"
+     },
+     "risk_score": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Risk Score"
+     },
+     "recommended_action": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Recommended Action"
+     },
+     "price": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Price"
+     }
+    },
+    "type": "object",
+    "required": [
+     "job_id",
+     "title"
+    ],
+    "title": "JobCard"
+   },
+   "LoginIn": {
+    "properties": {
+     "email": {
+      "type": "string",
+      "title": "Email"
+     },
+     "password": {
+      "type": "string",
+      "title": "Password"
+     }
+    },
+    "type": "object",
+    "required": [
+     "email",
+     "password"
+    ],
+    "title": "LoginIn"
+   },
+   "MappingIn": {
+    "properties": {
+     "catalog_sha256": {
+      "type": "string",
+      "title": "Catalog Sha256"
+     },
+     "operations": {
+      "additionalProperties": true,
+      "type": "object",
+      "title": "Operations"
+     }
+    },
+    "type": "object",
+    "required": [
+     "catalog_sha256",
+     "operations"
+    ],
+    "title": "MappingIn"
+   },
+   "MemoryOut": {
+    "properties": {
+     "style": {
+      "items": {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      "type": "array",
+      "title": "Style"
+     },
+     "outcome": {
+      "additionalProperties": {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      "type": "object",
+      "title": "Outcome"
+     }
+    },
+    "type": "object",
+    "required": [
+     "style",
+     "outcome"
+    ],
+    "title": "MemoryOut"
+   },
+   "ModeIn": {
+    "properties": {
+     "mode": {
+      "type": "string",
+      "title": "Mode"
+     }
+    },
+    "type": "object",
+    "required": [
+     "mode"
+    ],
+    "title": "ModeIn"
+   },
+   "OutcomeIn": {
+    "properties": {
+     "outcome": {
+      "type": "string",
+      "enum": [
+       "viewed",
+       "replied",
+       "interview",
+       "hired",
+       "lost"
+      ],
+      "title": "Outcome"
+     }
+    },
+    "type": "object",
+    "required": [
+     "outcome"
+    ],
+    "title": "OutcomeIn"
+   },
+   "ParagraphRegenerationIn": {
+    "properties": {
+     "claim_index": {
+      "type": "integer",
+      "maximum": 50.0,
+      "minimum": 0.0,
+      "title": "Claim Index"
+     }
+    },
+    "type": "object",
+    "required": [
+     "claim_index"
+    ],
+    "title": "ParagraphRegenerationIn"
+   },
+   "ParagraphRegenerationOut": {
+    "properties": {
+     "text": {
+      "type": "string",
+      "title": "Text"
+     }
+    },
+    "type": "object",
+    "required": [
+     "text"
+    ],
+    "title": "ParagraphRegenerationOut"
+   },
+   "PipelineOut": {
+    "properties": {
+     "columns": {
+      "additionalProperties": {
+       "items": {
+        "$ref": "#/components/schemas/RunOut"
+       },
+       "type": "array"
+      },
+      "type": "object",
+      "title": "Columns"
+     }
+    },
+    "type": "object",
+    "required": [
+     "columns"
+    ],
+    "title": "PipelineOut"
+   },
+   "PlatformConfirmationIn": {
+    "properties": {
+     "review_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Review Hash"
+     },
+     "confirm_on_upwork": {
+      "type": "boolean",
+      "title": "Confirm On Upwork"
+     },
+     "attachments_choice": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Attachments Choice"
+     }
+    },
+    "type": "object",
+    "required": [
+     "review_hash",
+     "confirm_on_upwork"
+    ],
+    "title": "PlatformConfirmationIn"
+   },
+   "RegisterIn": {
+    "properties": {
+     "email": {
+      "type": "string",
+      "maxLength": 200,
+      "minLength": 3,
+      "title": "Email"
+     },
+     "password": {
+      "type": "string",
+      "maxLength": 200,
+      "minLength": 8,
+      "title": "Password"
+     },
+     "freelancer_id": {
+      "type": "string",
+      "title": "Freelancer Id",
+      "default": "sample-ai-engineer"
+     }
+    },
+    "type": "object",
+    "required": [
+     "email",
+     "password"
+    ],
+    "title": "RegisterIn"
+   },
+   "ReplayIn": {
+    "properties": {
+     "checkpoint_id": {
+      "type": "string",
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Checkpoint Id"
+     },
+     "node": {
+      "type": "string",
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Node"
+     }
+    },
+    "type": "object",
+    "required": [
+     "checkpoint_id",
+     "node"
+    ],
+    "title": "ReplayIn"
+   },
+   "RepositoryIn": {
+    "properties": {
+     "owner": {
+      "type": "string",
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Owner"
+     },
+     "repo": {
+      "type": "string",
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Repo"
+     },
+     "path": {
+      "type": "string",
+      "maxLength": 300,
+      "minLength": 1,
+      "title": "Path"
+     },
+     "ref": {
+      "anyOf": [
+       {
+        "type": "string",
+        "maxLength": 200
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Ref"
+     },
+     "kind": {
+      "type": "string",
+      "pattern": "^(readme|code)$",
+      "title": "Kind"
+     },
+     "metadata": {
+      "$ref": "#/components/schemas/DocumentMetadata"
+     }
+    },
+    "type": "object",
+    "required": [
+     "owner",
+     "repo",
+     "path",
+     "kind",
+     "metadata"
+    ],
+    "title": "RepositoryIn"
+   },
+   "RunDetail": {
+    "properties": {
+     "run_id": {
+      "type": "string",
+      "title": "Run Id"
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "bid",
+       "conv"
+      ],
+      "title": "Kind"
+     },
+     "target": {
+      "type": "string",
+      "title": "Target"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status"
+     },
+     "trace_id": {
+      "type": "string",
+      "title": "Trace Id"
+     },
+     "degraded": {
+      "type": "boolean",
+      "title": "Degraded",
+      "default": false
+     },
+     "created_at": {
+      "type": "number",
+      "title": "Created At"
+     },
+     "outcome": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Outcome"
+     },
+     "pending": {
+      "anyOf": [
+       {
+        "additionalProperties": true,
+        "type": "object"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Pending"
+     },
+     "summary": {
+      "additionalProperties": true,
+      "type": "object",
+      "title": "Summary",
+      "default": {}
+     }
+    },
+    "type": "object",
+    "required": [
+     "run_id",
+     "kind",
+     "target",
+     "status",
+     "trace_id",
+     "created_at"
+    ],
+    "title": "RunDetail"
+   },
+   "RunMetricOut": {
+    "properties": {
+     "run_id": {
+      "type": "string",
+      "title": "Run Id"
+     },
+     "target": {
+      "type": "string",
+      "title": "Target"
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "bid",
+       "conv"
+      ],
+      "title": "Kind"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status"
+     },
+     "trace_id": {
+      "type": "string",
+      "title": "Trace Id"
+     },
+     "tokens_used": {
+      "type": "integer",
+      "title": "Tokens Used"
+     },
+     "input_tokens": {
+      "type": "integer",
+      "title": "Input Tokens"
+     },
+     "output_tokens": {
+      "type": "integer",
+      "title": "Output Tokens"
+     },
+     "output_tokens_per_second": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Output Tokens Per Second"
+     },
+     "latency_ms": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Latency Ms"
+     },
+     "cost_usd": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Cost Usd"
+     },
+     "usage_exact": {
+      "type": "boolean",
+      "title": "Usage Exact"
+     },
+     "models": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Models"
+     },
+     "job_analyzed": {
+      "type": "boolean",
+      "title": "Job Analyzed"
+     },
+     "proposal": {
+      "type": "boolean",
+      "title": "Proposal"
+     }
+    },
+    "type": "object",
+    "required": [
+     "run_id",
+     "target",
+     "kind",
+     "status",
+     "trace_id",
+     "tokens_used",
+     "input_tokens",
+     "output_tokens",
+     "output_tokens_per_second",
+     "latency_ms",
+     "cost_usd",
+     "usage_exact",
+     "models",
+     "job_analyzed",
+     "proposal"
+    ],
+    "title": "RunMetricOut"
+   },
+   "RunOut": {
+    "properties": {
+     "run_id": {
+      "type": "string",
+      "title": "Run Id"
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "bid",
+       "conv"
+      ],
+      "title": "Kind"
+     },
+     "target": {
+      "type": "string",
+      "title": "Target"
+     },
+     "status": {
+      "type": "string",
+      "title": "Status"
+     },
+     "trace_id": {
+      "type": "string",
+      "title": "Trace Id"
+     },
+     "degraded": {
+      "type": "boolean",
+      "title": "Degraded",
+      "default": false
+     },
+     "created_at": {
+      "type": "number",
+      "title": "Created At"
+     },
+     "outcome": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Outcome"
+     }
+    },
+    "type": "object",
+    "required": [
+     "run_id",
+     "kind",
+     "target",
+     "status",
+     "trace_id",
+     "created_at"
+    ],
+    "title": "RunOut"
+   },
+   "SettingsIn": {
+    "properties": {
+     "hourly_rate_usd": {
+      "anyOf": [
+       {
+        "type": "number",
+        "maximum": 1000.0,
+        "exclusiveMinimum": 0.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Hourly Rate Usd"
+     },
+     "minimum_project_budget_usd": {
+      "anyOf": [
+       {
+        "type": "number",
+        "maximum": 1000000.0,
+        "minimum": 0.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Minimum Project Budget Usd"
+     },
+     "weekly_connects_budget": {
+      "anyOf": [
+       {
+        "type": "integer",
+        "maximum": 1000.0,
+        "minimum": 0.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Weekly Connects Budget"
+     },
+     "auto_skip_low_fit": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Auto Skip Low Fit"
+     }
+    },
+    "type": "object",
+    "title": "SettingsIn"
+   },
+   "SettingsOut": {
+    "properties": {
+     "hourly_rate_usd": {
+      "anyOf": [
+       {
+        "type": "number",
+        "maximum": 1000.0,
+        "exclusiveMinimum": 0.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Hourly Rate Usd"
+     },
+     "minimum_project_budget_usd": {
+      "anyOf": [
+       {
+        "type": "number",
+        "maximum": 1000000.0,
+        "minimum": 0.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Minimum Project Budget Usd"
+     },
+     "weekly_connects_budget": {
+      "anyOf": [
+       {
+        "type": "integer",
+        "maximum": 1000.0,
+        "minimum": 0.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Weekly Connects Budget"
+     },
+     "auto_skip_low_fit": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Auto Skip Low Fit"
+     },
+     "saved_searches": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array",
+      "title": "Saved Searches",
+      "default": []
+     },
+     "autonomy_note": {
+      "type": "string",
+      "title": "Autonomy Note",
+      "default": "GigBid never sends a proposal or message without your approval."
+     }
+    },
+    "type": "object",
+    "title": "SettingsOut"
+   },
+   "ThreadCard": {
+    "properties": {
+     "thread_id": {
+      "type": "string",
+      "title": "Thread Id"
+     },
+     "job_id": {
+      "type": "string",
+      "title": "Job Id"
+     },
+     "client_id": {
+      "type": "string",
+      "title": "Client Id"
+     },
+     "last_message": {
+      "type": "string",
+      "title": "Last Message",
+      "default": ""
+     },
+     "latest_run": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/RunOut"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     }
+    },
+    "type": "object",
+    "required": [
+     "thread_id",
+     "job_id",
+     "client_id"
+    ],
+    "title": "ThreadCard"
+   },
+   "TokenOut": {
+    "properties": {
+     "token": {
+      "type": "string",
+      "title": "Token"
+     },
+     "user": {
+      "$ref": "#/components/schemas/UserOut"
+     }
+    },
+    "type": "object",
+    "required": [
+     "token",
+     "user"
+    ],
+    "title": "TokenOut"
+   },
+   "UploadIn": {
+    "properties": {
+     "filename": {
+      "type": "string",
+      "maxLength": 200,
+      "minLength": 1,
+      "pattern": "^[^/\\\\]+$",
+      "title": "Filename"
+     },
+     "kind": {
+      "type": "string",
+      "pattern": "^(cv|case_study|review|past_proposal)$",
+      "title": "Kind"
+     },
+     "content_base64": {
+      "type": "string",
+      "maxLength": 2700000,
+      "minLength": 1,
+      "title": "Content Base64"
+     },
+     "metadata": {
+      "$ref": "#/components/schemas/DocumentMetadata"
+     }
+    },
+    "type": "object",
+    "required": [
+     "filename",
+     "kind",
+     "content_base64",
+     "metadata"
+    ],
+    "title": "UploadIn"
+   },
+   "UserOut": {
+    "properties": {
+     "user_id": {
+      "type": "string",
+      "title": "User Id"
+     },
+     "email": {
+      "type": "string",
+      "title": "Email"
+     },
+     "freelancer_id": {
+      "type": "string",
+      "title": "Freelancer Id"
+     },
+     "display_name": {
+      "type": "string",
+      "title": "Display Name",
+      "default": ""
+     }
+    },
+    "type": "object",
+    "required": [
+     "user_id",
+     "email",
+     "freelancer_id"
+    ],
+    "title": "UserOut"
+   },
+   "ValidationError": {
+    "properties": {
+     "loc": {
+      "items": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "integer"
+        }
+       ]
+      },
+      "type": "array",
+      "title": "Location"
+     },
+     "msg": {
+      "type": "string",
+      "title": "Message"
+     },
+     "type": {
+      "type": "string",
+      "title": "Error Type"
+     },
+     "input": {
+      "title": "Input"
+     },
+     "ctx": {
+      "type": "object",
+      "title": "Context"
+     }
+    },
+    "type": "object",
+    "required": [
+     "loc",
+     "msg",
+     "type"
+    ],
+    "title": "ValidationError"
+   }
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+  "sample_job_id": "scam-200004",
+  "cap": 2048,
+  "trials": [
+    {
+      "variant": "react",
+      "job_id": "scam-200004",
+      "action": "bid",
+      "correct": false,
+      "error": null,
+      "tokens": 5724,
+      "latency_seconds": 6.0487,
+      "critic_revisions": null,
+      "max_completion_tokens_per_call": 2048
+    },
+    {
+      "variant": "supervisor",
+      "job_id": "scam-200004",
+      "action": null,
+      "correct": false,
+      "error": "ValidationError: 2 validation errors for AgentRecommendation\nclaim_texts\n  List should have at most 2 items after validation, not 3 [type=too_long, input_value=['The freelancer has a hi...'s hourly rate is $40.\"], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long\nevidence_ids\n  List should have at most 5 items after validation, not 6 [type=too_long, input_value=['ai-ml-engineer-p07', 'a... 'ai-ml-engineer-rd-12'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "tokens": 6055,
+      "latency_seconds": 7.5334,
+      "critic_revisions": null,
+      "max_completion_tokens_per_call": 2048
+    },
+    {
+      "variant": "hand_built",
+      "job_id": "scam-200004",
+      "action": "skip",
+      "correct": true,
+      "error": null,
+      "tokens": 1496,
+      "latency_seconds": 7.6603,
+      "critic_revisions": 0,
+      "max_completion_tokens_per_call": 2048
+    }
+  ],
+  "excluded_from_comparison": true
+}

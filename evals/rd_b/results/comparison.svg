@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#222}.title{font-size:20px;font-weight:bold}.label{font-size:12px}.small{font-size:10px}</style>
+<text x="20" y="30" class="title">Hashing baseline vs local FastEmbed — synthetic evaluation</text>
+<text x="70" y="62" class="label">Recall@5 by RAG variant</text>
+<line x1="70" y1="380" x2="970" y2="380" stroke="#777"/>
+<rect x="100" y="292.8" width="25" height="87.2" fill="#4c78a8"/>
+<text x="112.5" y="287.8" text-anchor="middle" class="small">0.29</text>
+<rect x="130" y="302.0" width="25" height="78.0" fill="#54a24b"/>
+<text x="142.5" y="297.0" text-anchor="middle" class="small">0.26</text>
+<text x="125" y="398" text-anchor="middle" class="small">v0_naive</text>
+<rect x="212" y="275.7" width="25" height="104.3" fill="#4c78a8"/>
+<text x="224.5" y="270.7" text-anchor="middle" class="small">0.35</text>
+<rect x="242" y="289.0" width="25" height="91.0" fill="#54a24b"/>
+<text x="254.5" y="284.0" text-anchor="middle" class="small">0.30</text>
+<text x="237" y="398" text-anchor="middle" class="small">v1_decomposed</text>
+<rect x="324" y="272.2" width="25" height="107.8" fill="#4c78a8"/>
+<text x="336.5" y="267.2" text-anchor="middle" class="small">0.36</text>
+<rect x="354" y="275.4" width="25" height="104.6" fill="#54a24b"/>
+<text x="366.5" y="270.4" text-anchor="middle" class="small">0.35</text>
+<text x="349" y="398" text-anchor="middle" class="small">v1_v2_hybrid_decomposed</text>
+<rect x="436" y="271.6" width="25" height="108.4" fill="#4c78a8"/>
+<text x="448.5" y="266.6" text-anchor="middle" class="small">0.36</text>
+<rect x="466" y="269.5" width="25" height="110.5" fill="#54a24b"/>
+<text x="478.5" y="264.5" text-anchor="middle" class="small">0.37</text>
+<text x="461" y="398" text-anchor="middle" class="small">v1_v2_v3</text>
+<rect x="548" y="286.0" width="25" height="94.0" fill="#4c78a8"/>
+<text x="560.5" y="281.0" text-anchor="middle" class="small">0.31</text>
+<rect x="578" y="286.8" width="25" height="93.2" fill="#54a24b"/>
+<text x="590.5" y="281.8" text-anchor="middle" class="small">0.31</text>
+<text x="573" y="398" text-anchor="middle" class="small">v2_hybrid</text>
+<rect x="660" y="273.5" width="25" height="106.5" fill="#4c78a8"/>
+<text x="672.5" y="268.5" text-anchor="middle" class="small">0.36</text>
+<rect x="690" y="276.8" width="25" height="103.2" fill="#54a24b"/>
+<text x="702.5" y="271.8" text-anchor="middle" class="small">0.34</text>
+<text x="685" y="398" text-anchor="middle" class="small">v3_rerank</text>
+<rect x="772" y="271.4" width="25" height="108.6" fill="#4c78a8"/>
+<text x="784.5" y="266.4" text-anchor="middle" class="small">0.36</text>
+<rect x="802" y="274.7" width="25" height="105.3" fill="#54a24b"/>
+<text x="814.5" y="269.7" text-anchor="middle" class="small">0.35</text>
+<text x="797" y="398" text-anchor="middle" class="small">v8_corrective</text>
+<rect x="690" y="54" width="12" height="12" fill="#4c78a8"/><text x="708" y="64" class="small">Hashing</text>
+<rect x="785" y="54" width="12" height="12" fill="#54a24b"/><text x="803" y="64" class="small">FastEmbed</text>
+<text x="70" y="425" class="label">Decision accuracy (v1_decomposed, all personas)</text>
+<line x1="70" y1="440" x2="970" y2="440" stroke="#777"/>
+<rect x="340" y="352.7" width="48" height="87.3" fill="#4c78a8"/>
+<text x="364" y="344.7" text-anchor="middle" class="small">97.0%</text>
+<text x="364" y="458" text-anchor="middle" class="small">hashing</text>
+<rect x="490" y="355.7" width="48" height="84.3" fill="#54a24b"/>
+<text x="514" y="347.7" text-anchor="middle" class="small">93.7%</text>
+<text x="514" y="458" text-anchor="middle" class="small">fastembed</text>
+</svg>
