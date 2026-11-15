@@ -14,6 +14,8 @@ x-agent-env: &agent-env
   GIGBID__portfolio__source: mcp
   GIGBID__portfolio__transport: streamable_http
   GIGBID__portfolio__url: http://portfolio-mcp:8765/mcp
+  PORTFOLIO_MCP_TOKEN: ${PORTFOLIO_MCP_TOKEN:?set PORTFOLIO_MCP_TOKEN}
+  PORTFOLIO_INDEX_DB: /data/portfolio_index.sqlite
   GIGBID__marketplace__mode: mcp
   GIGBID__marketplace__url: http://marketplace-mcp:8001/mcp
   GIGBID__workspace__source: mcp
@@ -39,7 +41,7 @@ services:
     command: ["redis-server", "--appendonly", "yes", "--appendfsync", "everysec"]
     volumes: [redisdata:/data]
     healthcheck: {test: ["CMD", "redis-cli", "ping"], interval: 5s, retries: 10}
-  ollama:                      # open profile: local open-weight models (pull with: docker compose exec ollama ollama pull qwen3:4b)
+  ollama:                      # open profile: local open-weight models (pull qwen3:4b-instruct)
     image: ollama/ollama
     volumes: [ollama:/root/.ollama]
     ports: ["11434:11434"]
@@ -64,6 +66,11 @@ services:
       HOST: 0.0.0.0
       PORT: "8765"
       GIGBID_DATA_DIR: ${GIGBID_DATA_DIR:-data/sample}
+      OAUTH_DB: /data/oauth/tokens.sqlite
+      OAUTH_ENCRYPTION_KEY: ${OAUTH_ENCRYPTION_KEY:?set a persistent Fernet key for per-user OAuth tokens}
+      PORTFOLIO_INDEX_DB: /data/portfolio_index.sqlite
+      PORTFOLIO_MCP_TOKEN: ${PORTFOLIO_MCP_TOKEN:?set PORTFOLIO_MCP_TOKEN}
+    volumes: [appdata:/data]
   marketplace-mcp:
     <<: *py
     build: {context: .., dockerfile: infra/docker/marketplace-mcp.Dockerfile}
@@ -87,7 +94,9 @@ services:
   api:
     <<: *py
     build: {context: .., dockerfile: infra/docker/api.Dockerfile}
-    environment: *agent-env
+    environment:
+      <<: *agent-env
+      GITHUB_MCP_BINARY: /usr/local/bin/github-mcp-server
     volumes: [appdata:/data]
     depends_on: {postgres: {condition: service_healthy}, redis: {condition: service_healthy}, portfolio-mcp: {condition: service_started}, marketplace-mcp: {condition: service_started}}
     ports: ["8000:8000"]

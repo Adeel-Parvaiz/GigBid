@@ -44,7 +44,7 @@ async def test_measurement_counts_schema_repair_tokens_and_preserves_model():
     assert answer.title == "Build"
     assert len(llm.calls) == 2
     assert all(c["node"] == "analyst" and c["prompt_tokens"] == 10 for c in llm.calls)
-    assert all(c["model"] == "qwen3:4b" for c in llm.calls)
+    assert all(c["model"] == "qwen3:4b-instruct" for c in llm.calls)
 
 
 def test_failed_jobs_count_against_accuracy_and_missing_usage_is_not_zero():

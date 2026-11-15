@@ -14,13 +14,14 @@ llm:
       billing: local
       hardware_note: "Local Ollama inference; hardware and electricity costs are not measured."
       api_key_env: LLM_API_KEY
+      max_output_tokens: 768
       nodes:                                   # choose by measurement, not by default
-        analyst: qwen3:4b
-        risk: qwen3:4b
-        writer: gpt-oss:20b
-        critic: gpt-oss:20b
-        liaison_intent: qwen3:4b
-        liaison_reply: gpt-oss:20b
+        analyst: qwen3:4b-instruct
+        risk: qwen3:4b-instruct
+        writer: qwen3:4b-instruct
+        critic: qwen3:4b-instruct
+        liaison_intent: qwen3:4b-instruct
+        liaison_reply: qwen3:4b-instruct
       fallback_nodes: {analyst: qwen2.5:3b, risk: qwen2.5:3b, liaison_intent: qwen2.5:3b}
     paid:
       base_url: https://api.openai.com/v1

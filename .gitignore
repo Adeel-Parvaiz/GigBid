@@ -4,6 +4,7 @@ __pycache__/
 .venv/
 .venv-linux/
 .local-models/
+/backups/
 apps/web/playwright-report/
 apps/web/playwright-report-a6/
 apps/web/test-results/

@@ -16,8 +16,11 @@ Docker volumes.
 - A managed PostgreSQL database and a **newly rotated** connection credential.
   The earlier local credential was exposed and must not be reused.
 - A persistent Fernet key for OAuth-token encryption and fresh application,
-  marketplace, GigSim, and reviewer secrets. Do not commit `.env` or paste secrets
-  into chat.
+  marketplace, Portfolio MCP, GigSim, and reviewer secrets. Set the same
+  `PORTFOLIO_MCP_TOKEN` and `OAUTH_ENCRYPTION_KEY` for the API/worker and
+  Portfolio MCP service through `.env`. Keep the Fernet key stable and preserve
+  it separately from backups; changing it makes existing encrypted OAuth and
+  portfolio records unreadable. Do not commit `.env` or paste secrets into chat.
 - An LLM configuration. `LLM_BACKEND=heuristic` is suitable only for a smoke
   test; real proposal generation needs a configured model endpoint and key.
 
@@ -40,8 +43,8 @@ Edit `.env` on the VPS and set:
   `https://<DOMAIN>/api/connections/upwork/callback`. Register that exact URL
   with the OAuth provider before enabling Upwork.
 - Fresh random values for `APP_SECRET_KEY`, `POSTGRES_PASSWORD`,
-  `MARKETPLACE_MCP_TOKEN`, `GIGSIM_API_TOKEN`, `REVIEWER_PASSWORD`, and a valid
-  `OAUTH_ENCRYPTION_KEY`.
+  `MARKETPLACE_MCP_TOKEN`, `PORTFOLIO_MCP_TOKEN`, `GIGSIM_API_TOKEN`,
+  `REVIEWER_PASSWORD`, and a valid, persistent `OAUTH_ENCRYPTION_KEY`.
 - `GIGBID_DATA_DIR=data/sample` for a small smoke deployment. To use the prepared
   Kaggle corpus instead, obtain the source data under its license, run the
   documented dataset preparation, then set the corpus path before building.
@@ -62,8 +65,17 @@ worker, then approving once from the UI.
 
 ## Keep available and secure
 
-- Configure provider-side backups for managed PostgreSQL. Back up Docker volumes
-  containing Redis, runs, OAuth tokens, and GigSim state before upgrades.
+- The shared `appdata` volume (runs/users/OAuth/portfolio-index/GigSim/workspace
+  SQLite and audit files) can be snapshotted with the tested procedure in
+  [the runbook](RUNBOOK.md). That archive is not encrypted and does not include
+  Redis, PostgreSQL, Ollama, or Caddy volumes.
+- Configure managed-PostgreSQL backups/PITR and periodic `pg_dump` exports.
+  Redis AOF, local `pgdata`, Ollama models, and Caddy's certificate/config
+  volumes need separate service-aware backups and restore drills; see
+  [the volume guidance](RUNBOOK.md#other-persistent-volumes).
+- Retain encrypted copies off-site with a client-side encrypted tool such as
+  Restic. Store its repository key separately from the repository and from
+  `OAUTH_ENCRYPTION_KEY`; no off-site service or backup job is provisioned here.
 - Keep `.env` only on the host with restrictive file permissions. Rotate secrets
   if the host or backups are exposed.
 - Monitor `docker compose ... ps` and container logs; renewals are automatic while

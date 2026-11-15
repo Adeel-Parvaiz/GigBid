@@ -9,6 +9,7 @@ from typing import Literal
 from pydantic import BaseModel, Field
 
 from rag.index.bm25 import BM25Index
+from rag.index.sqlite_vector import SQLiteDenseIndex
 from rag.index.vector import DenseIndex, Embedder, HashingEmbedder
 from rag.rerank import LexicalReranker
 
@@ -90,7 +91,16 @@ class PortfolioStore:
             from agent.config import load_config
             from rag.retriever import make_embedder
             embedder = make_embedder(load_config(overrides={'rag': self.rag_config}))
-        self.index = DenseIndex(list(self.items.values()), embedder or HashingEmbedder())
+        vector_embedder = embedder or HashingEmbedder()
+        if self.user and self.vault:
+            index_database = os.environ.get("PORTFOLIO_INDEX_DB") or str(
+                self.vault.database.with_name("portfolio_index.sqlite")
+            )
+            self.index = SQLiteDenseIndex(
+                list(self.items.values()), vector_embedder, index_database, self.user, self.vault.cipher
+            )
+        else:
+            self.index = DenseIndex(list(self.items.values()), vector_embedder)
         self.bm25 = BM25Index(list(self.items.values()))
         self.layer = layer or os.environ.get("PORTFOLIO_RETRIEVAL", "dense")      # dense | hybrid | hybrid_rerank
         self.reranker = LexicalReranker()

@@ -7,6 +7,7 @@ from mcp.shared.memory import create_connected_server_and_client_session as conn
 from apps.api.auth.oauth_store import OAuthVault
 from mcp_servers.portfolio.server import build_server
 from mcp_servers.portfolio.tools import PortfolioStore
+from rag.index.sqlite_vector import SQLiteDenseIndex
 from rag.index.vector import DenseIndex, HashingEmbedder
 from rag.ingest.loaders import fixed_chunks, load_document
 from rag.ingest.store import PortfolioCorpus
@@ -87,6 +88,8 @@ async def test_open_mcp_session_refreshes_after_add_update_delete_and_restart(tm
     vault = OAuthVault(tmp_path / 'live.sqlite')
     corpus = PortfolioCorpus(vault)
     store = PortfolioStore(freelancer_id='sample-ai-engineer', user_id='alice', vault=vault)
+    assert isinstance(store.index, SQLiteDenseIndex)
+    assert (tmp_path / 'portfolio_index.sqlite').is_file()
     async with connect(build_server(store)) as session:
         before = await session.call_tool('search_evidence', {'requirement': 'uniqueb1marker'})
         assert not any('uniqueb1marker' in i['summary'] for i in before.structuredContent['items'])
@@ -98,9 +101,17 @@ async def test_open_mcp_session_refreshes_after_add_update_delete_and_restart(tm
         # A second server reading the same encrypted store also sees persisted evidence.
         restarted = PortfolioStore(freelancer_id='sample-ai-engineer', user_id='alice', vault=OAuthVault(vault.database))
         assert restarted.get_case_study(eid).source == 'upload:new.md'
+        assert any(
+            item['evidence_id'] == eid
+            for item in restarted.index.search('uniqueb1marker', k=10)
+        )
         other = PortfolioStore(freelancer_id='sample-ai-engineer', user_id='bob', vault=vault)
         with pytest.raises(ValueError):
             other.get_case_study(eid)
+        assert all(
+            item['evidence_id'] != eid
+            for item in other.index.search('uniqueb1marker', k=20)
+        )
         corpus.ingest('alice', 'sample-ai-engineer', 'new.md', b'Replacement evidence without the old unique marker', 'case_study', META)
         assert (await session.call_tool('get_case_study', {'id': eid})).isError
         corpus.delete('alice', result['document_id'])

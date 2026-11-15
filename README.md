@@ -9,6 +9,13 @@ evidence**, and manage client replies. **A human approves every proposal and mes
 > Dataset #1 from the TA's list is now ingested as real job text; synthetic personas, clients, labels, proposals and outcomes remain clearly distinguished.
 > Real open-weight model runs are recorded separately from the historical heuristic baselines below. Development gold is synthetic and real outcome labels are unavailable; none of these evaluations measure marketplace performance. Dataset selection, attribution, licensing, preprocessing and limitations are documented in [docs/DATA_CARD.md](docs/DATA_CARD.md).
 
+## Two-minute portfolio tour
+
+- **Live UI:** [GigBid on Vercel](https://web-seven-dun-59.vercel.app) — access-protected; a public backend is not deployed.
+- **Workflow video:** [watch the recorded approval-to-submission flow](gigbid_workflow_2min.webm).
+- **One agent trace:** [scam job correctly skipped by the hand-built graph](evals/results/rd_c_traces/skipped_scam.json).
+- **Signature extension:** [X2 proposal experiments](docs/EXTENSION.md), with the [paired GigSim A/B result](evals/results/proposal_ab_experiment.json).
+
 ## Run it (verified from a clean venv on Linux; Windows untested)
 ```bash
 python -m venv .venv && source .venv/bin/activate          # Windows: .venv\Scripts\activate

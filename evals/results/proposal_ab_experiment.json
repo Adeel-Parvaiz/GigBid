@@ -1,0 +1,1054 @@
+{
+  "meta": {
+    "generated_at": "2026-11-15T15:56:06.633298+00:00",
+    "commit": "98b9252",
+    "corpus": "seeded sample of 200 jobs with required skills from kaggle_2024_v1",
+    "valid_for_real_marketplace_claims": false,
+    "why_not": "owned GigSim's deterministic rule-based client model is a controlled comparison, not real client evidence"
+  },
+  "experiment": "generic versus job-tailored proposal copy",
+  "design": "matched pairs; both arms use the same jobs, bid amounts, GigSim seed, and draft-ID sequence",
+  "seed": 4016,
+  "n": 200,
+  "job_provenance_counts": {
+    "real": 47,
+    "synthetic": 153
+  },
+  "reply_rates": {
+    "generic": {
+      "replies": 36,
+      "submissions": 200,
+      "rate": 0.18,
+      "wilson_95ci": [
+        0.133,
+        0.239
+      ]
+    },
+    "job_tailored": {
+      "replies": 158,
+      "submissions": 200,
+      "rate": 0.79,
+      "wilson_95ci": [
+        0.728,
+        0.841
+      ]
+    }
+  },
+  "reply_rate_difference_job_tailored_minus_generic": 0.61,
+  "paired_test": {
+    "name": "exact two-sided McNemar test",
+    "generic_only_replies": 8,
+    "job_tailored_only_replies": 130,
+    "p_value": 1.6209625004911946e-29,
+    "alpha": 0.05,
+    "significant": true
+  },
+  "pairs": [
+    {
+      "job_id": "syn-100237",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100606",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "scam-200080",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100235",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101038",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-7e2564cabd",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-3cdc9fb48d",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101097",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-cb305b809e",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100331",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-7ca9be7821",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-a374c2331f",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100200",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100337",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101297",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-31d617d7a2",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101336",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-6055248366",
+      "generic_replied": true,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-101427",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100856",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100988",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100916",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-e98c9e49ba",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "inj-200107",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-101074",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-d16ca2cfec",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-6393293e35",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-1c94b4b153",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100056",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "real-f89739968b",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-4e0146201f",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-525054d8ef",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "scam-200058",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100580",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100368",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100299",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101112",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101035",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100510",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100899",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100789",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "inj-200131",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100171",
+      "generic_replied": true,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "inj-200124",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-414af450de",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100846",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101099",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-101273",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-bd862bd951",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "real-f7b7fcb010",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-ff2de1640e",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100749",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-259e10a703",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100763",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100466",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100555",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101187",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100341",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100993",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101292",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100803",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-fa0c26f31b",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101472",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-c144f22f12",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100799",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "scam-200043",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101131",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100704",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101291",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100759",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "scam-200023",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100264",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100507",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100587",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100399-dup",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-101277",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-816abdc559",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100247",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100934",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101192-dup",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-4aea79355f",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100476",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101033",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "inj-200151",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-83e58b59bf",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-101408",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100710",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-5bc3a0ae78",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100835",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-c1f3dfbebd",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100659",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101084",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100433",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-2e2dedd90f",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100184",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "scam-200053",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100966",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100035",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100869",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101374-dup",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100302",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100886",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100643",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100623",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100999",
+      "generic_replied": true,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100901",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100342",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100048",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "inj-200140",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100557",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-f5325bdb3d",
+      "generic_replied": true,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-101411",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-d2f5a9407e",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100994",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "real-417f0aafba",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101240",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100825",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-1f3168cf41",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "scam-200033",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101215",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "scam-200083",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101261",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-ba15ebf735",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100715",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-9b8a696d13",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "scam-200029",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100373",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100823",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "real-2a0f5d7330",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100874",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100707",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100526",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100079",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-e9f2f14654",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100722",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100026",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100873",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100458",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-101276",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100155",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101463",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101039",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101057",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "real-07e4422755",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100336",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100935",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-b03ed593e9",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100902",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100549",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-2cd4000e7d",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100492",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101493",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100872",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100460",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100278",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101382",
+      "generic_replied": true,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "real-e26e4d5600",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100239",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100420",
+      "generic_replied": true,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-101229",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-c81f08942d",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100937",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-101003",
+      "generic_replied": true,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-101341",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100256",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100385",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100218",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100971",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100349",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "inj-200105",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100410",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "scam-200004",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-38c7ac79de",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100793",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-101186",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100376",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-53075621ff",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101047",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100768",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100362",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100258",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "inj-200125",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "inj-200116",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100884",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100673",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-2fe59e7802",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100556",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-d755c04173",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-347c240a6c",
+      "generic_replied": true,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "inj-200101",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "real-fefc8dcc03",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100508",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100044",
+      "generic_replied": true,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100190",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100398",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101059",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "syn-100193",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-101027",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    },
+    {
+      "job_id": "real-66dacbfb8d",
+      "generic_replied": false,
+      "job_tailored_replied": true
+    },
+    {
+      "job_id": "syn-100074",
+      "generic_replied": false,
+      "job_tailored_replied": false
+    }
+  ],
+  "limitations": [
+    "GigSim outcomes are deterministic rule-based synthetic client decisions, not real reply-rate evidence.",
+    "The treatment mentions the job title and listed required skills; the simulator rewards these signals by design.",
+    "The experiment uses fixed copy templates and does not compare LLM prompt versions or establish generalization.",
+    "Simulator submissions and Connects are isolated in a temporary local database; no external marketplace is contacted."
+  ]
+}

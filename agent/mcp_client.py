@@ -58,8 +58,19 @@ def transport_error(error):
 def portfolio_connection(cfg: dict, user: str | None = None, freelancer: str | None = None) -> dict:
     p = cfg.get("portfolio", {})
     if p.get("transport") == "streamable_http":
-        return {"transport": "streamable_http", "url": p["url"]}
-    env = {k: os.environ[k] for k in ['PORTFOLIO_DIR', 'GIGBID_DATA_DIR', 'OAUTH_DB', 'OAUTH_ENCRYPTION_KEY'] if os.environ.get(k)}
+        token = os.environ.get("PORTFOLIO_MCP_TOKEN")
+        if not user or not token:
+            raise ValueError("Authenticated user context and PORTFOLIO_MCP_TOKEN are required for portfolio MCP")
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "X-GigBid-User-ID": user,
+        }
+        if freelancer:
+            headers["X-GigBid-Freelancer-ID"] = freelancer
+        return {"transport": "streamable_http", "url": p["url"], "headers": headers}
+    env = {k: os.environ[k] for k in [
+        'PORTFOLIO_DIR', 'GIGBID_DATA_DIR', 'OAUTH_DB', 'OAUTH_ENCRYPTION_KEY', 'PORTFOLIO_INDEX_DB'
+    ] if os.environ.get(k)}
     rag = cfg.get('rag', {})
     env['PORTFOLIO_RAG_CONFIG'] = json.dumps(rag)
     if user:
