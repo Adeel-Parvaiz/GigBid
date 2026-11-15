@@ -1,6 +1,10 @@
 # Runbook
+For a public VPS deployment, use [the VPS deployment guide](DEPLOY_VPS.md) and
+the production-only `infra/docker-compose.vps.yml` override. The standard Compose
+file remains the local development setup.
+
 ## Start
-`cp .env.example .env`, set unique secrets (including `GIGSIM_API_TOKEN`), then run `docker compose -f infra/docker-compose.yml --env-file .env up --build`. The default stack runs the project-owned GigSim on localhost:8003 and routes the marketplace MCP through it. Pull models when needed: `docker compose exec ollama ollama pull qwen3:4b` (and the writer model in `agent/config.yaml`).
+`cp .env.example .env`, set unique secrets (including `GIGSIM_API_TOKEN`), then run `docker compose -f infra/docker-compose.yml --env-file .env up --build`. The default stack runs the project-owned GigSim on `127.0.0.1:13003` and routes the marketplace MCP through it. Pull models when needed: `docker compose exec ollama ollama pull qwen3:4b` (and the writer model in `agent/config.yaml`).
 Reviewer login is seeded from `REVIEWER_EMAIL` / `REVIEWER_PASSWORD`.
 
 Interactive job and conversation runs, approval resumes, retries and graph replays are queued through ARQ. The worker and API must use the same persistent `RUNS_DB` path; SSE events are stored there so the API can stream progress produced by the worker. Redis uses AOF with a persistent Compose volume for queued work.

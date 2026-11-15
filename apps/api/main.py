@@ -110,7 +110,7 @@ def create_app(deps=None, checkpointer=None, users: UserStore | None = None, run
     @app.get('/upwork-connected')
     def upwork_connected():
         from fastapi.responses import HTMLResponse
-        return HTMLResponse('<h1>Upwork connected</h1><p>Return to GigBid Settings. No proposals or messages were sent. Live mode requires verified tool mappings.</p><a href="http://127.0.0.1:3000/settings">Return to Settings</a>')
+        return HTMLResponse('<h1>Upwork connected</h1><p>Return to GigBid Settings. No proposals or messages were sent. Live mode requires verified tool mappings.</p><a href="/settings">Return to Settings</a>')
 
     @app.get('/upwork-connection-failed')
     def upwork_failed():

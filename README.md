@@ -5,6 +5,7 @@ evidence**, and manage client replies. **A human approves every proposal and mes
 
 > **Status: working backend + UI + project-owned GigSim service.** Run `python -m scripts.run_gigsim --with-api` for the persistent synthetic marketplace, authenticated MCP and GigBid API. See [our GigSim documentation](docs/OWN_GIGSIM.md).
 > Frontend deployment: [GigBid on Vercel](https://web-seven-dun-59.vercel.app) (currently access-protected; API and supporting services are not publicly deployed). [Workflow recording](evals/results/part_d_workflow.webm) and [Playwright results](evals/results/part_d_playwright.json).
+> VPS deployment preparation: [deployment guide](docs/DEPLOY_VPS.md); no public backend host has been provisioned.
 > Dataset #1 from the TA's list is now ingested as real job text; synthetic personas, clients, labels, proposals and outcomes remain clearly distinguished.
 > Real open-weight model runs are recorded separately from the historical heuristic baselines below. Development gold is synthetic and real outcome labels are unavailable; none of these evaluations measure marketplace performance. Dataset selection, attribution, licensing, preprocessing and limitations are documented in [docs/DATA_CARD.md](docs/DATA_CARD.md).
 

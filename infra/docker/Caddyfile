@@ -1,0 +1,18 @@
+{$DOMAIN} {
+	encode zstd gzip
+
+	@api path /api/*
+	handle @api {
+		uri strip_prefix /api
+		reverse_proxy api:8000
+	}
+
+	@oauth_result path /upwork-connected /upwork-connection-failed
+	handle @oauth_result {
+		reverse_proxy api:8000
+	}
+
+	handle {
+		reverse_proxy web:80
+	}
+}

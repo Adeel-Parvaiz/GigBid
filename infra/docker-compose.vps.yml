@@ -1,0 +1,66 @@
+services:
+  postgres:
+    profiles: ["local-db"]
+
+  ollama:
+    profiles: ["local-model"]
+    ports: !reset []
+
+  gigsim:
+    ports: !reset []
+
+  api:
+    ports: !reset []
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?set DATABASE_URL to the rotated managed PostgreSQL URL}
+      UPWORK_CALLBACK_URL: ${PUBLIC_UPWORK_CALLBACK_URL:?set the public Upwork callback URL}
+    depends_on: !override
+      redis:
+        condition: service_healthy
+      portfolio-mcp:
+        condition: service_started
+      marketplace-mcp:
+        condition: service_started
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=5)"
+      interval: 15s
+      timeout: 7s
+      retries: 5
+      start_period: 30s
+
+  worker:
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?set DATABASE_URL to the rotated managed PostgreSQL URL}
+    depends_on: !override
+      redis:
+        condition: service_healthy
+      api:
+        condition: service_started
+
+  web:
+    ports: !reset []
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN to a DNS name pointing at this VPS}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./docker/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      web:
+        condition: service_started
+
+volumes:
+  caddy_data: {}
+  caddy_config: {}

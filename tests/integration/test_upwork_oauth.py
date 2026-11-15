@@ -145,6 +145,9 @@ async def test_application_oauth_callback_user_scoping_and_provider_switch(oauth
             assert (await client.get('/connections/upwork/callback?state=bad&code=bad')).status_code == 400
             complete = await client.get(redirect.path + '?' + redirect.query, follow_redirects=False)
             assert complete.status_code == 303 and complete.headers['location'] == '/upwork-connected'
+            connected_page = await client.get('/upwork-connected')
+            assert connected_page.status_code == 200 and 'href="/settings"' in connected_page.text
+            assert '127.0.0.1:3000' not in connected_page.text
             assert (await client.get('/connections/upwork', headers=headers)).json()['connected']
             assert not (await client.get('/connections/upwork', headers=bob)).json()['connected']
             catalog = (await client.get('/connections/upwork/catalog', headers=headers)).json()
