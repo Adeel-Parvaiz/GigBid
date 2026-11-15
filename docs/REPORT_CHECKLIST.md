@@ -1,14 +1,14 @@
 # R&D report checklist (<= 10 pages). Every claim -> a results file, trace or commit.
-1 Problem/constraints: what must never be automated (send, spend Connects), budgets (declare p95 latency + cost).
+1 Problem/constraints: what must never be automated (send, spend Connects), measured p95 latency and cost, plus whether acceptance thresholds were preregistered.
 2 Architecture: use docs/ARCHITECTURE.md diagrams.
 3 R&D A tool granularity: run complete in `evals/rd_a/` with 40 contract-derived tasks, three description-only conditions, 120 local MCP calls, individual and aggregate results, and a visualization. This is a BM25 lexical tool-discovery baseline, not an LLM/production-agent comparison; see `docs/RD_A_RESULTS.md` for measured results and limitations.
 4 R&D B RAG: retrieval and decision runs exist for all three personas against `evals/datasets/kaggle_2024_v1`; the local-simulator outcome runner and a hashing-vs-local-FastEmbed comparison also completed. See `docs/RD_B_RESULTS.md` for the FastEmbed model/revision, re-embedded corpus, retrieval/decision/claim metrics, and paired cases where decisions did not improve or regressed despite retrieval changes. All current dev/gold data are synthetic; the instructor dev set and real-world outcome evaluation are still outstanding.
 5 R&D C single agent vs supervisor vs graph: completed on the frozen 50-job synthetic sample (150 paired trials). See `docs/RD_C_RESULTS.md`, `evals/results/rd_c_comparison.json`, and `evals/results/rd_c_trials.jsonl` for aggregate and persona/job-type results, five counted failures, and simulator-only outcome limitations. The hand-built graph scored 0.98 bid/skip accuracy versus 0.34 ReAct and 0.36 supervisor; the approved-proposal trace documents a baseline injection false positive that passed the local guard. This is exploratory synthetic evidence, not a real-market comparison. Open-model selection evidence remains separate: `docs/OPEN_MODEL_RESULTS.md` and `evals/results/open_model_comparison.json`.
-6 Change request (2 Nov): not received. Rules/prompts/thresholds are in `agent/config.yaml`; measure lines changed + minutes.
-7 Extension: not built.
-8 Failure analysis: actual failed cases now exist in `docs/OPEN_MODEL_RESULTS.md` and real API defects in `docs/REAL_AGENT_BEHAVIOUR.md`; the final report still needs >= 10 failed dev jobs grouped into a taxonomy, with the attempted fix and measured outcome.
+6 Change request (2 Nov): not received. Rules/prompts/thresholds are in `agent/config.yaml`; no request-specific edit/time estimate is claimed.
+7 Extension: X2 proposal experiments implemented and measured; see `docs/EXTENSION.md` and `evals/results/proposal_ab_experiment.json`.
+8 Failure analysis: ten paired failed development jobs and the model-size intervention are documented in `RD_Report.md` Appendix A. Seven corrected; three remain unresolved. Generic-opening/compliance misses are not separately measured.
 9 Safety: use "Safety properties" in ARCHITECTURE.md; add the injection blind spot from `injection_eval.json`.
-10 Hidden test results vs declared budgets, no excuses.
+10 Hidden tests: unavailable/not run. The report states this explicitly; no hidden-test pass or comparison is claimed. No latency or fully loaded cost thresholds were preregistered.
 Also: judge calibration (30 own labels, Cohen's kappa: `evals/runners/judge_calibration.py`), human pairwise panel, cost per proposal.
 
 Actual behavior evidence: `evals/results/real_agent_behaviour.json` records 25 passed real-model HTTP checks; `docs/REAL_AGENT_BEHAVIOUR.md` explains the defects found and fixed. This includes SQLite pending-approval restart coverage and local mock writes, not a substitute for GigSim/Postgres/Redis, browser tests or public traces.

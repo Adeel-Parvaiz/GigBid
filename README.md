@@ -4,7 +4,7 @@ LangGraph agents find freelance jobs, judge whether to bid, draft proposals wher
 evidence**, and manage client replies. **A human approves every proposal and message before anything leaves the system.**
 
 > **Status: working backend + UI + project-owned GigSim service.** Run `python -m scripts.run_gigsim --with-api` for the persistent synthetic marketplace, authenticated MCP and GigBid API. See [our GigSim documentation](docs/OWN_GIGSIM.md).
-> Frontend deployment: [GigBid on Vercel](https://web-seven-dun-59.vercel.app) (currently access-protected; API and supporting services are not publicly deployed). [Workflow recording](evals/results/part_d_workflow.webm) and [Playwright results](evals/results/part_d_playwright.json).
+> Frontend deployment: [GigBid on Vercel](https://web-seven-dun-59.vercel.app) (currently access-protected; API and supporting services are not publicly deployed). [Three-minute demo on YouTube](https://youtu.be/mAZ58rnRQ6w) and [Playwright results](evals/results/part_d_playwright.json).
 > VPS deployment preparation: [deployment guide](docs/DEPLOY_VPS.md); no public backend host has been provisioned.
 > Dataset #1 from the TA's list is now ingested as real job text; synthetic personas, clients, labels, proposals and outcomes remain clearly distinguished.
 > Real open-weight model runs are recorded separately from the historical heuristic baselines below. Development gold is synthetic and real outcome labels are unavailable; none of these evaluations measure marketplace performance. Dataset selection, attribution, licensing, preprocessing and limitations are documented in [docs/DATA_CARD.md](docs/DATA_CARD.md).
@@ -12,7 +12,7 @@ evidence**, and manage client replies. **A human approves every proposal and mes
 ## Two-minute portfolio tour
 
 - **Live UI:** [GigBid on Vercel](https://web-seven-dun-59.vercel.app) — access-protected; a public backend is not deployed.
-- **Workflow video:** [watch the recorded approval-to-submission flow](gigbid_workflow_2min.webm).
+- **3-minute demo:** [watch the narrated GigBid walkthrough on YouTube](https://youtu.be/mAZ58rnRQ6w).
 - **One agent trace:** [scam job correctly skipped by the hand-built graph](evals/results/rd_c_traces/skipped_scam.json).
 - **Signature extension:** [X2 proposal experiments](docs/EXTENSION.md), with the [paired GigSim A/B result](evals/results/proposal_ab_experiment.json).
 

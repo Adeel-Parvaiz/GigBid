@@ -20,5 +20,10 @@ node_modules/
 *.jsonl
 *.egg-info/
 gigbid_playwright_report/
+# Generated demo media and local narration script
+GigBid_3min_demo.mp4
+GigBid_demo_with_user_voiceover.mp4
+GigBid_Voiceover_Script.txt
+demo_video.mp4
 data/raw/*
 !data/raw/README.md
